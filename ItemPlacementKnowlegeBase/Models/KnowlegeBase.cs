@@ -36,11 +36,11 @@ namespace ItemPlacementKnowlegeBase.Models
             return Frames.Find(x => x.Name.Equals(name));
         }
 
-        public void SetFrame(string name, Frame frame)
+        public void SetFrame(Frame frame)
         {
-            var frameIndex = Frames.FindIndex(x => x.Name.Equals(name));
+            var frameIndex = Frames.FindIndex(x => x.Name.Equals(frame.Name));
             if (frameIndex < 0)
-                AddFrame(frame);
+                Frames.Add(frame);
             else
                 Frames[frameIndex] = frame;
         }
@@ -48,14 +48,6 @@ namespace ItemPlacementKnowlegeBase.Models
         private bool IsFrameNameExist(string name)
         {
             return Frames.Any(x => x.Name == name);
-        }
-
-        public void RemoveFrame(string frameName)
-        {
-            if (IsFrameNameExist(frameName))
-                Frames.RemoveAll(x => x.Name == frameName);
-            else
-                throw new ArgumentException("Фрейма с таким именем не существует");
         }
 
         public void RemoveFrame(Frame frame)

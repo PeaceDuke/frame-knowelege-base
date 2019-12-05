@@ -32,12 +32,18 @@ namespace ItemPlacementKnowlegeBase.Models
             Slots.Add(new Slot(slotName, value, type));
         }
 
-        public void SetSlotValue(string slotName, Object value)
+        public Slot GetSlot(string name)
         {
-            var slotIndex = Slots.FindIndex(x => x.Name == slotName);
+            return Slots.Find(x => x.Name.Equals(name));
+        }
+
+        public void SetSlot(Slot slot)
+        {
+            var slotIndex = Slots.FindIndex(x => x.Name == slot.Name);
             if (slotIndex < 0)
-                throw new IndexOutOfRangeException();
-            Slots[slotIndex].SetValue(value);
+                Slots.Add(slot);
+            else
+                Slots[slotIndex] = slot;
         }
 
         public object Clone() { return this.MemberwiseClone(); }

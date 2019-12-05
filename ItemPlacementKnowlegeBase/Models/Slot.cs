@@ -8,6 +8,8 @@ namespace ItemPlacementKnowlegeBase.Models
 {
     public class Slot
     {
+        private List<Type> valildeTypes = new List<Type>() { typeof(int), typeof(float), typeof(string), typeof(Frame) };
+
         public string Name { get; set; }
 
         private Type ValueType { get; }
@@ -44,7 +46,10 @@ namespace ItemPlacementKnowlegeBase.Models
 
         public bool ValidateValue(Object value, Type type)
         {
-            return value.GetType().Equals(type);
+            if (valildeTypes.Any(x => x == type))
+                return value.GetType().Equals(type);
+            else
+                throw new ArgumentException("Данный тип не может быть использован");
         }
     }
 }
