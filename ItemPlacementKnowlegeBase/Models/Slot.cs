@@ -12,7 +12,7 @@ namespace ItemPlacementKnowlegeBase.Models
 
         public string Name { get; set; }
 
-        private Type ValueType { get; }
+        public Type ValueType { get; }
 
         public Object Value { get; }
 
@@ -25,7 +25,7 @@ namespace ItemPlacementKnowlegeBase.Models
                 Value = value;
             }
             else
-                throw new ArgumentException("Необходимы или строки или другие фреймы");
+                throw new ArgumentException("Значение не соответствует указаному типу слота");
         }
 
         public Object SetValue(Object newValue)

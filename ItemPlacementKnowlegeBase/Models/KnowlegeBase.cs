@@ -17,7 +17,7 @@ namespace ItemPlacementKnowlegeBase.Models
 
         public void AddFrame(string name)
         {
-            if (IsFrameNameExist(name))
+            if (!IsFrameNameExist(name))
                 Frames.Add(new Frame(name));
             else
                 throw new ArgumentException("Фрейм с таким именем уже существует");
@@ -25,7 +25,7 @@ namespace ItemPlacementKnowlegeBase.Models
 
         public void AddFrame(Frame frame)
         {
-            if (IsFrameNameExist(frame.Name))
+            if (!IsFrameNameExist(frame.Name))
                 Frames.Add(frame);
             else
                 throw new ArgumentException("Фрейм с таким именем уже существует");

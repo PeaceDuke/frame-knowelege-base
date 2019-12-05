@@ -38,6 +38,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_edit_frame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_edit_frame.Designer.cs">
+      <DependentUpon>Form_edit_frame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_edit_slot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_edit_slot.Designer.cs">
+      <DependentUpon>Form_edit_slot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_form.Designer.cs">
+      <DependentUpon>Main_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Frame.cs" />
     <Compile Include="Models\KnowlegeBase.cs" />
     <Compile Include="Models\Slot.cs" />
@@ -55,6 +75,17 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form_edit_frame.resx">
+      <DependentUpon>Form_edit_frame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_edit_slot.resx">
+      <DependentUpon>Form_edit_slot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_form.resx">
+      <DependentUpon>Main_form.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

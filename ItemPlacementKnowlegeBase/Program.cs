@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ItemPlacementKnowlegeBase.Models;
-using Newtonsoft.Json;
+//using Newtonsoft.Json;
 using System.IO;
+using System.Windows.Forms;
 
 namespace ItemPlacementKnowlegeBase
 {
@@ -13,7 +14,7 @@ namespace ItemPlacementKnowlegeBase
     {
         static void Main(string[] args)
         {
-            
+            Application.Run(new Main_form());
         }
     }
 }

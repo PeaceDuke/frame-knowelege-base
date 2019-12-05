@@ -68,5 +68,10 @@ namespace ItemPlacementKnowlegeBase.Models
             else
                 throw new ArgumentException("Слота с таким именем не существует");
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
