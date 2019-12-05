@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ItemPlacementKnowlegeBase.Models
 {
-    class KnowlegeBase
+    public class KnowlegeBase
     {
         public List<Frame> Frames { get; }
 
@@ -47,11 +47,23 @@ namespace ItemPlacementKnowlegeBase.Models
 
         private bool IsFrameNameExist(string name)
         {
-            var frameIndex = Frames.FindIndex(x => x.Name.Equals(name));
-            if (frameIndex < 0)
-                return true;
+            return Frames.Any(x => x.Name == name);
+        }
+
+        public void RemoveFrame(string frameName)
+        {
+            if (IsFrameNameExist(frameName))
+                Frames.RemoveAll(x => x.Name == frameName);
             else
-                return false;
+                throw new ArgumentException("Фрейма с таким именем не существует");
+        }
+
+        public void RemoveFrame(Frame frame)
+        {
+            if (IsFrameNameExist(frame.Name))
+                Frames.Remove(frame);
+            else
+                throw new ArgumentException("Фрейма с таким именем не существует");
         }
     }
 }

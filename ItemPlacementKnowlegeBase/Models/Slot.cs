@@ -6,38 +6,45 @@ using System.Threading.Tasks;
 
 namespace ItemPlacementKnowlegeBase.Models
 {
-    class Slot
+    public class Slot
     {
-        private Object slotValue;
-
         public string Name { get; set; }
 
-        public Type ValueType { get; set; }
+        private Type ValueType { get; }
 
-        public Object Value 
-        { 
-            get { return slotValue; } 
-            set { slotValue = SetValue(value); } 
-        }
+        public Object Value { get; }
 
         public Slot(string name, Object value, Type type)
         {
-            Name = name;
-            ValueType = type;
-            Value = value;
-        }
-
-        public Object SetValue(Object newValue)
-        {
-            if (ValidateValue(newValue))
-                return newValue;
+            if (ValidateValue(value, type))
+            {
+                Name = name;
+                ValueType = type;
+                Value = value;
+            }
             else
                 throw new ArgumentException("Необходимы или строки или другие фреймы");
         }
 
-        public bool ValidateValue(Object value)
+        public Object SetValue(Object newValue)
         {
-            return value.GetType().Equals(ValueType);
+            if (ValidateValue(newValue, ValueType))
+                return newValue;
+            else
+                throw new ArgumentException("Значение не соответствует типу слота");
+        }
+
+        public Object SetValue(Object newValue, Type newType)
+        {
+            if (ValidateValue(newValue, newType))
+                return newValue;
+            else
+                throw new ArgumentException("Значение не соответствует указаному типу слота");
+        }
+
+        public bool ValidateValue(Object value, Type type)
+        {
+            return value.GetType().Equals(type);
         }
     }
 }
