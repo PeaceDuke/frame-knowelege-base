@@ -14,7 +14,7 @@ namespace ItemPlacementKnowlegeBase
     {
         static void Main(string[] args)
         {
-            //Application.Run(new Main_form());
+            Application.Run(new Main_form());
 
             var KWBase = new KnowlegeBase();
             var sceneFrame = KWBase.AddFrame("Сцена", true);
