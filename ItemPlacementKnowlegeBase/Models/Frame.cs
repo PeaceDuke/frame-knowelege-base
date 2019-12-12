@@ -3,33 +3,55 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace ItemPlacementKnowlegeBase.Models
 {
-    public class Frame : ICloneable
+    [Serializable]
+    public class Frame
     {
+        public bool IsBase { get; set; }
+
         public string Name { get; set; }
 
         public List<Slot> Slots { get; }
 
-        public Frame(string name)
-        {
-            Name = name;
-            Slots = new List<Slot>();
-        }
+        public Frame ParentFrame { get; }
 
-        public void AddSlot(Slot slot)
+        public Frame(string name, bool isbase = false, Frame parent = null)
         {
-            if (IsSlotExist(slot.Name))
-                throw new ArgumentException("Слот с таким именем уже существует");
-            Slots.Add(slot);
+            if (parent is null)
+            {
+                Slots = new List<Slot>();
+            }
+            else
+            {
+                if (parent.IsBase)
+                    Slots = new List<Slot>(parent.Slots);
+                else
+                    throw new ArgumentException("Фрейм может быть создан только от базового");
+            }
+            Name = name;
+            ParentFrame = parent;
+            IsBase = isbase;
         }
 
         public void AddSlot(string slotName, Object value, Type type)
         {
             if (IsSlotExist(slotName))
                 throw new ArgumentException("Слот с таким именем уже существует");
+            if (IsBase && type == typeof(Frame))
+                if(!(value as Frame).IsBase)
+                    throw new ArgumentException("Базовый фрейм может принимать лишь базовые фреймы в качестве значений слота");
             Slots.Add(new Slot(slotName, value, type));
+        }
+
+        public void AddSlot(string slotName, Type type)
+        {
+            if (IsSlotExist(slotName))
+                throw new ArgumentException("Слот с таким именем уже существует");
+            Slots.Add(new Slot(slotName, type));
         }
 
         public Slot GetSlot(string name)
@@ -45,8 +67,30 @@ namespace ItemPlacementKnowlegeBase.Models
             else
                 Slots[slotIndex] = slot;
         }
+        public Frame Clone(string name)
+        {
+            if (IsSlotExist(name))
+                throw new ArgumentException("Фрейм стаким именем уже существует");
+            using (var ms = new MemoryStream())
+            {
+                var formatter = new BinaryFormatter();
+                formatter.Serialize(ms, this);
+                ms.Position = 0;
+                var frame = (Frame)formatter.Deserialize(ms);
+                frame.Name = name;
 
-        public object Clone() { return this.MemberwiseClone(); }
+                return frame;
+            }
+        }
+
+
+        public Frame Determinate(string name) 
+        {
+            var frame = this.Clone(name);
+            frame.IsBase = false;
+
+            return frame;
+        }
 
         private bool IsSlotExist(string name)
         {
@@ -73,5 +117,14 @@ namespace ItemPlacementKnowlegeBase.Models
         {
             return Name;
         }
+
+        //public void Refresh()
+        //{
+        //    if(!(parentFrame is null))
+        //    {
+        //        var t = parentFrame.Slots;
+
+        //    }
+        //}
     }
 }

@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace ItemPlacementKnowlegeBase.Models
 {
+    [Serializable]
     public class Slot
     {
         private List<Type> valildeTypes = new List<Type>() { typeof(int), typeof(float), typeof(string), typeof(Frame) };
 
         public string Name { get; set; }
 
-        public Type ValueType { get; }
+        public Type ValueType { get; private set; }
 
-        public Object Value { get; }
+        public Object Value { get; private set; }
 
         public Slot(string name, Object value, Type type)
         {
@@ -28,18 +29,29 @@ namespace ItemPlacementKnowlegeBase.Models
                 throw new ArgumentException("Значение не соответствует указаному типу слота");
         }
 
-        public Object SetValue(Object newValue)
+        public Slot(string name, Type type)
+        {
+                Name = name;
+                ValueType = type;
+        }
+
+        public void SetValue(Object newValue)
         {
             if (ValidateValue(newValue, ValueType))
-                return newValue;
+            {
+                Value = newValue;
+            }
             else
                 throw new ArgumentException("Значение не соответствует типу слота");
         }
 
-        public Object SetValue(Object newValue, Type newType)
+        public void SetValue(Object newValue, Type newType)
         {
             if (ValidateValue(newValue, newType))
-                return newValue;
+            {
+                ValueType = newType;
+                Value = newValue;
+            }
             else
                 throw new ArgumentException("Значение не соответствует указаному типу слота");
         }

@@ -15,10 +15,14 @@ namespace ItemPlacementKnowlegeBase.Models
             Frames = new List<Frame>();
         }
 
-        public void AddFrame(string name)
+        public Frame AddFrame(string name, bool isbase = false, Frame parent = null)
         {
             if (!IsFrameNameExist(name))
-                Frames.Add(new Frame(name));
+            {
+                var frame = new Frame(name, isbase, parent);
+                Frames.Add(frame);
+                return frame;
+            }
             else
                 throw new ArgumentException("Фрейм с таким именем уже существует");
         }
