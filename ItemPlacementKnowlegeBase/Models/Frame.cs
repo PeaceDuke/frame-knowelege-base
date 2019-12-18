@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace ItemPlacementKnowlegeBase.Models
 {
@@ -17,9 +15,9 @@ namespace ItemPlacementKnowlegeBase.Models
 
         public List<Slot> Slots { get; }
 
-        public Frame ParentFrame { get; }
+        public string ParentFrameName { get; private set; }
 
-        public Frame(string name, bool isbase = false, Frame parent = null)
+        public Frame(string name, bool isbase = false, string parent = null)
         {
             if (parent is null)
             {
@@ -27,13 +25,13 @@ namespace ItemPlacementKnowlegeBase.Models
             }
             else
             {
-                if (parent.IsBase)
+                /*if (parent.IsBase)
                     Slots = new List<Slot>(parent.Slots);
                 else
-                    throw new ArgumentException("Фрейм может быть создан только от базового");
+                    throw new ArgumentException("Фрейм может быть создан только от базового");*/
             }
             Name = name;
-            ParentFrame = parent;
+            ParentFrameName = parent;
             IsBase = isbase;
         }
 
@@ -78,6 +76,7 @@ namespace ItemPlacementKnowlegeBase.Models
                 ms.Position = 0;
                 var frame = (Frame)formatter.Deserialize(ms);
                 frame.Name = name;
+                frame.ParentFrameName = this.Name;
 
                 return frame;
             }

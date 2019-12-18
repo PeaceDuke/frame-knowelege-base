@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ItemPlacementKnowlegeBase.Models;
-//using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System.IO;
 using System.Windows.Forms;
+using ItemPlacementKnowlegeBase.Services;
 
 namespace ItemPlacementKnowlegeBase
 {
@@ -14,19 +15,51 @@ namespace ItemPlacementKnowlegeBase
     {
         static void Main(string[] args)
         {
-            Application.Run(new Main_form());
+            //Application.Run(new Main_form());
 
             var KWBase = new KnowlegeBase();
             var sceneFrame = KWBase.AddFrame("Сцена", true);
             var surfaceFrame = KWBase.AddFrame("Поверхность", true);
             var cellFrame = KWBase.AddFrame("Клетка", true);
             var objectFrame = KWBase.AddFrame("Объект", true);
-            sceneFrame.AddSlot("Cтена", surfaceFrame, typeof(Frame));
+            sceneFrame.AddSlot("Cтена 1", surfaceFrame, typeof(Frame));
+            sceneFrame.AddSlot("Cтена 2", surfaceFrame, typeof(Frame));
+            sceneFrame.AddSlot("Cтена 3", surfaceFrame, typeof(Frame));
+            sceneFrame.AddSlot("Cтена 4", surfaceFrame, typeof(Frame));
             sceneFrame.AddSlot("Пол", surfaceFrame, typeof(Frame));
+            sceneFrame.AddSlot("Потолок", surfaceFrame, typeof(Frame));
             surfaceFrame.AddSlot("K1", cellFrame, typeof(Frame));
             surfaceFrame.AddSlot("K2", cellFrame, typeof(Frame));
             surfaceFrame.AddSlot("K3", cellFrame, typeof(Frame));
             surfaceFrame.AddSlot("K4", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K5", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K6", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K7", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K8", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K11", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K12", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K13", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K14", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K15", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K16", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K17", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K18", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K21", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K22", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K23", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K24", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K25", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K26", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K27", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K28", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K31", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K32", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K33", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K34", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K35", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K36", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K37", cellFrame, typeof(Frame));
+            surfaceFrame.AddSlot("K38", cellFrame, typeof(Frame));
             cellFrame.AddSlot("X", typeof(int));
             cellFrame.AddSlot("Y", typeof(int));
             cellFrame.AddSlot("Объект", objectFrame, typeof(Frame));
@@ -45,6 +78,17 @@ namespace ItemPlacementKnowlegeBase
             tableFrame.GetSlot("H").SetValue(1);
             tableFrame.GetSlot("Ссылка").SetValue("/obj/table.obj");
             KWBase.AddFrame(tableFrame);
+
+            var wraper = new InferenceWraper(KWBase);
+            var result = wraper.StartInference(sceneFrame);
+
+            var serializer = new JsonSerializer();
+
+            using (StreamWriter sw = new StreamWriter("result.json"))
+            using (JsonWriter writer = new JsonTextWriter(sw))
+            {
+                serializer.Serialize(writer, result);
+            }
         }
     }
 }

@@ -52,9 +52,9 @@ namespace ItemPlacementKnowlegeBase
                 cur_frame = Knowleges.GetFrame(e.Item.Text);
                 lv_slots.Items.Clear();
                 gb_frame.Text = "Frame " + e.Item.Text;
-                if(Knowleges.GetFrame(e.Item.Text).ParentFrame!=null)
+                if(Knowleges.GetFrame(e.Item.Text).ParentFrameName!=null)
                 {
-                    gb_frame.Text += ":" + Knowleges.GetFrame(e.Item.Text).ParentFrame.Name;
+                    gb_frame.Text += ":" + Knowleges.GetFrame(e.Item.Text).ParentFrameName;
                 }
                 var slots = Knowleges.GetFrame(e.Item.Text).Slots;
                 foreach (var slot in slots)
@@ -89,9 +89,9 @@ namespace ItemPlacementKnowlegeBase
             }
             else
             {
-                if (cur_frame.ParentFrame != null)
+                if (cur_frame.ParentFrameName != null)
                 {
-                    slot_of_parent = cur_frame.ParentFrame.GetSlot(lv_slots.SelectedItems[0].Text) != null;
+                    //slot_of_parent = cur_frame.ParentFrameName.GetSlot(lv_slots.SelectedItems[0].Text) != null;
                 }
                 if (!slot_of_parent)
                 {
