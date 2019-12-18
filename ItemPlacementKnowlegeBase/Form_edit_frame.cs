@@ -21,6 +21,14 @@ namespace ItemPlacementKnowlegeBase
             Delete
         }
 
+        public bool Child()
+        {
+            if (cb_parrent.SelectedIndex == -1)
+                return false;
+            else
+                return true;
+        }
+
         public Form_edit_frame(FormType type)
         {
             InitializeComponent();
@@ -39,6 +47,7 @@ namespace ItemPlacementKnowlegeBase
         public void Initialize()
         {
             bt_add.Enabled = false;
+            
         }
 
         public string Name_frame()
@@ -50,7 +59,10 @@ namespace ItemPlacementKnowlegeBase
         {
             try
             {
-                Knowleges_edit.AddFrame(tb_name.Text);
+                if(cb_parrent.SelectedIndex == -1)
+                    Knowleges_edit.AddFrame(tb_name.Text, cb_base.Checked);
+                else
+                    Knowleges_edit.AddFrame(tb_name.Text, cb_base.Checked, Knowleges_edit.GetFrame(cb_parrent.SelectedItem.ToString()).Name);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -67,6 +79,29 @@ namespace ItemPlacementKnowlegeBase
                 bt_add.Enabled = true;
             else
                 bt_add.Enabled = false;
+        }
+
+        private void Form_edit_frame_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Bt_abort_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Cb_base_VisibleChanged(object sender, EventArgs e)
+        {
+            if(this.Visible==true)
+            {
+                cb_parrent.Items.Clear();
+                foreach (var frame in Knowleges_edit.Frames)
+                {
+                    if (frame.IsBase)
+                        cb_parrent.Items.Add(frame.Name);
+                }
+            }
         }
     }
 }

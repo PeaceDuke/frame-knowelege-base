@@ -32,7 +32,7 @@
             this.tb_value = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lb_value = new System.Windows.Forms.Label();
             this.bt_applay = new System.Windows.Forms.Button();
             this.bt_abort = new System.Windows.Forms.Button();
             this.cb_type = new System.Windows.Forms.ComboBox();
@@ -71,14 +71,14 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Тип";
             // 
-            // label3
+            // lb_value
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 74);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Значение";
+            this.lb_value.AutoSize = true;
+            this.lb_value.Location = new System.Drawing.Point(12, 74);
+            this.lb_value.Name = "lb_value";
+            this.lb_value.Size = new System.Drawing.Size(55, 13);
+            this.lb_value.TabIndex = 5;
+            this.lb_value.Text = "Значение";
             // 
             // bt_applay
             // 
@@ -98,6 +98,7 @@
             this.bt_abort.TabIndex = 7;
             this.bt_abort.Text = "Отмена";
             this.bt_abort.UseVisualStyleBackColor = true;
+            this.bt_abort.Click += new System.EventHandler(this.Bt_abort_Click);
             // 
             // cb_type
             // 
@@ -127,7 +128,7 @@
             this.Controls.Add(this.cb_type);
             this.Controls.Add(this.bt_abort);
             this.Controls.Add(this.bt_applay);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lb_value);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tb_value);
@@ -146,7 +147,7 @@
         private System.Windows.Forms.TextBox tb_value;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lb_value;
         private System.Windows.Forms.Button bt_applay;
         private System.Windows.Forms.Button bt_abort;
         private System.Windows.Forms.ComboBox cb_type;
