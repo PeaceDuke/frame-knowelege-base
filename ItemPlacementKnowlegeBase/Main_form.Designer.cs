@@ -34,15 +34,17 @@
             this.bt_frame_delete = new System.Windows.Forms.Button();
             this.bt_frame_add = new System.Windows.Forms.Button();
             this.gb_frame = new System.Windows.Forms.GroupBox();
+            this.lv_slots = new System.Windows.Forms.ListView();
             this.bt_slot_delete = new System.Windows.Forms.Button();
             this.bt_slot_edit = new System.Windows.Forms.Button();
             this.bt_slot_add = new System.Windows.Forms.Button();
-            this.gb_slots = new System.Windows.Forms.GroupBox();
-            this.lv_slots = new System.Windows.Forms.ListView();
+            this.gb_slot_edit = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gb_frames.SuspendLayout();
             this.gb_frames_edit.SuspendLayout();
             this.gb_frame.SuspendLayout();
-            this.gb_slots.SuspendLayout();
+            this.gb_slot_edit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gb_frames
@@ -66,6 +68,7 @@
             this.lv_frames.TabIndex = 0;
             this.lv_frames.UseCompatibleStateImageBehavior = false;
             this.lv_frames.View = System.Windows.Forms.View.List;
+            this.lv_frames.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lv_frames_ItemDrag);
             this.lv_frames.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.Lv_frames_ItemSelectionChanged);
             // 
             // gb_frames_edit
@@ -101,20 +104,29 @@
             // 
             // gb_frame
             // 
-            this.gb_frame.Controls.Add(this.bt_slot_delete);
-            this.gb_frame.Controls.Add(this.bt_slot_edit);
-            this.gb_frame.Controls.Add(this.bt_slot_add);
-            this.gb_frame.Controls.Add(this.gb_slots);
+            this.gb_frame.Controls.Add(this.lv_slots);
             this.gb_frame.Location = new System.Drawing.Point(310, 1);
             this.gb_frame.Name = "gb_frame";
-            this.gb_frame.Size = new System.Drawing.Size(374, 347);
+            this.gb_frame.Size = new System.Drawing.Size(374, 286);
             this.gb_frame.TabIndex = 2;
             this.gb_frame.TabStop = false;
             this.gb_frame.Text = "Фрейм";
             // 
+            // lv_slots
+            // 
+            this.lv_slots.FullRowSelect = true;
+            this.lv_slots.HideSelection = false;
+            this.lv_slots.Location = new System.Drawing.Point(6, 19);
+            this.lv_slots.Name = "lv_slots";
+            this.lv_slots.Size = new System.Drawing.Size(362, 250);
+            this.lv_slots.TabIndex = 0;
+            this.lv_slots.UseCompatibleStateImageBehavior = false;
+            this.lv_slots.View = System.Windows.Forms.View.Details;
+            this.lv_slots.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.Lv_slots_ItemSelectionChanged);
+            // 
             // bt_slot_delete
             // 
-            this.bt_slot_delete.Location = new System.Drawing.Point(258, 309);
+            this.bt_slot_delete.Location = new System.Drawing.Point(238, 19);
             this.bt_slot_delete.Name = "bt_slot_delete";
             this.bt_slot_delete.Size = new System.Drawing.Size(110, 23);
             this.bt_slot_delete.TabIndex = 5;
@@ -124,7 +136,7 @@
             // 
             // bt_slot_edit
             // 
-            this.bt_slot_edit.Location = new System.Drawing.Point(132, 309);
+            this.bt_slot_edit.Location = new System.Drawing.Point(122, 19);
             this.bt_slot_edit.Name = "bt_slot_edit";
             this.bt_slot_edit.Size = new System.Drawing.Size(110, 23);
             this.bt_slot_edit.TabIndex = 4;
@@ -134,7 +146,7 @@
             // 
             // bt_slot_add
             // 
-            this.bt_slot_add.Location = new System.Drawing.Point(6, 309);
+            this.bt_slot_add.Location = new System.Drawing.Point(6, 19);
             this.bt_slot_add.Name = "bt_slot_add";
             this.bt_slot_add.Size = new System.Drawing.Size(110, 23);
             this.bt_slot_add.TabIndex = 3;
@@ -142,34 +154,33 @@
             this.bt_slot_add.UseVisualStyleBackColor = true;
             this.bt_slot_add.Click += new System.EventHandler(this.Bt_slot_add_Click);
             // 
-            // gb_slots
+            // gb_slot_edit
             // 
-            this.gb_slots.Controls.Add(this.lv_slots);
-            this.gb_slots.Location = new System.Drawing.Point(6, 19);
-            this.gb_slots.Name = "gb_slots";
-            this.gb_slots.Size = new System.Drawing.Size(362, 284);
-            this.gb_slots.TabIndex = 0;
-            this.gb_slots.TabStop = false;
-            this.gb_slots.Text = "Слоты";
+            this.gb_slot_edit.Controls.Add(this.bt_slot_delete);
+            this.gb_slot_edit.Controls.Add(this.bt_slot_add);
+            this.gb_slot_edit.Controls.Add(this.bt_slot_edit);
+            this.gb_slot_edit.Location = new System.Drawing.Point(310, 287);
+            this.gb_slot_edit.Name = "gb_slot_edit";
+            this.gb_slot_edit.Size = new System.Drawing.Size(374, 61);
+            this.gb_slot_edit.TabIndex = 6;
+            this.gb_slot_edit.TabStop = false;
+            this.gb_slot_edit.Text = "Редактирование слотов";
             // 
-            // lv_slots
+            // pictureBox1
             // 
-            this.lv_slots.FullRowSelect = true;
-            this.lv_slots.HideSelection = false;
-            this.lv_slots.Location = new System.Drawing.Point(16, 19);
-            this.lv_slots.Name = "lv_slots";
-            this.lv_slots.Size = new System.Drawing.Size(328, 248);
-            this.lv_slots.TabIndex = 0;
-            this.lv_slots.UseCompatibleStateImageBehavior = false;
-            this.lv_slots.View = System.Windows.Forms.View.Details;
-            this.lv_slots.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.Lv_slots_ItemSelectionChanged);
-            this.lv_slots.SelectedIndexChanged += new System.EventHandler(this.Lv_slots_SelectedIndexChanged);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 354);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(682, 350);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // Main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 402);
+            this.ClientSize = new System.Drawing.Size(694, 745);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.gb_slot_edit);
             this.Controls.Add(this.gb_frame);
             this.Controls.Add(this.gb_frames_edit);
             this.Controls.Add(this.gb_frames);
@@ -178,7 +189,8 @@
             this.gb_frames.ResumeLayout(false);
             this.gb_frames_edit.ResumeLayout(false);
             this.gb_frame.ResumeLayout(false);
-            this.gb_slots.ResumeLayout(false);
+            this.gb_slot_edit.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,7 +206,8 @@
         private System.Windows.Forms.Button bt_slot_delete;
         private System.Windows.Forms.Button bt_slot_edit;
         private System.Windows.Forms.Button bt_slot_add;
-        private System.Windows.Forms.GroupBox gb_slots;
         private System.Windows.Forms.ListView lv_slots;
+        private System.Windows.Forms.GroupBox gb_slot_edit;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -15,6 +15,8 @@ namespace ItemPlacementKnowlegeBase
     {
         KnowlegeBase Knowleges = new KnowlegeBase();
         Frame cur_frame;
+        GridDrawer gridDrawer;
+        public static string draggedData = "";
         public Main_form()
         {
             InitializeComponent();
@@ -29,6 +31,8 @@ namespace ItemPlacementKnowlegeBase
             lv_slots.Columns.Add("Name");
             lv_slots.Columns.Add("Type");
             lv_slots.Columns.Add("Value");
+
+            gridDrawer = new GridDrawer(8, 4, 60, pictureBox1);
         }
 
         private void Bt_frame_add_Click(object sender, EventArgs e)
@@ -38,8 +42,7 @@ namespace ItemPlacementKnowlegeBase
             
             if (formFrameAdd.ShowDialog() == DialogResult.OK)
             {                
-                var str = formFrameAdd.Name_frame();               
-                
+                var str = formFrameAdd.Name_frame();                
                 lv_frames.Items.Add(str);                                
             }
             formFrameAdd.Close();
@@ -100,12 +103,7 @@ namespace ItemPlacementKnowlegeBase
                 bt_slot_edit.Enabled = true;
             }            
         }
-
-        private void Lv_slots_SelectedIndexChanged(object sender, EventArgs e)
-        {   
-            
-        }
-
+        
         private void Bt_slot_add_Click(object sender, EventArgs e)
         {
             var formSlotAdd = new Form_edit_slot(Form_edit_slot.FormType.Insert);
@@ -172,6 +170,16 @@ namespace ItemPlacementKnowlegeBase
                 
             }
             formSlotAdd.Close();
+        }
+        
+        private void startDragDrop(string data)
+        {
+            draggedData = data;
+        }
+        private void lv_frames_ItemDrag(object sender, ItemDragEventArgs e)
+        {
+            lv_frames.BackColor = Color.Red;
+            startDragDrop((sender as ListView)?.SelectedItems[0]?.Text);
         }
     }
 }

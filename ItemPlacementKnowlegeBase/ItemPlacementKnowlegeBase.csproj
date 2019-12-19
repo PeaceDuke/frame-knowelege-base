@@ -67,6 +67,7 @@
     <Compile Include="Form_edit_slot.Designer.cs">
       <DependentUpon>Form_edit_slot.cs</DependentUpon>
     </Compile>
+    <Compile Include="GridDrawer.cs" />
     <Compile Include="Main_form.cs">
       <SubType>Form</SubType>
     </Compile>
