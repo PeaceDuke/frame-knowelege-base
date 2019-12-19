@@ -15,6 +15,7 @@ namespace ItemPlacementKnowlegeBase
     {
         KnowlegeBase Knowleges = new KnowlegeBase();
         Frame cur_frame;
+        public static string draggedData = "";
         public Main_form()
         {
             InitializeComponent();
@@ -38,8 +39,7 @@ namespace ItemPlacementKnowlegeBase
             
             if (formFrameAdd.ShowDialog() == DialogResult.OK)
             {                
-                var str = formFrameAdd.Name_frame();               
-                
+                var str = formFrameAdd.Name_frame();                
                 lv_frames.Items.Add(str);                                
             }
             formFrameAdd.Close();
@@ -100,12 +100,7 @@ namespace ItemPlacementKnowlegeBase
                 bt_slot_edit.Enabled = true;
             }            
         }
-
-        private void Lv_slots_SelectedIndexChanged(object sender, EventArgs e)
-        {   
-            
-        }
-
+        
         private void Bt_slot_add_Click(object sender, EventArgs e)
         {
             var formSlotAdd = new Form_edit_slot(Form_edit_slot.FormType.Insert);
@@ -173,5 +168,15 @@ namespace ItemPlacementKnowlegeBase
             }
             formSlotAdd.Close();
         }
+        
+        private void startDragDrop(string data)
+        {
+            draggedData = data;
+        }
+        private void lv_frames_ItemDrag(object sender, ItemDragEventArgs e)
+        {
+            startDragDrop((sender as ListView)?.SelectedItems[0]?.Text);
+        }
+
     }
 }

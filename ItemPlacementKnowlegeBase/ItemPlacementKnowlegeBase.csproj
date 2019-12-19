@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DrawControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DrawControl.Designer.cs">
+      <DependentUpon>DrawControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_edit_frame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,8 @@
     <Compile Include="Form_edit_slot.Designer.cs">
       <DependentUpon>Form_edit_slot.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\GridDrawer.cs" />
+    <Compile Include="Models\KnowlegeBaseProvider.cs" />
     <Compile Include="Main_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +93,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DrawControl.resx">
+      <DependentUpon>DrawControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_edit_frame.resx">
       <DependentUpon>Form_edit_frame.cs</DependentUpon>
     </EmbeddedResource>
