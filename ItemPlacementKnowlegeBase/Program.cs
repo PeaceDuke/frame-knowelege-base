@@ -28,56 +28,19 @@ namespace ItemPlacementKnowlegeBase
             sceneFrame.AddSlot("Cтена 4", surfaceFrame, typeof(Frame));
             sceneFrame.AddSlot("Пол", surfaceFrame, typeof(Frame));
             sceneFrame.AddSlot("Потолок", surfaceFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K1", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K2", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K3", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K4", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K5", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K6", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K7", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K8", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K11", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K12", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K13", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K14", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K15", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K16", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K17", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K18", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K21", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K22", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K23", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K24", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K25", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K26", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K27", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K28", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K31", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K32", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K33", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K34", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K35", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K36", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K37", cellFrame, typeof(Frame));
-            surfaceFrame.AddSlot("K38", cellFrame, typeof(Frame));
+            for(var i = 0; i < 8; i++)
+            {
+                for(var j = 0; j < 8; j++)
+                {
+                    surfaceFrame.AddSlot("K" + i.ToString() + j.ToString(), cellFrame, typeof(Frame));
+                }
+            }
             cellFrame.AddSlot("X", typeof(int));
             cellFrame.AddSlot("Y", typeof(int));
             cellFrame.AddSlot("Объект", objectFrame, typeof(Frame));
             objectFrame.AddSlot("W", typeof(int));
             objectFrame.AddSlot("H", typeof(int));
             objectFrame.AddSlot("Ссылка", typeof(string));
-            var emptyObjectFrame = objectFrame.Determinate("Пустой объект");
-            emptyObjectFrame.GetSlot("W").SetValue(1);
-            emptyObjectFrame.GetSlot("H").SetValue(1);
-            emptyObjectFrame.GetSlot("Ссылка").SetValue("/obj/empty.obj");
-            KWBase.AddFrame(emptyObjectFrame);
-            var flourObjectFrame = objectFrame.Clone("Напольный объект");
-            KWBase.AddFrame(flourObjectFrame);
-            var tableFrame= flourObjectFrame.Determinate("Стол");
-            tableFrame.GetSlot("W").SetValue(1);
-            tableFrame.GetSlot("H").SetValue(1);
-            tableFrame.GetSlot("Ссылка").SetValue("/obj/table.obj");
-            KWBase.AddFrame(tableFrame);
 
             var wraper = new InferenceWraper(KWBase);
             var result = wraper.StartInference(sceneFrame);
@@ -89,6 +52,45 @@ namespace ItemPlacementKnowlegeBase
             {
                 serializer.Serialize(writer, result);
             }
+
+
+            var toolboxFrame = KWBase.AddFrame("Тулбокс", true);
+            var tableFrame = objectFrame.Determinate("Стол");
+            KWBase.AddFrame(tableFrame);
+            var chairFrame = objectFrame.Determinate("Стул");
+            KWBase.AddFrame(chairFrame);
+            toolboxFrame.AddSlot("Пустой объект", objectFrame, typeof(Frame));
+
+            var floorToolboxFrame = wraper.StartInference(toolboxFrame);
+            floorToolboxFrame.Name = "Тулбокс для пола";
+            floorToolboxFrame.AddSlot("Предмет 1", chairFrame, typeof(Frame));
+            floorToolboxFrame.AddSlot("Предмет 2", tableFrame, typeof(Frame));
+
+            using (StreamWriter sw = new StreamWriter("result1.json"))
+            using (JsonWriter writer = new JsonTextWriter(sw))
+            {
+                serializer.Serialize(writer, floorToolboxFrame);
+            }
+
+            var eventFrame = KWBase.AddFrame("Ситуация", true);
+            eventFrame.AddSlot("Агент",typeof(string));
+            eventFrame.AddSlot("Реципиент", typeof(string));
+            eventFrame.AddSlot("Процедура", typeof(string));
+            var tryPlaceEventFrame = eventFrame.Determinate("Ситуация попытки размещения");
+            var placementEventFrame = eventFrame.Determinate("Ситуация попытки размещения");
+            var errorEventFrame = eventFrame.Determinate("Ситуация попытки размещения");
+            tryPlaceEventFrame.GetSlot("Агент").SetValue("Объект");
+            tryPlaceEventFrame.GetSlot("Реципиент").SetValue("Клетка");
+            tryPlaceEventFrame.GetSlot("Процедура").SetValue("ChecPlace()");
+            tryPlaceEventFrame.AddSlot("Следующий", placementEventFrame, typeof(Frame));
+            tryPlaceEventFrame.AddSlot("Ошибка", errorEventFrame, typeof(Frame));
+            placementEventFrame.GetSlot("Агент").SetValue("Объект");
+            placementEventFrame.GetSlot("Реципиент").SetValue("Клетка");
+            placementEventFrame.GetSlot("Процедура").SetValue("Place()");
+            errorEventFrame.GetSlot("Агент").SetValue("Объект");
+            errorEventFrame.GetSlot("Реципиент").SetValue("Клетка");
+            errorEventFrame.GetSlot("Процедура").SetValue("ThrowPlacementError()");
+
         }
     }
 }
