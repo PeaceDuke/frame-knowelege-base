@@ -39,29 +39,32 @@ namespace ItemPlacementKnowlegeBase.Services
                     }
                 }
             }
-            fillFrame(detFrame);
+            fillFrame(frame.Name, detFrame);
             return detFrame;
         }
 
         private int surfaceXIndex = 0;
         private int surfaceYIndex = 0;
 
-        private void fillFrame(Frame frame)
+        private void fillFrame(string name, Frame frame)
         {
-            switch(frame.Name)
+            switch(name)
             {
-                case "Поверхность": { surfaceXIndex = surfaceYIndex = 0;  break; }
+                case "Поверхность": { 
+                        surfaceXIndex = surfaceYIndex = 0;
+                        break; 
+                    }
                 case "Клетка": 
                     { 
-                        frame.Slots.Find(x => x.Name == "X").SetValue(surfaceXIndex++);
-                        frame.Slots.Find(x => x.Name == "Y").SetValue(surfaceYIndex++);
+                        frame.GetSlot("X").SetValue((surfaceXIndex++) / 8);
+                        frame.GetSlot("Y").SetValue((surfaceYIndex++) % 8);
                         break; 
                     }
                 case "Объект":
                     {
-                        frame.Slots.Find(x => x.Name == "W").SetValue(1);
-                        frame.Slots.Find(x => x.Name == "H").SetValue(1);
-                        frame.Slots.Find(x => x.Name == "Ссылка").SetValue("empty");
+                        frame.GetSlot("W").SetValue(1);
+                        frame.GetSlot("H").SetValue(1);
+                        frame.GetSlot("Ссылка").SetValue("empty");
                         break;
                     }
             }
