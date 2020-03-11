@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,10 @@ namespace ItemPlacementKnowlegeBase.Models
 
         public string Name { get; set; }
 
+        [JsonIgnore]
         public Type ValueType { get; private set; }
+
+        public String Type { get { return ValueType.Name; } }
 
         public Object Value { get; private set; }
 

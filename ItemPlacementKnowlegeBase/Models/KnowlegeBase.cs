@@ -15,7 +15,7 @@ namespace ItemPlacementKnowlegeBase.Models
             Frames = new List<Frame>();
         }
 
-        public Frame AddFrame(string name, bool isbase = false, string parent = null)
+        public Frame AddFrame(string name, bool isbase = false, Frame parent = null)
         {
             if (!IsFrameNameExist(name))
             {

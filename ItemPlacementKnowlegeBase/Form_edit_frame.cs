@@ -62,7 +62,7 @@ namespace ItemPlacementKnowlegeBase
                 if(cb_parrent.SelectedIndex == -1)
                     Knowleges_edit.AddFrame(tb_name.Text, cb_base.Checked);
                 else
-                    Knowleges_edit.AddFrame(tb_name.Text, cb_base.Checked, Knowleges_edit.GetFrame(cb_parrent.SelectedItem.ToString()).Name);
+                    Knowleges_edit.AddFrame(tb_name.Text, cb_base.Checked, Knowleges_edit.GetFrame(cb_parrent.SelectedItem.ToString()));
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

@@ -42,16 +42,10 @@ namespace ItemPlacementKnowlegeBase
             objectFrame.AddSlot("H", typeof(int));
             objectFrame.AddSlot("Ссылка", typeof(string));
 
-            var wraper = new InferenceWraper(KWBase);
+            var wraper = new FrameWraper();
             var result = wraper.StartInference(sceneFrame);
 
-            var serializer = new JsonSerializer();
-
-            using (StreamWriter sw = new StreamWriter("result.json"))
-            using (JsonWriter writer = new JsonTextWriter(sw))
-            {
-                serializer.Serialize(writer, result);
-            }
+            KWBSerializer.SerilizeToFile(result, "result.json");
 
 
             var toolboxFrame = KWBase.AddFrame("Тулбокс", true);
@@ -66,11 +60,10 @@ namespace ItemPlacementKnowlegeBase
             floorToolboxFrame.AddSlot("Предмет 1", chairFrame, typeof(Frame));
             floorToolboxFrame.AddSlot("Предмет 2", tableFrame, typeof(Frame));
 
-            using (StreamWriter sw = new StreamWriter("result1.json"))
-            using (JsonWriter writer = new JsonTextWriter(sw))
-            {
-                serializer.Serialize(writer, floorToolboxFrame);
-            }
+            KWBSerializer.SerilizeToFile(floorToolboxFrame, "toolbox.json");
+
+
+            var eventFrames = new List<Frame>();
 
             var eventFrame = KWBase.AddFrame("Ситуация", true);
             eventFrame.AddSlot("Агент",typeof(string));
@@ -90,6 +83,14 @@ namespace ItemPlacementKnowlegeBase
             errorEventFrame.GetSlot("Агент").SetValue("Объект");
             errorEventFrame.GetSlot("Реципиент").SetValue("Клетка");
             errorEventFrame.GetSlot("Процедура").SetValue("ThrowPlacementError()");
+            eventFrames.Add(tryPlaceEventFrame);
+            eventFrames.Add(placementEventFrame);
+            eventFrames.Add(errorEventFrame);
+
+            KWBSerializer.SerilizeToFile(eventFrames, "events.json");
+            KWBSerializer.SerilizeToFile(KWBase, "entireKWB.json");
+
+            KWBSerializer.DeserilizeFromFile("result.json");
 
         }
     }

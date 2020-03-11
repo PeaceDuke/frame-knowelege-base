@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ItemPlacementKnowlegeBase.Services;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,31 +11,39 @@ namespace ItemPlacementKnowlegeBase.Models
     [Serializable]
     public class Frame
     {
+        [JsonIgnore]
         public bool IsBase { get; set; }
+
+        public int Id { get; set; }
 
         public string Name { get; set; }
 
         public List<Slot> Slots { get; }
 
-        public string ParentFrameName { get; private set; }
+        [JsonIgnore]
+        public Frame ParentFrame { get; private set; }
 
-        public Frame(string name, bool isbase = false, string parent = null)
+        public int ParentFrameId { get { return ParentFrame != null ? ParentFrame.Id : 0; } }
+
+        public Frame(string name, bool isbase = false, Frame parent = null)
         {
             if (parent is null)
             {
                 Slots = new List<Slot>();
             }
-            else
-            {
-                /*if (parent.IsBase)
-                    Slots = new List<Slot>(parent.Slots);
-                else
-                    throw new ArgumentException("Фрейм может быть создан только от базового");*/
-            }
+            //else
+            //{
+            //    if (parent.IsBase)
+            //        Slots = new List<Slot>(parent.Slots);
+            //    else
+            //        throw new ArgumentException("Фрейм может быть создан только от базового");
+            //}
+            Id = RandomGenerator.getRandomNum();
             Name = name;
-            ParentFrameName = parent;
+            ParentFrame = parent;
             IsBase = isbase;
         }
+
 
         public void AddSlot(string slotName, Object value, Type type)
         {
@@ -75,8 +85,9 @@ namespace ItemPlacementKnowlegeBase.Models
                 formatter.Serialize(ms, this);
                 ms.Position = 0;
                 var frame = (Frame)formatter.Deserialize(ms);
+                frame.Id = RandomGenerator.getRandomNum();
                 frame.Name = name;
-                frame.ParentFrameName = this.Name;
+                frame.ParentFrame = this;
 
                 return frame;
             }
@@ -116,14 +127,5 @@ namespace ItemPlacementKnowlegeBase.Models
         {
             return Name;
         }
-
-        //public void Refresh()
-        //{
-        //    if(!(parentFrame is null))
-        //    {
-        //        var t = parentFrame.Slots;
-
-        //    }
-        //}
     }
 }
