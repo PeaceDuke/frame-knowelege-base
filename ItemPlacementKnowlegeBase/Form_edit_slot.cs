@@ -31,6 +31,7 @@ namespace ItemPlacementKnowlegeBase
             {
                 case FormType.Insert:
                     bt_applay.Text = @"Добавить";
+                    bt_applay.Enabled = false;
                     break;
                 case FormType.Update:
                     bt_applay.Text = @"Изменить";
@@ -91,6 +92,7 @@ namespace ItemPlacementKnowlegeBase
                 {
                     cb_value.Items.Add(frame.Name);
                 }
+                bt_applay.Enabled = false;
             }
             else
             {
@@ -230,6 +232,31 @@ namespace ItemPlacementKnowlegeBase
         private void Bt_abort_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cb_value_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_value.SelectedItem != null & tb_name.Text != "")
+                bt_applay.Enabled = true;
+            else
+                bt_applay.Enabled = false;
+                    
+        }
+
+        private void tb_name_TextChanged(object sender, EventArgs e)
+        {
+            if (tb_value.Text != "" & tb_name.Text != "" & cb_type.SelectedIndex != 3 | cb_value.SelectedItem != null & tb_name.Text != "" & cb_type.SelectedIndex == 3)
+                bt_applay.Enabled = true;
+            else
+                bt_applay.Enabled = false;
+        }
+
+        private void tb_value_TextChanged(object sender, EventArgs e)
+        {
+            if (tb_value.Text != "" & tb_name.Text != "" & cb_type.SelectedIndex != 3 | cb_value.SelectedItem != null & tb_name.Text != "" & cb_type.SelectedIndex == 3)
+                bt_applay.Enabled = true;
+            else
+                bt_applay.Enabled = false;
         }
     }
 }
