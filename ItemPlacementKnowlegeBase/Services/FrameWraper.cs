@@ -7,14 +7,8 @@ using ItemPlacementKnowlegeBase.Models;
 
 namespace ItemPlacementKnowlegeBase.Services
 {
-    public class InferenceWraper
+    public class FrameWraper
     {
-        public KnowlegeBase KnowlegeBase { get; set; }
-
-        public InferenceWraper(KnowlegeBase knowlegeBase)
-        {
-            KnowlegeBase = knowlegeBase;
-        }
 
         public Frame StartInference(Frame targetFrame)
         {
@@ -27,7 +21,6 @@ namespace ItemPlacementKnowlegeBase.Services
         private Frame DeterminateFrame(Frame frame)
         {
             var detFrame = frame.Determinate(string.Format("{0}_{1}", frame.Name, RandomString(20)));
-            KnowlegeBase.AddFrame(detFrame);
             foreach (var slot in detFrame.Slots)
             {
                 if(slot.ValueType == typeof(Frame))
@@ -43,21 +36,21 @@ namespace ItemPlacementKnowlegeBase.Services
             return detFrame;
         }
 
-        private int surfaceXIndex = 0;
-        private int surfaceYIndex = 0;
+        private int surfaceIndex = 0;
 
         private void fillFrame(string name, Frame frame)
         {
             switch(name)
             {
                 case "Поверхность": { 
-                        surfaceXIndex = surfaceYIndex = 0;
+                        surfaceIndex = 0;
                         break; 
                     }
                 case "Клетка": 
                     { 
-                        frame.GetSlot("X").SetValue((surfaceXIndex++) / 8);
-                        frame.GetSlot("Y").SetValue((surfaceYIndex++) % 8);
+                        frame.GetSlot("X").SetValue(surfaceIndex / 8);
+                        frame.GetSlot("Y").SetValue(surfaceIndex % 8);
+                        surfaceIndex++;
                         break; 
                     }
                 case "Объект":
