@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bt_add = new System.Windows.Forms.Button();
             this.bt_abort = new System.Windows.Forms.Button();
-            this.cb_base = new System.Windows.Forms.CheckBox();
             this.cb_parrent = new System.Windows.Forms.ComboBox();
             this.lb__parrent = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -75,17 +74,6 @@
             this.bt_abort.UseVisualStyleBackColor = true;
             this.bt_abort.Click += new System.EventHandler(this.Bt_abort_Click);
             // 
-            // cb_base
-            // 
-            this.cb_base.AutoSize = true;
-            this.cb_base.Location = new System.Drawing.Point(20, 38);
-            this.cb_base.Name = "cb_base";
-            this.cb_base.Size = new System.Drawing.Size(104, 17);
-            this.cb_base.TabIndex = 4;
-            this.cb_base.Text = "Базовый класс";
-            this.cb_base.UseVisualStyleBackColor = true;
-            this.cb_base.VisibleChanged += new System.EventHandler(this.Cb_base_VisibleChanged);
-            // 
             // cb_parrent
             // 
             this.cb_parrent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -113,7 +101,6 @@
             this.ClientSize = new System.Drawing.Size(259, 123);
             this.Controls.Add(this.cb_parrent);
             this.Controls.Add(this.lb__parrent);
-            this.Controls.Add(this.cb_base);
             this.Controls.Add(this.bt_abort);
             this.Controls.Add(this.bt_add);
             this.Controls.Add(this.label1);
@@ -132,7 +119,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bt_add;
         private System.Windows.Forms.Button bt_abort;
-        private System.Windows.Forms.CheckBox cb_base;
         private System.Windows.Forms.ComboBox cb_parrent;
         private System.Windows.Forms.Label lb__parrent;
     }

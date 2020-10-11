@@ -61,6 +61,12 @@
     <Compile Include="DrawControl.Designer.cs">
       <DependentUpon>DrawControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_edit_domains.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_edit_domains.Designer.cs">
+      <DependentUpon>Form_edit_domains.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_edit_frame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,10 @@
       <DependentUpon>Form_edit_slot.cs</DependentUpon>
     </Compile>
     <Compile Include="Gui\GridDrawer.cs" />
+    <Compile Include="Models\Domain.cs" />
+    <Compile Include="Models\DomainSlot.cs" />
+    <Compile Include="Models\DomainValue.cs" />
+    <Compile Include="Models\FrameSlot.cs" />
     <Compile Include="Models\KnowlegeBaseProvider.cs" />
     <Compile Include="Main_form.cs">
       <SubType>Form</SubType>
@@ -84,8 +94,10 @@
     <Compile Include="Models\Frame.cs" />
     <Compile Include="Models\KnowlegeBase.cs" />
     <Compile Include="Models\Slot.cs" />
+    <Compile Include="Models\TextSlot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DownUpReasoner.cs" />
     <Compile Include="Services\FrameWraper.cs" />
     <Compile Include="Services\KWBSerializer.cs" />
     <Compile Include="Services\RandomGenerator.cs" />

@@ -49,20 +49,20 @@ namespace ItemPlacementKnowlegeBase
         {
             if (e.IsSelected)
             {
-                cur_frame = Knowleges.GetFrame(e.Item.Text);
+                cur_frame = Knowleges[e.Item.Text];
                 lv_slots.Items.Clear();
                 gb_frame.Text = "Frame " + e.Item.Text;
-                if(Knowleges.GetFrame(e.Item.Text).ParentFrame!=null)
+                if(Knowleges[e.Item.Text].Parent!=null)
                 {
-                    gb_frame.Text += ":" + Knowleges.GetFrame(e.Item.Text).ParentFrame.Name;
+                    gb_frame.Text += ":" + Knowleges[e.Item.Text].Parent.Name;
                 }
-                var slots = Knowleges.GetFrame(e.Item.Text).Slots;
+                var slots = Knowleges[e.Item.Text].Slots;
                 foreach (var slot in slots)
                 {
                     var listItem = new ListViewItem(slot.Name);
-                    listItem.SubItems.Add(slot.ValueType.Name);
-                    if(slot.Value!=null)
-                        listItem.SubItems.Add(slot.Value.ToString());
+                    listItem.SubItems.Add(slot.TypeAsString);
+                    if(slot.ValueAsString!=null)
+                        listItem.SubItems.Add(slot.ValueAsString);
                     lv_slots.Items.Add(listItem);
                 }
                 bt_frame_delete.Enabled = true;
@@ -89,7 +89,7 @@ namespace ItemPlacementKnowlegeBase
             }
             else
             {
-                if (cur_frame.ParentFrame != null)
+                if (cur_frame.Parent != null)
                 {
                     //slot_of_parent = cur_frame.ParentFrameName.GetSlot(lv_slots.SelectedItems[0].Text) != null;
                 }
@@ -106,7 +106,7 @@ namespace ItemPlacementKnowlegeBase
             var formSlotAdd = new Form_edit_slot(Form_edit_slot.FormType.Insert);
             formSlotAdd.Knowleges_edit = Knowleges;
 
-            formSlotAdd.cur_frame = Knowleges.GetFrame(lv_frames.SelectedItems[0].Text);
+            formSlotAdd.cur_frame = Knowleges[lv_frames.SelectedItems[0].Text];
             if (formSlotAdd.ShowDialog() == DialogResult.OK)
             {
                 var slot_name = formSlotAdd.Slot_name;
@@ -125,8 +125,8 @@ namespace ItemPlacementKnowlegeBase
         {            
             var lvItem = lv_frames.SelectedItems[0];
             lv_frames.Items.Remove(lvItem);
-            var frame = Knowleges.GetFrame(lvItem.Text);
-            Knowleges.RemoveFrame(frame);
+            var frame = Knowleges[lvItem.Text];
+            Knowleges.Frames.Remove(frame);
 
             bt_frame_delete.Enabled = false;
             bt_slot_delete.Enabled = false;
@@ -140,8 +140,8 @@ namespace ItemPlacementKnowlegeBase
         {
             var lvSlotItem = lv_slots.SelectedItems[0];
             var lvFramItem = lv_frames.SelectedItems[0];
-            var frame = Knowleges.GetFrame(lvFramItem.Text);
-            frame.RemoveSlot(lvSlotItem.Text);
+            var frame = Knowleges[lvFramItem.Text];
+            frame.Slots.Remove(frame[lvSlotItem.Text]);
             lv_slots.Items.Remove(lvSlotItem);
             bt_slot_delete.Enabled = false;
             bt_slot_edit.Enabled = false;
@@ -152,9 +152,9 @@ namespace ItemPlacementKnowlegeBase
             var formSlotAdd = new Form_edit_slot(Form_edit_slot.FormType.Update);
             formSlotAdd.Knowleges_edit = Knowleges;
 
-            var cur_frame = Knowleges.GetFrame(lv_frames.SelectedItems[0].Text);
+            var cur_frame = Knowleges[lv_frames.SelectedItems[0].Text];
             formSlotAdd.cur_frame = cur_frame;
-            formSlotAdd.cur_slot = cur_frame.GetSlot(lv_slots.SelectedItems[0].Text);
+            formSlotAdd.cur_slot = cur_frame[lv_slots.SelectedItems[0].Text];
             formSlotAdd.form_type = Form_edit_slot.FormType.Update;
             int a = 0;
             if (formSlotAdd.ShowDialog() == DialogResult.OK)

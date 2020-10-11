@@ -1,131 +1,302 @@
-﻿using ItemPlacementKnowlegeBase.Services;
-using Newtonsoft.Json;
-using System;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.IO;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 
 namespace ItemPlacementKnowlegeBase.Models
 {
+    /// <summary>
+    /// Фрейм
+    /// </summary>
     [Serializable]
-    public class Frame
+    public class Frame : INotifyPropertyChanged
     {
-        [JsonIgnore]
+        private readonly List<Delegate> _serializableDelegates;
+
+        private readonly TextSlot _nameSystemSlot;
+        private readonly FrameSlot _parentSystemSlot;
+
+        public readonly string NameSlotName = "Имя";
+        public readonly string ParentSlotName = "Родитель";
+        public readonly string RecipeSlotName = "Рецепт";
+
         public bool IsBase { get; set; }
 
-        public int Id { get; set; }
+        /// <summary>
+        /// Слот по индексу
+        /// </summary>
+        /// <param name="index">Индекс</param>
+        /// <returns>Слот</returns>
+        public Slot this[int index] => Slots[index];
 
-        public string Name { get; set; }
+        /// <summary>
+        /// Слот по имени
+        /// </summary>
+        /// <param name="name">Имя слота</param>
+        /// <returns>Слот</returns>
+        public Slot this[string name] => Slots.First(s => s.Name == name);
 
-        public List<Slot> Slots { get; }
-
-        [JsonIgnore]
-        public Frame ParentFrame { get; private set; }
-
-        public int ParentFrameId { get { return ParentFrame != null ? ParentFrame.Id : 0; } }
-
-        public Frame(string name, bool isbase = false, Frame parent = null)
+        /// <summary>
+        /// Имя фрейма
+        /// </summary>
+        public string Name
         {
-            if (parent is null)
+            get => _nameSystemSlot.Text;
+            set
             {
-                Slots = new List<Slot>();
+                _nameSystemSlot.Text = value;
+                OnPropertyChanged(nameof(Name));
             }
-            //else
-            //{
-            //    if (parent.IsBase)
-            //        Slots = new List<Slot>(parent.Slots);
-            //    else
-            //        throw new ArgumentException("Фрейм может быть создан только от базового");
-            //}
-            Id = RandomGenerator.getRandomNum();
+        }
+
+        /// <summary>
+        /// Родительский фрейм
+        /// </summary>
+        public Frame Parent
+        {
+            get => _parentSystemSlot.Frame;
+            set
+            {
+                var oldParent = _parentSystemSlot.Frame;
+                if (_parentSystemSlot.Frame != null) oldParent.PropertyChanged -= ParentOnPropertyChanged;
+                _parentSystemSlot.Frame = value;
+                if (value != null) value.PropertyChanged += ParentOnPropertyChanged;
+                ProcessParentChange(oldParent, value);
+                OnPropertyChanged(nameof(Parent));
+            }
+        }
+
+        private void ParentOnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            OnPropertyChanged(nameof(Parent));
+        }
+
+        /// <summary>
+        /// Список фреймов-наследников
+        /// </summary>
+        public ObservableCollection<Frame> Children { get; }
+
+        /// <summary>
+        /// Список слотов
+        /// </summary>
+        public ObservableCollection<Slot> Slots { get; }
+        
+        public TextSlot RecipeSlot {get => Slots[2] as TextSlot;}
+
+        public Frame(string name)
+        {
+            Children = new ObservableCollection<Frame>();
+            Slots = new ObservableCollection<Slot>();
+
+            _nameSystemSlot = new TextSlot(NameSlotName, isSystemSlot: true);
+            _parentSystemSlot = new FrameSlot(ParentSlotName, isSystemSlot: true);
+
+            _nameSystemSlot.PropertyChanged += NameSystemSlotOnPropertyChanged;
+            _parentSystemSlot.PropertyChanged += ParentSystemSlotOnPropertyChanged;
+
+            Slots.Add(_nameSystemSlot);
+            Slots.Add(_parentSystemSlot);
+            Slots.Add(new TextSlot(RecipeSlotName, isSystemSlot: true));
+
             Name = name;
-            ParentFrame = parent;
-            IsBase = isbase;
+
+            Children.CollectionChanged += ChildrenOnCollectionChanged;
+            Slots.CollectionChanged += SlotsOnCollectionChanged;
+
+            _serializableDelegates = new List<Delegate>();
         }
 
-
-        public void AddSlot(string slotName, Object value, Type type)
+        public Frame(string name, bool isBase) : this(name)
         {
-            if (IsSlotExist(slotName))
-                throw new ArgumentException("Слот с таким именем уже существует");
-            if (IsBase && type == typeof(Frame))
-                if(!(value as Frame).IsBase)
-                    throw new ArgumentException("Базовый фрейм может принимать лишь базовые фреймы в качестве значений слота");
-            Slots.Add(new Slot(slotName, value, type));
+            IsBase = isBase;
         }
 
-        public void AddSlot(string slotName, Type type)
+        private void ParentSystemSlotOnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (IsSlotExist(slotName))
-                throw new ArgumentException("Слот с таким именем уже существует");
-            Slots.Add(new Slot(slotName, type));
-        }
-
-        public Slot GetSlot(string name)
-        {
-            return Slots.Find(x => x.Name.Equals(name));
-        }
-
-        public void SetSlot(Slot slot)
-        {
-            var slotIndex = Slots.FindIndex(x => x.Name == slot.Name);
-            if (slotIndex < 0)
-                Slots.Add(slot);
-            else
-                Slots[slotIndex] = slot;
-        }
-        public Frame Clone(string name)
-        {
-            if (IsSlotExist(name))
-                throw new ArgumentException("Фрейм стаким именем уже существует");
-            using (var ms = new MemoryStream())
+            if (e.PropertyName == nameof(FrameSlot.Frame))
             {
-                var formatter = new BinaryFormatter();
-                formatter.Serialize(ms, this);
-                ms.Position = 0;
-                var frame = (Frame)formatter.Deserialize(ms);
-                frame.Id = RandomGenerator.getRandomNum();
-                frame.Name = name;
-                frame.ParentFrame = this;
-
-                return frame;
+                OnPropertyChanged(nameof(Parent));
+                OnPropertyChanged(nameof(Children));
             }
         }
 
-
-        public Frame Determinate(string name) 
+        private void NameSystemSlotOnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            var frame = this.Clone(name);
-            frame.IsBase = false;
-
-            return frame;
+            if (e.PropertyName == nameof(TextSlot.Text))
+                OnPropertyChanged(nameof(Name));
         }
 
-        private bool IsSlotExist(string name)
+        public TextSlot GetNameSystemSlot() =>
+            Slots.OfType<TextSlot>().First(s => s.Name == NameSlotName && s.IsSystemSlot);
+
+        public FrameSlot GetParentSystemSlot() =>
+            Slots.OfType<FrameSlot>().First(s => s.Name == ParentSlotName && s.IsSystemSlot);
+
+        public void ReplaceSlot(Slot oldSlot, Slot newSlot)
         {
-            return Slots.Any(x => x.Name == name);
+            var oldIndex = Slots.IndexOf(oldSlot);
+            Slots.Insert(oldIndex, newSlot);
+            Slots.Remove(oldSlot);
         }
 
-        public void RemoveSlot(string slotName)
+        private void SlotsOnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            if (IsSlotExist(slotName))
-                Slots.RemoveAll(x => x.Name == slotName);
+            switch (e.Action)
+            {
+                case NotifyCollectionChangedAction.Add:
+                    foreach (var newItem in e.NewItems)
+                    {
+                        var addedSlot = newItem as Slot;
+                        ProcessAddedSlot(addedSlot);
+                    }
+
+                    break;
+                case NotifyCollectionChangedAction.Remove:
+                {
+                    foreach (var oldItem in e.OldItems)
+                    {
+                        var removedSlot = oldItem as Slot;
+                        ProcessRemovedSlot(removedSlot);
+                    }
+
+                    break;
+                }
+            }
+
+            OnPropertyChanged(nameof(Slots));
+        }
+
+        private void ProcessRemovedSlot(Slot removedSlot)
+        {
+            if (removedSlot.IsSystemSlot)
+            {
+                Slots.Add(removedSlot);
+                throw new Exception("Нельзя удалять системные слоты");
+            }
+
+            removedSlot.PropertyChanged -= FrameSlotOnPropertyChanged;
+        }
+
+        private void ProcessAddedSlot(Slot addedFrameSlot)
+        {
+            if (Slots.Count(s => ReferenceEquals(s, addedFrameSlot)) > 1)
+            {
+                Slots.Remove(addedFrameSlot);
+                throw new ArgumentException("Такой слот уже есть у этого фрейма", nameof(addedFrameSlot));
+            }
+
+            addedFrameSlot.PropertyChanged += FrameSlotOnPropertyChanged;
+        }
+
+        private void FrameSlotOnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            OnPropertyChanged(nameof(Slots));
+        }
+
+        private void ChildrenOnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            switch (e.Action)
+            {
+                case NotifyCollectionChangedAction.Add:
+                    foreach (var newItem in e.NewItems)
+                    {
+                        var addedChild = newItem as Frame;
+                        ProcessAddedChild(addedChild);
+                    }
+
+                    break;
+                case NotifyCollectionChangedAction.Remove:
+                    foreach (var oldItem in e.OldItems)
+                    {
+                        var removedChild = oldItem as Frame;
+                        ProcessRemovedChild(removedChild, e.OldItems);
+                    }
+
+                    break;
+            }
+
+            OnPropertyChanged(nameof(Children));
+        }
+
+        private void ProcessParentChange(Frame oldParent, Frame newParent)
+        {
+            if (newParent == null)
+            {
+                oldParent?.Children.Remove(this);
+            }
             else
-                throw new ArgumentException("Слота с таким именем не существует");
+            {
+                newParent.Children.Add(this);
+            }
         }
 
-        public void RemoveSlot(Slot slot)
+        private void ProcessAddedChild(Frame child)
         {
-            if (IsSlotExist(slot.Name))
-                Slots.Remove(slot);
-            else
-                throw new ArgumentException("Слота с таким именем не существует");
+            if (child == null)
+                throw new ArgumentNullException(nameof(child));
+
+            if (Children.Count(c => ReferenceEquals(c, child)) > 1)
+                throw new ArgumentException("Фрейм уже является наследником", nameof(child));
+
+            child._parentSystemSlot.Frame = this;
+            child.PropertyChanged += ChildOnPropertyChanged;
+        }
+
+        private void ChildOnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            //OnPropertyChanged(nameof(Children));
+        }
+
+        private void ProcessRemovedChild(Frame child, IList oldItems)
+        {
+            child._parentSystemSlot.Frame = null;
+            child.PropertyChanged -= ChildOnPropertyChanged;
+        }
+
+        [field: NonSerialized] public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         public override string ToString()
         {
             return Name;
+        }
+
+        [OnSerializing]
+        public void OnSerializing(StreamingContext context)
+        {
+            _serializableDelegates.Clear();
+            var handler = PropertyChanged;
+
+            if (handler != null)
+            {
+                foreach (var invocation in handler.GetInvocationList())
+                {
+                    if (invocation.Target.GetType().IsSerializable)
+                    {
+                        _serializableDelegates.Add(invocation);
+                    }
+                }
+            }
+        }
+
+        [OnDeserialized]
+        public void OnDeserialized(StreamingContext context)
+        {
+            if (_serializableDelegates == null) return;
+
+            foreach (var invocation in _serializableDelegates)
+            {
+                PropertyChanged += (PropertyChangedEventHandler) invocation;
+            }
         }
     }
 }

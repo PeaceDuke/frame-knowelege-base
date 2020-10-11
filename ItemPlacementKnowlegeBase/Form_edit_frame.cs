@@ -59,10 +59,11 @@ namespace ItemPlacementKnowlegeBase
         {
             try
             {
-                if(cb_parrent.SelectedIndex == -1)
-                    Knowleges_edit.AddFrame(tb_name.Text, cb_base.Checked);
-                else
-                    Knowleges_edit.AddFrame(tb_name.Text, cb_base.Checked, Knowleges_edit.GetFrame(cb_parrent.SelectedItem.ToString()));
+                Frame frame = new Frame(tb_name.Text);
+                if (cb_parrent.SelectedIndex != -1)
+                    frame.Parent = Knowleges_edit[cb_parrent.SelectedItem.ToString()];
+                Knowleges_edit.Frames.Add(frame);
+
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -89,19 +90,6 @@ namespace ItemPlacementKnowlegeBase
         private void Bt_abort_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void Cb_base_VisibleChanged(object sender, EventArgs e)
-        {
-            if(this.Visible==true)
-            {
-                cb_parrent.Items.Clear();
-                foreach (var frame in Knowleges_edit.Frames)
-                {
-                    if (frame.IsBase)
-                        cb_parrent.Items.Add(frame.Name);
-                }
-            }
         }
     }
 }

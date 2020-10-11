@@ -1,71 +1,133 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ItemPlacementKnowlegeBase.Models
 {
+    /// <summary>
+    /// Обобщение слота фрейма
+    /// </summary>
     [Serializable]
-    public class Slot
+    public abstract class Slot : INotifyPropertyChanged
     {
-        private List<Type> valildeTypes = new List<Type>() { typeof(int), typeof(float), typeof(string), typeof(Frame) };
+        private readonly List<Delegate> _serializableDelegates;
 
-        public string Name { get; set; }
+        private string _name;
+        private bool _isResult;
+        private bool _isSystemSlot;
+        private bool _isRequestable;
 
-        [JsonIgnore]
-        public Type ValueType { get; private set; }
+        [field: NonSerialized]
+        public event PropertyChangedEventHandler PropertyChanged;
 
-        public String Type { get { return ValueType.Name; } }
-
-        public Object Value { get; private set; }
-
-        public Slot(string name, Object value, Type type)
+        /// <summary>
+        /// Имя слота
+        /// </summary>
+        public string Name
         {
-            if (ValidateValue(value, type))
+            get => _name;
+            set
             {
-                Name = name;
-                ValueType = type;
-                Value = value;
+                _name = value;
+                OnPropertyChanged(nameof(Name));
             }
-            else
-                throw new ArgumentException("Значение не соответствует указаному типу слота");
         }
 
-        public Slot(string name, Type type)
+        /// <summary>
+        /// Является ли слот системным
+        /// </summary>
+        public bool IsSystemSlot
         {
-                Name = name;
-                ValueType = type;
-        }
-
-        public void SetValue(Object newValue)
-        {
-            if (ValidateValue(newValue, ValueType))
+            get => _isSystemSlot;
+            set
             {
-                Value = newValue;
+                _isSystemSlot = value;
+                OnPropertyChanged(nameof(IsSystemSlot));
             }
-            else
-                throw new ArgumentException("Значение не соответствует типу слота");
         }
 
-        public void SetValue(Object newValue, Type newType)
+        /// <summary>
+        /// Является ли слот запрашиваемым
+        /// </summary>
+        public bool IsRequestable
         {
-            if (ValidateValue(newValue, newType))
+            get => _isRequestable;
+            set
             {
-                ValueType = newType;
-                Value = newValue;
+                _isRequestable = value;
+                OnPropertyChanged(nameof(IsRequestable));
             }
-            else
-                throw new ArgumentException("Значение не соответствует указаному типу слота");
         }
 
-        public bool ValidateValue(Object value, Type type)
+        /// <summary>
+        /// Является ли слот результатом
+        /// </summary>
+        public bool IsResult
         {
-            if (valildeTypes.Any(x => x == type))
-                return value.GetType().Equals(type);
-            else
-                throw new ArgumentException("Данный тип не может быть использован");
+            get => _isResult;
+            set
+            {
+                _isResult = value;
+                OnPropertyChanged(nameof(IsResult));
+            }
+        }
+
+        public abstract string TypeAsString { get; }
+
+        public abstract string ValueAsString { get; }
+
+        protected Slot(string name, bool isSystemSlot = false, bool isRequestable = false, bool isResult = false)
+        {
+            Name = name;
+            IsSystemSlot = isSystemSlot;
+            IsRequestable = isRequestable;
+            IsResult = isResult;
+
+            _serializableDelegates = new List<Delegate>();
+        }
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public override string ToString()
+        {
+            return Name;
+        }
+
+        [OnSerializing]
+        public void OnSerializing(StreamingContext context)
+        {
+            _serializableDelegates.Clear();
+            var handler = PropertyChanged;
+
+            if (handler != null)
+            {
+                foreach (var invocation in handler.GetInvocationList())
+                {
+                    if (invocation.Target.GetType().IsSerializable)
+                    {
+                        _serializableDelegates.Add(invocation);
+                    }
+                }
+            }
+        }
+
+        [OnDeserialized]
+        public void OnDeserialized(StreamingContext context)
+        {
+            if (_serializableDelegates == null) return;
+
+            foreach (var invocation in _serializableDelegates)
+            {
+                PropertyChanged += (PropertyChangedEventHandler)invocation;
+            }
         }
     }
 }

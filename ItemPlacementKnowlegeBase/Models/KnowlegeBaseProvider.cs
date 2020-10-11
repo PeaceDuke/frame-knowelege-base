@@ -12,6 +12,7 @@ namespace ItemPlacementKnowlegeBase
     {
         private static KnowlegeBaseProvider instance;
         private static List<FilledCell> filledCells;
+
         private KnowlegeBaseProvider()
         {
             //тут создается база знаний, пока это просто вектор говна
