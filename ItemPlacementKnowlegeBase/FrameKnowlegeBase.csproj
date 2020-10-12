@@ -80,6 +80,7 @@
       <DependentUpon>Form_edit_slot.cs</DependentUpon>
     </Compile>
     <Compile Include="Gui\GridDrawer.cs" />
+    <Compile Include="Gui\TextureResource.cs" />
     <Compile Include="Models\Domain.cs" />
     <Compile Include="Models\DomainSlot.cs" />
     <Compile Include="Models\DomainValue.cs" />
