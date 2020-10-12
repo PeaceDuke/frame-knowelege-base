@@ -79,12 +79,15 @@
     <Compile Include="Form_edit_slot.Designer.cs">
       <DependentUpon>Form_edit_slot.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\Cell.cs" />
+    <Compile Include="Gui\Field.cs" />
     <Compile Include="Gui\GridDrawer.cs" />
+    <Compile Include="Gui\Item.cs" />
     <Compile Include="Models\Domain.cs" />
     <Compile Include="Models\DomainSlot.cs" />
     <Compile Include="Models\DomainValue.cs" />
     <Compile Include="Models\FrameSlot.cs" />
-    <Compile Include="Models\KnowlegeBaseProvider.cs" />
+    <Compile Include="Services\DummyKnowlegeBaseProvider.cs" />
     <Compile Include="Main_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +102,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DownUpReasoner.cs" />
     <Compile Include="Services\FrameWraper.cs" />
+    <Compile Include="Services\IKnowlegeBaseProvider.cs" />
+    <Compile Include="Services\KnowlegeBaseManager.cs" />
     <Compile Include="Services\KWBSerializer.cs" />
     <Compile Include="Services\RandomGenerator.cs" />
   </ItemGroup>
