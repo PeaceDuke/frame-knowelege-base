@@ -5,64 +5,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using ItemPlacementKnowlegeBase.Services;
 
-namespace ItemPlacementKnowlegeBase
+namespace ItemPlacementKnowlegeBase.Gui
 {
     class GridDrawer : IDisposable
     {
-        private int width;
-        public int Width
-        {
-            get { return width; }
-            set { width = value; initGrid(); draw(); }
-        }
-
-        private int height;
-        public int Height
-        {
-            get { return height; }
-            set { height = value; initGrid(); draw(); }
-        }
-        private int cellSize;
-        public int CellSize
-        {
-            get { return cellSize; }
-            set
-            {
-                cellSize = value;
-                initGrid();
-                defaultBitmap = createChessBoardBitmap(cellSize, 5);
-                draw();
-            }
-        }
+        public int Width { get; }
+        public int Height { get; }
+        public int CellSize { get; }
 
         PictureBox canvas;
         Label label;
-        Bitmap defaultBitmap;
 
         Pen pen = new Pen(Color.Black, 1);
         List<Line> gridLines = new List<Line>();
         Point? selectexCell = null;
         Font font = new Font(FontFamily.Families[39], 13);
-        public GridDrawer(int width, int height, int cellSize, PictureBox canvas, Label label)
+        public GridDrawer(PictureBox canvas, Label label)
         {
-            this.width = width;
-            this.height = height;
-            this.cellSize = cellSize;
+            var field = KnowlegeBaseManager.get().loadField();
+            Width = field.Width;
+            Height = field.Heigth;
+            CellSize = field.CellSize;
             this.canvas = canvas;
             this.label = label;
 
-            canvas.Width = width * cellSize + 1;
-            canvas.Height = height * cellSize + 1;
+            canvas.Width = Width * CellSize + 1;
+            canvas.Height = Height * CellSize + 1;
             canvas.MouseMove += onMouseMove;
             canvas.MouseUp += onMouseUp;
             canvas.MouseLeave += onMouseLeave;
             canvas.Resize += onResize;
 
             initGrid();
-            //create default bitmap
-            defaultBitmap = createChessBoardBitmap(cellSize, 5);
-                
             draw();
         }
 
@@ -71,45 +47,46 @@ namespace ItemPlacementKnowlegeBase
         {
             gridLines.Clear();
             //vertical lines
-            for (var w = 0; w <= width; w++)
+            for (var w = 0; w <= Width; w++)
             {
-                gridLines.Add(new Line(w * cellSize, 0, w * cellSize, height * cellSize));
+                gridLines.Add(new Line(w * CellSize, 0, w * CellSize, Height * CellSize));
             }
 
             //horizotal lines
-            for (var h = 0; h <= height; h++)
+            for (var h = 0; h <= Height; h++)
             {
-                gridLines.Add(new Line(0, h * cellSize, width * cellSize, h * cellSize));
+                gridLines.Add(new Line(0, h * CellSize, Width * CellSize, h * CellSize));
             }
         }
 
 
         private void onMouseUp(object sender, MouseEventArgs e)
         {
-            int cellX = e.X / cellSize;
-            int cellY = e.Y / cellSize;
-            var provider = KnowlegeBaseProvider.get();
+            int cellX = e.X / CellSize;
+            int cellY = e.Y / CellSize;
+            var provider = KnowlegeBaseManager.get();
             switch (e.Button)
             {
                 case MouseButtons.Left:
-                    if (Main_form.draggedData.Length != 0)
+                    if (Main_form.draggedData != null)
                     {
-                        
-                        provider.addFrame(Main_form.draggedData, cellX, cellY);
-                        Main_form.draggedData = "";
+                        Item item = Main_form.draggedData;
+                        Cell cell = new Cell(cellX, cellY, item);
+                        provider.placeItem(cell, item);
+                        Main_form.draggedData = null;
                     }
                     break;
                 case MouseButtons.Right:
-                    provider.removeFrame(cellX, cellY);                    
+                    provider.removeItem(new Cell(cellX, cellY, null));
                     break;                    
             }
         }
 
         private void onMouseMove(object sender, MouseEventArgs e)
         {
-            int x = e.X / cellSize;
-            int y = e.Y / cellSize;
-            if (0 <= x && x < width && 0 <= y && y < height)
+            int x = e.X / CellSize;
+            int y = e.Y / CellSize;
+            if (0 <= x && x < Width && 0 <= y && y < Height)
             {
                 selectexCell = new Point(x, y);
             }
@@ -135,18 +112,14 @@ namespace ItemPlacementKnowlegeBase
         {
             var buffer = new Bitmap(canvas.Width, canvas.Height);
             var graphics = Graphics.FromImage(buffer);
-            var filledCells = KnowlegeBaseProvider.get().getFramesToDraw();
+            var filledCells = KnowlegeBaseManager.get().loadField().Cells.FindAll(_cell => _cell.Item != null);
             pen.Width = 1;
 
             //draw filled cells
             foreach (var cell in filledCells)
             {
-                var bitmap = cell.bitmap;
-                if(bitmap == null)
-                {
-                    bitmap = defaultBitmap;
-                }
-                graphics.DrawImage(bitmap, cell.x * cellSize, cell.y * cellSize, cellSize, cellSize);
+                var bitmap = cell.Item.Bitmap;
+                graphics.DrawImage(bitmap, cell.X * CellSize, cell.Y * CellSize, CellSize, CellSize);
             }
 
 
@@ -171,11 +144,11 @@ namespace ItemPlacementKnowlegeBase
             if (selectexCell.HasValue)
             {
                 var value = selectexCell.Value;
-                graphics.DrawRectangle(pen, value.X * cellSize, value.Y * cellSize, cellSize, cellSize);
-                var selectedCellValue = filledCells.Find(cell => cell.x == value.X && cell.y == value.Y);
+                graphics.DrawRectangle(pen, value.X * CellSize, value.Y * CellSize, CellSize, CellSize);
+                var selectedCellValue = filledCells.Find(_cell => _cell.X == value.X && _cell.Y == value.Y);
                 if(selectedCellValue != null)
                 {
-                    label.Text = selectedCellValue.name;
+                    label.Text = selectedCellValue.Item.Name;
                 }
                 else
                 {
@@ -205,21 +178,8 @@ namespace ItemPlacementKnowlegeBase
         {
             canvas.Dispose();
             label.Dispose();
-            defaultBitmap.Dispose();
         }
 
-        private static Bitmap createChessBoardBitmap(int size, int cells)
-        {
-            var bitmap = new Bitmap(size, size);
-            var cellSize = size / cells;
-            Graphics gr = Graphics.FromImage(bitmap);
-            for (int i = 0; i <= cells; i++)
-                for (int j = 0; j <= cells; j++)
-                {
-                    var brush = (i % 2 == j % 2) ? Brushes.Red : Brushes.Yellow;
-                    gr.FillRectangle(brush, i * cellSize, j * cellSize, cellSize, cellSize);
-                }
-            return bitmap;
-        }
+        
     }
 }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ItemPlacementKnowlegeBase.Models.GUI
+namespace ItemPlacementKnowlegeBase.Gui
 {
     class Cell
     {
@@ -19,6 +19,19 @@ namespace ItemPlacementKnowlegeBase.Models.GUI
             X = x;
             Y = y;
             Item = item;
+        }
+
+        public override bool Equals(object obj)
+        {
+            Cell cell = obj as Cell;
+            if (cell == null)
+            {
+                return false;
+            }
+            else
+            {
+                return this.X == cell.X && this.Y == cell.Y && this.Item == cell.Item;
+            }
         }
     }
 }
