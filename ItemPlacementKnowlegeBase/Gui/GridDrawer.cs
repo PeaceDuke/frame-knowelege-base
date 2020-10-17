@@ -68,17 +68,39 @@ namespace ItemPlacementKnowlegeBase.Gui
             switch (e.Button)
             {
                 case MouseButtons.Left:
-                    if (Main_form.draggedData != null)
                     {
-                        Item item = Main_form.draggedData;
-                        Cell cell = new Cell(cellX, cellY, item);
-                        provider.placeItem(cell, item);
-                        Main_form.draggedData = null;
+                        if (Main_form.draggedData != null)
+                        {
+                            Item item = Main_form.draggedData;
+                            Cell cell = new Cell(cellX, cellY, item);
+                            var sucsess = provider.placeItem(cell, item);
+                            Main_form.draggedData = null;
+                            if (!sucsess)
+                            {
+                                string reasoning = "не смог поставить предмет:\n";
+                                foreach (var reason in provider.getLastReasoning())
+                                {
+                                    reasoning += reason + "\n";
+                                }
+                                MessageBox.Show(reasoning);
+                            }
+                        }
+                        break;
                     }
-                    break;
                 case MouseButtons.Right:
-                    provider.removeItem(new Cell(cellX, cellY, null));
-                    break;                    
+                    {
+                        var sucsess = provider.removeItem(new Cell(cellX, cellY, null));
+                        if (!sucsess)
+                        {
+                            string reasoning = "не смог поставить убрать предмет:\n";
+                            foreach (var reason in provider.getLastReasoning())
+                            {
+                                reasoning += reason + "\n";
+                            }
+                            MessageBox.Show(reasoning);
+                        }
+                        break;
+                    }
             }
         }
 
