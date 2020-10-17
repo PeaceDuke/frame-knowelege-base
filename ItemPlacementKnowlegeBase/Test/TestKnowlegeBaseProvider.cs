@@ -14,6 +14,7 @@ namespace ItemPlacementKnowlegeBase.Services
 
         private List<Item> items;
         private Field field;
+        private String reason;
 
         public TestKnowlegeBaseProvider()
         {
@@ -23,7 +24,7 @@ namespace ItemPlacementKnowlegeBase.Services
 
         public List<string> getLastReasoning()
         {
-            throw new NotImplementedException();
+            return new List<string>() { reason };
         }
 
         public Field loadField()
@@ -67,10 +68,17 @@ namespace ItemPlacementKnowlegeBase.Services
 
         public bool placeItem(Cell cell, Item item)
         {
-            bool result = Test.Test.CheckRule(cell.X, cell.Y, item.Name);
-            if (result)
+            string result = Test.Test.CheckRule(cell.X, cell.Y, item.Name);
+            if (result == null)
+            {
                 Test.Test.PutItem(cell.X, cell.Y, item.Name);
-            return result;
+                return true;
+            }
+            else
+            {
+                reason = result;
+                return false;
+            }
         }
 
         public bool removeItem(Cell cell)

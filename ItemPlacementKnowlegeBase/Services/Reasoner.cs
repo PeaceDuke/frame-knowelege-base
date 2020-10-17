@@ -296,6 +296,7 @@ namespace ItemPlacementKnowlegeBase.Services
             _bindingCandidate = null;
             _bindedSubframe = null;
             _resultFrame = null;
+            _askSlot = null;
         }
 
         private List<Frame> getSubFrames(Frame frame)
