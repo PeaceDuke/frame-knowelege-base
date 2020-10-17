@@ -91,7 +91,7 @@ namespace ItemPlacementKnowlegeBase.Test
                 frames[9].Slots.Add(new DomainSlot("Субъект", domains[2], domains[2][0], false, true));
                 frames[9].Slots.Add(new DomainSlot("Расположение", domains[3], domains[3][2], false, true));
                 frames[9].Slots.Add(new DomainSlot("Тип правила", domains[1], domains[1][0]));
-                frames[11].Slots.Add(new TextSlot("Объяснение", "Нельзя ставить стул справа стола"));
+                frames[9].Slots.Add(new TextSlot("Объяснение", "Нельзя ставить стул справа стола"));
                 frames[9].Parent = frames[7];
 
                 frames[10].Slots.Add(new DomainSlot("Объект", domains[2], domains[2][0], false, true));
