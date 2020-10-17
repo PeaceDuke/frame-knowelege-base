@@ -73,6 +73,10 @@ namespace ItemPlacementKnowlegeBase.Gui
                         {
                             Item item = Main_form.draggedData;
                             Cell cell = new Cell(cellX, cellY, item);
+                            if(!cellInField(cell, provider.loadField()))
+                            {
+                                break;
+                            }
                             var sucsess = provider.placeItem(cell, item);
                             Main_form.draggedData = null;
                             if (!sucsess)
@@ -89,7 +93,12 @@ namespace ItemPlacementKnowlegeBase.Gui
                     }
                 case MouseButtons.Right:
                     {
-                        var sucsess = provider.removeItem(new Cell(cellX, cellY, null));
+                        var cell = new Cell(cellX, cellY, null);
+                        if(!cellInField(cell, provider.loadField()))
+                        {
+                            break;
+                        }
+                        var sucsess = provider.removeItem(cell);
                         if (!sucsess)
                         {
                             string reasoning = "не смог поставить убрать предмет:\n";
@@ -102,6 +111,11 @@ namespace ItemPlacementKnowlegeBase.Gui
                         break;
                     }
             }
+        }
+
+        private bool cellInField(Cell cell, Field field)
+        {
+            return cell.X >= 0 && cell.X < field.Width && cell.Y >= 0 && cell.Y < field.Heigth;
         }
 
         private void onMouseMove(object sender, MouseEventArgs e)
