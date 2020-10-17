@@ -85,6 +85,7 @@
     <Compile Include="Gui\GridDrawer.cs" />
     <Compile Include="Gui\TextureResource.cs" />
     <Compile Include="Gui\Item.cs" />
+    <Compile Include="Images\ImagePathes.cs" />
     <Compile Include="Models\Domain.cs" />
     <Compile Include="Models\DomainSlot.cs" />
     <Compile Include="Models\DomainValue.cs" />
@@ -141,7 +142,19 @@
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\carpet.jpg" />
+    <Content Include="Images\chest.jpg" />
+    <Content Include="Images\closet.jpg" />
+    <Content Include="Images\commode.jpg" />
+    <Content Include="Images\freezer.jpg" />
+    <Content Include="Images\lamp.jpg" />
+    <Content Include="Images\lamp2.jpg" />
+    <Content Include="Images\picture.jpg" />
+    <Content Include="Images\picture2.jpg" />
+    <Content Include="Images\shelf.jpg" />
+    <Content Include="Images\table.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

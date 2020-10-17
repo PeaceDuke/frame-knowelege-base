@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ItemPlacementKnowlegeBase.Services;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -13,7 +14,7 @@ namespace ItemPlacementKnowlegeBase.Gui
 {
     class TextureResource
     {
-        private int size = 60;
+        private int size = KnowlegeBaseManager.get().loadField().CellSize;
         //private static TextureResource instance;
 
         private static List<TextureResource> listRes = new List<TextureResource>();
@@ -36,7 +37,7 @@ namespace ItemPlacementKnowlegeBase.Gui
 
         public int TextureId { get; set; }
 
-        public static TextureResource getInstanse(string name)
+        public static TextureResource get(string name)
         {
             if (listRes.Find(x => x.Name == name) == null)
             {

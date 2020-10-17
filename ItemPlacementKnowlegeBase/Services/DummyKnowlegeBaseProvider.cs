@@ -6,25 +6,37 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ItemPlacementKnowlegeBase.Images;
 
 namespace ItemPlacementKnowlegeBase.Services
 {
     class DummyKnowlegeBaseProvider : IKnowlegeBaseProvider
     {
-        private static List<Item> items = new List<Item>();
+        private static List<Item> items = null;
         private Field field;
 
         public DummyKnowlegeBaseProvider()
         {
             //тут создается база знаний
-            field = new Field(21, 10, 32);
-            items.Add(new Item("предмет 1", createChessBoardBitmap(32, 8, Brushes.Red, Brushes.Yellow)));
-            items.Add(new Item("предмет 2", createChessBoardBitmap(32, 8, Brushes.White, Brushes.Black)));
-            items.Add(new Item("предмет 3", createChessBoardBitmap(32, 8, Brushes.Green, Brushes.Blue)));
+            field = new Field(10, 4, 80);
         }
 
         public List<Item> loadItems()
         {
+            if (items == null)
+            {
+                items = new List<Item>();
+                items.Add(new Item("chest", TextureResource.get(ImagePathes.CHEST).Source));
+                items.Add(new Item("closet", TextureResource.get(ImagePathes.CLOSET).Source));
+                items.Add(new Item("commode", TextureResource.get(ImagePathes.COMMODE).Source));
+                items.Add(new Item("freezer", TextureResource.get(ImagePathes.FREEZER).Source));
+                items.Add(new Item("lamp1", TextureResource.get(ImagePathes.LAMP1).Source));
+                items.Add(new Item("lamp2", TextureResource.get(ImagePathes.LAMP2).Source));
+                items.Add(new Item("picture1", TextureResource.get(ImagePathes.PICTURE1).Source));
+                items.Add(new Item("picture2", TextureResource.get(ImagePathes.PICTURE2).Source));
+                items.Add(new Item("shelf", TextureResource.get(ImagePathes.SHELF).Source));
+                items.Add(new Item("table", TextureResource.get(ImagePathes.TABLE).Source));
+            }
             return items;
         }
         public bool removeItem(Cell cell)
