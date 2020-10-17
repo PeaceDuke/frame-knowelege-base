@@ -16,9 +16,9 @@ namespace ItemPlacementKnowlegeBase
     {
         static void Main(string[] args)
         {
-            //Application.Run(new Main_form());
+            Application.Run(new Main_form());
 
-            Test.Test.Do();
+            //Test.Test.Do();
         }
     }
 }

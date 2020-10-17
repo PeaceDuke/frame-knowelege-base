@@ -8,12 +8,12 @@ namespace ItemPlacementKnowlegeBase.Services
 {
     class KnowlegeBaseManager
     {
-        private static DummyKnowlegeBaseProvider instance;
+        private static TestKnowlegeBaseProvider instance;
 
         public static IKnowlegeBaseProvider get()
         {
             if (instance == null)
-                instance = new DummyKnowlegeBaseProvider();
+                instance = new TestKnowlegeBaseProvider();
 
             return instance;
         }

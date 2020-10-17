@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ItemPlacementKnowlegeBase.Gui;
 using ItemPlacementKnowlegeBase.Models;
 using ItemPlacementKnowlegeBase.Services;
 
@@ -121,91 +122,51 @@ namespace ItemPlacementKnowlegeBase.Test
 
         private static Reasoner reasoner = new Reasoner(TestFrameModel);
 
+        private static bool inited = false;
+
         public static Frame GetFieldFrame()
         {
             Frame fieldFrame = reasoner.GetFrame("Поле");
-            Frame cellFrame = reasoner.GetFrame("Клетка");
-            Frame emptyItem = reasoner.GetFrame("Пустота");
-            int h = int.Parse(fieldFrame["Высота"].ValueAsString);
-            int w = int.Parse(fieldFrame["Ширина"].ValueAsString);
-            Frame floor = new Frame("Пол");
-            foreach (Slot slot in fieldFrame.Slots)
-                if (!slot.IsSystemSlot)
-                    floor.Slots.Add(slot);
-            floor.Slots.Add(new DomainSlot("Место", domains[0], domains[0][0], false, true));
-            floor.Parent = fieldFrame;
-            reasoner.AddFrame(floor);
-            Frame floorCell = new Frame("Клетка пола");
-            floorCell.Slots.Add(new FrameSlot("Место", floor, false, true));
-            floorCell.Parent = cellFrame;
-            List<Frame> cellFrames = new List<Frame>();
-            Domain domain = new Domain("Числа");
-            int max = h > w ? h : w;
-            for (int i = 0; i < max; i++)
-                domain.Values.Add(new DomainValue(i.ToString()));
-            reasoner.AddDomain(domain);
-            for (int i = 0; i < h; i++)
-                for (int j = 0; j < w; j++)
-                {
-                    string name = "Клетка" + i + ":" + j;
-                    Frame newCellFrame = new Frame(name);
-                    newCellFrame.Slots.Add(new DomainSlot("X", domain, domain[i], false, true));
-                    newCellFrame.Slots.Add(new DomainSlot("Y", domain, domain[j], false, true));
-                    Frame leftFrame = j > 0 ? cellFrames[i * h + j - 1] : null;
-                    Frame upFrame = i > 0 ? cellFrames[(i - 1) * h + j] : null;
-                    if(leftFrame != null)
+            if(!inited)
+            {
+                Frame cellFrame = reasoner.GetFrame("Клетка");
+                Frame emptyItem = reasoner.GetFrame("Пустота");
+                int h = int.Parse(fieldFrame["Высота"].ValueAsString);
+                int w = int.Parse(fieldFrame["Ширина"].ValueAsString);
+                List<Frame> cellFrames = new List<Frame>();
+                Domain domain = new Domain("Числа");
+                int max = h > w ? h : w;
+                for (int i = 0; i < max; i++)
+                    domain.Values.Add(new DomainValue(i.ToString()));
+                reasoner.AddDomain(domain);
+                for (int i = 0; i < h; i++)
+                    for (int j = 0; j < w; j++)
                     {
-                        newCellFrame.Slots.Add(new FrameSlot("Слева", leftFrame));
-                        leftFrame.Slots.Add(new FrameSlot("Справа", newCellFrame));
+                        string name = "Клетка" + i + ":" + j;
+                        Frame newCellFrame = new Frame(name);
+                        newCellFrame.Slots.Add(new DomainSlot("X", domain, domain[i], false, true));
+                        newCellFrame.Slots.Add(new DomainSlot("Y", domain, domain[j], false, true));
+                        Frame leftFrame = j > 0 ? cellFrames[i * h + j - 1] : null;
+                        Frame upFrame = i > 0 ? cellFrames[(i - 1) * h + j] : null;
+                        if (leftFrame != null)
+                        {
+                            newCellFrame.Slots.Add(new FrameSlot("Слева", leftFrame));
+                            leftFrame.Slots.Add(new FrameSlot("Справа", newCellFrame));
+                        }
+                        if (upFrame != null)
+                        {
+                            newCellFrame.Slots.Add(new FrameSlot("Выше", upFrame));
+                            upFrame.Slots.Add(new FrameSlot("Ниже", newCellFrame));
+                        }
+                        newCellFrame.Slots.Add(new FrameSlot("Предмет", emptyItem));
+                        newCellFrame.Parent = cellFrame;
+                        fieldFrame.Slots.Add(new FrameSlot(name, newCellFrame));
+                        cellFrames.Add(newCellFrame);
+                        reasoner.AddFrame(newCellFrame);
                     }
-                    if(upFrame != null)
-                    {
-                        newCellFrame.Slots.Add(new FrameSlot("Выше", upFrame));
-                        upFrame.Slots.Add(new FrameSlot("Ниже", newCellFrame));
-                    }
-                    newCellFrame.Slots.Add(new FrameSlot("Предмет", emptyItem));
-                    newCellFrame.Parent = floorCell;
-                    floor.Slots.Add(new FrameSlot(name, newCellFrame));
-                    cellFrames.Add(newCellFrame);
-                    reasoner.AddFrame(newCellFrame);
-                }
-            Frame cealing = new Frame("Пол");
-            foreach (Slot slot in fieldFrame.Slots)
-                if (!slot.IsSystemSlot)
-                    cealing.Slots.Add(slot);
-            cealing.Slots.Add(new DomainSlot("Место", domains[0], domains[0][0], false, true));
-            cealing.Parent = fieldFrame;
-            reasoner.AddFrame(cealing);
-            Frame cealingCell = new Frame("Клетка пола");
-            cealingCell.Slots.Add(new FrameSlot("Место", floor, false, true));
-            cealingCell.Parent = cellFrame;
-            cellFrames = new List<Frame>();
-            for (int i = 0; i < h; i++)
-                for (int j = 0; j < w; j++)
-                {
-                    string name = "Клетка" + i + ":" + j;
-                    Frame newCellFrame = new Frame(name);
-                    newCellFrame.Slots.Add(new DomainSlot("X", domain, domain[i], false, true));
-                    newCellFrame.Slots.Add(new DomainSlot("Y", domain, domain[j], false, true));
-                    Frame leftFrame = j > 0 ? cellFrames[i * h + j - 1] : null;
-                    Frame upFrame = i > 0 ? cellFrames[(i - 1) * h + j] : null;
-                    if(leftFrame != null)
-                    {
-                        newCellFrame.Slots.Add(new FrameSlot("Слева", leftFrame));
-                        leftFrame.Slots.Add(new FrameSlot("Справа", newCellFrame));
-                    }
-                    if(upFrame != null)
-                    {
-                        newCellFrame.Slots.Add(new FrameSlot("Выше", upFrame));
-                        upFrame.Slots.Add(new FrameSlot("Ниже", newCellFrame));
-                    }
-                    newCellFrame.Slots.Add(new FrameSlot("Предмет", emptyItem));
-                    newCellFrame.Parent = cealingCell;
-                    cealing.Slots.Add(new FrameSlot(name, newCellFrame));
-                    cellFrames.Add(newCellFrame);
-                    reasoner.AddFrame(newCellFrame);
-                }
-            return floor;
+                inited = true;
+            }
+            return fieldFrame;
         }
 
         public static List<Frame> GetItemFrameList()
@@ -213,22 +174,143 @@ namespace ItemPlacementKnowlegeBase.Test
             return reasoner.GetAllSubFrames("Предмет");
         }
 
-        public static bool GetRuleFrame()
+        public static bool CheckRule(int x, int y, string itemName)
         {
-            Frame eventFrame = reasoner.GetFrame("Событие");
+            reasoner.Clear();
+            DomainValue answer = null;
 
             while (true)
             {
-                var slot = reasoner.test(eventFrame);
-                if (slot == null)
+                var answerSlot = reasoner.GetNextValueToAsk();
+                if (answerSlot == null)
                     break;
-                Console.WriteLine(slot + "?");
-                Console.WriteLine(String.Join(", ", slot.Domain.Values.Select(x => x.Text)));
-                var valId = int.Parse(Console.ReadLine());
-                reasoner.SetAnswer(slot.Domain.Values[valId]);
+                switch (answerSlot.Name)
+                {
+                    case "X":
+                        answer = answerSlot.Domain[x];
+                        break;
+                    case "Y":
+                        answer = answerSlot.Domain[y];
+                        break;
+
+                }
+                if (answer == null)
+                    throw new Exception("Ответ не найден");
+                reasoner.SetAnswer(answer);
             }
-            Console.WriteLine();
+
+            Frame cellFrame = reasoner.GetAnswer();
+
+            if (cellFrame == null)
+                throw new Exception("Клетка не найдена");
+
+            Frame eventFrame = reasoner.GetFrame("Правило");
+
+            foreach (Slot slot in cellFrame.Slots)
+            {
+                if (slot.IsSystemSlot || slot.Name == "Предмет")
+                    continue;
+                while (true)
+                {
+                    var answerSlot = reasoner.test(eventFrame);
+                    if (answerSlot == null)
+                        break;
+                    switch (answerSlot.Name)
+                    {
+                        case "Объект":
+                            answer = answerSlot.Domain[itemName];
+                            break;
+                        case "Субъект":
+                            answer = answerSlot.Domain[cellFrame["Предмет"].Name];
+                            break;
+                        case "Расположение":
+                            answer = answerSlot.Domain[slot.Name];
+                            break;
+
+                    }
+                    reasoner.SetAnswer(answer);
+                }
+                if (reasoner.AnswerFound)
+                    return true;
+            }    
             return false;
+        }
+
+        public static void RemoveItem(int x, int y)
+        {
+            DomainValue answer = null;
+
+            while (true)
+            {
+                var answerSlot = reasoner.GetNextValueToAsk();
+                if (answerSlot == null)
+                    break;
+                switch (answerSlot.Name)
+                {
+                    case "X":
+                        answer = answerSlot.Domain[x];
+                        break;
+                    case "Y":
+                        answer = answerSlot.Domain[y];
+                        break;
+
+                }
+                if (answer == null)
+                    throw new Exception("Ответ не найден");
+                reasoner.SetAnswer(answer);
+            }
+
+            Frame cellFrame = reasoner.GetAnswer();
+
+            if (cellFrame == null)
+                throw new Exception("Клетка не найдена");
+
+            FrameSlot cellItemslot = (FrameSlot)cellFrame["Предмет"];
+
+            Frame emptyItem = reasoner.GetFrame("Пустота");
+            cellItemslot.Frame = emptyItem;
+        }
+
+        public static void PutItem(int x, int y, string itemName)
+        {
+            DomainValue answer = null;
+
+            while (true)
+            {
+                var answerSlot = reasoner.GetNextValueToAsk();
+                if (answerSlot == null)
+                    break;
+                switch (answerSlot.Name)
+                {
+                    case "X":
+                        answer = answerSlot.Domain[x];
+                        break;
+                    case "Y":
+                        answer = answerSlot.Domain[y];
+                        break;
+
+                }
+                if (answer == null)
+                    throw new Exception("Ответ не найден");
+                reasoner.SetAnswer(answer);
+            }
+
+            Frame cellFrame = reasoner.GetAnswer();
+
+            if (cellFrame == null)
+                throw new Exception("Клетка не найдена");
+
+            FrameSlot cellItemslot = (FrameSlot)cellFrame["Предмет"];
+
+            Frame item = reasoner.GetFrame(itemName);
+            if(item == null)
+                throw new Exception("Предмет не найден");
+            cellItemslot.Frame = item;
+        }
+
+        public static List<Frame> getReasoning()
+        {
+            return reasoner.GetInferringPath();
         }
 
 

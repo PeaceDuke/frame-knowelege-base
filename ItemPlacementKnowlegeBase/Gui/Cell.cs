@@ -12,7 +12,13 @@ namespace ItemPlacementKnowlegeBase.Gui
             //координаты в сетке. (0,0) - левый верхний угол
         public int X { get; }
         public int Y { get; }
-        public Item Item { get; }
+        public Item Item { get; set; }
+
+        public Cell(int x, int y)
+        {
+            X = x;
+            Y = y;
+        }
 
         public Cell(int x, int y, Item item)
         {

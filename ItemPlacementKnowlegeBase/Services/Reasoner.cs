@@ -215,7 +215,7 @@ namespace ItemPlacementKnowlegeBase.Services
                         {
                             foreach (var slot in _bindingStack.Last().Slots)
                             {
-                                if (slot is FrameSlot && !slot.IsSystemSlot)
+                                if (slot is FrameSlot && !slot.IsSystemSlot && slot.IsRequestable)
                                 {
                                     _bindedSubframe = (slot as FrameSlot).Frame;
                                     break;
@@ -281,6 +281,11 @@ namespace ItemPlacementKnowlegeBase.Services
         public void AddDomain(Domain domain)
         {
             _model.Domains.Add(domain);
+        }
+
+        public Domain GetDomain(string domainName)
+        {
+            return _model.Domains.Where(x => x.Name == domainName).First();
         }
 
         public void Clear()
