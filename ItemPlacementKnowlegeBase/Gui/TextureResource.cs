@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ItemPlacementKnowlegeBase.Images;
+using ItemPlacementKnowlegeBase.Services;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -13,7 +15,7 @@ namespace ItemPlacementKnowlegeBase.Gui
 {
     class TextureResource
     {
-        private int size = 60;
+        private int size = KnowlegeBaseManager.get().loadField().CellSize;
         //private static TextureResource instance;
 
         private static List<TextureResource> listRes = new List<TextureResource>();
@@ -36,7 +38,7 @@ namespace ItemPlacementKnowlegeBase.Gui
 
         public int TextureId { get; set; }
 
-        public static TextureResource getInstanse(string name)
+        public static TextureResource get(string name)
         {
             if (listRes.Find(x => x.Name == name) == null)
             {
@@ -102,7 +104,7 @@ namespace ItemPlacementKnowlegeBase.Gui
             int checkFile = FileIsOk(source);
             if (checkFile == 1)
             {
-                this.Source = ResizeImage(new Bitmap(this.Name + ".jpg"),  size, size);
+                this.Source = ResizeImage(new Bitmap(ImagePathes.PREFIX + this.Name + ".jpg"),  size, size);
                 Console.WriteLine("Image loaded");
             }
             else
@@ -127,10 +129,12 @@ namespace ItemPlacementKnowlegeBase.Gui
         {
             if(this.Source != null)
                 this.Source.Dispose();
-            int checkFile = FileIsOk(this.Name+".jpg");
+
+            string fullFilename = ImagePathes.PREFIX + this.Name + ".jpg";
+            int checkFile = FileIsOk(fullFilename);
             if (checkFile == 1)
             {
-                this.Source = ResizeImage( new Bitmap(this.Name + ".jpg"), size, size);
+                this.Source = ResizeImage( new Bitmap(fullFilename), size, size);
                 Console.WriteLine("Image loaded");
             }
             else

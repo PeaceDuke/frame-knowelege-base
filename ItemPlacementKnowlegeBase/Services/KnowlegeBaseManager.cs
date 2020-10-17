@@ -8,7 +8,7 @@ namespace ItemPlacementKnowlegeBase.Services
 {
     class KnowlegeBaseManager
     {
-        private static TestKnowlegeBaseProvider instance;
+        private static IKnowlegeBaseProvider instance;
 
         public static IKnowlegeBaseProvider get()
         {
