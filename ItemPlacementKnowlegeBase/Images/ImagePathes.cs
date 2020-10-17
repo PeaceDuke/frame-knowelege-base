@@ -8,16 +8,16 @@ namespace ItemPlacementKnowlegeBase.Images
 {
     class ImagePathes
     {
-        private const string prefix     = "D:\\Projects\\frame-knowelege-base\\ItemPlacementKnowlegeBase\\Images\\";
-        public const string CHEST       = prefix + "chest";
-        public const string CLOSET      = prefix + "closet";
-        public const string COMMODE     = prefix + "commode";
-        public const string FREEZER     = prefix + "freezer";
-        public const string LAMP1       = prefix + "lamp";
-        public const string LAMP2       = prefix + "lamp2";
-        public const string PICTURE1    = prefix + "picture";
-        public const string PICTURE2    = prefix + "picture2";
-        public const string SHELF       = prefix + "shelf";
-        public const string TABLE       = prefix + "table";
+        public const string PREFIX      = "..\\..\\Images\\";
+        public const string CHEST       = PREFIX + "chest";
+        public const string CLOSET      = PREFIX + "closet";
+        public const string COMMODE     = PREFIX + "commode";
+        public const string FREEZER     = PREFIX + "freezer";
+        public const string LAMP1       = PREFIX + "lamp";
+        public const string LAMP2       = PREFIX + "lamp2";
+        public const string PICTURE1    = PREFIX + "picture";
+        public const string PICTURE2    = PREFIX + "picture2";
+        public const string SHELF       = PREFIX + "shelf";
+        public const string TABLE       = PREFIX + "table";
     }
 }

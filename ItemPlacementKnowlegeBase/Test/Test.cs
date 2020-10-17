@@ -29,7 +29,7 @@ namespace ItemPlacementKnowlegeBase.Test
             {
                 new DomainValue("Стол"),
                 new DomainValue("Стул"),
-                new DomainValue("Горшок"),
+                new DomainValue("Картина"),
             }),
             new Domain("Расположение", new[]
             {
@@ -50,7 +50,7 @@ namespace ItemPlacementKnowlegeBase.Test
                     new Frame("Напольный предмет"),
                     new Frame("Стол"),
                     new Frame("Стул"),
-                    new Frame("Горшок"),
+                    new Frame("Картина"),
                     new Frame("Поле"),
                     new Frame("Клетка"),
                     new Frame("Правило"),
@@ -68,17 +68,17 @@ namespace ItemPlacementKnowlegeBase.Test
 
                 frames[2].Slots.Add(new DomainSlot("Предмет", domains[2], domains[2][0]));
                 frames[2].Slots.Add(new TextSlot("Цвет", "#000000"));
-                frames[2].Slots.Add(new TextSlot("Изображение", "/path/to/image"));
+                frames[2].Slots.Add(new TextSlot("Изображение", "table"));
                 frames[2].Parent = frames[1];
 
                 frames[3].Slots.Add(new DomainSlot("Предмет", domains[2], domains[2][1]));
                 frames[3].Slots.Add(new TextSlot("Цвет", "#FFFFFF"));
-                frames[3].Slots.Add(new TextSlot("Изображение", "/path/to/image"));
+                frames[3].Slots.Add(new TextSlot("Изображение", "chair"));
                 frames[3].Parent = frames[1];
 
                 frames[4].Slots.Add(new DomainSlot("Предмет", domains[2], domains[2][2]));
                 frames[4].Slots.Add(new TextSlot("Цвет", "#111111"));
-                frames[4].Slots.Add(new TextSlot("Изображение", "/path/to/image"));
+                frames[4].Slots.Add(new TextSlot("Изображение", "picture"));
                 frames[4].Parent = frames[1];
 
                 frames[5].Slots.Add(new TextSlot("Высота", "10"));

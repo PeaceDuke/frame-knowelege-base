@@ -1,4 +1,5 @@
-﻿using ItemPlacementKnowlegeBase.Services;
+﻿using ItemPlacementKnowlegeBase.Images;
+using ItemPlacementKnowlegeBase.Services;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -103,7 +104,7 @@ namespace ItemPlacementKnowlegeBase.Gui
             int checkFile = FileIsOk(source);
             if (checkFile == 1)
             {
-                this.Source = ResizeImage(new Bitmap(this.Name + ".jpg"),  size, size);
+                this.Source = ResizeImage(new Bitmap(ImagePathes.PREFIX + this.Name + ".jpg"),  size, size);
                 Console.WriteLine("Image loaded");
             }
             else
@@ -128,10 +129,12 @@ namespace ItemPlacementKnowlegeBase.Gui
         {
             if(this.Source != null)
                 this.Source.Dispose();
-            int checkFile = FileIsOk(this.Name+".jpg");
+
+            string fullFilename = ImagePathes.PREFIX + this.Name + ".jpg";
+            int checkFile = FileIsOk(fullFilename);
             if (checkFile == 1)
             {
-                this.Source = ResizeImage( new Bitmap(this.Name + ".jpg"), size, size);
+                this.Source = ResizeImage( new Bitmap(fullFilename), size, size);
                 Console.WriteLine("Image loaded");
             }
             else

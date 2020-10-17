@@ -59,7 +59,8 @@ namespace ItemPlacementKnowlegeBase.Services
             {
                 if (frame.Name == "Пустота")
                     continue;
-                items.Add(new Item(frame.Name, createChessBoardBitmap(32, 8, Brushes.Black, new SolidBrush(ColorTranslator.FromHtml(frame["Цвет"].ValueAsString)))));
+                var picture = TextureResource.get(frame["Изображение"].ValueAsString).Source;
+                items.Add(new Item(frame.Name,  picture));
             }
 
             return items;
