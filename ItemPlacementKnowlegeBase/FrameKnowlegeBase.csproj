@@ -43,6 +43,7 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -88,6 +89,7 @@
     <Compile Include="Models\DomainSlot.cs" />
     <Compile Include="Models\DomainValue.cs" />
     <Compile Include="Models\FrameSlot.cs" />
+    <Compile Include="Test\TestKnowlegeBaseProvider.cs" />
     <Compile Include="Services\DummyKnowlegeBaseProvider.cs" />
     <Compile Include="Main_form.cs">
       <SubType>Form</SubType>
@@ -101,12 +103,13 @@
     <Compile Include="Models\TextSlot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\DownUpReasoner.cs" />
+    <Compile Include="Services\Reasoner.cs" />
     <Compile Include="Services\FrameWraper.cs" />
     <Compile Include="Services\IKnowlegeBaseProvider.cs" />
     <Compile Include="Services\KnowlegeBaseManager.cs" />
     <Compile Include="Services\KWBSerializer.cs" />
     <Compile Include="Services\RandomGenerator.cs" />
+    <Compile Include="Test\Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
@@ -138,6 +141,7 @@
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

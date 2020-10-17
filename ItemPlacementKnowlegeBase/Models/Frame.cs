@@ -23,7 +23,6 @@ namespace ItemPlacementKnowlegeBase.Models
 
         public readonly string NameSlotName = "Имя";
         public readonly string ParentSlotName = "Родитель";
-        public readonly string RecipeSlotName = "Рецепт";
 
         public bool IsBase { get; set; }
 
@@ -101,7 +100,6 @@ namespace ItemPlacementKnowlegeBase.Models
 
             Slots.Add(_nameSystemSlot);
             Slots.Add(_parentSystemSlot);
-            Slots.Add(new TextSlot(RecipeSlotName, isSystemSlot: true));
 
             Name = name;
 

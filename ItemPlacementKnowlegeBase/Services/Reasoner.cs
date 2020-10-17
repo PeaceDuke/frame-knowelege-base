@@ -5,10 +5,9 @@ using ItemPlacementKnowlegeBase.Models;
 
 namespace ItemPlacementKnowlegeBase.Services
 {
-    public class DownUpReasoner
+    public class Reasoner
     {
         private readonly KnowlegeBase _model;
-        private readonly IEnumerable<string> _goalSlotNames;
         private Dictionary<String, DomainValue> _memory = new Dictionary<string, DomainValue>();
 
         private Frame _bindingCandidate = null;
@@ -20,12 +19,9 @@ namespace ItemPlacementKnowlegeBase.Services
         private Frame _bindedSubframe = null;
         private Frame _resultFrame;
 
-        private List<Frame> Candidates = new List<Frame>();
-
-        public DownUpReasoner(KnowlegeBase model, IEnumerable<String> goalSlotNames)
+        public Reasoner(KnowlegeBase model)
         {
             _model = model;
-            _goalSlotNames = goalSlotNames;
         }
 
         public bool AnswerFound { get => _bindedSubframe != null && _resultFrame != null; }
@@ -79,7 +75,7 @@ namespace ItemPlacementKnowlegeBase.Services
                 }
 
                 var topFrameSlotsSuits = CheckSlotsSuits(_bindingStack.Peek());
-                Console.WriteLine("Top frame " + _bindingStack.Peek().Name + " " +  (topFrameSlotsSuits));
+                Console.WriteLine("Top frame " + _bindingStack.Peek().Name + " " + (topFrameSlotsSuits));
                 if (topFrameSlotsSuits == true)
                 {
                     _bindedFrames[_bindingStack.Peek()] = true;
@@ -110,14 +106,12 @@ namespace ItemPlacementKnowlegeBase.Services
                     if (slot.IsRequestable)
                     {
                         _askSlot = slot;
-                        return (DomainSlot) _askSlot;
+                        return (DomainSlot)_askSlot;
                     }
 
                     _memory[slot.Name] = (slot as DomainSlot).Value;
                 }
             }
-
-            return null;
         }
 
         private Frame GetCandidateFrame(Frame subframe)
@@ -148,7 +142,7 @@ namespace ItemPlacementKnowlegeBase.Services
             }
             else
             {
-                
+
                 var subframes = new List<FrameSlot>();
 
                 foreach (var frame in _model.Frames)
@@ -156,19 +150,160 @@ namespace ItemPlacementKnowlegeBase.Services
                     subframes.AddRange(frame.Slots.Where(x => x is FrameSlot && !x.IsSystemSlot)
                         .Select(x => x as FrameSlot));
                 }
-               
+
                 var suitFrames = subframes.Where(x => CheckSlotsSuits(x.Frame) == true && !_bindedFrames.ContainsKey(x.Frame));
                 if (suitFrames.Count() != 0)
                     return suitFrames.First()?.Frame;
                 var unusedFrames = subframes.Where(x => CheckSlotsSuits(x.Frame) == null && !_bindedFrames.ContainsKey(x.Frame));
                 return unusedFrames.FirstOrDefault()?.Frame;
             }
-            
+
+        }
+
+        public DomainSlot test(Frame f)
+        {
+            if (_bindingCandidate == null)
+            {
+                _bindingCandidate = f;
+                Console.WriteLine("First candidate is ", _bindingCandidate.Name);
+
+                _bindingStack.Push(_bindingCandidate);
+            }
+
+            while (true)
+            {
+                if (_bindingStack.Count == 0)
+                {
+                    if (_bindedSubframe != null)
+                    {
+                        Console.WriteLine("Subframe bound " + _bindedSubframe.Name);
+                        var cand = GetCandidateFrame(_bindedSubframe);
+                        if (cand == null)
+                        {
+                            Console.WriteLine("Candidate not found");
+                            return null;
+                        }
+                        Console.WriteLine("Next candidate is " + cand.Name);
+                        _bindingStack.Push(cand);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Subframe not bound. Go to next candidate");
+                        var cand = GetCandidateFrame(null);
+                        if (cand == null)
+                        {
+                            Console.WriteLine("Candidate not found");
+                            return null;
+                        }
+                        Console.WriteLine("Next candidate is " + cand.Name);
+                        _bindingStack.Push(cand);
+                    }
+
+                    continue;
+                }
+
+                var topFrameSlotsSuits = CheckSlotsSuits(_bindingStack.Peek());
+                Console.WriteLine("Top frame " + _bindingStack.Peek().Name + " " + (topFrameSlotsSuits));
+                if (topFrameSlotsSuits == true)
+                {
+                    _bindedFrames[_bindingStack.Peek()] = true;
+                    if (_bindingStack.Peek().Parent != null)
+                        _bindingStack.Push(_bindingStack.Peek().Parent);
+                    else
+                    {
+                        if (_bindedSubframe == null)
+                        {
+                            foreach (var slot in _bindingStack.Last().Slots)
+                            {
+                                if (slot is FrameSlot && !slot.IsSystemSlot)
+                                {
+                                    _bindedSubframe = (slot as FrameSlot).Frame;
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                            _resultFrame = _bindingStack.Last();
+                        _bindingStack.Clear();
+                    }
+                }
+                else if (topFrameSlotsSuits == false)
+                {
+                    _bindedFrames[_bindingStack.Last()] = false;
+                    foreach (var frame in _bindingStack)
+                    {
+                        _bindedFrames[frame] = false;
+                    }
+
+                    _bindingStack.Clear();
+                }
+                else
+                {
+                    var slot = FindFirstSlotToAsk(_bindingStack.Peek());
+                    if (slot.IsRequestable)
+                    {
+                        _askSlot = slot;
+                        return (DomainSlot)_askSlot;
+                    }
+
+                    _memory[slot.Name] = (slot as DomainSlot).Value;
+                }
+            }
+        }
+
+        public List<Frame> GetAllSubFrames(string frameName)
+        {
+            List<Frame> frames = new List<Frame>();
+            Frame frame = _model[frameName];
+            if (frame != null)
+                frames.AddRange(getSubFrames(frame));
+            return frames;
+        }
+
+        public Frame GetFrame(string frameName)
+        {
+            Frame frame = _model[frameName];
+            if (frame != null)
+                return frame;
+            return null;
         }
 
         public void SetAnswer(DomainValue value)
         {
             _memory[_askSlot.Name] = value;
+        }
+
+        public void AddFrame(Frame frame)
+        {
+            _model.Frames.Add(frame);
+        }
+
+        public void AddDomain(Domain domain)
+        {
+            _model.Domains.Add(domain);
+        }
+
+        public void Clear()
+        {
+            _memory.Clear();
+            _bindingStack.Clear();
+            _bindedFrames.Clear();
+            _bindingCandidate = null;
+            _bindedSubframe = null;
+            _resultFrame = null;
+        }
+
+        private List<Frame> getSubFrames(Frame frame)
+        {
+            List<Frame> frames = new List<Frame>();
+            foreach (Frame f in frame.Children)
+            {
+                frames.AddRange(getSubFrames(f));
+                if (f.Children.Count == 0)
+                    frames.Add(f);
+            }
+            return frames;
+
         }
 
         private Slot FindFirstSlotToAsk(Frame frame)
@@ -188,29 +323,19 @@ namespace ItemPlacementKnowlegeBase.Services
         public Frame GetAnswer()
         {
             var result = _resultFrame;
-            while (result != null && result.Parent != null)
-                result = result.Parent;
+            //while (result != null && result.Parent != null)
+            //    result = result.Parent;
             if (result != null)
                 return result;
-            
-            if (_bindedSubframe != null)
-                return _bindedSubframe; // must not happen
+
             return null;
         }
-        
+
         public List<Frame> GetInferringPath()
         {
             var selectedFrames = new List<Frame>();
-            var result = _resultFrame;
-            
-            while (result != null)
-            {
-                selectedFrames.Add(result);
-                result = result.Parent;
-            }
-            
             var subframe = _bindedSubframe;
-            
+
             while (subframe != null)
             {
                 selectedFrames.Add(subframe);
@@ -247,7 +372,7 @@ namespace ItemPlacementKnowlegeBase.Services
             return true;
         }
 
-        private Frame _getFirstCandidate()
+        public Frame _getFirstCandidate()
         {
             var subframe = _getMostCommonSubframe();
             var leaf = _getAnyLeaf();
@@ -268,31 +393,31 @@ namespace ItemPlacementKnowlegeBase.Services
                     subframes_count[subframe.Frame] += 1;
                 }
             }
-            
+
             if (subframes_count.Count == 0)
                 return null;
             return subframes_count.OrderBy(x => x.Value).LastOrDefault().Key;
 
-            // return used_subframes.FirstOrDefault()?.Frame;
+            //return used_subframes.FirstOrDefault()?.Frame;
 
-            // var maxUsed = used_subframes.Max(x => used_subframes.Count(y => y == x));
-            // var result = used_subframes.FirstOrDefault(x => used_subframes.Count(y => y == x) == maxUsed);
-            // var frameSlot = result as FrameSlot;
-            // return frameSlot?.Frame;
-            // var used_subframes = new List<FrameSlot>();
-            //
-            // foreach (var frame in _model.Frames)
-            // {
-            //     used_subframes.AddRange(frame.Slots.Where(x => x is FrameSlot && !x.IsSystemSlot)
-            //         .Select(x => x as FrameSlot));
-            // }
-            //
-            // // return used_subframes.FirstOrDefault()?.Frame;
-            //
-            // var maxUsed = used_subframes.Max(x => used_subframes.Count(y => y == x));
-            // var result = used_subframes.FirstOrDefault(x => used_subframes.Count(y => y == x) == maxUsed);
-            // var frameSlot = result as FrameSlot;
-            // return frameSlot?.Frame;
+            //var maxUsed = used_subframes.Max(x => used_subframes.Count(y => y == x));
+            //var result = used_subframes.FirstOrDefault(x => used_subframes.Count(y => y == x) == maxUsed);
+            //var frameSlot = result as FrameSlot;
+            //return frameSlot?.Frame;
+            //var used_subframes = new List<FrameSlot>();
+
+            //foreach (var frame in _model.Frames)
+            //{
+            //    used_subframes.AddRange(frame.Slots.Where(x => x is FrameSlot && !x.IsSystemSlot)
+            //        .Select(x => x as FrameSlot));
+            //}
+
+            //return used_subframes.FirstOrDefault()?.Frame;
+
+            //var maxUsed = used_subframes.Max(x => used_subframes.Count(y => y == x));
+            //var result = used_subframes.FirstOrDefault(x => used_subframes.Count(y => y == x) == maxUsed);
+            //var frameSlot = result as FrameSlot;
+            //return frameSlot?.Frame;
         }
 
         private Frame _getAnyLeaf()
