@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ItemPlacementKnowlegeBase.Gui
 {
-    class Cell
+    public class Cell
     {
             //координаты в сетке. (0,0) - левый верхний угол
         public int X { get; }

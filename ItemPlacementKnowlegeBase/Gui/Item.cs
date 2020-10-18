@@ -9,16 +9,19 @@ namespace ItemPlacementKnowlegeBase.Gui
 {
     public class Item
     {
-        public string Name { get; }
+        public string Name { get; set; }
 
         //придумай тут формат в котором будет цвет, лучше думаю hex
 
-        public Bitmap Bitmap { get; }
+        public string ImageName { get; set; }
 
-        public Item(string name, Bitmap bitmap)
+        public Bitmap Bitmap { get; set; }
+
+        public Item(string name, string imageName, Bitmap bitmap)
         {
             Name = name;
             Bitmap = bitmap;
+            ImageName = imageName;
         }
 
         public override bool Equals(object obj)

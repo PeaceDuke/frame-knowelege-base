@@ -24,8 +24,6 @@ namespace ItemPlacementKnowlegeBase.Models
         public readonly string NameSlotName = "Имя";
         public readonly string ParentSlotName = "Родитель";
 
-        public bool IsBase { get; set; }
-
         /// <summary>
         /// Слот по индексу
         /// </summary>
@@ -105,11 +103,6 @@ namespace ItemPlacementKnowlegeBase.Models
             Slots.CollectionChanged += SlotsOnCollectionChanged;
 
             _serializableDelegates = new List<Delegate>();
-        }
-
-        public Frame(string name, bool isBase) : this(name)
-        {
-            IsBase = isBase;
         }
 
         private void ParentSystemSlotOnPropertyChanged(object sender, PropertyChangedEventArgs e)

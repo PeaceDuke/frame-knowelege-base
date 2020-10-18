@@ -21,44 +21,44 @@ namespace ItemPlacementKnowlegeBase.Services
             field = new Field(10, 4, 80);
         }
 
-        public List<Item> loadItems()
+        public List<Item> LoadItems()
         {
             if (items == null)
             {
                 items = new List<Item>();
-                items.Add(new Item("chest", TextureResource.get(ImagePathes.CHEST).Source));
-                items.Add(new Item("closet", TextureResource.get(ImagePathes.CLOSET).Source));
-                items.Add(new Item("commode", TextureResource.get(ImagePathes.COMMODE).Source));
-                items.Add(new Item("freezer", TextureResource.get(ImagePathes.FREEZER).Source));
-                items.Add(new Item("lamp1", TextureResource.get(ImagePathes.LAMP1).Source));
-                items.Add(new Item("lamp2", TextureResource.get(ImagePathes.LAMP2).Source));
-                items.Add(new Item("picture1", TextureResource.get(ImagePathes.PICTURE1).Source));
-                items.Add(new Item("picture2", TextureResource.get(ImagePathes.PICTURE2).Source));
-                items.Add(new Item("shelf", TextureResource.get(ImagePathes.SHELF).Source));
-                items.Add(new Item("table", TextureResource.get(ImagePathes.TABLE).Source));
+                items.Add(new Item("chest", ImagePathes.CHEST, TextureResource.get(ImagePathes.CHEST).Source));
+                items.Add(new Item("closet", ImagePathes.CLOSET, TextureResource.get(ImagePathes.CLOSET).Source));
+                items.Add(new Item("commode", ImagePathes.COMMODE, TextureResource.get(ImagePathes.COMMODE).Source));
+                items.Add(new Item("freezer", ImagePathes.FREEZER, TextureResource.get(ImagePathes.FREEZER).Source));
+                items.Add(new Item("lamp1", ImagePathes.LAMP1, TextureResource.get(ImagePathes.LAMP1).Source));
+                items.Add(new Item("lamp2", ImagePathes.LAMP2,TextureResource.get(ImagePathes.LAMP2).Source));
+                items.Add(new Item("picture1", ImagePathes.PICTURE1, TextureResource.get(ImagePathes.PICTURE1).Source));
+                items.Add(new Item("picture2", ImagePathes.PICTURE2, TextureResource.get(ImagePathes.PICTURE2).Source));
+                items.Add(new Item("shelf", ImagePathes.SHELF, TextureResource.get(ImagePathes.SHELF).Source));
+                items.Add(new Item("table", ImagePathes.TABLE, TextureResource.get(ImagePathes.TABLE).Source));
             }
             return items;
         }
-        public bool removeItem(Cell cell)
+        public bool RemoveItem(Cell cell)
         {
             var i = field.Cells.FindIndex(_cell => _cell.X == cell.X && _cell.Y == cell.Y);
             field.Cells[i] = new Cell(cell.X, cell.Y, null);
             return true;
         }
 
-        public bool placeItem(Cell cell, Item item)
+        public bool PlaceItem(Cell cell, Item item)
         {
             var i = field.Cells.FindIndex(_cell => _cell.X == cell.X && _cell.Y == cell.Y);
             field.Cells[i] = new Cell(cell.X, cell.Y, item);
             return true;
         }
 
-        public List<string> getLastReasoning()
+        public List<string> GetLastReasoning()
         {
             return new List<string>(new[] { "ну а хули!" });
         }
 
-        public Field loadField()
+        public Field LoadField()
         {
             return field;
         }

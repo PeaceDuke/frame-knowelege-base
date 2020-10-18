@@ -15,7 +15,7 @@ namespace ItemPlacementKnowlegeBase.Gui
 {
     class TextureResource
     {
-        private int size = KnowlegeBaseManager.get().loadField().CellSize;
+        private int size = KnowlegeBaseManager.get().LoadField().CellSize;
         //private static TextureResource instance;
 
         private static List<TextureResource> listRes = new List<TextureResource>();

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,19 +14,24 @@ namespace ItemPlacementKnowlegeBase
 {
     public partial class Main_form : Form
     {
-        KnowlegeBase Knowleges = new KnowlegeBase();
-        Frame cur_frame;
         public static Item draggedData = null;
+        public TestKnowlegeBaseProvider provider;
         public Main_form()
         {
             InitializeComponent();
             //InicializeParts();
-            var provider = KnowlegeBaseManager.get();
-            foreach(var item in provider.loadItems())
+            provider = KnowlegeBaseManager.get();
+            foreach(var item in provider.LoadItems())
             {
                 ListViewItem lvi = new ListViewItem(item.Name);
                 lvi.Tag = item;
                 lv_items.Items.Add(lvi);
+            }
+            foreach(var rule in provider.LoadRules())
+            {
+                ListViewItem lvi = new ListViewItem(rule.GetDescription());
+                lvi.Tag = rule;
+                lv_rules.Items.Add(lvi);
             }
         }
         // private void InicializeParts()
@@ -187,5 +191,64 @@ namespace ItemPlacementKnowlegeBase
             startDragDrop((sender as ListView)?.SelectedItems[0]?.Tag as Item);
         }
 
+        private void btn_addItem_Click(object sender, EventArgs e)
+        {
+            var formFrameAdd = new Form_edit_item(provider);
+
+            if (formFrameAdd.ShowDialog() == DialogResult.OK)
+            {
+                var item = formFrameAdd.item;
+                ListViewItem lvi = new ListViewItem(item.Name);
+                lvi.Tag = item;
+                lv_items.Items.Add(lvi);
+            }
+            formFrameAdd.Close();
+        }
+
+        private void btn_changeItem_Click(object sender, EventArgs e)
+        {
+            if (lv_items.SelectedItems.Count == 0)
+                MessageBox.Show("Выберете предмет");
+            var formFrameChange = new Form_edit_item(provider, (Item)lv_items.SelectedItems[0].Tag);
+
+            if (formFrameChange.ShowDialog() == DialogResult.OK)
+            {
+                var item = formFrameChange.item;
+                ListViewItem lvi = new ListViewItem(item.Name);
+                lvi.Tag = item;
+                lv_items.Items.Add(lvi);
+            }
+            formFrameChange.Close();
+
+        }
+
+        private void btn_removeItem_Click(object sender, EventArgs e)
+        {
+            if (lv_items.SelectedItems.Count <= 0)
+                MessageBox.Show("Выберете предмет");
+            provider.RemoveItemFromList((Item)lv_items.SelectedItems[0].Tag);
+
+        }
+
+        private void btn_addRule_Click(object sender, EventArgs e)
+        {
+            var formFrameAdd = new Form_edit_rule(provider);
+
+            if (formFrameAdd.ShowDialog() == DialogResult.OK)
+            {
+                var rule = formFrameAdd.rule;
+                ListViewItem lvi = new ListViewItem(rule.GetDescription());
+                lvi.Tag = rule;
+                lv_rules.Items.Add(lvi);
+            }
+            formFrameAdd.Close();
+        }
+
+        private void btn_removeRule_Click(object sender, EventArgs e)
+        {
+            if (lv_rules.SelectedItems.Count <= 0)
+                MessageBox.Show("Выберете правило");
+            provider.RemoveRuleFromList((Rule)lv_rules.SelectedItems[0].Tag);
+        }
     }
 }

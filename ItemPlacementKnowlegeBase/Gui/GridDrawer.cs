@@ -9,7 +9,7 @@ using ItemPlacementKnowlegeBase.Services;
 
 namespace ItemPlacementKnowlegeBase.Gui
 {
-    class GridDrawer : IDisposable
+    public class GridDrawer : IDisposable
     {
         public int Width { get; }
         public int Height { get; }
@@ -24,7 +24,7 @@ namespace ItemPlacementKnowlegeBase.Gui
         Font font = new Font(FontFamily.Families[39], 13);
         public GridDrawer(PictureBox canvas, Label label)
         {
-            var field = KnowlegeBaseManager.get().loadField();
+            var field = KnowlegeBaseManager.get().LoadField();
             Width = field.Width;
             Height = field.Heigth;
             CellSize = field.CellSize;
@@ -73,16 +73,16 @@ namespace ItemPlacementKnowlegeBase.Gui
                         {
                             Item item = Main_form.draggedData;
                             Cell cell = new Cell(cellX, cellY, item);
-                            if(!cellInField(cell, provider.loadField()))
+                            if(!cellInField(cell, provider.LoadField()))
                             {
                                 break;
                             }
-                            var sucsess = provider.placeItem(cell, item);
+                            var sucsess = provider.PlaceItem(cell, item);
                             Main_form.draggedData = null;
                             if (!sucsess)
                             {
                                 string reasoning = "не смог поставить предмет:\n";
-                                foreach (var reason in provider.getLastReasoning())
+                                foreach (var reason in provider.GetLastReasoning())
                                 {
                                     reasoning += reason + "\n";
                                 }
@@ -94,15 +94,15 @@ namespace ItemPlacementKnowlegeBase.Gui
                 case MouseButtons.Right:
                     {
                         var cell = new Cell(cellX, cellY, null);
-                        if(!cellInField(cell, provider.loadField()))
+                        if(!cellInField(cell, provider.LoadField()))
                         {
                             break;
                         }
-                        var sucsess = provider.removeItem(cell);
+                        var sucsess = provider.RemoveItem(cell);
                         if (!sucsess)
                         {
                             string reasoning = "не смог поставить убрать предмет:\n";
-                            foreach (var reason in provider.getLastReasoning())
+                            foreach (var reason in provider.GetLastReasoning())
                             {
                                 reasoning += reason + "\n";
                             }
@@ -148,7 +148,7 @@ namespace ItemPlacementKnowlegeBase.Gui
         {
             var buffer = new Bitmap(canvas.Width, canvas.Height);
             var graphics = Graphics.FromImage(buffer);
-            var filledCells = KnowlegeBaseManager.get().loadField().Cells.FindAll(_cell => _cell.Item != null);
+            var filledCells = KnowlegeBaseManager.get().LoadField().Cells.FindAll(_cell => _cell.Item != null);
             pen.Width = 1;
 
             //draw filled cells

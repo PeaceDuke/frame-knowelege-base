@@ -7,63 +7,55 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ItemPlacementKnowlegeBase.Images;
+using ItemPlacementKnowlegeBase.Gui;
 using ItemPlacementKnowlegeBase.Models;
+using ItemPlacementKnowlegeBase.Services;
 
 namespace ItemPlacementKnowlegeBase
 {    
-    public partial class Form_edit_frame : Form
+    public partial class Form_edit_item : Form
     {
-        public KnowlegeBase Knowleges_edit = new KnowlegeBase();
-        public FormType form_type;
-        public enum FormType
-        {
-            Insert,
-            Delete
-        }
+        public Item item;
+        public TestKnowlegeBaseProvider provider;
 
-        public bool Child()
-        {
-            if (cb_parrent.SelectedIndex == -1)
-                return false;
-            else
-                return true;
-        }
-
-        public Form_edit_frame(FormType type)
+        public Form_edit_item(TestKnowlegeBaseProvider _provider)
         {
             InitializeComponent();
             Initialize();
-            switch (type)
-            {
-                case FormType.Insert:
-                    bt_add.Text = @"Добавить";                   
-                    break;
-                case FormType.Delete:
-                    bt_add.Text = @"Удалить";
-                    break;
-            }
+            provider = _provider;
+            bt_add.Text = @"Добавить";
+        }
+
+        public Form_edit_item(TestKnowlegeBaseProvider _provider, Item _item)
+        {
+            InitializeComponent();
+            Initialize();
+            provider = _provider;
+            item = _item;
+            bt_add.Text = @"Обновить";
+            tb_name.Text = item.Name;
+            cb_images.Text = ImagePathes.ITEMLIST.Where(x => x == item.ImageName).First();
         }
 
         public void Initialize()
         {
             bt_add.Enabled = false;
-            
-        }
-
-        public string Name_frame()
-        {
-            return tb_name.Text;
+            cb_images.Items.AddRange(ImagePathes.ITEMLIST);
         }
 
         private void Bt_add_Click(object sender, EventArgs e)
         {
             try
             {
-                Frame frame = new Frame(tb_name.Text);
-                if (cb_parrent.SelectedIndex != -1)
-                    frame.Parent = Knowleges_edit[cb_parrent.SelectedItem.ToString()];
-                Knowleges_edit.Frames.Add(frame);
-
+                if(item == null)
+                {
+                    item = provider.AddItemToList(tb_name.Text, cb_images.Text);
+                }
+                else
+                {
+                    item = provider.ChangeItemFromList(item, tb_name.Text, cb_images.Text);
+                }
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -90,6 +82,11 @@ namespace ItemPlacementKnowlegeBase
         private void Bt_abort_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

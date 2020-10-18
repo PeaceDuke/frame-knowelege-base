@@ -114,6 +114,11 @@ namespace ItemPlacementKnowlegeBase.Services
             }
         }
 
+        public KnowlegeBase GetModel()
+        {
+            return _model;
+        }
+
         private Frame GetCandidateFrame(Frame subframe)
         {
             if (subframe != null)
@@ -337,16 +342,29 @@ namespace ItemPlacementKnowlegeBase.Services
             return null;
         }
 
+        public Dictionary<Frame, bool> GetBindedFrames()
+        { 
+            return _bindedFrames;
+        }
+        
         public List<Frame> GetInferringPath()
-        {
+        { 
             var selectedFrames = new List<Frame>();
-            var subframe = _bindedSubframe;
-
-            while (subframe != null)
+            var result = _resultFrame;
+            
+            while (result != null)
             {
-                selectedFrames.Add(subframe);
-                subframe = subframe.Parent;
+                selectedFrames.Add(result);
+                result = result.Parent;
             }
+            
+            //var subframe = _bindedSubframe;
+            
+            //while (subframe != null)
+            //{
+            //    selectedFrames.Add(subframe);
+            //    subframe = subframe.Parent;
+            //}
 
             return selectedFrames;
         }

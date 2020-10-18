@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace ItemPlacementKnowlegeBase.Services
 {
-    interface IKnowlegeBaseProvider
+    public interface IKnowlegeBaseProvider
     {
 
         /// <summary>
         /// Загружает из БЗ соответствующий фрейм и создает описание для поля
         /// </summary>
         /// <returns>Параметры генерируемого поля</returns>
-        Field loadField();
+        Field LoadField();
 
         /// <summary>
         /// Загружает из БЗ список доступных предметов
         /// </summary>
         /// <returns>Список доступных предметов</returns>
-        List<Item> loadItems();
+        List<Item> LoadItems();
 
         /// <summary>
         /// Место где происходит вся магия, внутри происходит проверка на распологаемость предмета, 
@@ -29,7 +29,7 @@ namespace ItemPlacementKnowlegeBase.Services
         /// <param name="cell">Клетка в которую пытается поместиться предмет</param>
         /// <param name="item">Предмет который пытаются поместить</param>
         /// <returns>Помещен ли предмет?</returns>
-        bool placeItem(Cell cell, Item item);
+        bool PlaceItem(Cell cell, Item item);
 
         /// <summary>
         /// Место где происходит вся магия, внутри происходит проверка на распологаемость предмета, 
@@ -37,12 +37,12 @@ namespace ItemPlacementKnowlegeBase.Services
         /// </summary>
         /// <param name="cell">Клетка из которой пытаются достать предмет</param>
         /// <returns>Помещен ли предмет?</returns>
-        bool removeItem(Cell cell);
+        bool RemoveItem(Cell cell);
 
         /// <summary>
         /// Тут будет объяснение того, почему предмет нельзя поместить
         /// </summary>
         /// <returns>Строки объяснения со сработавшими фреймами</returns>
-        List<string> getLastReasoning();
+        List<string> GetLastReasoning();
     }
 }

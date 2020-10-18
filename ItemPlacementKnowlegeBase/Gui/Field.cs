@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ItemPlacementKnowlegeBase.Gui
 {
-    class Field
+    public class Field
     {
         public int Heigth { get; }
         public int Width { get; }
