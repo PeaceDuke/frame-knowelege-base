@@ -177,7 +177,8 @@ namespace ItemPlacementKnowlegeBase.Services
             KnowlegeBase knowlegeBase = Test.Test.GetModel();
             Frame itemFrame = knowlegeBase[item.Name];
             Frame emptyFrame = knowlegeBase["Пустота"];
-            foreach (var cellItemSlot in knowlegeBase.Frames.Where(x => x.Slots.Where(y => y is FrameSlot && ((FrameSlot)y).Frame.Equals(itemFrame)).Any()).Select(x => x["Предмет"] as FrameSlot))
+            var test = knowlegeBase.Frames.Where(x => x.Slots.Where(y => y.Name == "Предмет" && y is FrameSlot && ((FrameSlot)y).Frame.Equals(itemFrame)).Any()).Select(x => x["Предмет"] as FrameSlot);
+            foreach (var cellItemSlot in test)
             {
                 cellItemSlot.Frame = emptyFrame;
             }
