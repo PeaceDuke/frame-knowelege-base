@@ -97,7 +97,8 @@
             "Выше",
             "Ниже",
             "Слева",
-            "Справа"});
+            "Справа",
+            "Вместо"});
             this.cb_place.Location = new System.Drawing.Point(90, 73);
             this.cb_place.Name = "cb_place";
             this.cb_place.Size = new System.Drawing.Size(178, 21);
