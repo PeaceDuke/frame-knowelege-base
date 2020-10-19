@@ -43,7 +43,7 @@
     <Frame name = "Клетка"/>
     <Frame name = "Правило"/>
     <Frame name = "Событие">
-      <FrameSlot name = "Правило" value = "Правило"/>
+      <FrameSlot name = "Правило" value = "Правило" isRequestable = "true"/>
     </Frame>
     <Frame name = "Отношение стола и стула" parent = "Правило">
       <DomainSlot name = "Объект" domain = "Предметы" value = "Стул" isRequestable = "true"/>
