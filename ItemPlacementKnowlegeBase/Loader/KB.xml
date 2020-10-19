@@ -1,10 +1,5 @@
 <KnowledgeBase>
   <Domains>
-    <Domain name = "Место">
-      <value name = "Пол"/>
-      <value name = "Стена"/>
-      <value name = "Потолок"/>
-    </Domain>
     <Domain name = "Тип правила">
       <value name = "Запрещающее"/>
       <value name = "Разрешающее"/>
@@ -24,7 +19,6 @@
   </Domains>
   <Frames>
     <Frame name = "Предмет"/>
-    <Frame name = "Напольный предмет"/>
     <Frame name = "Стол" parent = "Предмет">
       <DomainSlot name = "Предмет" domain = "Предметы" value = "Стол" isRequestable = "true"/>
       <TextSlot name = "Изображение" value = "table"/>
@@ -38,8 +32,8 @@
       <TextSlot name = "Изображение" value = "picture" />
     </Frame>
     <Frame name = "Поле">
-      <TextSlot name = "Высота" value = "15"/>
-      <TextSlot name = "Ширина" value = "10"/>
+      <TextSlot name = "Размер" value = "5"/>
+      <TextSlot name = "Размер клетки" value = "64"/>
     </Frame>
     <Frame name = "Клетка"/>
     <Frame name = "Правило"/>
@@ -67,7 +61,7 @@
       <TextSlot name = "Объяснение" value = "Нельзя ставить стул слева стола"/>      
     </Frame>
     <Frame name = "Пустота" parent = "Предмет"/>
-    <Frame name = "Костыль">
+    <Frame name = "Клетки_корень">
       <FrameSlot name = "Клетка" value = "Клетка" isRequestable = "true"/>
     </Frame>
   </Frames>

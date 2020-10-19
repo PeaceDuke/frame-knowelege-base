@@ -208,7 +208,10 @@ namespace ItemPlacementKnowlegeBase
         private void btn_changeItem_Click(object sender, EventArgs e)
         {
             if (lv_items.SelectedItems.Count == 0)
+            {
                 MessageBox.Show("Выберете предмет");
+                return;
+            }
             var formFrameChange = new Form_edit_item(provider, (Item)lv_items.SelectedItems[0].Tag);
 
             if (formFrameChange.ShowDialog() == DialogResult.OK)

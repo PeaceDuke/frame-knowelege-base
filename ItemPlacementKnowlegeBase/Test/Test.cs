@@ -61,7 +61,7 @@ namespace ItemPlacementKnowlegeBase.Test
                     new Frame("Отношение горшка и стола"),      //10
                     new Frame("Отношение стола и стула 2"),     //11
                     new Frame("Пустота"),                       //12
-                    new Frame("Костыль"),                       //13
+                    new Frame("Клетки_корень"),                       //13
                 };
 
                 var frameModel = new KnowlegeBase();
@@ -81,8 +81,7 @@ namespace ItemPlacementKnowlegeBase.Test
                 frames[4].Slots.Add(new TextSlot("Изображение", "picture"));
                 frames[4].Parent = frames[0];
 
-                frames[5].Slots.Add(new TextSlot("Высота", "10"));
-                frames[5].Slots.Add(new TextSlot("Ширина", "15"));
+                frames[5].Slots.Add(new TextSlot("Размер", "10"));
 
                 frames[8].Slots.Add(new FrameSlot("Правило", frames[7], false, true));
 
@@ -132,8 +131,13 @@ namespace ItemPlacementKnowlegeBase.Test
                     testFrameModel = KnowlegeBaseLoader.Parce(KnowlegeBaseLoader.TEST_KNOWLEDGE_BASE);
                 }
 
-                return testFrameModel;
-                //return frameModel;
+                if (testFrameModel == null)
+                { 
+                    return frameModel; 
+                }
+                {
+                    return testFrameModel;
+                }
             }
         }
 
@@ -149,23 +153,21 @@ namespace ItemPlacementKnowlegeBase.Test
             {
                 Frame cellFrame = reasoner.GetFrame("Клетка");
                 Frame emptyItem = reasoner.GetFrame("Пустота");
-                int h = int.Parse(fieldFrame["Высота"].ValueAsString);
-                int w = int.Parse(fieldFrame["Ширина"].ValueAsString);
                 List<Frame> cellFrames = new List<Frame>();
                 Domain domain = new Domain("Числа");
-                int max = h > w ? h : w;
+                int max = int.Parse(fieldFrame["Размер"].ValueAsString);
                 for (int i = 0; i < max; i++)
                     domain.Values.Add(new DomainValue(i.ToString()));
                 reasoner.AddDomain(domain);
-                for (int x = 0; x < w; x++)
-                    for (int y = 0; y < h; y++)
+                for (int x = 0; x < max; x++)
+                    for (int y = 0; y < max; y++)
                     {
                         string name = "Клетка" + x + ":" + y;
                         Frame newCellFrame = new Frame(name);
                         newCellFrame.Slots.Add(new DomainSlot("X", domain, domain[x], false, true));
                         newCellFrame.Slots.Add(new DomainSlot("Y", domain, domain[y], false, true));
-                        Frame leftFrame = x > 0 ? cellFrames[(x - 1) * h + y] : null;
-                        Frame upFrame = y > 0 ? cellFrames[x * h + y - 1] : null;
+                        Frame leftFrame = x > 0 ? cellFrames[(x - 1) * max + y] : null;
+                        Frame upFrame = y > 0 ? cellFrames[x * max + y - 1] : null;
                         if (leftFrame != null)
                         {
                             newCellFrame.Slots.Add(new FrameSlot("Слева", leftFrame));
@@ -204,7 +206,7 @@ namespace ItemPlacementKnowlegeBase.Test
             reasoner.Clear();
             DomainValue answer = null;
 
-            Frame fieldFrame = reasoner.GetFrame("Костыль");
+            Frame fieldFrame = reasoner.GetFrame("Клетки_корень");
 
             while (true)
             {
@@ -347,7 +349,7 @@ namespace ItemPlacementKnowlegeBase.Test
         {
             reasoner.Clear();
             DomainValue answer = null;
-            Frame fieldFrame = reasoner.GetFrame("Костыль");
+            Frame fieldFrame = reasoner.GetFrame("Клетки_корень");
 
             while (true)
             {
@@ -386,7 +388,7 @@ namespace ItemPlacementKnowlegeBase.Test
         {
             reasoner.Clear();
             DomainValue answer = null;
-            Frame fieldFrame = reasoner.GetFrame("Костыль");
+            Frame fieldFrame = reasoner.GetFrame("Клетки_корень");
 
             while (true)
             {

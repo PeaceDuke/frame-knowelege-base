@@ -20,7 +20,7 @@ namespace ItemPlacementKnowlegeBase.Services
         public TestKnowlegeBaseProvider()
         {
             Frame fieldFrame = Test.Test.GetFieldFrame();
-            field = new Field(int.Parse(fieldFrame["Высота"].ValueAsString), int.Parse(fieldFrame["Ширина"].ValueAsString), 32);
+            field = new Field(int.Parse(fieldFrame["Размер"].ValueAsString), int.Parse(fieldFrame["Размер"].ValueAsString), int.Parse(fieldFrame["Размер клетки"].ValueAsString));
         }
 
         public List<string> GetLastReasoning()

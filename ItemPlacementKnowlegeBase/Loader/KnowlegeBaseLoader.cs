@@ -15,20 +15,27 @@ namespace ItemPlacementKnowlegeBase.Loader
         {
             XmlDocument xDoc = new XmlDocument();
             KnowlegeBase result = new KnowlegeBase();
-            xDoc.Load(path);
-            var xDomains = xDoc.GetElementsByTagName("Domains")[0];
-            var xFrames = xDoc.GetElementsByTagName("Frames")[0];
-            Domain[] domains = ParceDomains(xDomains);
-            Frame[] frames = ParceFrames(xFrames, domains);
-
-            foreach (var domain in domains)
+            try
             {
-                result.Domains.Add(domain);
+                xDoc.Load(path);
+                var xDomains = xDoc.GetElementsByTagName("Domains")[0];
+                var xFrames = xDoc.GetElementsByTagName("Frames")[0];
+                Domain[] domains = ParceDomains(xDomains);
+                Frame[] frames = ParceFrames(xFrames, domains);
+
+                foreach (var domain in domains)
+                {
+                    result.Domains.Add(domain);
+                }
+
+                foreach (var frame in frames)
+                {
+                    result.Frames.Add(frame);
+                }
             }
-
-            foreach (var frame in frames)
+            catch(Exception ex)
             {
-                result.Frames.Add(frame);
+                result = null;
             }
 
             return result;

@@ -60,6 +60,7 @@
             // 
             // btn_removeItem
             // 
+            this.btn_removeItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_removeItem.Location = new System.Drawing.Point(202, 312);
             this.btn_removeItem.Name = "btn_removeItem";
             this.btn_removeItem.Size = new System.Drawing.Size(90, 29);
@@ -70,6 +71,7 @@
             // 
             // btn_changeItem
             // 
+            this.btn_changeItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_changeItem.Location = new System.Drawing.Point(106, 312);
             this.btn_changeItem.Name = "btn_changeItem";
             this.btn_changeItem.Size = new System.Drawing.Size(90, 29);
@@ -80,6 +82,7 @@
             // 
             // btn_addItem
             // 
+            this.btn_addItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_addItem.Location = new System.Drawing.Point(10, 312);
             this.btn_addItem.Name = "btn_addItem";
             this.btn_addItem.Size = new System.Drawing.Size(90, 29);
@@ -90,7 +93,9 @@
             // 
             // lv_items
             // 
-            this.lv_items.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lv_items.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lv_items.FullRowSelect = true;
             this.lv_items.HideSelection = false;
             this.lv_items.Location = new System.Drawing.Point(3, 16);
@@ -118,6 +123,7 @@
             // 
             // btn_removeRule
             // 
+            this.btn_removeRule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_removeRule.Location = new System.Drawing.Point(198, 312);
             this.btn_removeRule.Name = "btn_removeRule";
             this.btn_removeRule.Size = new System.Drawing.Size(90, 29);
@@ -128,6 +134,7 @@
             // 
             // btn_addRule
             // 
+            this.btn_addRule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_addRule.Location = new System.Drawing.Point(6, 312);
             this.btn_addRule.Name = "btn_addRule";
             this.btn_addRule.Size = new System.Drawing.Size(90, 29);
@@ -138,7 +145,9 @@
             // 
             // lv_rules
             // 
-            this.lv_rules.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lv_rules.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lv_rules.FullRowSelect = true;
             this.lv_rules.HideSelection = false;
             this.lv_rules.Location = new System.Drawing.Point(3, 16);
@@ -166,6 +175,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.drawControl1);
             this.Controls.Add(this.gb_items);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Main_form";
             this.Text = "Слоты";
             this.gb_items.ResumeLayout(false);
