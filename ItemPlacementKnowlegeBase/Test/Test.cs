@@ -81,7 +81,7 @@ namespace ItemPlacementKnowlegeBase.Test
                 frames[4].Parent = frames[0];
 
                 frames[5].Slots.Add(new TextSlot("Высота", "10"));
-                frames[5].Slots.Add(new TextSlot("Ширина", "10"));
+                frames[5].Slots.Add(new TextSlot("Ширина", "15"));
 
                 frames[8].Slots.Add(new FrameSlot("Правило", frames[7], false, true));
 
@@ -157,15 +157,15 @@ namespace ItemPlacementKnowlegeBase.Test
                 for (int i = 0; i < max; i++)
                     domain.Values.Add(new DomainValue(i.ToString()));
                 reasoner.AddDomain(domain);
-                for (int i = 0; i < h; i++)
-                    for (int j = 0; j < w; j++)
+                for (int x = 0; x < w; x++)
+                    for (int y = 0; y < h; y++)
                     {
-                        string name = "Клетка" + i + ":" + j;
+                        string name = "Клетка" + x + ":" + y;
                         Frame newCellFrame = new Frame(name);
-                        newCellFrame.Slots.Add(new DomainSlot("X", domain, domain[i], false, true));
-                        newCellFrame.Slots.Add(new DomainSlot("Y", domain, domain[j], false, true));
-                        Frame leftFrame = i > 0 ? cellFrames[(i - 1) * h + j] : null;
-                        Frame upFrame = j > 0 ? cellFrames[i * h + j - 1] : null;
+                        newCellFrame.Slots.Add(new DomainSlot("X", domain, domain[x], false, true));
+                        newCellFrame.Slots.Add(new DomainSlot("Y", domain, domain[y], false, true));
+                        Frame leftFrame = x > 0 ? cellFrames[(x - 1) * h + y] : null;
+                        Frame upFrame = y > 0 ? cellFrames[x * h + y - 1] : null;
                         if (leftFrame != null)
                         {
                             newCellFrame.Slots.Add(new FrameSlot("Слева", leftFrame));
