@@ -1,0 +1,43 @@
+{
+    "last_id": "308",
+    "namespaces": {
+        "default": "http://www.ontosearch.com/2007/12/ontosofa-ns#",
+        "http://data.ria.ru": "http://data.ria.ru",
+        "ontolis-avis": "http://knova.ru/ontolis-avis",
+        "owl": "http://www.w3.org/2002/07/owl",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+        "ria": "http://data.ria.ru#",
+        "riacv": "http://data.ria.ru/cv#",
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsd": "http://www.w3.org/2001/XMLSchema"
+    },
+    "nodes": [
+        {
+            "attributes": {
+            },
+            "id": "32",
+            "name": "Место",
+            "namespace": "http://data.ria.ru",
+            "position_x": 978.1290236298164,
+            "position_y": 1238.4590233498157
+        },
+        {
+            "attributes": {
+            },
+            "id": "17",
+            "name": "Достопримечательность",
+            "namespace": "http://data.ria.ru",
+            "position_x": 1175.9241888730262,
+            "position_y": 1328.3535551017028
+        }
+    ],
+    "relationNames": [
+        "http://knova.ru/reply/converter#a_part_of",
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+        "http://knova.ru/reply/converter#is_instance_of"
+    ],
+    "relations": [
+    ],
+    "visualize_ont_path": ""
+}

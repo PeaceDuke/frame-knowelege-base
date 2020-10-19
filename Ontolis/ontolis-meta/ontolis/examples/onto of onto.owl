@@ -1,0 +1,640 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://knova.ru/onto of onto.owl#"
+     xml:base="http://knova.ru/onto of onto.owl"
+     xmlns:ontolis="http://knova.ru/ontolis#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://knova.ru/onto of onto.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knova.ru/ontolis#position_x -->
+
+    <owl:AnnotationProperty rdf:about="http://knova.ru/ontolis#position_x">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://knova.ru/ontolis#position_y -->
+
+    <owl:AnnotationProperty rdf:about="http://knova.ru/ontolis#position_y">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://knova.ru/ontolis#weight -->
+
+    <owl:AnnotationProperty rdf:about="http://knova.ru/ontolis#weight">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#a_part_of -->
+
+    <owl:ObjectProperty rdf:about="http://knova.ru/user/1442306026250#a_part_of"/>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#has -->
+
+    <owl:ObjectProperty rdf:about="http://knova.ru/user/1442306026250#has"/>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#same_as -->
+
+    <owl:ObjectProperty rdf:about="http://knova.ru/user/1442306026250#same_as"/>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#subClassOf -->
+
+    <owl:ObjectProperty rdf:about="http://knova.ru/user/1442306026250#subClassOf"/>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#use -->
+
+    <owl:ObjectProperty rdf:about="http://knova.ru/user/1442306026250#use"/>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#use_for -->
+
+    <owl:ObjectProperty rdf:about="http://knova.ru/user/1442306026250#use_for"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Artificial_intelligence -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Artificial_intelligence">
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">352.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">404.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Information_Systems -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Information_Systems">
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1531.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">398.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Intelligent_Information_Retrieval -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Intelligent_Information_Retrieval">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#subClassOf"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Ontology_application_domains"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1259.25</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">487.75</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Knowledge_representation_and_reasoning -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Knowledge_representation_and_reasoning">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#subClassOf"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Artificial_intelligence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">317.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">478.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Markup_languages -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Markup_languages">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#subClassOf"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Web_data_description_languages"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1684.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">591.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#OWL -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#OWL">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#same_as"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Web_Ontology_Language"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1609.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">746.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Ontology_application_domains -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Ontology_application_domains">
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1137.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">420.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Ontology_engineering -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Ontology_engineering">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#subClassOf"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Knowledge_representation_and_reasoning"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#use"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Онтология"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">332.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">554.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#RDF -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#RDF">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#same_as"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Resource_Description_Framework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1371.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">752.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Recommender_system -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Recommender_system">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#subClassOf"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Ontology_application_domains"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1203.75</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">542.5</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Resource_Description_Framework -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Resource_Description_Framework">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#subClassOf"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Semantic_web_description_languages"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1304.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">677.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Semantic_web_description_languages -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Semantic_web_description_languages">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#subClassOf"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Web_data_description_languages"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#use_for"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Онтология"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1394.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">603.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Web_Ontology_Language -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Web_Ontology_Language">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#subClassOf"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Semantic_web_description_languages"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1557.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">677.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Web_data_description_languages -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Web_data_description_languages">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#a_part_of"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#World_Wide_Web"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1548.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">526.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#World_Wide_Web -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#World_Wide_Web">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#subClassOf"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Information_Systems"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1569.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">463.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#a_part_of -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#a_part_of">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#Связь"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#same_as -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#same_as">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#Связь"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#subClassOf -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#subClassOf">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#Связь"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Активный_словарь -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Активный_словарь">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#Онтология"/>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">987.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">760.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#База_знаний -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#База_знаний">
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1212.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">786.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Дерево_классификации -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Дерево_классификации">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#Онтология"/>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">585.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">753.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Домен -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Домен">
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">600.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1102.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Заключение -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Заключение">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#a_part_of"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Продукция"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1552.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">974.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Значение -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Значение">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#Узел"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#a_part_of"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Домен"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">697.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1035.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Иерархия_классов -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Иерархия_классов">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#Онтология"/>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">327.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">759.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Класс -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Класс">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#Узел"/>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">396.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1046.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Онтология -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Онтология">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#База_знаний"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#has"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Ontology_application_domains"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#has"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Формальная_модель_онтологии"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">720.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">484.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Пассивный_словарь -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Пассивный_словарь">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#Онтология"/>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">821.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">752.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Посылка -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Посылка">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#a_part_of"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Продукция"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1635.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">932.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Продукционная_база_знаний -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Продукционная_база_знаний">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#База_знаний"/>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1443.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">823.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Продукция -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Продукция">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#Продукционная_база_знаний"/>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1470.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">921.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Свойство -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Свойство">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#Узел"/>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">588.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1044.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Связь -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Связь">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#a_part_of"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Семантическая_сеть"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">846.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">906.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Семантическая_сеть -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Семантическая_сеть">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#База_знаний"/>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">588.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">856.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Таксономия -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Таксономия">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#Онтология"/>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">478.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">757.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Тезаурус -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Тезаурус">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#Онтология"/>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">741.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">754.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Узел -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Узел">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knova.ru/user/1442306026250#a_part_of"/>
+                <owl:someValuesFrom rdf:resource="http://knova.ru/user/1442306026250#Семантическая_сеть"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">528.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">943.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Формальная_модель_онтологии -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Формальная_модель_онтологии">
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">731.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">401.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Экземпляр -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Экземпляр">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#Узел"/>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">485.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1047.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Агрегация_(слабая) -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Агрегация_(слабая)">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#a_part_of"/>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1048.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1095.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/user/1442306026250#Композиция_(сильная) -->
+
+    <owl:Class rdf:about="http://knova.ru/user/1442306026250#Композиция_(сильная)">
+        <rdfs:subClassOf rdf:resource="http://knova.ru/user/1442306026250#a_part_of"/>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">814.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1101.0</ontolis:position_y>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://knova.ru/user/1442306026250#a_part_of">
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1013.0</ontolis:position_y>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">907.0</ontolis:position_x>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://knova.ru/user/1442306026250#same_as">
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1013.0</ontolis:position_y>
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1015.0</ontolis:position_x>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://knova.ru/user/1442306026250#subClassOf">
+        <ontolis:position_x rdf:datatype="http://www.w3.org/2001/XMLSchema#double">802.0</ontolis:position_x>
+        <ontolis:position_y rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1016.0</ontolis:position_y>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 1.0-SNAPSHOT) https://github.com/owlcs/owlapi -->
+

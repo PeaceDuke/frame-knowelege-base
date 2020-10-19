@@ -1,0 +1,133 @@
+{
+    "last_id": "17",
+    "namespaces": {
+        "default": "http://knova.ru/user/1496147340831",
+        "ontolis-avis": "http://knova.ru/ontolis-avis",
+        "owl": "http://www.w3.org/2002/07/owl",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+        "xsd": "http://www.w3.org/2001/XMLSchema"
+    },
+    "nodes": [
+        {
+            "attributes": {
+            },
+            "id": "1",
+            "name": "альцгеймер",
+            "namespace": "http://knova.ru/user/1496147340831",
+            "position_x": 22,
+            "position_y": -190
+        },
+        {
+            "attributes": {
+            },
+            "id": "2",
+            "name": "AKKN1",
+            "namespace": "http://knova.ru/user/1496147340831",
+            "position_x": -313,
+            "position_y": -229
+        },
+        {
+            "attributes": {
+            },
+            "id": "3",
+            "name": "Ген",
+            "namespace": "http://knova.ru/user/1496147340831",
+            "position_x": -231,
+            "position_y": -378
+        },
+        {
+            "attributes": {
+            },
+            "id": "6",
+            "name": "потеря памяти",
+            "namespace": "http://knova.ru/user/1496147340831",
+            "position_x": -133,
+            "position_y": -82
+        },
+        {
+            "attributes": {
+            },
+            "id": "10",
+            "name": "ферментт ыыы",
+            "namespace": "http://knova.ru/user/1496147340831",
+            "position_x": -345,
+            "position_y": -38
+        },
+        {
+            "attributes": {
+            },
+            "id": "13",
+            "name": "имт",
+            "namespace": "http://knova.ru/user/1496147340831",
+            "position_x": -778,
+            "position_y": -465
+        },
+        {
+            "attributes": {
+            },
+            "id": "14",
+            "name": "ожирение",
+            "namespace": "http://knova.ru/user/1496147340831",
+            "position_x": -830,
+            "position_y": -220
+        },
+        {
+            "attributes": {
+            },
+            "id": "15",
+            "name": "сахарный диабет",
+            "namespace": "http://knova.ru/user/1496147340831",
+            "position_x": -634,
+            "position_y": -339
+        }
+    ],
+    "relations": [
+        {
+            "attributes": {
+            },
+            "destination_node_id": "3",
+            "id": "4",
+            "name": "is_a",
+            "namespace": "http://knova.ru/user/1496147340831",
+            "source_node_id": "2"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "1",
+            "id": "9",
+            "name": "влимяет",
+            "namespace": "http://knova.ru/user/1496147340831",
+            "source_node_id": "6"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "10",
+            "id": "11",
+            "name": "влимяет",
+            "namespace": "http://knova.ru/user/1496147340831",
+            "source_node_id": "2"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "6",
+            "id": "12",
+            "name": "влимяет",
+            "namespace": "http://knova.ru/user/1496147340831",
+            "source_node_id": "10"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "15",
+            "id": "17",
+            "name": "влимяет",
+            "namespace": "http://knova.ru/user/1496147340831",
+            "source_node_id": "13"
+        }
+    ],
+    "visualize_ont_path": ""
+}

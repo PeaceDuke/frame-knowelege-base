@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1509438562751" name="http://knova.ru/OntoOwl.owl" uri="OntoOwl.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509438562751" name="http://knova.ru/dataScience.owl" uri="dataScience.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509438562751" name="http://www.ontosearch.com/2007/12/ontosofa-ns" uri="data.ria.ru.owl"/>
+    </group>
+</catalog>

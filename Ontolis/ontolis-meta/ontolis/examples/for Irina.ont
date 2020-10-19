@@ -1,0 +1,281 @@
+{
+    "last_id": "308",
+    "namespaces": {
+        "default": "http://www.ontosearch.com/2007/12/ontosofa-ns#",
+        "http://data.ria.ru": "http://data.ria.ru",
+        "ontolis-avis": "http://knova.ru/ontolis-avis",
+        "owl": "http://www.w3.org/2002/07/owl",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+        "ria": "http://data.ria.ru#",
+        "riacv": "http://data.ria.ru/cv#",
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsd": "http://www.w3.org/2001/XMLSchema"
+    },
+    "nodes": [
+        {
+            "attributes": {
+            },
+            "id": "86",
+            "name": "аббревиатура",
+            "namespace": "http://data.ria.ru",
+            "position_x": 290.11208950442244,
+            "position_y": 1043.7514785588737
+        },
+        {
+            "attributes": {
+            },
+            "id": "117",
+            "name": "ОКПО",
+            "namespace": "http://data.ria.ru",
+            "position_x": 537.12977527616158,
+            "position_y": 1492.0879347596494
+        },
+        {
+            "attributes": {
+            },
+            "id": "76",
+            "name": "Орган власти",
+            "namespace": "http://data.ria.ru",
+            "position_x": 621.21555558603359,
+            "position_y": 1079.1329799056093
+        },
+        {
+            "attributes": {
+            },
+            "id": "127",
+            "name": "предыдущее название",
+            "namespace": "http://data.ria.ru",
+            "position_x": 545.48192762392887,
+            "position_y": 1366.5932656679729
+        },
+        {
+            "attributes": {
+            },
+            "id": "60",
+            "name": "Научно-образовательное учреждение",
+            "namespace": "http://data.ria.ru",
+            "position_x": 226.78408977622109,
+            "position_y": 1283.4961083856315
+        },
+        {
+            "attributes": {
+            },
+            "id": "84",
+            "name": "образовательное",
+            "namespace": "http://data.ria.ru",
+            "position_x": 200,
+            "position_y": 1410.9058243406112
+        },
+        {
+            "attributes": {
+            },
+            "id": "20",
+            "name": "Спортивная команда",
+            "namespace": "http://data.ria.ru",
+            "position_x": 550.43536759911581,
+            "position_y": 1166.2243434480533
+        },
+        {
+            "attributes": {
+            },
+            "id": "28",
+            "name": "Общественное объединение",
+            "namespace": "http://data.ria.ru",
+            "position_x": 432.41358645676519,
+            "position_y": 1031.3454269108877
+        },
+        {
+            "attributes": {
+            },
+            "id": "104",
+            "name": "официальное наименование",
+            "namespace": "http://data.ria.ru",
+            "position_x": 738.94246211808036,
+            "position_y": 1173.3710156884003
+        },
+        {
+            "attributes": {
+            },
+            "id": "100",
+            "name": "дата закрытия",
+            "namespace": "http://data.ria.ru",
+            "position_x": 321.17319394388892,
+            "position_y": 1151.583824556006
+        },
+        {
+            "attributes": {
+            },
+            "id": "2",
+            "name": "Политическая партия",
+            "namespace": "http://data.ria.ru",
+            "position_x": 219.00336649997644,
+            "position_y": 1177.0821124681718
+        },
+        {
+            "attributes": {
+            },
+            "id": "37",
+            "name": "Международная организация",
+            "namespace": "http://data.ria.ru",
+            "position_x": 573.70384451444488,
+            "position_y": 1316.3469167305184
+        },
+        {
+            "attributes": {
+            },
+            "id": "27",
+            "name": "Коммерческая компания",
+            "namespace": "http://data.ria.ru",
+            "position_x": 394.5495705467024,
+            "position_y": 1518.2833892988851
+        },
+        {
+            "attributes": {
+            },
+            "id": "73",
+            "name": "Организация",
+            "namespace": "http://data.ria.ru",
+            "position_x": 463.25504978905383,
+            "position_y": 1191.8943386331548
+        }
+    ],
+    "relationNames": [
+        "http://knova.ru/reply/converter#a_part_of",
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+        "http://knova.ru/reply/converter#is_instance_of"
+    ],
+    "relations": [
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "245",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "27"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "165",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "20"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "207",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "2"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "162",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "100"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "159",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "37"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "166",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "76"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "257",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "28"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "281",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "117"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "173",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "60"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "215",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "86"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "218",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "104"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "60",
+            "id": "209",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "84"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "174",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "127"
+        }
+    ],
+    "visualize_ont_path": ""
+}

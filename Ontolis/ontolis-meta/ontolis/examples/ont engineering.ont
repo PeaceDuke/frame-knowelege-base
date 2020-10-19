@@ -1,0 +1,115 @@
+{
+    "last_id": "188",
+    "namespaces": {
+        "default": "http://knova.ru/user/1442306026250",
+        "ontolis-avis": "http://knova.ru/ontolis-avis",
+        "owl": "http://www.w3.org/2002/07/owl",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+        "xsd": "http://www.w3.org/2001/XMLSchema"
+    },
+    "nodes": [
+        {
+            "attributes": {
+            },
+            "id": "86",
+            "name": "Ontology engineering",
+            "namespace": "http://knova.ru/user/1442306026250",
+            "position_x": 451,
+            "position_y": 772
+        },
+        {
+            "attributes": {
+            },
+            "id": "88",
+            "name": "Artificial intelligence",
+            "namespace": "http://knova.ru/user/1442306026250",
+            "position_x": 432,
+            "position_y": 622
+        },
+        {
+            "attributes": {
+            },
+            "id": "87",
+            "name": "Knowledge representation and reasoning",
+            "namespace": "http://knova.ru/user/1442306026250",
+            "position_x": 396,
+            "position_y": 684
+        },
+        {
+            "attributes": {
+            },
+            "id": "143",
+            "name": "Ontology engineering methods",
+            "namespace": "http://knova.ru/user/1442306026250",
+            "position_x": 216,
+            "position_y": 720
+        },
+        {
+            "attributes": {
+            },
+            "id": "123",
+            "name": "Онтологический инжиниринг",
+            "namespace": "http://knova.ru/user/1442306026250",
+            "position_x": 457,
+            "position_y": 848
+        },
+        {
+            "attributes": {
+            },
+            "id": "146",
+            "name": "Методы онтологического инжиниринга",
+            "namespace": "http://knova.ru/user/1442306026250",
+            "position_x": 212,
+            "position_y": 846
+        }
+    ],
+    "relations": [
+        {
+            "attributes": {
+            },
+            "destination_node_id": "143",
+            "id": "147",
+            "name": "same_as",
+            "namespace": "http://knova.ru/user/1442306026250",
+            "source_node_id": "146"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "86",
+            "id": "124",
+            "name": "same_as",
+            "namespace": "http://knova.ru/user/1442306026250",
+            "source_node_id": "123"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "88",
+            "id": "89",
+            "name": "subClassOf",
+            "namespace": "http://knova.ru/user/1442306026250",
+            "source_node_id": "87"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "143",
+            "id": "145",
+            "name": "has",
+            "namespace": "http://knova.ru/user/1442306026250",
+            "source_node_id": "86"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "87",
+            "id": "90",
+            "name": "subClassOf",
+            "namespace": "http://knova.ru/user/1442306026250",
+            "source_node_id": "86"
+        }
+    ],
+    "visualize_ont_path": ""
+}

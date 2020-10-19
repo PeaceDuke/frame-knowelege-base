@@ -1,0 +1,280 @@
+{
+    "last_id": "308",
+    "namespaces": {
+        "default": "http://www.ontosearch.com/2007/12/ontosofa-ns#",
+        "http://data.ria.ru": "http://data.ria.ru",
+        "ontolis-avis": "http://knova.ru/ontolis-avis",
+        "owl": "http://www.w3.org/2002/07/owl",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+        "ria": "http://data.ria.ru#",
+        "riacv": "http://data.ria.ru/cv#",
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsd": "http://www.w3.org/2001/XMLSchema"
+    },
+    "nodes": [
+        {
+            "attributes": {
+            },
+            "id": "62",
+            "name": "Аэропорт",
+            "namespace": "http://data.ria.ru",
+            "position_x": 794,
+            "position_y": 1515
+        },
+        {
+            "attributes": {
+            },
+            "id": "54",
+            "name": "Гражданское сооружение",
+            "namespace": "http://data.ria.ru",
+            "position_x": 636,
+            "position_y": 1434
+        },
+        {
+            "attributes": {
+            },
+            "id": "29",
+            "name": "Железнодорожный вокзал",
+            "namespace": "http://data.ria.ru",
+            "position_x": 699,
+            "position_y": 1273
+        },
+        {
+            "attributes": {
+            },
+            "id": "52",
+            "name": "Кладбище",
+            "namespace": "http://data.ria.ru",
+            "position_x": 742,
+            "position_y": 1548
+        },
+        {
+            "attributes": {
+            },
+            "id": "40",
+            "name": "Театр",
+            "namespace": "http://data.ria.ru",
+            "position_x": 619,
+            "position_y": 1594
+        },
+        {
+            "attributes": {
+            },
+            "id": "33",
+            "name": "Больница",
+            "namespace": "http://data.ria.ru",
+            "position_x": 671,
+            "position_y": 1569
+        },
+        {
+            "attributes": {
+            },
+            "id": "17",
+            "name": "Достопримечательность",
+            "namespace": "http://data.ria.ru",
+            "position_x": 427,
+            "position_y": 1542
+        },
+        {
+            "attributes": {
+            },
+            "id": "137",
+            "name": "координаты",
+            "namespace": "http://data.ria.ru",
+            "position_x": 790,
+            "position_y": 1139
+        },
+        {
+            "attributes": {
+            },
+            "id": "90",
+            "name": "торговая марка",
+            "namespace": "http://data.ria.ru",
+            "position_x": 742,
+            "position_y": 1205
+        },
+        {
+            "attributes": {
+            },
+            "id": "66",
+            "name": "Станция метро",
+            "namespace": "http://data.ria.ru",
+            "position_x": 446,
+            "position_y": 1337
+        },
+        {
+            "attributes": {
+            },
+            "id": "31",
+            "name": "Музей",
+            "namespace": "http://data.ria.ru",
+            "position_x": 834,
+            "position_y": 1484
+        },
+        {
+            "attributes": {
+            },
+            "id": "10",
+            "name": "Место события",
+            "namespace": "http://data.ria.ru",
+            "position_x": 463,
+            "position_y": 1176
+        },
+        {
+            "attributes": {
+            },
+            "id": "74",
+            "name": "Кинотеатр",
+            "namespace": "http://data.ria.ru",
+            "position_x": 685,
+            "position_y": 1235
+        },
+        {
+            "attributes": {
+            },
+            "id": "22",
+            "name": "Концертный зал",
+            "namespace": "http://data.ria.ru",
+            "position_x": 586,
+            "position_y": 1176
+        },
+        {
+            "attributes": {
+            },
+            "id": "70",
+            "name": "Стадион",
+            "namespace": "http://data.ria.ru",
+            "position_x": 616,
+            "position_y": 1228
+        }
+    ],
+    "relationNames": [
+        "http://knova.ru/reply/converter#a_part_of",
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+        "http://knova.ru/reply/converter#is_instance_of"
+    ],
+    "relations": [
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "54",
+            "id": "186",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "52"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "54",
+            "id": "187",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "17"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "54",
+            "id": "163",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "10"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "54",
+            "id": "264",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "29"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "54",
+            "id": "221",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "74"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "54",
+            "id": "213",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "40"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "54",
+            "id": "291",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "70"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "54",
+            "id": "190",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "62"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "54",
+            "id": "191",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "66"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "54",
+            "id": "172",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "22"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "54",
+            "id": "235",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "33"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "54",
+            "id": "266",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "31"
+        }
+    ],
+    "visualize_ont_path": ""
+}

@@ -1,0 +1,133 @@
+{
+    "last_id": "142",
+    "namespaces": {
+        "default": "http://knova.ru/user/1476796747347",
+        "ontolis-avis": "http://knova.ru/ontolis-avis",
+        "owl": "http://www.w3.org/2002/07/owl",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+        "xsd": "http://www.w3.org/2001/XMLSchema"
+    },
+    "nodes": [
+        {
+            "attributes": {
+            },
+            "id": "29",
+            "name": "Благоустройство придворовой территории",
+            "namespace": "http://knova.ru/user/1476796747347",
+            "position_x": 510,
+            "position_y": 579
+        },
+        {
+            "attributes": {
+            },
+            "id": "28",
+            "name": "Благоустройство дома",
+            "namespace": "http://knova.ru/user/1476796747347",
+            "position_x": 256,
+            "position_y": 579
+        },
+        {
+            "attributes": {
+            },
+            "id": "31",
+            "name": "Подъезды",
+            "namespace": "http://knova.ru/user/1476796747347",
+            "position_x": 345,
+            "position_y": 669
+        },
+        {
+            "attributes": {
+            },
+            "id": "30",
+            "name": "Квартиры",
+            "namespace": "http://knova.ru/user/1476796747347",
+            "position_x": 200,
+            "position_y": 673
+        },
+        {
+            "attributes": {
+            },
+            "id": "24",
+            "name": "Благоустройство",
+            "namespace": "http://knova.ru/user/1476796747347",
+            "position_x": 500,
+            "position_y": 475
+        },
+        {
+            "attributes": {
+            },
+            "id": "33",
+            "name": "Автопарковка",
+            "namespace": "http://knova.ru/user/1476796747347",
+            "position_x": 643,
+            "position_y": 674
+        },
+        {
+            "attributes": {
+            },
+            "id": "32",
+            "name": "Детская площадка",
+            "namespace": "http://knova.ru/user/1476796747347",
+            "position_x": 453,
+            "position_y": 672
+        }
+    ],
+    "relations": [
+        {
+            "attributes": {
+            },
+            "destination_node_id": "29",
+            "id": "34",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/user/1476796747347",
+            "source_node_id": "33"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "24",
+            "id": "38",
+            "name": "is_a",
+            "namespace": "http://knova.ru/user/1476796747347",
+            "source_node_id": "28"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "28",
+            "id": "40",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/user/1476796747347",
+            "source_node_id": "31"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "24",
+            "id": "35",
+            "name": "is_a",
+            "namespace": "http://knova.ru/user/1476796747347",
+            "source_node_id": "29"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "28",
+            "id": "39",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/user/1476796747347",
+            "source_node_id": "30"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "29",
+            "id": "41",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/user/1476796747347",
+            "source_node_id": "32"
+        }
+    ],
+    "visualize_ont_path": ""
+}

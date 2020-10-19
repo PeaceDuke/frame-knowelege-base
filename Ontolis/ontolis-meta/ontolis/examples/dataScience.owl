@@ -1,0 +1,3188 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://knova.ru/dataScience.owl#"
+     xml:base="http://knova.ru/dataScience.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://knova.ru/dataScience.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#ANOVA_Radial_Basis -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#ANOVA_Radial_Basis">
+        <rdfs:label xml:lang="en">ANOVA Radial Basis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Kernels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Accumulo -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Accumulo">
+        <rdfs:label xml:lang="en">Accumulo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Column_Family_Stores"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Apache_Accumulo</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Agnostic_Specifications -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Agnostic_Specifications">
+        <rdfs:label xml:lang="en">Agnostic Specifications</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Production"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Angular -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Angular">
+        <rdfs:label xml:lang="en">Angular</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Javascript"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/AngularJS</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Apache_Kafka -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Apache_Kafka">
+        <rdfs:label xml:lang="en">Apache Kafka</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Real-Time/Streaming"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Apache_Kafka</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Apache_Samza -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Apache_Samza">
+        <rdfs:label xml:lang="en">Apache Samza</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Mixed"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Apache_Samza</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Applications -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Applications">
+        <rdfs:label xml:lang="en">Applications</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Apriori_Algorithm -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Apriori_Algorithm">
+        <rdfs:label xml:lang="en">Apriori Algorithm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Association_Rules"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Apriori_algorithm</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#ArangoDB -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#ArangoDB">
+        <rdfs:label xml:lang="en">ArangoDB</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Key-Value_Store"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/comingSoon.png</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Architectures -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Architectures">
+        <rdfs:label xml:lang="en">Architectures</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Deep_Learning"/>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Recurrent_Neural_Networks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Area_Chart -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Area_Chart">
+        <rdfs:label xml:lang="en">Area Chart</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Visualization"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Area_chart</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Artificial_Neural_Networks -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Artificial_Neural_Networks">
+        <rdfs:label xml:lang="en">Artificial Neural Networks</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Learning_Algorithms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Association_Rules -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Association_Rules">
+        <rdfs:label xml:lang="en">Association Rules</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Learning_Algorithms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Associative_Neural_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Associative_Neural_Network">
+        <rdfs:label xml:lang="en">Associative Neural Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Modular_Neural_Networks"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/asnn.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Astrophysics -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Astrophysics">
+        <rdfs:label xml:lang="en">Astrophysics</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Applications"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/astro.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Automated_Parameter_Tuning -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Automated_Parameter_Tuning">
+        <rdfs:label xml:lang="en">Automated Parameter Tuning</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Model_Performance"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Reactive_search_optimization</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Automatic_Summarization -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Automatic_Summarization">
+        <rdfs:label xml:lang="en">Automatic Summarization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Natural_Language_Processing"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Automatic_summarization</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Average_Linkage -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Average_Linkage">
+        <rdfs:label xml:lang="en">Average Linkage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Hierarchical_Clustering"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/UPGMA</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#BIRCH -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#BIRCH">
+        <rdfs:label xml:lang="en">BIRCH</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Performant"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/BIRCH_(data_clustering)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#BSAS -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#BSAS">
+        <rdfs:label xml:lang="en">BSAS</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Performant"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Basic_sequential_algorithmic_scheme</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Bagging -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Bagging">
+        <rdfs:label xml:lang="en">Bagging</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Meta_Learning"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Bootstrap_aggregating</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Bar_Chart -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Bar_Chart">
+        <rdfs:label xml:lang="en">Bar Chart</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Visualization"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Bar_chart</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Batch -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Batch">
+        <rdfs:label xml:lang="en">Batch</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures/Frameworks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Bayesian_Approaches -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Bayesian_Approaches">
+        <rdfs:label xml:lang="en">Bayesian Approaches</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Statistics"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Bayesian_inference</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Berkeley_DB -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Berkeley_DB">
+        <rdfs:label xml:lang="en">Berkeley DB</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Key-Value_Store"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Berkeley_DB</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Bessel -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Bessel">
+        <rdfs:label xml:lang="en">Bessel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Kernels"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Bessel_function</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Bi-Directional_Recurrent_Neural_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Bi-Directional_Recurrent_Neural_Network">
+        <rdfs:label xml:lang="en">Bi-Directional Recurrent Neural Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/BRNN.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Bioinformatics -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Bioinformatics">
+        <rdfs:label xml:lang="en">Bioinformatics</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Applications"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/bio.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Boosting -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Boosting">
+        <rdfs:label xml:lang="en">Boosting</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Meta_Learning"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Boosting_(machine_learning)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Bootstrap_Sampling -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Bootstrap_Sampling">
+        <rdfs:label xml:lang="en">Bootstrap Sampling</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Model_Validation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Bootstrapping_(statistics)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Boxplot -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Boxplot">
+        <rdfs:label xml:lang="en">Boxplot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Visualization"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Box_plot</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#CLARANS -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#CLARANS">
+        <rdfs:label xml:lang="en">CLARANS</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Performant"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/comingSoon.png</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#CLIQUE -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#CLIQUE">
+        <rdfs:label xml:lang="en">CLIQUE</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Subspace_Models"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Clique_problem</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#CSS -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#CSS">
+        <rdfs:label xml:lang="en">CSS</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Web_Frameworks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Cartogram -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Cartogram">
+        <rdfs:label xml:lang="en">Cartogram</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Visualization"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Cartogram</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Cassandra -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Cassandra">
+        <rdfs:label xml:lang="en">Cassandra</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Column_Family_Stores"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Apache_Cassandra</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Centroid_Models -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Centroid_Models">
+        <rdfs:label xml:lang="en">Centroid Models</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Clustering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Character_Encoding -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Character_Encoding">
+        <rdfs:label xml:lang="en">Character Encoding</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Cleaning"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Character_encoding</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Character_Manipulation -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Character_Manipulation">
+        <rdfs:label xml:lang="en">Character Manipulation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Cleaning"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Cheminformatics -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Cheminformatics">
+        <rdfs:label xml:lang="en">Cheminformatics</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Applications"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/cheminfo.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Clojure -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Clojure">
+        <rdfs:label xml:lang="en">Clojure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Languages"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Clojure</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Cloud -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Cloud">
+        <rdfs:label xml:lang="en">Cloud</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Production"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Cluster_Validity -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Cluster_Validity">
+        <rdfs:label xml:lang="en">Cluster Validity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Model_Validation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Clustering -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Clustering">
+        <rdfs:label xml:lang="en">Clustering</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Learning_Algorithms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#CodeIgniter -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#CodeIgniter">
+        <rdfs:label xml:lang="en">CodeIgniter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#PHP"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/CodeIgniter</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Column_Family_Stores -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Column_Family_Stores">
+        <rdfs:label xml:lang="en">Column Family Stores</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#NoSQL"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Complete_Linkage -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Complete_Linkage">
+        <rdfs:label xml:lang="en">Complete Linkage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Hierarchical_Clustering"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Complete-linkage_clustering</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Compound_Hierarchical-Deep_Models -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Compound_Hierarchical-Deep_Models">
+        <rdfs:label xml:lang="en">Compound Hierarchical-Deep Models</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/torralba.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Computational_Chemistry -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Computational_Chemistry">
+        <rdfs:label xml:lang="en">Computational Chemistry</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Applications"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/chem.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Computer_Vision -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Computer_Vision">
+        <rdfs:label xml:lang="en">Computer Vision</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Applications"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Computer_vision</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Confidence_Interval -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Confidence_Interval">
+        <rdfs:label xml:lang="en">Confidence Interval</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Statistics"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Confidence_interval</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Confusion_Matrix -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Confusion_Matrix">
+        <rdfs:label xml:lang="en">Confusion Matrix</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Model_Validation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Confusion_matrix</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Connectivity_Models -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Connectivity_Models">
+        <rdfs:label xml:lang="en">Connectivity Models</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Clustering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Continuous_Time_Recurrent_Neural_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Continuous_Time_Recurrent_Neural_Network">
+        <rdfs:label xml:lang="en">Continuous Time Recurrent Neural Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/CTRNN.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Control_Chart -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Control_Chart">
+        <rdfs:label xml:lang="en">Control Chart</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Visualization"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Control_chart</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Convolutional_Deep_Belief_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Convolutional_Deep_Belief_Network">
+        <rdfs:label xml:lang="en">Convolutional Deep Belief Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Convolutional_Deep_Belief_Networks</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Convolutional_Neural_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Convolutional_Neural_Network">
+        <rdfs:label xml:lang="en">Convolutional Neural Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Convolutional_neural_network</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Correlation -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Correlation">
+        <rdfs:label xml:lang="en">Correlation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Statistics"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Correlation_and_dependence</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#CouchDB -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#CouchDB">
+        <rdfs:label xml:lang="en">CouchDB</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Document_Store"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/CouchDB</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Covariance -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Covariance">
+        <rdfs:label xml:lang="en">Covariance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Statistics"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Covariance</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Cross_Validation -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Cross_Validation">
+        <rdfs:label xml:lang="en">Cross Validation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Model_Validation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Cross-validation_(statistics)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Customized_Tuning -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Customized_Tuning">
+        <rdfs:label xml:lang="en">Customized Tuning</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Model_Performance"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Hyperparameter_optimization</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#D3 -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#D3">
+        <rdfs:label xml:lang="en">D3</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Visualization"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/D3.js</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#DB2 -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#DB2">
+        <rdfs:label xml:lang="en">DB2</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Relational"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/IBM_DB2</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#DBSCAN -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#DBSCAN">
+        <rdfs:label xml:lang="en">DBSCAN</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Density_Models"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/DBSCAN</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#DNA_Sequencing -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#DNA_Sequencing">
+        <rdfs:label xml:lang="en">DNA Sequencing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Applications"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/dna.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Data_Cleaning -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Data_Cleaning">
+        <rdfs:label xml:lang="en">Data Cleaning</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Data_Preparation -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Data_Preparation">
+        <rdfs:label xml:lang="en">Data Preparation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Data_Science -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Data_Science">
+        <rdfs:label xml:lang="en">Data Science</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Data_Visualization -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Data_Visualization">
+        <rdfs:label xml:lang="en">Data Visualization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Databases -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Databases">
+        <rdfs:label xml:lang="en">Databases</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Dataflow -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Dataflow">
+        <rdfs:label xml:lang="en">Dataflow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Paradigms"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/http://googlecloudplatform.blogspot.com/2014/06/sneak-peek-google-cloud-dataflow-a-cloud-native-data-processing-service.html</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Decision_Stump -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Decision_Stump">
+        <rdfs:label xml:lang="en">Decision Stump</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Decision_Trees"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Decision_stump</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Decision_Trees -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Decision_Trees">
+        <rdfs:label xml:lang="en">Decision Trees</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Learning_Algorithms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Deductive_Correction -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Deductive_Correction">
+        <rdfs:label xml:lang="en">Deductive Correction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Cleaning"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/comingSoon.png</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Deep_Belief_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Deep_Belief_Network">
+        <rdfs:label xml:lang="en">Deep Belief Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Deep_belief_network</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Deep_Boltzmann_Machines -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Deep_Boltzmann_Machines">
+        <rdfs:label xml:lang="en">Deep Boltzmann Machines</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/larochelle.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Deep_Coding_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Deep_Coding_Network">
+        <rdfs:label xml:lang="en">Deep Coding Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/yu.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Deep_Kernel_Machines -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Deep_Kernel_Machines">
+        <rdfs:label xml:lang="en">Deep Kernel Machines</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/saul.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Deep_Learning -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Deep_Learning">
+        <rdfs:label xml:lang="en">Deep Learning</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Learning_Algorithms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Deep_Neural_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Deep_Neural_Network">
+        <rdfs:label xml:lang="en">Deep Neural Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/bengio.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Deep_Q-Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Deep_Q-Network">
+        <rdfs:label xml:lang="en">Deep Q-Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/dqn.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Deep_Stacking_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Deep_Stacking_Network">
+        <rdfs:label xml:lang="en">Deep Stacking Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/dong.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Density_Models -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Density_Models">
+        <rdfs:label xml:lang="en">Density Models</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Clustering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Development -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Development">
+        <rdfs:label xml:lang="en">Development</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Dimensionality_Reduction -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Dimensionality_Reduction">
+        <rdfs:label xml:lang="en">Dimensionality Reduction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Preparation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Distributed_ML_Libraries -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Distributed_ML_Libraries">
+        <rdfs:label xml:lang="en">Distributed ML Libraries</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Production"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Distribution_Models -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Distribution_Models">
+        <rdfs:label xml:lang="en">Distribution Models</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Clustering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Django -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Django">
+        <rdfs:label xml:lang="en">Django</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Python"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Django_(web_framework)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Document_Store -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Document_Store">
+        <rdfs:label xml:lang="en">Document Store</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#NoSQL"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Dunn_index -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Dunn_index">
+        <rdfs:label xml:lang="en">Dunn index</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Internal_Evaluation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Dunn_index</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#DynamoDB -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#DynamoDB">
+        <rdfs:label xml:lang="en">DynamoDB</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Key-Value_Store"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Amazon_DynamoDB</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Echo_State_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Echo_State_Network">
+        <rdfs:label xml:lang="en">Echo State Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Echo_state_network</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Eclat_Algorithm -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Eclat_Algorithm">
+        <rdfs:label xml:lang="en">Eclat Algorithm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Association_Rules"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/Eclat.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Effect_Size -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Effect_Size">
+        <rdfs:label xml:lang="en">Effect Size</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Statistics"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Effect_size</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Elastic_Net_Regularization -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Elastic_Net_Regularization">
+        <rdfs:label xml:lang="en">Elastic Net Regularization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Regression"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Elastic_net_regularization</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#EnDBSCAN -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#EnDBSCAN">
+        <rdfs:label xml:lang="en">EnDBSCAN</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Density_Models"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/comingSoon.png</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#EnterpriseDB -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#EnterpriseDB">
+        <rdfs:label xml:lang="en">EnterpriseDB</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Relational"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/EnterpriseDB</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Error_Localization -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Error_Localization">
+        <rdfs:label xml:lang="en">Error Localization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Cleaning"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/comingSoon.png</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#External_Evaluation -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#External_Evaluation">
+        <rdfs:label xml:lang="en">External Evaluation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Cluster_Validity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#F-measure -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#F-measure">
+        <rdfs:label xml:lang="en">F-measure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#External_Evaluation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/F1_score</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#FP-Growth -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#FP-Growth">
+        <rdfs:label xml:lang="en">FP-Growth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Association_Rules"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/hunyadi.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#False_Discovery_Rate -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#False_Discovery_Rate">
+        <rdfs:label xml:lang="en">False Discovery Rate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Statistics"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/False_discovery_rate</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Familywise_Error_Rate -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Familywise_Error_Rate">
+        <rdfs:label xml:lang="en">Familywise Error Rate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Statistics"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Familywise_error_rate</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Feature_Engineering -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Feature_Engineering">
+        <rdfs:label xml:lang="en">Feature Engineering</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Preparation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/feature_eng.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Feature_Learning -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Feature_Learning">
+        <rdfs:label xml:lang="en">Feature Learning</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Preparation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Feature_learning</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Feature_Selection -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Feature_Selection">
+        <rdfs:label xml:lang="en">Feature Selection</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Preparation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Feature_selection</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Feedforward_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Feedforward_Network">
+        <rdfs:label xml:lang="en">Feedforward Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Artificial_Neural_Networks"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Feedforward_neural_network</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Flask -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Flask">
+        <rdfs:label xml:lang="en">Flask</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Python"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Flask_(web_framework)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Foundation_Framework -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Foundation_Framework">
+        <rdfs:label xml:lang="en">Foundation Framework</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#CSS"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Foundation_(framework)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Frequentist_Approaches -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Frequentist_Approaches">
+        <rdfs:label xml:lang="en">Frequentist Approaches</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Statistics"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Frequentist_inference</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Fuzzy_C-Means -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Fuzzy_C-Means">
+        <rdfs:label xml:lang="en">Fuzzy C-Means</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Centroid_Models"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Fuzzy_clustering#Fuzzy_c-means_clustering</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#GCE -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#GCE">
+        <rdfs:label xml:lang="en">GCE</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Cloud"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Google_Compute_Engine</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Gaussian_Processes -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Gaussian_Processes">
+        <rdfs:label xml:lang="en">Gaussian Processes</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Methods"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Gaussian_process</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#GitHub -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#GitHub">
+        <rdfs:label xml:lang="en">GitHub</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Version_Control"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/GitHub</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Google_Web_Toolkit -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Google_Web_Toolkit">
+        <rdfs:label xml:lang="en">Google Web Toolkit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Java"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Google_Web_Toolkit</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Grails -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Grails">
+        <rdfs:label xml:lang="en">Grails</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Java"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Grails_(framework)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Graph -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Graph">
+        <rdfs:label xml:lang="en">Graph</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#NoSQL"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#GraphLab -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#GraphLab">
+        <rdfs:label xml:lang="en">GraphLab</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Distributed_ML_Libraries"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/GraphLab</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Guassian_Radial_Basis -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Guassian_Radial_Basis">
+        <rdfs:label xml:lang="en">Guassian Radial Basis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Kernels"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Radial_basis_function_kernel</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#H2O -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#H2O">
+        <rdfs:label xml:lang="en">H2O</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Distributed_ML_Libraries"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/H2o_%28Analytics_tool%29</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#HBase -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#HBase">
+        <rdfs:label xml:lang="en">HBase</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Column_Family_Stores"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Apache_HBase</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Hadoop -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Hadoop">
+        <rdfs:label xml:lang="en">Hadoop</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Batch"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Apache_Hadoop</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Heteroskedasticity -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Heteroskedasticity">
+        <rdfs:label xml:lang="en">Heteroskedasticity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Statistics"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Heteroscedasticity</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Hierarchical_Clustering -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Hierarchical_Clustering">
+        <rdfs:label xml:lang="en">Hierarchical Clustering</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Connectivity_Models"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Hierarchical_Recurrent_Neural_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Hierarchical_Recurrent_Neural_Network">
+        <rdfs:label xml:lang="en">Hierarchical Recurrent Neural Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/HRNN.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Histogram -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Histogram">
+        <rdfs:label xml:lang="en">Histogram</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Visualization"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Histogram</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Hive -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Hive">
+        <rdfs:label xml:lang="en">Hive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Platforms"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Apache_Hive</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Hopfield_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Hopfield_Network">
+        <rdfs:label xml:lang="en">Hopfield Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Hopfield_network</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#HyperGraphDB -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#HyperGraphDB">
+        <rdfs:label xml:lang="en">HyperGraphDB</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Graph"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Graph_database</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Hyperbolic_Tangent -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Hyperbolic_Tangent">
+        <rdfs:label xml:lang="en">Hyperbolic Tangent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Kernels"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Hyperbolic_function</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Hypertable -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Hypertable">
+        <rdfs:label xml:lang="en">Hypertable</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Column_Family_Stores"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Hypertable</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Hypothesis_Testing -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Hypothesis_Testing">
+        <rdfs:label xml:lang="en">Hypothesis Testing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Statistics"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Statistical_hypothesis_testing</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Imputation -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Imputation">
+        <rdfs:label xml:lang="en">Imputation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Cleaning"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Imputation_(statistics)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Incomplete_Cholesky_Decomposition -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Incomplete_Cholesky_Decomposition">
+        <rdfs:label xml:lang="en">Incomplete Cholesky Decomposition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Methods"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Incomplete_Cholesky_factorization</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Inconsistencies -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Inconsistencies">
+        <rdfs:label xml:lang="en">Inconsistencies</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Cleaning"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/comingSoon.png</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Infinite_Graph -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Infinite_Graph">
+        <rdfs:label xml:lang="en">Infinite Graph</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Graph"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Graph_database</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Information_Retrieval -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Information_Retrieval">
+        <rdfs:label xml:lang="en">Information Retrieval</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Applications"/>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Natural_Language_Processing"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/information.pdf</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Information_retrieval</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Instance-Based_Methods -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Instance-Based_Methods">
+        <rdfs:label xml:lang="en">Instance-Based Methods</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Learning_Algorithms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Interior_Point_Code_Quadratic_Optimizer -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Interior_Point_Code_Quadratic_Optimizer">
+        <rdfs:label xml:lang="en">Interior Point Code Quadratic Optimizer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Methods"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/loqo.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Internal_Evaluation -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Internal_Evaluation">
+        <rdfs:label xml:lang="en">Internal Evaluation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Cluster_Validity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Jaccard_index -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Jaccard_index">
+        <rdfs:label xml:lang="en">Jaccard index</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#External_Evaluation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Jaccard_index</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Java -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Java">
+        <rdfs:label xml:lang="en">Java</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Languages"/>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Web_Frameworks"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Java_(programming_language)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Javascript -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Javascript">
+        <rdfs:label xml:lang="en">Javascript</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Web_Frameworks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Julia -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Julia">
+        <rdfs:label xml:lang="en">Julia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Languages"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Julia_(programming_language)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Kappa_Statistic -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Kappa_Statistic">
+        <rdfs:label xml:lang="en">Kappa Statistic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Model_Validation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Cohen%27s_kappa</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Kernel_Feature_Analysis -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Kernel_Feature_Analysis">
+        <rdfs:label xml:lang="en">Kernel Feature Analysis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Methods"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/Feng.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Kernel_Methods -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Kernel_Methods">
+        <rdfs:label xml:lang="en">Kernel Methods</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Learning_Algorithms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Kernels -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Kernels">
+        <rdfs:label xml:lang="en">Kernels</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Kernel_Methods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Key-Value_Store -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Key-Value_Store">
+        <rdfs:label xml:lang="en">Key-Value Store</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#NoSQL"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Kohonen_Self_Organizing_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Kohonen_Self_Organizing_Network">
+        <rdfs:label xml:lang="en">Kohonen Self Organizing Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Artificial_Neural_Networks"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Self-organizing_map</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Lambda -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Lambda">
+        <rdfs:label xml:lang="en">Lambda</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Mixed"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Lambda_architecture</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Languages -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Languages">
+        <rdfs:label xml:lang="en">Languages</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Laplace_Radial_Basis -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Laplace_Radial_Basis">
+        <rdfs:label xml:lang="en">Laplace Radial Basis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Kernels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Laravel -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Laravel">
+        <rdfs:label xml:lang="en">Laravel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#PHP"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Laravel</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Learning_Algorithms -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Learning_Algorithms">
+        <rdfs:label xml:lang="en">Learning Algorithms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Learning_Vector_Quantization -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Learning_Vector_Quantization">
+        <rdfs:label xml:lang="en">Learning Vector Quantization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Artificial_Neural_Networks"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Learning_vector_quantization</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Line_Chart -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Line_Chart">
+        <rdfs:label xml:lang="en">Line Chart</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Visualization"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Line_chart</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Linear -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Linear">
+        <rdfs:label xml:lang="en">Linear</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Kernels"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Kernel_%28linear_algebra%29</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Logistic_Regression -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Logistic_Regression">
+        <rdfs:label xml:lang="en">Logistic Regression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Regression"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Logistic_regression</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Long_Short_Term_Memory_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Long_Short_Term_Memory_Network">
+        <rdfs:label xml:lang="en">Long Short Term Memory Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Long_short_term_memory</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Lotus -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Lotus">
+        <rdfs:label xml:lang="en">Lotus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Ruby"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/http://lotusrb.org/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#MLlib -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#MLlib">
+        <rdfs:label xml:lang="en">MLlib</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Distributed_ML_Libraries"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/https://spark.apache.org/mllib/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Machine_Translation -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Machine_Translation">
+        <rdfs:label xml:lang="en">Machine Translation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Natural_Language_Processing"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Machine_translation</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Mahout -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Mahout">
+        <rdfs:label xml:lang="en">Mahout</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Distributed_ML_Libraries"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Apache_Mahout</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#MapReduce -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#MapReduce">
+        <rdfs:label xml:lang="en">MapReduce</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Paradigms"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/MapReduce</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Mean-shift -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Mean-shift">
+        <rdfs:label xml:lang="en">Mean-shift</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Density_Models"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Mean-shift</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Medical_Diagnosis -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Medical_Diagnosis">
+        <rdfs:label xml:lang="en">Medical Diagnosis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Applications"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/med.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#MemcacheDB -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#MemcacheDB">
+        <rdfs:label xml:lang="en">MemcacheDB</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Key-Value_Store"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/MemcacheDB</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Meta_Analysis -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Meta_Analysis">
+        <rdfs:label xml:lang="en">Meta Analysis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Statistics"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Meta-analysis</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Meta_Learning -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Meta_Learning">
+        <rdfs:label xml:lang="en">Meta Learning</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Model_Performance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Methods -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Methods">
+        <rdfs:label xml:lang="en">Methods</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Kernel_Methods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Microsoft_SQL_Server -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Microsoft_SQL_Server">
+        <rdfs:label xml:lang="en">Microsoft SQL Server</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Relational"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Microsoft_SQL_Server</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Minimal_Value_Adjustment -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Minimal_Value_Adjustment">
+        <rdfs:label xml:lang="en">Minimal Value Adjustment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Cleaning"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/comingSoon.png</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Missing_Values -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Missing_Values">
+        <rdfs:label xml:lang="en">Missing Values</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Cleaning"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Missing_data</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Mixed -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Mixed">
+        <rdfs:label xml:lang="en">Mixed</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures/Frameworks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Model_Performance -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Model_Performance">
+        <rdfs:label xml:lang="en">Model Performance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Model_Validation -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Model_Validation">
+        <rdfs:label xml:lang="en">Model Validation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Modular_Neural_Networks -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Modular_Neural_Networks">
+        <rdfs:label xml:lang="en">Modular Neural Networks</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Artificial_Neural_Networks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#MongoDB -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#MongoDB">
+        <rdfs:label xml:lang="en">MongoDB</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Document_Store"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/MongoDB</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Multiple_Hypothesis_Testing -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Multiple_Hypothesis_Testing">
+        <rdfs:label xml:lang="en">Multiple Hypothesis Testing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Statistics"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Multiple_comparisons_problem</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Multiple_Linear_Regression -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Multiple_Linear_Regression">
+        <rdfs:label xml:lang="en">Multiple Linear Regression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Regression"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Linear_regression</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Multiple_Time_Scales_Recurrent_Neural_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Multiple_Time_Scales_Recurrent_Neural_Network">
+        <rdfs:label xml:lang="en">Multiple Time Scales Recurrent Neural Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/mtsrnn.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Mutual_Information -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Mutual_Information">
+        <rdfs:label xml:lang="en">Mutual Information</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#External_Evaluation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Mutual_information</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#MySQL -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#MySQL">
+        <rdfs:label xml:lang="en">MySQL</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Relational"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/MySQL</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Naiad -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Naiad">
+        <rdfs:label xml:lang="en">Naiad</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Mixed"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/http://research.microsoft.com/pubs/201100/naiad_sosp2013.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Named_Entity_Recognition -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Named_Entity_Recognition">
+        <rdfs:label xml:lang="en">Named Entity Recognition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Natural_Language_Processing"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Named-entity_recognition</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Natural_Language_Generation -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Natural_Language_Generation">
+        <rdfs:label xml:lang="en">Natural Language Generation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Natural_Language_Processing"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Natural_language_generation</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Natural_Language_Processing -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Natural_Language_Processing">
+        <rdfs:label xml:lang="en">Natural Language Processing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Applications"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Neo4J -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Neo4J">
+        <rdfs:label xml:lang="en">Neo4J</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Graph"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Neo4j</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Netezza -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Netezza">
+        <rdfs:label xml:lang="en">Netezza</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Relational"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Netezza</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#NoSQL -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#NoSQL">
+        <rdfs:label xml:lang="en">NoSQL</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Databases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#OPTICS -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#OPTICS">
+        <rdfs:label xml:lang="en">OPTICS</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Density_Models"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/OPTICS_algorithm</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Online_Learning_with_Kernels -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Online_Learning_with_Kernels">
+        <rdfs:label xml:lang="en">Online Learning with Kernels</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Methods"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/onlinekern.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Optical_Character_Recognition -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Optical_Character_Recognition">
+        <rdfs:label xml:lang="en">Optical Character Recognition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Natural_Language_Processing"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Optical_character_recognition</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Oracle -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Oracle">
+        <rdfs:label xml:lang="en">Oracle</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Relational"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Oracle</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#OrientDB -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#OrientDB">
+        <rdfs:label xml:lang="en">OrientDB</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Graph"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/OrientDB</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Outliers -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Outliers">
+        <rdfs:label xml:lang="en">Outliers</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Cleaning"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Outlier</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#P-Value -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#P-Value">
+        <rdfs:label xml:lang="en">P-Value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Statistics"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/P-value</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#PHP -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#PHP">
+        <rdfs:label xml:lang="en">PHP</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Web_Frameworks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#PMML -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#PMML">
+        <rdfs:label xml:lang="en">PMML</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Agnostic_Specifications"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Predictive_Model_Markup_Language</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Padrino -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Padrino">
+        <rdfs:label xml:lang="en">Padrino</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Ruby"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Padrino_(web_framework)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Paradigms -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Paradigms">
+        <rdfs:label xml:lang="en">Paradigms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Production"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Pareto_Chart -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Pareto_Chart">
+        <rdfs:label xml:lang="en">Pareto Chart</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Visualization"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Pareto_chart</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Performant -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Performant">
+        <rdfs:label xml:lang="en">Performant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Clustering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Phalcon -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Phalcon">
+        <rdfs:label xml:lang="en">Phalcon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#PHP"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Phalcon_(framework)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Pie_Chart -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Pie_Chart">
+        <rdfs:label xml:lang="en">Pie Chart</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Visualization"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Pie_chart</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Pig -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Pig">
+        <rdfs:label xml:lang="en">Pig</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Platforms"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Pig_(programming_tool)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Platforms -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Platforms">
+        <rdfs:label xml:lang="en">Platforms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Production"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Play -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Play">
+        <rdfs:label xml:lang="en">Play</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Java"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Play_framework</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Polynomial -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Polynomial">
+        <rdfs:label xml:lang="en">Polynomial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Kernels"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Polynomial_kernel</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#PostgreSQL -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#PostgreSQL">
+        <rdfs:label xml:lang="en">PostgreSQL</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Relational"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/PostgreSQL</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Precision_and_Recall -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Precision_and_Recall">
+        <rdfs:label xml:lang="en">Precision and Recall</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Model_Validation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Precision_and_recall</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Probabilistic_Classifiers -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Probabilistic_Classifiers">
+        <rdfs:label xml:lang="en">Probabilistic Classifiers</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Learning_Algorithms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Production -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Production">
+        <rdfs:label xml:lang="en">Production</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Projection_Pursuit -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Projection_Pursuit">
+        <rdfs:label xml:lang="en">Projection Pursuit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Dimensionality_Reduction"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Projection_pursuit</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Pyramid -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Pyramid">
+        <rdfs:label xml:lang="en">Pyramid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Python"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Pylons_project#Pyramid</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Python -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Python">
+        <rdfs:label xml:lang="en">Python</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Languages"/>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Web_Frameworks"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Python_(programming_language)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#R -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#R">
+        <rdfs:label xml:lang="en">R</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Languages"/>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Web_Frameworks"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/R_(programming_language)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#ROC_Curves -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#ROC_Curves">
+        <rdfs:label xml:lang="en">ROC Curves</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Model_Validation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Receiver_operating_characteristic</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Radial_Basis_Function_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Radial_Basis_Function_Network">
+        <rdfs:label xml:lang="en">Radial Basis Function Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Artificial_Neural_Networks"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Radial_basis_function_network</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Rand_Measure -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Rand_Measure">
+        <rdfs:label xml:lang="en">Rand Measure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#External_Evaluation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Rand_index</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Random_Forests -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Random_Forests">
+        <rdfs:label xml:lang="en">Random Forests</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Meta_Learning"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Random_forest</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Ranking -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Ranking">
+        <rdfs:label xml:lang="en">Ranking</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Methods"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/ranking.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#RaptorDB -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#RaptorDB">
+        <rdfs:label xml:lang="en">RaptorDB</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Document_Store"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/comingSoon.png</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#RavenDB -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#RavenDB">
+        <rdfs:label xml:lang="en">RavenDB</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Document_Store"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Document-oriented_database</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Recommender_Systems -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Recommender_Systems">
+        <rdfs:label xml:lang="en">Recommender Systems</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Applications"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Recommender_system</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Recurrent_Multilayer_Perceptron -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Recurrent_Multilayer_Perceptron">
+        <rdfs:label xml:lang="en">Recurrent Multilayer Perceptron</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/RMLP.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Recurrent_Neural_Networks -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Recurrent_Neural_Networks">
+        <rdfs:label xml:lang="en">Recurrent Neural Networks</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Artificial_Neural_Networks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Redis -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Redis">
+        <rdfs:label xml:lang="en">Redis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Key-Value_Store"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Redis</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Regression -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Regression">
+        <rdfs:label xml:lang="en">Regression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Learning_Algorithms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Regularization -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Regularization">
+        <rdfs:label xml:lang="en">Regularization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Model_Performance"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Regularization_(mathematics)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Relational -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Relational">
+        <rdfs:label xml:lang="en">Relational</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Databases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Relevance_Vector_Machine -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Relevance_Vector_Machine">
+        <rdfs:label xml:lang="en">Relevance Vector Machine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Methods"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Relevance_vector_machine</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Resource_Managers -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Resource_Managers">
+        <rdfs:label xml:lang="en">Resource Managers</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Production"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Riak -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Riak">
+        <rdfs:label xml:lang="en">Riak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Key-Value_Store"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Riak</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Ridge_Regression -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Ridge_Regression">
+        <rdfs:label xml:lang="en">Ridge Regression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Regression"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Tikhonov_regularization</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Robotics -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Robotics">
+        <rdfs:label xml:lang="en">Robotics</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Applications"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Robot_learning</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Ruby -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Ruby">
+        <rdfs:label xml:lang="en">Ruby</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Web_Frameworks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Ruby_on_Rails -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Ruby_on_Rails">
+        <rdfs:label xml:lang="en">Ruby on Rails</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Ruby"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Ruby_on_Rails</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Rule_Learners -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Rule_Learners">
+        <rdfs:label xml:lang="en">Rule Learners</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Learning_Algorithms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Run_Chart -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Run_Chart">
+        <rdfs:label xml:lang="en">Run Chart</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Visualization"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Run_chart</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#SLIPPER -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#SLIPPER">
+        <rdfs:label xml:lang="en">SLIPPER</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Rule_Learners"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/slipper.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#SQL_Azure -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#SQL_Azure">
+        <rdfs:label xml:lang="en">SQL Azure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Relational"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/SQL_Azure</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#SQLite -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#SQLite">
+        <rdfs:label xml:lang="en">SQLite</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Relational"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/SQLite</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Sammon_Mapping -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Sammon_Mapping">
+        <rdfs:label xml:lang="en">Sammon Mapping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Dimensionality_Reduction"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Sammon_mapping</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Scala -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Scala">
+        <rdfs:label xml:lang="en">Scala</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Languages"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Scala_(programming_language)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Scatterplot -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Scatterplot">
+        <rdfs:label xml:lang="en">Scatterplot</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Visualization"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Scatter_plot</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Search_Engines -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Search_Engines">
+        <rdfs:label xml:lang="en">Search Engines</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Applications"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Learning_to_rank</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Second_Order_Recurrent_Neural_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Second_Order_Recurrent_Neural_Network">
+        <rdfs:label xml:lang="en">Second Order Recurrent Neural Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/sornn.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Sensitivity_and_Specificity -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Sensitivity_and_Specificity">
+        <rdfs:label xml:lang="en">Sensitivity and Specificity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Model_Validation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Sensitivity_and_specificity</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Sentiment_Analysis -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Sentiment_Analysis">
+        <rdfs:label xml:lang="en">Sentiment Analysis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Natural_Language_Processing"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Sentiment_analysis</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Shiny -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Shiny">
+        <rdfs:label xml:lang="en">Shiny</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#R"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/http://shiny.rstudio.com/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Silhouette_coefficient -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Silhouette_coefficient">
+        <rdfs:label xml:lang="en">Silhouette coefficient</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Internal_Evaluation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Silhouette_(clustering)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Sinatra -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Sinatra">
+        <rdfs:label xml:lang="en">Sinatra</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Ruby"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Sinatra_(software)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Single_Linkage -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Single_Linkage">
+        <rdfs:label xml:lang="en">Single Linkage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Hierarchical_Clustering"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Single-linkage_clustering</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Software_Engineering -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Software_Engineering">
+        <rdfs:label xml:lang="en">Software Engineering</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Applications"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/software.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Spark -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Spark">
+        <rdfs:label xml:lang="en">Spark</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Real-Time/Streaming"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Apache_Spark</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Sparkline -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Sparkline">
+        <rdfs:label xml:lang="en">Sparkline</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Visualization"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Sparkline</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Special_Values -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Special_Values">
+        <rdfs:label xml:lang="en">Special Values</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Cleaning"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/comingSoon.png</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Spectral_Clustering -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Spectral_Clustering">
+        <rdfs:label xml:lang="en">Spectral Clustering</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Methods"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Spectral_clustering</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Speech_Recognition -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Speech_Recognition">
+        <rdfs:label xml:lang="en">Speech Recognition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Applications"/>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Natural_Language_Processing"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/speech.pdf</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Speech_recognition</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Spring_MVC -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Spring_MVC">
+        <rdfs:label xml:lang="en">Spring MVC</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Java"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Spring_Framework</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Stacked_Generalization -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Stacked_Generalization">
+        <rdfs:label xml:lang="en">Stacked Generalization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Model_Performance"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Ensemble_averaging</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Statistics -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Statistics">
+        <rdfs:label xml:lang="en">Statistics</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Science"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Stem-and-Leaf_Display -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Stem-and-Leaf_Display">
+        <rdfs:label xml:lang="en">Stem-and-Leaf Display</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Visualization"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Stem-and-leaf_display</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Stepwise_Regression -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Stepwise_Regression">
+        <rdfs:label xml:lang="en">Stepwise Regression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Regression"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Stepwise_regression</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Stochastic_Neural_Network -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Stochastic_Neural_Network">
+        <rdfs:label xml:lang="en">Stochastic Neural Network</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Stochastic_neural_network</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Stock_Market_Analysis -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Stock_Market_Analysis">
+        <rdfs:label xml:lang="en">Stock Market Analysis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Applications"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/stock.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Storm -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Storm">
+        <rdfs:label xml:lang="en">Storm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Real-Time/Streaming"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Storm_(event_processor)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Subspace_Models -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Subspace_Models">
+        <rdfs:label xml:lang="en">Subspace Models</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Clustering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Support_Vector_Machine -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Support_Vector_Machine">
+        <rdfs:label xml:lang="en">Support Vector Machine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Methods"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Support_vector_machine</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Symfony2 -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Symfony2">
+        <rdfs:label xml:lang="en">Symfony2</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#PHP"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Symfony</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#TRIPPER -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#TRIPPER">
+        <rdfs:label xml:lang="en">TRIPPER</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Rule_Learners"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/tripper.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Table -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Table">
+        <rdfs:label xml:lang="en">Table</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Visualization"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Table_(database)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Topic_Modeling -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Topic_Modeling">
+        <rdfs:label xml:lang="en">Topic Modeling</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Natural_Language_Processing"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Topic_model</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Transformation -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Transformation">
+        <rdfs:label xml:lang="en">Transformation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Cleaning"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/comingSoon.png</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Twitter_Bootstrap -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Twitter_Bootstrap">
+        <rdfs:label xml:lang="en">Twitter Bootstrap</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#CSS"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Type_Conversion -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Type_Conversion">
+        <rdfs:label xml:lang="en">Type Conversion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Data_Cleaning"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Type_conversion</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Vaadin -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Vaadin">
+        <rdfs:label xml:lang="en">Vaadin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Java"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Vaadin</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Version_Control -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Version_Control">
+        <rdfs:label xml:lang="en">Version Control</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Development"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Visualization -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Visualization">
+        <rdfs:label xml:lang="en">Visualization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Development"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Voldemort -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Voldemort">
+        <rdfs:label xml:lang="en">Voldemort</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Key-Value_Store"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/comingSoon.png</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Web_Frameworks -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Web_Frameworks">
+        <rdfs:label xml:lang="en">Web Frameworks</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Development"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#YARN -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#YARN">
+        <rdfs:label xml:lang="en">YARN</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Resource_Managers"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/http://blog.cloudera.com/blog/2012/10/mr2-and-yarn-briefly-explained/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Yahoo_Pure -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Yahoo_Pure">
+        <rdfs:label xml:lang="en">Yahoo Pure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#CSS"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/http://purecss.io/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#jQuery -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#jQuery">
+        <rdfs:label xml:lang="en">jQuery</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Javascript"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/JQuery</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#k-Means -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#k-Means">
+        <rdfs:label xml:lang="en">k-Means</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Centroid_Models"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/K-means_clustering</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#k-Medians -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#k-Medians">
+        <rdfs:label xml:lang="en">k-Medians</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Centroid_Models"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/K-medians_clustering</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#k-Medoids -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#k-Medoids">
+        <rdfs:label xml:lang="en">k-Medoids</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Centroid_Models"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/K-medoids</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#AWS/EC2 -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#AWS/EC2">
+        <rdfs:label xml:lang="en">AWS/EC2</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Cloud"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Amazon_Elastic_Compute_Cloud</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Architectures/Frameworks -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Architectures/Frameworks">
+        <rdfs:label xml:lang="en">Architectures/Frameworks</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Production"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Bayesian_Belief_Network_(BBN) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Bayesian_Belief_Network_(BBN)">
+        <rdfs:label xml:lang="en">Bayesian Belief Network (BBN)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Probabilistic_Classifiers"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Bayesian_network</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Benford&apos;s_Law -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Benford&apos;s_Law">
+        <rdfs:label xml:lang="en">Benford&apos;s Law</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Statistics"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Benford%27s_law</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#C4.5/5.0 -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#C4.5/5.0">
+        <rdfs:label xml:lang="en">C4.5/5.0</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Decision_Trees"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/C4.5_algorithm#Improvements_in_C5.0.2FSee5_algorithm</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Chi-squared_Automatic_Interaction_Detection_(CHAID) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Chi-squared_Automatic_Interaction_Detection_(CHAID)">
+        <rdfs:label xml:lang="en">Chi-squared Automatic Interaction Detection (CHAID)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Decision_Trees"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/CHAID</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Classification_and_Regression_Tree_(CART) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Classification_and_Regression_Tree_(CART)">
+        <rdfs:label xml:lang="en">Classification and Regression Tree (CART)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Decision_Trees"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Decision_tree_learning</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Davies–Bouldin_index -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Davies–Bouldin_index">
+        <rdfs:label xml:lang="en">Davies–Bouldin index</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Internal_Evaluation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Davies%E2%80%93Bouldin_index</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Elman/Jordan_Networks -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Elman/Jordan_Networks">
+        <rdfs:label xml:lang="en">Elman/Jordan Networks</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/elmanjordan.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Expectation-Maximization_(EM)_Algorithm -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Expectation-Maximization_(EM)_Algorithm">
+        <rdfs:label xml:lang="en">Expectation-Maximization (EM) Algorithm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Distribution_Models"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Fowlkes–Mallows_index -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Fowlkes–Mallows_index">
+        <rdfs:label xml:lang="en">Fowlkes–Mallows index</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#External_Evaluation"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Fowlkes%E2%80%93Mallows_index</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Gradient_Boosting_Machines_(GBM) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Gradient_Boosting_Machines_(GBM)">
+        <rdfs:label xml:lang="en">Gradient Boosting Machines (GBM)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Decision_Trees"/>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Model_Performance"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Gradient_boosting</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#IREP++ -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#IREP++">
+        <rdfs:label xml:lang="en">IREP++</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Rule_Learners"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/irepplusplus.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Incremental_Reduced_Error_Pruning_(IREP) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Incremental_Reduced_Error_Pruning_(IREP)">
+        <rdfs:label xml:lang="en">Incremental Reduced Error Pruning (IREP)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Rule_Learners"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/irep.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#K-Means++ -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#K-Means++">
+        <rdfs:label xml:lang="en">K-Means++</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Centroid_Models"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/K-means%2B%2B</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Kernel_Canonical_Correlation_Analysis_(KCCA) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Kernel_Canonical_Correlation_Analysis_(KCCA)">
+        <rdfs:label xml:lang="en">Kernel Canonical Correlation Analysis (KCCA)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Methods"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/kCCA.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Kernel_Principle_Components_Analysis_(KPCA) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Kernel_Principle_Components_Analysis_(KPCA)">
+        <rdfs:label xml:lang="en">Kernel Principle Components Analysis (KPCA)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Methods"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Kernel_principal_component_analysis</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Learning_Vector_Quantization_(LVQ) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Learning_Vector_Quantization_(LVQ)">
+        <rdfs:label xml:lang="en">Learning Vector Quantization (LVQ)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Instance-Based_Methods"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Learning_vector_quantization</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Least_Absolute_Shrinkage_and_Selection_Operator_(LASSO) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Least_Absolute_Shrinkage_and_Selection_Operator_(LASSO)">
+        <rdfs:label xml:lang="en">Least Absolute Shrinkage and Selection Operator (LASSO)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Regression"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Least_squares#Lasso_method</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Locally_Estimated_Scatterplot_Smoothing_(LOESS) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Locally_Estimated_Scatterplot_Smoothing_(LOESS)">
+        <rdfs:label xml:lang="en">Locally Estimated Scatterplot Smoothing (LOESS)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Regression"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Local_regression</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#M5&apos;_Algorithm -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#M5&apos;_Algorithm">
+        <rdfs:label xml:lang="en">M5&apos; Algorithm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Decision_Trees"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/comingSoon.png</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Multidimensional_Scaling_(MDS) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Multidimensional_Scaling_(MDS)">
+        <rdfs:label xml:lang="en">Multidimensional Scaling (MDS)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Dimensionality_Reduction"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Multidimensional_scaling</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Multivariate_Adaptive_Regression_Splines_(MARS) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Multivariate_Adaptive_Regression_Splines_(MARS)">
+        <rdfs:label xml:lang="en">Multivariate Adaptive Regression Splines (MARS)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Decision_Trees"/>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Regression"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Multivariate_adaptive_regression_splines</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Naive_Bayes_(NB) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Naive_Bayes_(NB)">
+        <rdfs:label xml:lang="en">Naive Bayes (NB)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Probabilistic_Classifiers"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Naive_Bayes_classifier</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Partial_Least_Squares_Regression_(PLS) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Partial_Least_Squares_Regression_(PLS)">
+        <rdfs:label xml:lang="en">Partial Least Squares Regression (PLS)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Dimensionality_Reduction"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Partial_least_squares_regression</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Principal_Component_Analysis_(PCA) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Principal_Component_Analysis_(PCA)">
+        <rdfs:label xml:lang="en">Principal Component Analysis (PCA)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Dimensionality_Reduction"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Principal_component_analysis</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Real-Time/Streaming -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Real-Time/Streaming">
+        <rdfs:label xml:lang="en">Real-Time/Streaming</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures/Frameworks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Repeated_Incremental_Pruning_to_Produce_Error_Reduction_(RIPPER) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Repeated_Incremental_Pruning_to_Produce_Error_Reduction_(RIPPER)">
+        <rdfs:label xml:lang="en">Repeated Incremental Pruning to Produce Error Reduction (RIPPER)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Rule_Learners"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/ripper.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Spike-and-Slab_RBMs_(ssRBMs) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Spike-and-Slab_RBMs_(ssRBMs)">
+        <rdfs:label xml:lang="en">Spike-and-Slab RBMs (ssRBMs)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/luo.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Stacked_(Denoising)_Auto-Encoders -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Stacked_(Denoising)_Auto-Encoders">
+        <rdfs:label xml:lang="en">Stacked (Denoising) Auto-Encoders</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/vincent.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#Tensor_Deep_Stacking_Network_(T-DSN) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#Tensor_Deep_Stacking_Network_(T-DSN)">
+        <rdfs:label xml:lang="en">Tensor Deep Stacking Network (T-DSN)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Architectures"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://datascienceontology.com/papers/deng.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://knova.ru/dataScience.owl#k-Nearest_Neighbor_(kNN) -->
+
+    <owl:Class rdf:about="http://knova.ru/dataScience.owl#k-Nearest_Neighbor_(kNN)">
+        <rdfs:label xml:lang="en">k-Nearest Neighbor (kNN)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://knova.ru/dataScience.owl#Instance-Based_Methods"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm</rdfs:seeAlso>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.10-SNAPSHOT) http://owlapi.sourceforge.net -->
+

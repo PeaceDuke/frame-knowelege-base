@@ -1,0 +1,3807 @@
+{
+    "last_id": "489",
+    "namespaces": {
+        "default": "http://knova.ru/reviews.owl#",
+        "http://knova.ru/reviews.owl": "http://knova.ru/reviews.owl",
+        "ontolis-avis": "http://knova.ru/ontolis-avis",
+        "owl": "http://www.w3.org/2002/07/owl",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+        "reply": "http://knova.ru/reply#",
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsd": "http://www.w3.org/2001/XMLSchema"
+    },
+    "nodes": [
+        {
+            "attributes": {
+            },
+            "id": "13",
+            "name": "city__locality_ibfk_2__locality",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1209,
+            "position_y": 199
+        },
+        {
+            "attributes": {
+            },
+            "id": "122",
+            "name": "source_sourceType",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 719,
+            "position_y": 1069
+        },
+        {
+            "attributes": {
+            },
+            "id": "139",
+            "name": "district__addobj_ibfk_5__addobj",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1049,
+            "position_y": 189
+        },
+        {
+            "attributes": {
+            },
+            "id": "48",
+            "name": "review_fullText",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 809,
+            "position_y": 859
+        },
+        {
+            "attributes": {
+            },
+            "id": "63",
+            "name": "microdistrict",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1169,
+            "position_y": 369
+        },
+        {
+            "attributes": {
+            },
+            "id": "135",
+            "name": "microdistrict__addobj_ibfk_7__addobj",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 969,
+            "position_y": 349
+        },
+        {
+            "attributes": {
+            },
+            "id": "87",
+            "name": "region__area_ibfk_1__area",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1529,
+            "position_y": 429
+        },
+        {
+            "attributes": {
+            },
+            "id": "66",
+            "name": "objectofreview_id_parent",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 89,
+            "position_y": 779
+        },
+        {
+            "attributes": {
+            },
+            "id": "172",
+            "name": "street_id_locality",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1179,
+            "position_y": 59
+        },
+        {
+            "attributes": {
+            },
+            "id": "134",
+            "name": "person_gender",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 549,
+            "position_y": 409
+        },
+        {
+            "attributes": {
+            },
+            "id": "14",
+            "name": "district",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1219,
+            "position_y": 269
+        },
+        {
+            "attributes": {
+            },
+            "id": "103",
+            "name": "area__addobj_ibfk_2__addobj",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1549,
+            "position_y": 289
+        },
+        {
+            "attributes": {
+            },
+            "id": "86",
+            "name": "building__flat_ibfk_1__flat",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1299,
+            "position_y": 719
+        },
+        {
+            "attributes": {
+            },
+            "id": "10",
+            "name": "building_id_addobj",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1319,
+            "position_y": 779
+        },
+        {
+            "attributes": {
+            },
+            "id": "163",
+            "name": "flat_id_building",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 999,
+            "position_y": 899
+        },
+        {
+            "attributes": {
+            },
+            "id": "165",
+            "name": "source_TIC",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 709,
+            "position_y": 1109
+        },
+        {
+            "attributes": {
+            },
+            "id": "183",
+            "name": "developer_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1279,
+            "position_y": 939
+        },
+        {
+            "attributes": {
+            },
+            "id": "76",
+            "name": "addobj__building_ibfk_3__building",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1339,
+            "position_y": 429
+        },
+        {
+            "attributes": {
+            },
+            "id": "195",
+            "name": "building_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1319,
+            "position_y": 749
+        },
+        {
+            "attributes": {
+            },
+            "id": "145",
+            "name": "subreview_offeringOfEliminating",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 359,
+            "position_y": 729
+        },
+        {
+            "attributes": {
+            },
+            "id": "166",
+            "name": "addobj_id_district",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1249,
+            "position_y": 469
+        },
+        {
+            "attributes": {
+            },
+            "id": "152",
+            "name": "addobj_id_street",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1369,
+            "position_y": 439
+        },
+        {
+            "attributes": {
+            },
+            "id": "231",
+            "name": "review_flatChoosingReason",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 789,
+            "position_y": 799
+        },
+        {
+            "attributes": {
+            },
+            "id": "237",
+            "name": "addobj_id_area",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1259,
+            "position_y": 349
+        },
+        {
+            "attributes": {
+            },
+            "id": "159",
+            "name": "area_id_region",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1689,
+            "position_y": 309
+        },
+        {
+            "attributes": {
+            },
+            "id": "202",
+            "name": "addobj_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1399,
+            "position_y": 509
+        },
+        {
+            "attributes": {
+            },
+            "id": "161",
+            "name": "locality_id_city",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1499,
+            "position_y": 49
+        },
+        {
+            "attributes": {
+            },
+            "id": "197",
+            "name": "review_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 839,
+            "position_y": 749
+        },
+        {
+            "attributes": {
+            },
+            "id": "52",
+            "name": "addobj",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1399,
+            "position_y": 379
+        },
+        {
+            "attributes": {
+            },
+            "id": "57",
+            "name": "subreview_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 429,
+            "position_y": 849
+        },
+        {
+            "attributes": {
+            },
+            "id": "185",
+            "name": "addobj_houseNum",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1309,
+            "position_y": 329
+        },
+        {
+            "attributes": {
+            },
+            "id": "169",
+            "name": "review_isBought",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 789,
+            "position_y": 799
+        },
+        {
+            "attributes": {
+            },
+            "id": "46",
+            "name": "objectofreview__objectOfReview_ibfk_1__objectofreview",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 9,
+            "position_y": 709
+        },
+        {
+            "attributes": {
+            },
+            "id": "232",
+            "name": "subreview_fullText",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 349,
+            "position_y": 889
+        },
+        {
+            "attributes": {
+            },
+            "id": "234",
+            "name": "developer_name",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1329,
+            "position_y": 969
+        },
+        {
+            "attributes": {
+            },
+            "id": "90",
+            "name": "district__microdistrict_ibfk_1__microdistrict",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 929,
+            "position_y": 239
+        },
+        {
+            "attributes": {
+            },
+            "id": "26",
+            "name": "area",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1609,
+            "position_y": 279
+        },
+        {
+            "attributes": {
+            },
+            "id": "230",
+            "name": "street_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1249,
+            "position_y": 119
+        },
+        {
+            "attributes": {
+            },
+            "id": "71",
+            "name": "flat_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1019,
+            "position_y": 839
+        },
+        {
+            "attributes": {
+            },
+            "id": "17",
+            "name": "flat__review_ibfk_1__review",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1009,
+            "position_y": 899
+        },
+        {
+            "attributes": {
+            },
+            "id": "47",
+            "name": "subreview",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 489,
+            "position_y": 799
+        },
+        {
+            "attributes": {
+            },
+            "id": "123",
+            "name": "flat",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1079,
+            "position_y": 789
+        },
+        {
+            "attributes": {
+            },
+            "id": "224",
+            "name": "apartmentcomplex_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1489,
+            "position_y": 799
+        },
+        {
+            "attributes": {
+            },
+            "id": "79",
+            "name": "review__subreview_ibfk_1__subreview",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 699,
+            "position_y": 679
+        },
+        {
+            "attributes": {
+            },
+            "id": "34",
+            "name": "street__addobj_ibfk_6__addobj",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1189,
+            "position_y": 59
+        },
+        {
+            "attributes": {
+            },
+            "id": "58",
+            "name": "objectofreview",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 259,
+            "position_y": 789
+        },
+        {
+            "attributes": {
+            },
+            "id": "91",
+            "name": "building_storeys",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1249,
+            "position_y": 799
+        },
+        {
+            "attributes": {
+            },
+            "id": "105",
+            "name": "person_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 629,
+            "position_y": 429
+        },
+        {
+            "attributes": {
+            },
+            "id": "217",
+            "name": "building_plannedComplationDt",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1259,
+            "position_y": 669
+        },
+        {
+            "attributes": {
+            },
+            "id": "208",
+            "name": "subreview_id_review",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 319,
+            "position_y": 749
+        },
+        {
+            "attributes": {
+            },
+            "id": "162",
+            "name": "subreview_id_objectOfReview",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 319,
+            "position_y": 779
+        },
+        {
+            "attributes": {
+            },
+            "id": "27",
+            "name": "review_isGlad",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 629,
+            "position_y": 719
+        },
+        {
+            "attributes": {
+            },
+            "id": "21",
+            "name": "person",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 689,
+            "position_y": 509
+        },
+        {
+            "attributes": {
+            },
+            "id": "144",
+            "name": "street_id_city",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1309,
+            "position_y": -1
+        },
+        {
+            "attributes": {
+            },
+            "id": "146",
+            "name": "region_name",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1619,
+            "position_y": 359
+        },
+        {
+            "attributes": {
+            },
+            "id": "191",
+            "name": "district_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1069,
+            "position_y": 219
+        },
+        {
+            "attributes": {
+            },
+            "id": "106",
+            "name": "person_alias",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 529,
+            "position_y": 469
+        },
+        {
+            "attributes": {
+            },
+            "id": "108",
+            "name": "review_dtCreate",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 739,
+            "position_y": 839
+        },
+        {
+            "attributes": {
+            },
+            "id": "130",
+            "name": "source",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 779,
+            "position_y": 999
+        },
+        {
+            "attributes": {
+            },
+            "id": "101",
+            "name": "subreview_triedToInformDeveloper",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 299,
+            "position_y": 709
+        },
+        {
+            "attributes": {
+            },
+            "id": "181",
+            "name": "review_developerChoosingReason",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 599,
+            "position_y": 809
+        },
+        {
+            "attributes": {
+            },
+            "id": "70",
+            "name": "country_name",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 289,
+            "position_y": 1489
+        },
+        {
+            "attributes": {
+            },
+            "id": "22",
+            "name": "city__district_ibfk_1__district",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1349,
+            "position_y": 249
+        },
+        {
+            "attributes": {
+            },
+            "id": "201",
+            "name": "apartmentcomplex_name",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1469,
+            "position_y": 869
+        },
+        {
+            "attributes": {
+            },
+            "id": "15",
+            "name": "region",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1579,
+            "position_y": 379
+        },
+        {
+            "attributes": {
+            },
+            "id": "25",
+            "name": "apartmentcomplex",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1409,
+            "position_y": 799
+        },
+        {
+            "attributes": {
+            },
+            "id": "214",
+            "name": "subreview_developerHelped",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 369,
+            "position_y": 919
+        },
+        {
+            "attributes": {
+            },
+            "id": "236",
+            "name": "source_url",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 769,
+            "position_y": 1129
+        },
+        {
+            "attributes": {
+            },
+            "id": "239",
+            "name": "city_name",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1279,
+            "position_y": 199
+        },
+        {
+            "attributes": {
+            },
+            "id": "128",
+            "name": "building_complationDt",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1159,
+            "position_y": 689
+        },
+        {
+            "attributes": {
+            },
+            "id": "100",
+            "name": "review_likesNum",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 769,
+            "position_y": 709
+        },
+        {
+            "attributes": {
+            },
+            "id": "95",
+            "name": "building_id_developer",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1179,
+            "position_y": 749
+        },
+        {
+            "attributes": {
+            },
+            "id": "127",
+            "name": "apartmentcomplex__building_ibfk_1__building",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1279,
+            "position_y": 889
+        },
+        {
+            "attributes": {
+            },
+            "id": "18",
+            "name": "locality_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1459,
+            "position_y": 49
+        },
+        {
+            "attributes": {
+            },
+            "id": "2",
+            "name": "building",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1309,
+            "position_y": 689
+        },
+        {
+            "attributes": {
+            },
+            "id": "177",
+            "name": "addobj_strucNum",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1229,
+            "position_y": 419
+        },
+        {
+            "attributes": {
+            },
+            "id": "119",
+            "name": "review_messageType",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 599,
+            "position_y": 789
+        },
+        {
+            "attributes": {
+            },
+            "id": "168",
+            "name": "addobj_buildNum",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1449,
+            "position_y": 349
+        },
+        {
+            "attributes": {
+            },
+            "id": "93",
+            "name": "region__city_ibfk_1__city",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1479,
+            "position_y": 479
+        },
+        {
+            "attributes": {
+            },
+            "id": "110",
+            "name": "developer",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1339,
+            "position_y": 859
+        },
+        {
+            "attributes": {
+            },
+            "id": "16",
+            "name": "locality_id_area",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1529,
+            "position_y": 169
+        },
+        {
+            "attributes": {
+            },
+            "id": "116",
+            "name": "area_name",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1669,
+            "position_y": 189
+        },
+        {
+            "attributes": {
+            },
+            "id": "20",
+            "name": "review_duplicatesNum",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 619,
+            "position_y": 669
+        },
+        {
+            "attributes": {
+            },
+            "id": "210",
+            "name": "flat_floor",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1029,
+            "position_y": 719
+        },
+        {
+            "attributes": {
+            },
+            "id": "216",
+            "name": "microdistrict_name",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1049,
+            "position_y": 419
+        },
+        {
+            "attributes": {
+            },
+            "id": "194",
+            "name": "area_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1719,
+            "position_y": 239
+        },
+        {
+            "attributes": {
+            },
+            "id": "88",
+            "name": "objectofreview_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 209,
+            "position_y": 879
+        },
+        {
+            "attributes": {
+            },
+            "id": "59",
+            "name": "street_name",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1259,
+            "position_y": 9
+        },
+        {
+            "attributes": {
+            },
+            "id": "164",
+            "name": "review_id_flat",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 779,
+            "position_y": 649
+        },
+        {
+            "attributes": {
+            },
+            "id": "44",
+            "name": "source_ER",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 839,
+            "position_y": 1029
+        },
+        {
+            "attributes": {
+            },
+            "id": "28",
+            "name": "person__review_ibfk_2__review",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 629,
+            "position_y": 429
+        },
+        {
+            "attributes": {
+            },
+            "id": "29",
+            "name": "street",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1359,
+            "position_y": 139
+        },
+        {
+            "attributes": {
+            },
+            "id": "19",
+            "name": "locality",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1489,
+            "position_y": 179
+        },
+        {
+            "attributes": {
+            },
+            "id": "154",
+            "name": "source_name",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 659,
+            "position_y": 1069
+        },
+        {
+            "attributes": {
+            },
+            "id": "111",
+            "name": "objectofreview__subreview_ibfk_2__subreview",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": -1,
+            "position_y": 839
+        },
+        {
+            "attributes": {
+            },
+            "id": "142",
+            "name": "country",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 369,
+            "position_y": 1529
+        },
+        {
+            "attributes": {
+            },
+            "id": "36",
+            "name": "developer__building_ibfk_2__building",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1239,
+            "position_y": 929
+        },
+        {
+            "attributes": {
+            },
+            "id": "200",
+            "name": "review_id_source",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 859,
+            "position_y": 729
+        },
+        {
+            "attributes": {
+            },
+            "id": "50",
+            "name": "flat_porchNum",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1109,
+            "position_y": 819
+        },
+        {
+            "attributes": {
+            },
+            "id": "218",
+            "name": "person_patronymic",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 559,
+            "position_y": 489
+        },
+        {
+            "attributes": {
+            },
+            "id": "220",
+            "name": "addobj_id_locality",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1409,
+            "position_y": 479
+        },
+        {
+            "attributes": {
+            },
+            "id": "241",
+            "name": "addobj_id_microdistrict",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1249,
+            "position_y": 409
+        },
+        {
+            "attributes": {
+            },
+            "id": "80",
+            "name": "review_tone",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 669,
+            "position_y": 849
+        },
+        {
+            "attributes": {
+            },
+            "id": "68",
+            "name": "review_repostsNum",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 659,
+            "position_y": 749
+        },
+        {
+            "attributes": {
+            },
+            "id": "104",
+            "name": "country_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 409,
+            "position_y": 1569
+        },
+        {
+            "attributes": {
+            },
+            "id": "32",
+            "name": "area__locality_ibfk_1__locality",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1499,
+            "position_y": 229
+        },
+        {
+            "attributes": {
+            },
+            "id": "89",
+            "name": "objectofreview_name",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 149,
+            "position_y": 729
+        },
+        {
+            "attributes": {
+            },
+            "id": "72",
+            "name": "building_id_apartmentComplex",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1169,
+            "position_y": 629
+        },
+        {
+            "attributes": {
+            },
+            "id": "199",
+            "name": "flat_price",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1079,
+            "position_y": 849
+        },
+        {
+            "attributes": {
+            },
+            "id": "30",
+            "name": "subreview_developerAnswer",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 279,
+            "position_y": 829
+        },
+        {
+            "attributes": {
+            },
+            "id": "118",
+            "name": "city_id_region",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1369,
+            "position_y": 139
+        },
+        {
+            "attributes": {
+            },
+            "id": "41",
+            "name": "review",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 779,
+            "position_y": 769
+        },
+        {
+            "attributes": {
+            },
+            "id": "153",
+            "name": "review_id_person",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 759,
+            "position_y": 889
+        },
+        {
+            "attributes": {
+            },
+            "id": "9",
+            "name": "region__addobj_ibfk_1__addobj",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1559,
+            "position_y": 449
+        },
+        {
+            "attributes": {
+            },
+            "id": "175",
+            "name": "person_email",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 629,
+            "position_y": 379
+        },
+        {
+            "attributes": {
+            },
+            "id": "31",
+            "name": "review_serviceLvl",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 689,
+            "position_y": 879
+        },
+        {
+            "attributes": {
+            },
+            "id": "187",
+            "name": "microdistrict_id_district",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1069,
+            "position_y": 449
+        },
+        {
+            "attributes": {
+            },
+            "id": "45",
+            "name": "city__street_ibfk_2__street",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1329,
+            "position_y": 289
+        },
+        {
+            "attributes": {
+            },
+            "id": "107",
+            "name": "review_commentsNum",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 689,
+            "position_y": 639
+        },
+        {
+            "attributes": {
+            },
+            "id": "43",
+            "name": "region_code",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1629,
+            "position_y": 489
+        },
+        {
+            "attributes": {
+            },
+            "id": "6",
+            "name": "flat_flatNum",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1089,
+            "position_y": 739
+        },
+        {
+            "attributes": {
+            },
+            "id": "222",
+            "name": "city_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1429,
+            "position_y": 199
+        },
+        {
+            "attributes": {
+            },
+            "id": "211",
+            "name": "subreview_tone",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 489,
+            "position_y": 879
+        },
+        {
+            "attributes": {
+            },
+            "id": "81",
+            "name": "microdistrict_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1029,
+            "position_y": 369
+        },
+        {
+            "attributes": {
+            },
+            "id": "158",
+            "name": "source_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 829,
+            "position_y": 1099
+        },
+        {
+            "attributes": {
+            },
+            "id": "221",
+            "name": "addobj_id_city",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1329,
+            "position_y": 469
+        },
+        {
+            "attributes": {
+            },
+            "id": "240",
+            "name": "person_phone",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 689,
+            "position_y": 379
+        },
+        {
+            "attributes": {
+            },
+            "id": "92",
+            "name": "source__review_ibfk_3__review",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 569,
+            "position_y": 1009
+        },
+        {
+            "attributes": {
+            },
+            "id": "83",
+            "name": "locality__street_ibfk_1__street",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1339,
+            "position_y": 109
+        },
+        {
+            "attributes": {
+            },
+            "id": "1",
+            "name": "city__addobj_ibfk_3__addobj",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1199,
+            "position_y": 259
+        },
+        {
+            "attributes": {
+            },
+            "id": "138",
+            "name": "locality__addobj_ibfk_4__addobj",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1399,
+            "position_y": 109
+        },
+        {
+            "attributes": {
+            },
+            "id": "155",
+            "name": "addobj_id_region",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1399,
+            "position_y": 389
+        },
+        {
+            "attributes": {
+            },
+            "id": "23",
+            "name": "city",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1419,
+            "position_y": 249
+        },
+        {
+            "attributes": {
+            },
+            "id": "114",
+            "name": "person_firstName",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 649,
+            "position_y": 439
+        },
+        {
+            "attributes": {
+            },
+            "id": "171",
+            "name": "district_id_city",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1079,
+            "position_y": 169
+        },
+        {
+            "attributes": {
+            },
+            "id": "113",
+            "name": "region_id",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1689,
+            "position_y": 389
+        },
+        {
+            "attributes": {
+            },
+            "id": "121",
+            "name": "person_lastName",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 559,
+            "position_y": 549
+        },
+        {
+            "attributes": {
+            },
+            "id": "53",
+            "name": "person_id_city",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 709,
+            "position_y": 499
+        },
+        {
+            "attributes": {
+            },
+            "id": "94",
+            "name": "district_name",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1069,
+            "position_y": 289
+        },
+        {
+            "attributes": {
+            },
+            "id": "97",
+            "name": "street_subname",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1349,
+            "position_y": 39
+        },
+        {
+            "attributes": {
+            },
+            "id": "37",
+            "name": "locality_name",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 1569,
+            "position_y": 99
+        },
+        {
+            "attributes": {
+            },
+            "id": "149",
+            "name": "review_goalOfBuying",
+            "namespace": "http://knova.ru/reviews.owl",
+            "position_x": 679,
+            "position_y": 699
+        }
+    ],
+    "relationNames": [
+        "http://knova.ru/reviews.owl#a_part_of",
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+        "http://knova.ru/reply/converter#a_part_of",
+        "http://knova.ru/reviews.owl#district_ibfk_1",
+        "http://knova.ru/reviews.owl#flat_ibfk_1",
+        "http://knova.ru/reviews.owl#building_ibfk_1",
+        "http://knova.ru/reviews.owl#subreview_ibfk_2",
+        "http://knova.ru/reviews.owl#addobj_ibfk_1",
+        "http://knova.ru/reviews.owl#addobj_ibfk_6",
+        "http://knova.ru/reviews.owl#building_ibfk_3",
+        "http://knova.ru/reviews.owl#addobj_ibfk_7",
+        "http://knova.ru/reviews.owl#building_ibfk_2",
+        "http://knova.ru/reviews.owl#addobj_ibfk_5",
+        "http://knova.ru/reviews.owl#addobj_ibfk_3",
+        "http://knova.ru/reviews.owl#street_ibfk_2",
+        "http://knova.ru/reviews.owl#locality_ibfk_2",
+        "http://knova.ru/reviews.owl#street_ibfk_1",
+        "http://knova.ru/reviews.owl#review_ibfk_1",
+        "http://knova.ru/reviews.owl#addobj_ibfk_2",
+        "http://knova.ru/reviews.owl#area_ibfk_1",
+        "http://knova.ru/reviews.owl#city_ibfk_1",
+        "http://knova.ru/reviews.owl#locality_ibfk_1",
+        "http://knova.ru/reviews.owl#addobj_ibfk_4",
+        "http://knova.ru/reviews.owl#objectOfReview_ibfk_1",
+        "http://knova.ru/reviews.owl#microdistrict_ibfk_1",
+        "http://knova.ru/reviews.owl#subreview_ibfk_1",
+        "http://knova.ru/reviews.owl#review_ibfk_2",
+        "http://knova.ru/reviews.owl#review_ibfk_3"
+    ],
+    "relations": [
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "123",
+            "id": "242",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "163"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "14",
+            "id": "243",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "90"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "244",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "232"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "245",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "72"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "246",
+            "name": "district_ibfk_1",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "14"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "247",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "153"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "248",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "155"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "130",
+            "id": "249",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "236"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "63",
+            "id": "250",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "135"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "251",
+            "name": "flat_ibfk_1",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "123"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "252",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "149"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "253",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "118"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "130",
+            "id": "254",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "158"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "255",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "1"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "130",
+            "id": "256",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "154"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "25",
+            "id": "257",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "201"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "123",
+            "id": "258",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "50"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "29",
+            "id": "259",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "97"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "260",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "164"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "261",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "30"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "262",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "168"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "263",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "239"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "130",
+            "id": "264",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "92"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "26",
+            "id": "265",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "32"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "110",
+            "id": "266",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "36"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "267",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "106"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "25",
+            "id": "268",
+            "name": "building_ibfk_1",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "2"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "19",
+            "id": "269",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "161"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "270",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "241"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "58",
+            "id": "271",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "46"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "272",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "128"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "273",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "105"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "29",
+            "id": "274",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "230"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "275",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "185"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "276",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "169"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "123",
+            "id": "277",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "71"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "130",
+            "id": "278",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "236"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "279",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "237"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "280",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "197"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "281",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "211"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "282",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "79"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "58",
+            "id": "283",
+            "name": "subreview_ibfk_2",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "47"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "284",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "181"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "19",
+            "id": "285",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "18"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "286",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "10"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "123",
+            "id": "287",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "199"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "123",
+            "id": "288",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "6"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "289",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "208"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "63",
+            "id": "290",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "187"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "130",
+            "id": "291",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "154"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "142",
+            "id": "292",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "70"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "14",
+            "id": "293",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "171"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "294",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "222"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "295",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "217"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "296",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "118"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "297",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "241"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "298",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "218"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "25",
+            "id": "299",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "224"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "15",
+            "id": "300",
+            "name": "addobj_ibfk_1",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "52"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "19",
+            "id": "301",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "18"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "302",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "240"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "15",
+            "id": "303",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "9"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "26",
+            "id": "304",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "116"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "58",
+            "id": "305",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "66"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "123",
+            "id": "306",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "163"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "307",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "166"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "308",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "28"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "142",
+            "id": "309",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "104"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "26",
+            "id": "310",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "116"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "311",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "48"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "110",
+            "id": "312",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "183"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "313",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "134"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "14",
+            "id": "314",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "191"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "142",
+            "id": "315",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "104"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "316",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "202"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "317",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "31"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "29",
+            "id": "318",
+            "name": "addobj_ibfk_6",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "52"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "319",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "177"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "19",
+            "id": "320",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "161"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "63",
+            "id": "321",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "216"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "322",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "30"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "323",
+            "name": "building_ibfk_3",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "2"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "324",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "128"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "63",
+            "id": "325",
+            "name": "addobj_ibfk_7",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "52"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "326",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "80"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "327",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "72"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "328",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "119"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "29",
+            "id": "329",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "34"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "29",
+            "id": "330",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "97"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "331",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "240"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "14",
+            "id": "332",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "94"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "14",
+            "id": "333",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "139"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "334",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "114"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "19",
+            "id": "335",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "37"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "110",
+            "id": "336",
+            "name": "building_ibfk_2",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "2"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "337",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "166"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "338",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "200"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "26",
+            "id": "339",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "159"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "15",
+            "id": "340",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "113"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "14",
+            "id": "341",
+            "name": "addobj_ibfk_5",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "52"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "342",
+            "name": "addobj_ibfk_3",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "52"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "19",
+            "id": "343",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "37"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "25",
+            "id": "344",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "224"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "345",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "101"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "346",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "162"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "347",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "45"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "63",
+            "id": "348",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "81"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "349",
+            "name": "street_ibfk_2",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "29"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "350",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "211"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "351",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "155"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "352",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "108"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "353",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "145"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "354",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "22"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "355",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "202"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "29",
+            "id": "356",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "144"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "357",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "13"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "358",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "164"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "359",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "20"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "360",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "91"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "29",
+            "id": "361",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "59"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "362",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "175"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "58",
+            "id": "363",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "88"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "364",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "221"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "365",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "214"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "63",
+            "id": "366",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "187"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "367",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "100"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "368",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "91"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "130",
+            "id": "369",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "122"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "370",
+            "name": "locality_ibfk_2",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "19"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "371",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "220"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "58",
+            "id": "372",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "89"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "15",
+            "id": "373",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "146"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "130",
+            "id": "374",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "122"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "15",
+            "id": "375",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "113"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "26",
+            "id": "376",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "194"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "25",
+            "id": "377",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "127"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "378",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "53"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "19",
+            "id": "379",
+            "name": "street_ibfk_1",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "29"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "380",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "86"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "123",
+            "id": "381",
+            "name": "review_ibfk_1",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "41"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "382",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "231"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "383",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "119"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "123",
+            "id": "384",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "210"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "385",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "149"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "58",
+            "id": "386",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "66"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "26",
+            "id": "387",
+            "name": "addobj_ibfk_2",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "52"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "29",
+            "id": "388",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "144"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "29",
+            "id": "389",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "172"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "110",
+            "id": "390",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "183"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "391",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "175"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "15",
+            "id": "392",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "43"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "130",
+            "id": "393",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "158"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "15",
+            "id": "394",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "87"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "58",
+            "id": "395",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "89"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "396",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "185"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "15",
+            "id": "397",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "43"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "123",
+            "id": "398",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "50"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "25",
+            "id": "399",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "201"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "26",
+            "id": "400",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "159"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "15",
+            "id": "401",
+            "name": "area_ibfk_1",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "26"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "130",
+            "id": "402",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "165"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "403",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "221"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "130",
+            "id": "404",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "165"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "405",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "162"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "123",
+            "id": "406",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "210"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "407",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "217"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "408",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "57"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "409",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "106"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "410",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "20"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "411",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "48"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "123",
+            "id": "412",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "199"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "110",
+            "id": "413",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "234"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "63",
+            "id": "414",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "81"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "415",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "145"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "416",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "152"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "417",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "153"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "26",
+            "id": "418",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "103"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "123",
+            "id": "419",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "17"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "15",
+            "id": "420",
+            "name": "city_ibfk_1",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "23"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "421",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "168"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "422",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "134"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "423",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "53"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "424",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "105"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "26",
+            "id": "425",
+            "name": "locality_ibfk_1",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "19"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "29",
+            "id": "426",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "59"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "427",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "100"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "19",
+            "id": "428",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "16"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "429",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "68"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "430",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "239"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "431",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "195"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "29",
+            "id": "432",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "172"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "110",
+            "id": "433",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "234"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "434",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "208"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "19",
+            "id": "435",
+            "name": "addobj_ibfk_4",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "52"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "15",
+            "id": "436",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "93"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "19",
+            "id": "437",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "83"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "438",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "95"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "439",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "200"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "440",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "95"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "441",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "177"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "58",
+            "id": "442",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "88"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "443",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "10"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "444",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "231"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "14",
+            "id": "445",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "94"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "15",
+            "id": "446",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "146"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "447",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "68"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "448",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "195"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "449",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "121"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "123",
+            "id": "450",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "6"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "451",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "169"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "452",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "237"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "453",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "114"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "142",
+            "id": "454",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "70"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "58",
+            "id": "455",
+            "name": "objectOfReview_ibfk_1",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "58"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "456",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "27"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "14",
+            "id": "457",
+            "name": "microdistrict_ibfk_1",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "63"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "26",
+            "id": "458",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "194"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "130",
+            "id": "459",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "44"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "14",
+            "id": "460",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "191"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "461",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "57"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "123",
+            "id": "462",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "71"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "463",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "232"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "29",
+            "id": "464",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "230"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "63",
+            "id": "465",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "216"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "466",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "80"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "19",
+            "id": "467",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "138"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "468",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "181"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "469",
+            "name": "subreview_ibfk_1",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "47"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "470",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "218"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "471",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "197"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "472",
+            "name": "review_ibfk_2",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "41"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "473",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "76"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "474",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "108"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "58",
+            "id": "475",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "111"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "130",
+            "id": "476",
+            "name": "review_ibfk_3",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "41"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "477",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "121"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "478",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "214"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "479",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "107"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "19",
+            "id": "480",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "16"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "481",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "222"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "482",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "152"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "483",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "31"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "484",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "220"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "485",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "27"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "130",
+            "id": "486",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "44"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "14",
+            "id": "487",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "171"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "41",
+            "id": "488",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "107"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "47",
+            "id": "489",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reviews.owl",
+            "source_node_id": "101"
+        }
+    ],
+    "visualize_ont_path": ""
+}

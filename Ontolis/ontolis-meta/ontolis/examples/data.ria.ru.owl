@@ -1,0 +1,2431 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY ria "http://data.ria.ru#" >
+    <!ENTITY riacv "http://data.ria.ru/cv#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.ontosearch.com/2007/12/ontosofa-ns#"
+     xml:base="http://www.ontosearch.com/2007/12/ontosofa-ns"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ria="http://data.ria.ru#"
+     xmlns:riacv="http://data.ria.ru/cv#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://data.ria.ru">
+        <rdfs:label xml:lang="en">RIA Data Scheme</rdfs:label>
+        <rdfs:comment xml:lang="ru">Бизнес-онтология системы &quot;Метаданные&quot; компании РИА &quot;Новости&quot;</rdfs:comment>
+        <!--owl:imports rdf:resource="http://www.geonames.org/ontology"/-->
+        <owl:imports rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+    </owl:Ontology>
+    
+
+
+ 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.ria.ru#EmployedBy -->
+
+    <owl:ObjectProperty rdf:about="&ria;EmployedBy">
+        <rdfs:label xml:lang="en">EmployedBy</rdfs:label>
+        <rdfs:label xml:lang="ru">Место работы</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Организация-работодатель персоны</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ria;JobRelation"/>
+        <rdfs:range rdf:resource="&ria;Organization"/>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#JobRelation -->
+
+    <owl:ObjectProperty rdf:about="&ria;JobRelation">
+        <rdfs:label rdf:datatype="&xsd;string">JobRelation</rdfs:label>
+        <rdfs:label xml:lang="ru">Место работы</rdfs:label>
+        <rdfs:range rdf:resource="&ria;MainEntity"/>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#Parents -->
+
+    <owl:ObjectProperty rdf:about="&ria;Parents">
+        <rdfs:label xml:lang="en">parents</rdfs:label>
+        <rdfs:label xml:lang="ru">родители</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Родители персоны</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="&ria;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#PerformerIn -->
+
+    <owl:ObjectProperty rdf:about="&ria;PerformerIn">
+        <rdfs:label xml:lang="en">performerIn</rdfs:label>
+        <rdfs:label xml:lang="ru">участник</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Событие, на котором этот человек является исполнителем или участинком</rdfs:comment>
+        <rdfs:range rdf:resource="&ria;Event"/>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#StateLeader -->
+
+    <owl:ObjectProperty rdf:about="&ria;StateLeader">
+        <rdfs:label xml:lang="en">StateLeader</rdfs:label>
+        <rdfs:label xml:lang="ru">Лидер страны/региона</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Геообъект, высшим должностным лицом которого является персона</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ria;JobRelation"/>
+        <rdfs:range rdf:resource="&ria;Location"/>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#attendees -->
+
+    <owl:ObjectProperty rdf:about="&ria;attendees">
+        <rdfs:label xml:lang="en">attendees</rdfs:label>
+        <rdfs:label xml:lang="ru">организации-участники</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Организации, принимающие участие</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Event"/>
+        <rdfs:range rdf:resource="&ria;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#birthPlace -->
+
+    <owl:ObjectProperty rdf:about="&ria;birthPlace">
+        <rdfs:label xml:lang="en">birthPlace</rdfs:label>
+        <rdfs:label xml:lang="ru">место рождения</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Место рождения</rdfs:comment>
+        <rdfs:range rdf:resource="&ria;Location"/>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#catChild -->
+
+    <owl:ObjectProperty rdf:about="&ria;catChild">
+        <rdfs:label rdf:datatype="&xsd;string">catChild</rdfs:label>
+        <rdfs:label xml:lang="ru">дочерняя категория</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">ссылка на дочерний элемент в иерархии тематических категорий</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Category"/>
+        <rdfs:range rdf:resource="&ria;Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#catParent -->
+
+    <owl:ObjectProperty rdf:about="&ria;catParent">
+        <rdfs:label rdf:datatype="&xsd;string">catParent</rdfs:label>
+        <rdfs:label xml:lang="ru">родительская категория</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">ссылка на родительский элемент в иерархии тематических категорий (должен заполняться автоматически)</rdfs:comment>
+        <rdfs:range rdf:resource="&ria;Category"/>
+        <rdfs:domain rdf:resource="&ria;Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#children -->
+
+    <owl:ObjectProperty rdf:about="&ria;children">
+        <rdfs:label xml:lang="en">children</rdfs:label>
+        <rdfs:label xml:lang="ru">дети</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Дети персоны</rdfs:comment>
+        <rdfs:range rdf:resource="&ria;Person"/>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#citizenship -->
+
+    <owl:ObjectProperty rdf:about="&ria;citizenship">
+        <rdfs:label xml:lang="en">citizenship</rdfs:label>
+        <rdfs:label xml:lang="ru">гражданство</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Гражданство персоны</rdfs:comment>
+        <rdfs:range rdf:resource="&ria;Location"/>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#colleagues -->
+
+    <owl:ObjectProperty rdf:about="&ria;colleagues">
+        <rdfs:label xml:lang="en">colleagues</rdfs:label>
+        <rdfs:label xml:lang="ru">коллеги</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Коллеги персоны</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="&ria;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#createdBy -->
+
+    <owl:ObjectProperty rdf:about="&ria;createdBy">
+        <rdfs:label rdf:datatype="&xsd;string">createdBy</rdfs:label>
+        <rdfs:label xml:lang="ru">автор</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;CreativeWork"/>
+        <rdfs:range rdf:resource="&ria;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#creationPlace -->
+
+    <owl:ObjectProperty rdf:about="&ria;creationPlace">
+        <rdfs:label xml:lang="en">creationPlace</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;CreativeWork"/>
+        <rdfs:range rdf:resource="&ria;Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    
+
+
+    <!-- http://data.ria.ru#deathPlace -->
+
+    <owl:ObjectProperty rdf:about="&ria;deathPlace">
+        <rdfs:label xml:lang="en">deathPlace</rdfs:label>
+        <rdfs:label xml:lang="ru">место смерти</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Место смерти</rdfs:comment>
+        <rdfs:range rdf:resource="&ria;Location"/>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- http://data.ria.ru#eduLevel -->
+
+    <owl:ObjectProperty rdf:about="&ria;eduLevel">
+        <rdfs:label rdf:datatype="&xsd;string">eduLevel</rdfs:label>
+        <rdfs:label xml:lang="ru">уровень образования</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">уровень образования которое дает образовательное учреждение</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Research_Educational_Institution"/>
+        <rdfs:range rdf:resource="http://data.ria.ru/cv#EduLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#eventPlace -->
+
+    <owl:ObjectProperty rdf:about="&ria;eventPlace">
+        <rdfs:label rdf:datatype="&xsd;string">eventPlace</rdfs:label>
+        <rdfs:label xml:lang="ru">место проведения</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">место проведения мероприятия</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Event"/>
+        <rdfs:range rdf:resource="&ria;Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#eventType -->
+
+    <owl:ObjectProperty rdf:about="&ria;eventType">
+        <rdfs:label xml:lang="en">eventType</rdfs:label>
+        <rdfs:label xml:lang="ru">тип</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">тип события</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Event"/>
+        <rdfs:range rdf:resource="http://data.ria.ru/cv#EventType"/>
+    </owl:ObjectProperty>
+    
+
+    
+
+    
+
+
+    <!-- http://data.ria.ru#graduatedFrom -->
+
+    <owl:ObjectProperty rdf:about="&ria;graduatedFrom">
+        <rdfs:label xml:lang="en">graduatedFrom</rdfs:label>
+        <rdfs:label xml:lang="ru">окончил</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Учебное заведение, которое окончил человек</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="&ria;Research_Educational_Institution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#illustratedBy -->
+
+    <owl:ObjectProperty rdf:about="&ria;illustratedBy">
+        <rdfs:label rdf:datatype="&xsd;string">illustratedBy</rdfs:label>
+        <rdfs:label xml:lang="ru">медиа-объект</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">медиа-объекты, иллюстрирующие статью</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Article"/>
+        <rdfs:range rdf:resource="&ria;Media"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#industry -->
+
+    <owl:ObjectProperty rdf:about="&ria;industry">
+        <rdfs:label rdf:datatype="&xsd;string">industry</rdfs:label>
+        <rdfs:label xml:lang="ru">отрасль экономической деятельности</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">отрасль экономической деятельности</rdfs:comment>
+           <rdfs:domain>
+            <owl:Class>    
+              <owl:unionOf rdf:parseType="Collection">
+                <owl:Class rdf:about="http://data.ria.ru#Company"/>
+                <owl:Class rdf:about="http://data.ria.ru#Product"/>
+              </owl:unionOf>
+            </owl:Class>    
+          </rdfs:domain>
+        <rdfs:range rdf:resource="http://data.ria.ru/cv#Industry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#involvedEntity -->
+
+    <owl:ObjectProperty rdf:about="&ria;involvedEntity">
+        <rdfs:label rdf:datatype="&xsd;string">involvedEntity</rdfs:label>
+        <rdfs:label xml:lang="ru">часто упоминается</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">наиболее часто упоминаемые в материалах сюжета именованные сущности (люди, организации, продукты/бренды, география) - до пяти сущностей на каждый тип</rdfs:comment>
+        <rdfs:range rdf:resource="&ria;MainEntity"/>
+        <rdfs:domain rdf:resource="&ria;Story"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#language -->
+
+    <owl:ObjectProperty rdf:about="&ria;language">
+        <rdfs:label rdf:datatype="&xsd;string">language</rdfs:label>
+        <rdfs:label xml:lang="ru">язык</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">главный заголовок материала (если у материала несколько заголовков, то выбирается наиболее понятный для онлайн-аудитории)</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;News_Item"/>
+        <rdfs:range rdf:resource="http://data.ria.ru/cv#Language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#locParent -->
+
+    <owl:ObjectProperty rdf:about="&ria;locParent">
+        <rdfs:label rdf:datatype="&xsd;string">locParent</rdfs:label>
+        <rdfs:label xml:lang="ru">вышестоящий геообъект</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">ссылка на родительский элемент в географической иерархии</rdfs:comment>
+        <rdfs:range rdf:resource="&ria;Location"/>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#locType -->
+
+    <owl:ObjectProperty rdf:about="&ria;locType">
+        <rdfs:label xml:lang="ru">тип</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">тип геообъекта</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+        <rdfs:range rdf:resource="http://data.ria.ru/cv#LocType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#locality -->
+
+    <owl:ObjectProperty rdf:about="&ria;locality">
+        <rdfs:label xml:lang="en">locality</rdfs:label>
+        <rdfs:label xml:lang="ru">месторасположение</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">страна, город или любой другой географический объект, к которому относится организация</rdfs:comment>
+        <rdfs:range rdf:resource="&ria;Location"/>
+        <rdfs:domain rdf:resource="&ria;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#mediaType -->
+
+    <owl:ObjectProperty rdf:about="&ria;mediaType">
+        <rdfs:label rdf:datatype="&xsd;string">mediaType</rdfs:label>
+        <rdfs:label xml:lang="ru">тип</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">тип медиа-объекта</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Media"/>
+        <rdfs:range rdf:resource="http://data.ria.ru/cv#MediaType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#occupation -->
+
+    <owl:ObjectProperty rdf:about="&ria;occupation">
+        <rdfs:label xml:lang="en">occupation</rdfs:label>
+        <rdfs:label xml:lang="ru">деятельность</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Основное направление деятельности персоны</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="http://data.ria.ru/cv#Occupation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#orgParent -->
+
+    <owl:ObjectProperty rdf:about="&ria;orgParent">
+        <rdfs:label xml:lang="en">orgParent</rdfs:label>
+        <rdfs:label xml:lang="ru">родительская организация</rdfs:label>
+        <rdfs:range rdf:resource="&ria;Organization"/>
+        <rdfs:domain rdf:resource="&ria;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#orgPrevious -->
+
+    <owl:ObjectProperty rdf:about="&ria;orgPrevious">
+        <rdfs:label rdf:datatype="&xsd;string">orgPrevious</rdfs:label>
+        <rdfs:label xml:lang="ru">предыдущая организация</rdfs:label>
+        <rdfs:range rdf:resource="&ria;Organization"/>
+        <rdfs:domain rdf:resource="&ria;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#orgSubsequentName -->
+
+    <owl:ObjectProperty rdf:about="&ria;orgSubsequentName">
+        <rdfs:label xml:lang="en">orgSubsequentName</rdfs:label>
+        <rdfs:label xml:lang="ru">новое название</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;Organization"/>
+        <rdfs:range rdf:resource="&ria;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#ownedBy -->
+
+    <owl:ObjectProperty rdf:about="&ria;ownedBy">
+        <rdfs:label xml:lang="ru">компания-владелец</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">компания, которой принадлежит бренд</rdfs:comment>
+        <rdfs:range rdf:resource="&ria;Organization"/>
+        <rdfs:domain rdf:resource="&ria;Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#ownedByOrg -->
+
+    <owl:ObjectProperty rdf:about="&ria;ownedByOrg">
+        <rdfs:label xml:lang="ru">организация</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;CivicStructure"/>
+        <rdfs:range rdf:resource="&ria;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#owns -->
+
+    <owl:ObjectProperty rdf:about="&ria;owns">
+        <rdfs:label xml:lang="en">owns</rdfs:label>
+        <rdfs:label xml:lang="ru">изобретение</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Продукт, принадлежащий/созданный персоной</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="&ria;Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#parent -->
+
+    <owl:ObjectProperty rdf:about="&ria;parent">
+        <rdfs:label xml:lang="ru">родительское мероприятие</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">родительское мероприятие (для повторяющихся событий)</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Event"/>
+        <rdfs:range rdf:resource="&ria;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#parentNotion -->
+
+    <owl:ObjectProperty rdf:about="&ria;parentNotion">
+        <rdfs:label rdf:datatype="&xsd;string">parentNotion</rdfs:label>
+        <rdfs:label xml:lang="ru">гипероним</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;CommonName"/>
+        <rdfs:range rdf:resource="&ria;CommonName"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#performedBy -->
+
+    <owl:ObjectProperty rdf:about="&ria;performedBy">
+        <rdfs:label rdf:datatype="&xsd;string">performedBy</rdfs:label>
+        <rdfs:label xml:lang="ru">исполнитель</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;Performance"/>
+        <rdfs:range rdf:resource="&ria;PerformingGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#placeLocality -->
+
+    <owl:ObjectProperty rdf:about="&ria;placeLocality">
+        <rdfs:label xml:lang="ru">находится в</rdfs:label>
+        <rdfs:range rdf:resource="&ria;Location"/>
+        <rdfs:domain rdf:resource="&ria;Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#prodParent -->
+
+    <owl:ObjectProperty rdf:about="&ria;prodParent">
+        <rdfs:label rdf:datatype="&xsd;string">prodParent</rdfs:label>
+        <rdfs:label xml:lang="ru">родительский продукт</rdfs:label>
+        <rdfs:range rdf:resource="&ria;Product"/>
+        <rdfs:domain rdf:resource="&ria;Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#productClass -->
+
+    <owl:ObjectProperty rdf:about="&ria;productClass">
+        <rdfs:label rdf:datatype="&xsd;string">productClass</rdfs:label>
+        <rdfs:label xml:lang="ru">тип</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">тип продукта</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Product"/>
+        <rdfs:range rdf:resource="http://data.ria.ru/cv#ProductClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#publisher -->
+
+    <owl:ObjectProperty rdf:about="&ria;publisher">
+        <rdfs:label xml:lang="en">publisher</rdfs:label>
+        <rdfs:label xml:lang="ru">издатель</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">издатель</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;CreativeWork"/>
+        <rdfs:range rdf:resource="&ria;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#relatedCategory -->
+
+    <owl:ObjectProperty rdf:about="&ria;relatedCategory">
+        <rdfs:label rdf:datatype="&xsd;string">relatedCategory</rdfs:label>
+        <rdfs:range rdf:resource="&ria;Category"/>
+        <rdfs:domain rdf:resource="&ria;CommonName"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#relatedTo -->
+
+    <owl:ObjectProperty rdf:about="&ria;relatedTo">
+        <rdfs:label rdf:datatype="&xsd;string">relatedTo</rdfs:label>
+        <rdfs:label xml:lang="ru">связанное Местоположение</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">ссылка на объект, с которым соотносится гео-административная единица</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+        <rdfs:range rdf:resource="&ria;Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#renamedTo -->
+
+    <owl:ObjectProperty rdf:about="&ria;renamedTo">
+        <rdfs:label rdf:datatype="&xsd;string">renamedTo</rdfs:label>
+        <rdfs:label xml:lang="ru">новое название</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">ссылка на объект, в который переименована гео-административная единица</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+        <rdfs:range rdf:resource="&ria;Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#sex -->
+
+    <owl:ObjectProperty rdf:about="&ria;sex">
+        <rdfs:label xml:lang="en">sex</rdfs:label>
+        <rdfs:label xml:lang="ru">пол</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Пол</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="http://data.ria.ru/cv#Sex"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#siblings -->
+
+    <owl:ObjectProperty rdf:about="&ria;siblings">
+        <rdfs:label xml:lang="en">siblings</rdfs:label>
+        <rdfs:label xml:lang="ru">сибсы</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Братья или сестры персоны</rdfs:comment>
+        <rdfs:range rdf:resource="&ria;Person"/>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#sourceLocation -->
+
+    <owl:ObjectProperty rdf:about="&ria;sourceLocation">
+        <rdfs:label rdf:datatype="&xsd;string">sourceLocation</rdfs:label>
+        <rdfs:label xml:lang="ru">источник новости</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">ссылка на местоположение - источник новости</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+        <rdfs:range rdf:resource="&ria;Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#sportOfTeam -->
+
+    <owl:ObjectProperty rdf:about="&ria;sportOfTeam">
+        <rdfs:label xml:lang="ru">вид спорта</rdfs:label>
+        <rdfs:range rdf:resource="&ria;Sport"/>
+        <rdfs:domain rdf:resource="&ria;SportsTeam"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#spouse -->
+
+    <owl:ObjectProperty rdf:about="&ria;spouse">
+        <rdfs:label xml:lang="en">spouse</rdfs:label>
+        <rdfs:label xml:lang="ru">супружество</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Супруг или супруга персоны</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="&ria;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#subEvents -->
+
+    <owl:ObjectProperty rdf:about="&ria;subEvents">
+        <rdfs:label xml:lang="en">subEvents</rdfs:label>
+        <rdfs:label xml:lang="ru">дочерние мероприятия</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">cобытия, которые являются частью этого события.</rdfs:comment>
+        <rdfs:range rdf:resource="&ria;Event"/>
+        <rdfs:domain rdf:resource="&ria;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#taggedBy -->
+
+    <owl:ObjectProperty rdf:about="&ria;taggedBy">
+        <rdfs:label rdf:datatype="&xsd;string">taggedBy</rdfs:label>
+        <rdfs:label xml:lang="ru">концепты-тэги</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">концепты, которыми протегирована Новостная единица</rdfs:comment>
+        <rdfs:range rdf:resource="&ria;Concept"/>
+        <rdfs:domain rdf:resource="&ria;News_Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#title -->
+
+    <owl:ObjectProperty rdf:about="&ria;title">
+        <rdfs:label xml:lang="en">title</rdfs:label>
+        <rdfs:label xml:lang="ru">звание</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Звание Персоны</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="http://data.ria.ru/cv#Title"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru#uncheckedReference -->
+
+    <owl:ObjectProperty rdf:about="&ria;uncheckedReference">
+        <rdfs:label xml:lang="en">uncheckedReference</rdfs:label>
+        <rdfs:label xml:lang="ru">возможно является</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Ссылка на объект, которым может быть данный выделенный, но неподтвержденный синоним</rdfs:comment>
+        <rdfs:range rdf:resource="&ria;MainEntity"/>
+        <rdfs:domain rdf:resource="&ria;MainEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ria.ru/cv#brand -->
+
+    <owl:ObjectProperty rdf:about="http://data.ria.ru/cv#brand">
+        <rdfs:label rdf:datatype="&xsd;string">brand</rdfs:label>
+        <rdfs:label xml:lang="ru">бренд</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">бренд</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Product"/>
+        <rdfs:range rdf:resource="http://data.ria.ru/cv#Brand"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.ria.ru#DateRelation -->
+
+    <owl:DatatypeProperty rdf:about="&ria;DateRelation">
+        <rdfs:label rdf:datatype="&xsd;string">DateRelation</rdfs:label>
+        <rdfs:label xml:lang="ru">Дата</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;MainEntity"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#Istoricheskoje+nazvanije -->
+
+    <owl:DatatypeProperty rdf:about="&ria;Istoricheskoje+nazvanije">
+        <rdfs:label xml:lang="ru">Историческое название</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">булевой атрибут</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#WikipediaArticle -->
+
+    <owl:DatatypeProperty rdf:about="&ria;WikipediaArticle">
+        <rdfs:label xml:lang="en">WikipediaArticle</rdfs:label>
+        <rdfs:label xml:lang="ru">статья Википедии</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Ссылка на статью в Wiki</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;MainEntity"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#abbr -->
+
+    <owl:DatatypeProperty rdf:about="&ria;abbr">
+        <rdfs:label rdf:datatype="&xsd;string">abbr</rdfs:label>
+        <rdfs:label xml:lang="ru">аббревиатура</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">стандартная аббревиатура организации (если существует несколько аббревиатур, указывается наиболее длинная)</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Organization"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#abbreviation -->
+
+    <owl:DatatypeProperty rdf:about="&ria;abbreviation">
+        <rdfs:label rdf:datatype="&xsd;string">abbreviation</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;NewsProduct"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#additionalName -->
+
+    <owl:DatatypeProperty rdf:about="&ria;additionalName">
+        <rdfs:label xml:lang="en">additionalName</rdfs:label>
+        <rdfs:label xml:lang="ru">отчество</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Отчество</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#alternativeHeadline -->
+
+    <owl:DatatypeProperty rdf:about="&ria;alternativeHeadline">
+        <rdfs:label rdf:datatype="&xsd;string">alternativeHeadline</rdfs:label>
+        <rdfs:label xml:lang="ru">альтернативный заголовок</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">ссылка на версию материала с альтернативным заголовком (в основном для шпигельного заголовка статей)</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;News_Item"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#announce -->
+
+    <owl:DatatypeProperty rdf:about="&ria;announce">
+        <rdfs:label rdf:datatype="&xsd;string">announce</rdfs:label>
+        <rdfs:label xml:lang="ru">анонс</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">анонс</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Article"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#birthDate -->
+
+    <owl:DatatypeProperty rdf:about="&ria;birthDate">
+        <rdfs:label xml:lang="en">birthDate</rdfs:label>
+        <rdfs:label xml:lang="ru">дата рождения</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Дата рождения</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ria;DateRelation"/>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#body -->
+
+    <owl:DatatypeProperty rdf:about="&ria;body">
+        <rdfs:label rdf:datatype="&xsd;string">body</rdfs:label>
+        <rdfs:label xml:lang="ru">текст</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">текст статьи</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Article"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#boundedBy -->
+
+    <owl:DatatypeProperty rdf:about="&ria;boundedBy">
+        <rdfs:label rdf:datatype="&xsd;string">область на карте</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">область на карте в формате JSON</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+    
+
+
+    <!-- http://data.ria.ru#closedOn -->
+
+    <owl:DatatypeProperty rdf:about="&ria;closedOn">
+        <rdfs:label rdf:datatype="&xsd;string">closedOn</rdfs:label>
+        <rdfs:label xml:lang="ru">дата закрытия</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">дата закрытия/расформирования организации</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ria;DateRelation"/>
+        <rdfs:domain rdf:resource="&ria;Organization"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#comment -->
+
+    <owl:DatatypeProperty rdf:about="&ria;comment">
+        <rdfs:label rdf:datatype="&xsd;string">comment</rdfs:label>
+        <rdfs:label xml:lang="ru">комментарий</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">комментарий</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#copyrightNotice -->
+
+    <owl:DatatypeProperty rdf:about="&ria;copyrightNotice">
+        <rdfs:label rdf:datatype="&xsd;string">copyrightNotice</rdfs:label>
+        <rdfs:label xml:lang="ru">права</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">текст, содержащий права об интеллектуальной собственности на контент</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;News_Item"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#copyrightNoticeUri -->
+
+    <owl:DatatypeProperty rdf:about="&ria;copyrightNoticeUri">
+        <rdfs:label rdf:datatype="&xsd;string">copyrightNoticeUri</rdfs:label>
+        <rdfs:label xml:lang="ru">ссылка на права</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">ссылка на сведения об интеллектуальной собственности на контент</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;News_Item"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#dateCreated -->
+
+    <owl:DatatypeProperty rdf:about="&ria;dateCreated">
+        <rdfs:label rdf:datatype="&xsd;string">dateCreated</rdfs:label>
+        <rdfs:label xml:lang="ru">дата создания</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;CreativeWork"/>
+        <rdfs:subPropertyOf rdf:resource="&ria;DateRelation"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#dateModified -->
+
+    <owl:DatatypeProperty rdf:about="&ria;dateModified">
+        <rdfs:label rdf:datatype="&xsd;string">dateModified</rdfs:label>
+        <rdfs:label xml:lang="ru">последнее изменение</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">дата последнего изменения Новостной единицы</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ria;DateRelation"/>
+        <rdfs:domain rdf:resource="&ria;News_Item"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+
+    <!-- http://data.ria.ru#datePublished -->
+
+    <owl:DatatypeProperty rdf:about="&ria;datePublished">
+        <rdfs:label rdf:datatype="&xsd;string">datePublished</rdfs:label>
+        <rdfs:label xml:lang="ru">выход онлайн</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">дата, когда Новостная единица впервые стала доступна онлайн</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ria;DateRelation"/>
+        <rdfs:domain rdf:resource="&ria;News_Item"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#dateline -->
+
+    <owl:DatatypeProperty rdf:about="&ria;dateline">
+        <rdfs:label rdf:datatype="&xsd;string">dateline</rdfs:label>
+        <rdfs:label xml:lang="ru">место и время создания</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">место и время создания Новостной единицы (на естественном языке)</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;News_Item"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#deathDate -->
+
+    <owl:DatatypeProperty rdf:about="&ria;deathDate">
+        <rdfs:label xml:lang="en">deathDate</rdfs:label>
+        <rdfs:label xml:lang="ru">дата смерти</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Дата смерти</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ria;DateRelation"/>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#depth -->
+
+    <owl:DatatypeProperty rdf:about="&ria;depth">
+        <rdfs:label rdf:datatype="&xsd;string">depth</rdfs:label>
+        <rdfs:label xml:lang="ru">глубина</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">глубина-значение расстояния до дна</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#description -->
+
+    <owl:DatatypeProperty rdf:about="&ria;description">
+        <rdfs:label xml:lang="en">description</rdfs:label>
+        <rdfs:label xml:lang="ru">описание</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Текстовое описание сущности</rdfs:comment>
+        <rdfs:domain rdf:resource="&owl;Thing"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#dissolvedOn -->
+
+    <owl:DatatypeProperty rdf:about="&ria;dissolvedOn">
+        <rdfs:label rdf:datatype="&xsd;string">dissolvedOn</rdfs:label>
+        <rdfs:label xml:lang="ru">расформирован</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">дата расформирования гео-административной единицы</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ria;DateRelation"/>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#editorLabel -->
+
+    <owl:DatatypeProperty rdf:about="&ria;editorLabel">
+        <rdfs:label xml:lang="en">editorLabel</rdfs:label>
+        <rdfs:label xml:lang="ru">название для редактора</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Название, которое выводится редактору</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;MainEntity"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#editorialLink -->
+
+    <owl:DatatypeProperty rdf:about="&ria;editorialLink">
+        <rdfs:label xml:lang="en">editorialLink</rdfs:label>
+        <rdfs:label xml:lang="ru">ссылка редактуры</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Ссылка на материалы в редактуре</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Concept"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#education -->
+
+    <owl:DatatypeProperty rdf:about="&ria;education">
+        <rdfs:label xml:lang="ru">образовательное</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">ведется ли в учреждении образовательная деятельность</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Research_Educational_Institution"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#elevation -->
+
+    <owl:DatatypeProperty rdf:about="&ria;elevation">
+        <rdfs:label rdf:datatype="&xsd;string">elevation</rdfs:label>
+        <rdfs:label xml:lang="ru">высота</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">высота - значение высоты точки над уровнем моря в метрах</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#encoding -->
+
+    <owl:DatatypeProperty rdf:about="&ria;encoding">
+        <rdfs:label rdf:datatype="&xsd;string">encoding</rdfs:label>
+        <rdfs:label xml:lang="ru">формат</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">формат медиа-объекта</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Media"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#encodingUri -->
+
+    <owl:DatatypeProperty rdf:about="&ria;encodingUri">
+        <rdfs:label rdf:datatype="&xsd;string">encodingUri</rdfs:label>
+        <rdfs:label xml:lang="ru">ссылка на формат</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">URI формата медиа-объекта</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Media"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#entitySource -->
+
+    <owl:DatatypeProperty rdf:about="&ria;entitySource">
+        <rdfs:label xml:lang="en">entitySource</rdfs:label>
+        <rdfs:label xml:lang="ru">продукт-источник</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;Concept"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#eventEndDate -->
+
+    <owl:DatatypeProperty rdf:about="&ria;eventEndDate">
+        <rdfs:label rdf:datatype="&xsd;string">eventEndDate</rdfs:label>
+        <rdfs:label xml:lang="ru">завершение</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">дата завершения мероприятия</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ria;DateRelation"/>
+        <rdfs:domain rdf:resource="&ria;Event"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#eventFullName -->
+
+    <owl:DatatypeProperty rdf:about="&ria;eventFullName">
+        <rdfs:label xml:lang="en">eventFullName</rdfs:label>
+        <rdfs:label xml:lang="ru">официальное наименование</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">полное наименование события</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Event"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#eventStartDate -->
+
+    <owl:DatatypeProperty rdf:about="&ria;eventStartDate">
+        <rdfs:label rdf:datatype="&xsd;string">eventStartDate</rdfs:label>
+        <rdfs:label xml:lang="ru">начало</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">дата начала мероприятия</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ria;DateRelation"/>
+        <rdfs:domain rdf:resource="&ria;Event"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#fictionalCharacter -->
+
+    <owl:DatatypeProperty rdf:about="&ria;fictionalCharacter">
+        <rdfs:label xml:lang="en">fictionalCharacter</rdfs:label>
+        <rdfs:label xml:lang="ru">вымышленный персонаж</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Атрибут проставляется несуществующим персонажам (из фильмов, книг и проч.)</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#foundedOn -->
+
+    <owl:DatatypeProperty rdf:about="&ria;foundedOn">
+        <rdfs:label rdf:datatype="&xsd;string">foundedOn</rdfs:label>
+        <rdfs:label xml:lang="ru">дата создания</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">дата создания организации или запуска продукта/бренда</rdfs:comment>
+           <rdfs:domain>
+            <owl:Class>    
+              <owl:unionOf rdf:parseType="Collection">
+                <owl:Class rdf:about="http://data.ria.ru#Organization"/>
+                <owl:Class rdf:about="http://data.ria.ru#Product"/>
+              </owl:unionOf>
+            </owl:Class>    
+          </rdfs:domain>
+        <rdfs:subPropertyOf rdf:resource="&ria;DateRelation"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#fullName -->
+
+    <owl:DatatypeProperty rdf:about="&ria;fullName">
+        <rdfs:label rdf:datatype="&xsd;string">fullName</rdfs:label>
+        <rdfs:label xml:lang="ru">официальное наименование</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">официальное (полное) наименование организации (для коммерческих организаций - с указанием формы собственности)</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Organization"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#givenName -->
+
+    <owl:DatatypeProperty rdf:about="&ria;givenName">
+        <rdfs:label xml:lang="en">givenName</rdfs:label>
+        <rdfs:label xml:lang="ru">имя</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Имя данное при рождении</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#gruppa+stran -->
+
+    <owl:DatatypeProperty rdf:about="&ria;gruppa+stran">
+        <rdfs:label xml:lang="ru">группа стран</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">принадлежность к какой-либо группе стран</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#headline -->
+
+    <owl:DatatypeProperty rdf:about="&ria;headline">
+        <rdfs:label rdf:datatype="&xsd;string">headline</rdfs:label>
+        <rdfs:label xml:lang="ru">заголовок</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">главный заголовок материала (если у материала несколько заголовков, то выбирается наиболее понятный для онлайн-аудитории)</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;News_Item"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#height -->
+
+    <owl:DatatypeProperty rdf:about="&ria;height">
+        <rdfs:label xml:lang="en">personHeight</rdfs:label>
+        <rdfs:label xml:lang="ru">рост</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Рост человека (в метрах)</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#imageUrl -->
+
+    <owl:DatatypeProperty rdf:about="&ria;imageUrl">
+        <rdfs:label xml:lang="en">image</rdfs:label>
+        <rdfs:label xml:lang="ru">фото</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Ссылка (Url) на изображение объекта</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Concept"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#imdbEntry -->
+
+    <owl:DatatypeProperty rdf:about="&ria;imdbEntry">
+        <rdfs:label rdf:datatype="&xsd;string">imdbEntry</rdfs:label>
+        <rdfs:label xml:lang="ru">ссылка IMDB</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;Movie"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#iptc -->
+
+    <owl:DatatypeProperty rdf:about="&ria;iptc">
+        <rdfs:label rdf:datatype="&xsd;string">iptc</rdfs:label>
+        <rdfs:label xml:lang="ru">iptc</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;Category"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#lastName -->
+
+    <owl:DatatypeProperty rdf:about="&ria;lastName">
+        <rdfs:label xml:lang="en">lastname</rdfs:label>
+        <rdfs:label xml:lang="ru">фамилия</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Фамилия</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#lead -->
+
+    <owl:DatatypeProperty rdf:about="&ria;lead">
+        <rdfs:label rdf:datatype="&xsd;string">lead</rdfs:label>
+        <rdfs:label xml:lang="ru">лид</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">лид</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Article"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#listSid -->
+
+    <owl:DatatypeProperty rdf:about="&ria;listSid">
+        <rdfs:label rdf:datatype="&xsd;string">listSid</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;CommonName"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#locFullName -->
+
+    <owl:DatatypeProperty rdf:about="&ria;locFullName">
+        <rdfs:label rdf:datatype="&xsd;string">locFullName</rdfs:label>
+        <rdfs:label xml:lang="ru">полное наименование</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">полное наименование</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#mapZoom -->
+
+    <owl:DatatypeProperty rdf:about="&ria;mapZoom">
+        <rdfs:label rdf:datatype="&xsd;string">масштаб на карте</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#mediaHeight -->
+
+    <owl:DatatypeProperty rdf:about="&ria;mediaHeight">
+        <rdfs:label rdf:datatype="&xsd;string">height</rdfs:label>
+        <rdfs:label xml:lang="ru">высота</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">высота медиа-объекта</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Media"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#method -->
+
+    <owl:DatatypeProperty rdf:about="&ria;method">
+        <rdfs:label xml:lang="en">method</rdfs:label>
+        <rdfs:label xml:lang="ru">метод</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Метод выделения сущности</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;MainEntity"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#musicbrainzEntry -->
+
+    <owl:DatatypeProperty rdf:about="&ria;musicbrainzEntry">
+        <rdfs:label rdf:datatype="&xsd;string">musicbrainzEntry</rdfs:label>
+        <rdfs:label xml:lang="ru">ссылка Musicbrainz</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;MusicAlbum"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#name -->
+
+    <owl:DatatypeProperty rdf:about="&ria;name">
+        <rdfs:label xml:lang="en">name</rdfs:label>
+        <rdfs:label xml:lang="ru">наименование</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Имя (основное) объекта</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Concept"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#nameEn -->
+
+    <owl:DatatypeProperty rdf:about="&ria;nameEn">
+        <rdfs:label xml:lang="en">nameEn</rdfs:label>
+        <rdfs:label xml:lang="ru">английское название</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Название Объекта на английском языке</rdfs:comment>
+        <rdfs:domain rdf:resource="&owl;Thing"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#newsAssetsId -->
+
+    <owl:DatatypeProperty rdf:about="&ria;newsAssetsId">
+        <rdfs:label rdf:datatype="&xsd;string">newsAssetsId</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;NewsProduct"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#nickname -->
+
+    <owl:DatatypeProperty rdf:about="&ria;nickname">
+        <rdfs:label xml:lang="en">nickname</rdfs:label>
+        <rdfs:label xml:lang="ru">псевдоним</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Псевдоним, прозвище, никнэйм</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+    
+
+
+    <!-- http://data.ria.ru#okpo -->
+
+    <owl:DatatypeProperty rdf:about="&ria;okpo">
+        <rdfs:label xml:lang="ru">ОКПО</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">код ОКПО</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Organization"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#orgPreviousName -->
+
+    <owl:DatatypeProperty rdf:about="&ria;orgPreviousName">
+        <rdfs:label rdf:datatype="&xsd;string">orgPreviousName</rdfs:label>
+        <rdfs:label xml:lang="ru">предыдущее название</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">предыдущее название организации </rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Organization"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#point -->
+
+    <owl:DatatypeProperty rdf:about="&ria;point">
+        <rdfs:label xml:lang="ru">координаты</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">точка - координаты географического объекта в виде JSON массива из 2 элементов</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#polygon -->
+
+    <owl:DatatypeProperty rdf:about="&ria;polygon">
+        <rdfs:label rdf:datatype="&xsd;string">polygon</rdfs:label>
+        <rdfs:label xml:lang="ru">полигон</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">полигон - область, образованная замкнутой кривой; выражается набором четырех или более точек, разделенных пробелом, причем первая точка совпадает с последней</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#populationCensus -->
+
+    <owl:DatatypeProperty rdf:about="&ria;populationCensus">
+        <rdfs:label xml:lang="ru">население по переписи</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">население географического объекта</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+        <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#previousName -->
+
+    <owl:DatatypeProperty rdf:about="&ria;previousName">
+        <rdfs:label rdf:datatype="&xsd;string">previousName</rdfs:label>
+        <rdfs:label xml:lang="ru">предыдущее название</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">предыдущее название географического объекта</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#relatedContent -->
+
+    <owl:DatatypeProperty rdf:about="&ria;relatedContent">
+        <rdfs:label rdf:datatype="&xsd;string">relatedContent</rdfs:label>
+        <rdfs:label xml:lang="ru">связанный контент</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">ссылки на любой другой контент типа NewsItem, связанный с данным</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;News_Item"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#renamedOn -->
+
+    <owl:DatatypeProperty rdf:about="&ria;renamedOn">
+        <rdfs:label rdf:datatype="&xsd;string">renamedOn</rdfs:label>
+        <rdfs:label xml:lang="ru">дата переименования</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">дата переименования гео-административной единицы</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ria;DateRelation"/>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#route -->
+
+    <owl:DatatypeProperty rdf:about="&ria;route">
+        <rdfs:label rdf:datatype="&xsd;string">route</rdfs:label>
+        <rdfs:label xml:lang="ru">маршрут</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">маршрут</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Location"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#seeAlso -->
+
+    <owl:DatatypeProperty rdf:about="&ria;seeAlso">
+        <rdfs:label rdf:datatype="&xsd;string">seeAlso</rdfs:label>
+        <rdfs:label xml:lang="ru">ссылка</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;CommonName"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#socialNetPoint -->
+
+    <owl:DatatypeProperty rdf:about="&ria;socialNetPoint">
+        <rdfs:label xml:lang="en">socialNetPoint</rdfs:label>
+        <rdfs:label xml:lang="ru">соцсети</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Ссылка на страницу соцсети/блога и проч.</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#stopThemesList -->
+
+    <owl:DatatypeProperty rdf:about="&ria;stopThemesList">
+        <rdfs:label rdf:datatype="&xsd;string">stopThemesList</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;NewsProduct"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#synonym -->
+
+    <owl:DatatypeProperty rdf:about="&ria;synonym">
+        <rdfs:label xml:lang="en">synonym</rdfs:label>
+        <rdfs:label xml:lang="ru">синоним</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Возможное синонимичное наименование Объекта</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Concept"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#thumbnailUri -->
+
+    <owl:DatatypeProperty rdf:about="&ria;thumbnailUri">
+        <rdfs:label rdf:datatype="&xsd;string">thumbnailUri</rdfs:label>
+        <rdfs:label xml:lang="ru">изображение-миниатюра</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">изображение-миниатюра, релевантная для Новостной единицы</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;News_Item"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#tickerSymbol -->
+
+    <owl:DatatypeProperty rdf:about="&ria;tickerSymbol">
+        <rdfs:label rdf:datatype="&xsd;string">tickerSymbol</rdfs:label>
+        <rdfs:label xml:lang="ru">торговый тикер</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">торговый тикер организации: тикер и название торгового инструмента, разделенные пробелом</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Company"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#trademark -->
+
+    <owl:DatatypeProperty rdf:about="&ria;trademark">
+        <rdfs:label xml:lang="en">trademark</rdfs:label>
+        <rdfs:label xml:lang="ru">торговая марка</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Торговая марка</rdfs:comment>
+           <rdfs:domain>
+            <owl:Class>    
+              <owl:unionOf rdf:parseType="Collection">
+                <owl:Class rdf:about="http://data.ria.ru#Event"/>
+                <owl:Class rdf:about="http://data.ria.ru#Organization"/>
+                <owl:Class rdf:about="http://data.ria.ru#Person"/>
+                <owl:Class rdf:about="http://data.ria.ru#Product"/>
+              </owl:unionOf>
+            </owl:Class>    
+          </rdfs:domain>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#transcript -->
+
+    <owl:DatatypeProperty rdf:about="&ria;transcript">
+        <rdfs:label rdf:datatype="&xsd;string">transcript</rdfs:label>
+        <rdfs:label xml:lang="ru">транскрипт</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">транскрипт (для аудио- и видео-объектов)</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Media"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#url -->
+
+    <owl:DatatypeProperty rdf:about="&ria;url">
+        <rdfs:label xml:lang="en">url</rdfs:label>
+        <rdfs:label xml:lang="ru">сайт (url)</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Адрес страницы в интернете</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;MainEntity"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#urlcat -->
+
+    <owl:DatatypeProperty rdf:about="&ria;urlcat">
+        <rdfs:label rdf:datatype="&xsd;string">url</rdfs:label>
+        <rdfs:label xml:lang="ru">ссылка</rdfs:label>
+        <rdfs:domain rdf:resource="&ria;Category"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#usageTerms -->
+
+    <owl:DatatypeProperty rdf:about="&ria;usageTerms">
+        <rdfs:label rdf:datatype="&xsd;string">usageTerms</rdfs:label>
+        <rdfs:label xml:lang="ru">условия использования</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">условия использования контента, описанные на естественном языке</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;News_Item"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#usageTermsUri -->
+
+    <owl:DatatypeProperty rdf:about="&ria;usageTermsUri">
+        <rdfs:label rdf:datatype="&xsd;string">usageTermsUri</rdfs:label>
+        <rdfs:label xml:lang="ru">ссылка на условия использования</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">ссылка на сведения, описывающие условия использования контента на естественном языке</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;News_Item"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#weight -->
+
+    <owl:DatatypeProperty rdf:about="&ria;weight">
+        <rdfs:label xml:lang="en">weight</rdfs:label>
+        <rdfs:label xml:lang="ru">вес</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Вес объекта в тексте</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;MainEntity"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ria.ru#wordCount -->
+
+    <owl:DatatypeProperty rdf:about="&ria;wordCount">
+        <rdfs:label rdf:datatype="&xsd;string">wordCount</rdfs:label>
+        <rdfs:label xml:lang="ru">количество слов</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">количество слов в статье</rdfs:comment>
+        <rdfs:domain rdf:resource="&ria;Article"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+    <!-- http://data.ria.ru#Airport -->
+
+    <owl:Class rdf:about="&ria;Airport">
+        <rdfs:label rdf:datatype="&xsd;string">Airport</rdfs:label>
+        <rdfs:label xml:lang="en">Airport</rdfs:label>
+        <rdfs:label xml:lang="ru">Аэропорт</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Article -->
+
+    <owl:Class rdf:about="&ria;Article">
+        <rdfs:label rdf:datatype="&xsd;string">Article</rdfs:label>
+        <rdfs:label xml:lang="ru">Статья</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;News_Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Book -->
+
+    <owl:Class rdf:about="&ria;Book">
+        <rdfs:label rdf:datatype="&xsd;string">Book</rdfs:label>
+        <rdfs:label xml:lang="ru">Книга</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CreativeWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Category -->
+
+    <owl:Class rdf:about="&ria;Category">
+        <rdfs:label rdf:datatype="&xsd;string">Category</rdfs:label>
+        <rdfs:label xml:lang="ru">Тематическая категория</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Cemetery -->
+
+    <owl:Class rdf:about="&ria;Cemetery">
+        <rdfs:label rdf:datatype="&xsd;string">Cemetery</rdfs:label>
+        <rdfs:label xml:lang="ru">Кладбище</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#CivicStructure -->
+
+    <owl:Class rdf:about="&ria;CivicStructure">
+        <rdfs:label rdf:datatype="&xsd;string">CivicStructure</rdfs:label>
+        <rdfs:label xml:lang="en">CivicStructure</rdfs:label>
+        <rdfs:label xml:lang="ru">Гражданское сооружение</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#CommonName -->
+
+    <owl:Class rdf:about="&ria;CommonName">
+        <rdfs:label rdf:datatype="&xsd;string">Common Name</rdfs:label>
+        <rdfs:label xml:lang="ru">Общее понятие</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Company -->
+
+    <owl:Class rdf:about="&ria;Company">
+        <rdfs:label rdf:datatype="&xsd;string">Company</rdfs:label>
+        <rdfs:label xml:lang="ru">Коммерческая компания</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Concept -->
+
+    <owl:Class rdf:about="&ria;Concept">
+        <rdfs:label rdf:datatype="&xsd;string">Concept</rdfs:label>
+        <rdfs:label xml:lang="ru">Концепт</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;rootConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#CreativeWork -->
+
+    <owl:Class rdf:about="&ria;CreativeWork">
+        <rdfs:label rdf:datatype="&xsd;string">Creative Work</rdfs:label>
+        <rdfs:label xml:lang="ru">Объект творчества</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;MainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#DanceGroup -->
+
+    <owl:Class rdf:about="&ria;DanceGroup">
+        <rdfs:label rdf:datatype="&xsd;string">Dance Group</rdfs:label>
+        <rdfs:label xml:lang="ru">Танцевальный коллектив</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;PerformingGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Event -->
+
+    <owl:Class rdf:about="&ria;Event">
+        <rdfs:label rdf:datatype="&xsd;string">Event</rdfs:label>
+        <rdfs:label xml:lang="ru">Событие</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;MainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#EventVenue -->
+
+    <owl:Class rdf:about="&ria;EventVenue">
+        <rdfs:label rdf:datatype="&xsd;string">EventVenue</rdfs:label>
+        <rdfs:label xml:lang="en">EventVenue</rdfs:label>
+        <rdfs:label xml:lang="ru">Место события</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Government_Body -->
+
+    <owl:Class rdf:about="&ria;Government_Body">
+        <rdfs:label rdf:datatype="&xsd;string">Government Body</rdfs:label>
+        <rdfs:label xml:lang="ru">Орган власти</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Hospital -->
+
+    <owl:Class rdf:about="&ria;Hospital">
+        <rdfs:label rdf:datatype="&xsd;string">Hospital</rdfs:label>
+        <rdfs:label xml:lang="en">Hospital</rdfs:label>
+        <rdfs:label xml:lang="ru">Больница</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#International_Organization -->
+
+    <owl:Class rdf:about="&ria;International_Organization">
+        <rdfs:label rdf:datatype="&xsd;string">International Organization</rdfs:label>
+        <rdfs:label xml:lang="ru">Международная организация</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;Organization"/>
+    </owl:Class>
+    
+
+
+    
+
+
+    <!-- http://data.ria.ru#Keyword -->
+
+    <owl:Class rdf:about="&ria;Keyword">
+        <rdfs:label rdf:datatype="&xsd;string">Keyword</rdfs:label>
+        <rdfs:label xml:lang="ru">Ключевое слово</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CommonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#LandmarksOrHistoricalBuildings -->
+
+    <owl:Class rdf:about="&ria;LandmarksOrHistoricalBuildings">
+        <rdfs:label rdf:datatype="&xsd;string">LandmarksOrHistoricalBuildings</rdfs:label>
+        <rdfs:label xml:lang="ru">Достопримечательность</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Location -->
+
+    <owl:Class rdf:about="&ria;Location">
+        <rdfs:label rdf:datatype="&xsd;string">Location</rdfs:label>
+        <rdfs:label xml:lang="ru">Географическое название</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;Place"/>
+        <!--rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/-->
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#MainEntity -->
+
+    <owl:Class rdf:about="&ria;MainEntity">
+        <rdfs:label rdf:datatype="&xsd;string">Entity</rdfs:label>
+        <rdfs:label xml:lang="ru">Именованная сущность</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;Concept"/>
+        <rdfs:comment rdf:datatype="&xsd;string">надконцепт для основных тегируемых в статьях сущностей: Организации, Персоны, Местоположения и Бренда</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Media -->
+
+    <owl:Class rdf:about="&ria;Media">
+        <rdfs:label rdf:datatype="&xsd;string">Media</rdfs:label>
+        <rdfs:label xml:lang="ru">Медиа-объект</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;News_Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Movie -->
+
+    <owl:Class rdf:about="&ria;Movie">
+        <rdfs:label rdf:datatype="&xsd;string">Movie</rdfs:label>
+        <rdfs:label xml:lang="ru">Кинофильм</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CreativeWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#MovieTheater -->
+
+    <owl:Class rdf:about="&ria;MovieTheater">
+        <rdfs:label rdf:datatype="&xsd;string">MovieTheater</rdfs:label>
+        <rdfs:label xml:lang="ru">Кинотеатр</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Museum -->
+
+    <owl:Class rdf:about="&ria;Museum">
+        <rdfs:label rdf:datatype="&xsd;string">Museum</rdfs:label>
+        <rdfs:label xml:lang="ru">Музей</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#MusicAlbum -->
+
+    <owl:Class rdf:about="&ria;MusicAlbum">
+        <rdfs:label rdf:datatype="&xsd;string">Musical Album</rdfs:label>
+        <rdfs:label xml:lang="ru">Музыкальный альбом</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CreativeWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#MusicGroup -->
+
+    <owl:Class rdf:about="&ria;MusicGroup">
+        <rdfs:label rdf:datatype="&xsd;string">Music Group</rdfs:label>
+        <rdfs:label xml:lang="ru">Музыкальная группа</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;PerformingGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#MusicVenue -->
+
+    <owl:Class rdf:about="&ria;MusicVenue">
+        <rdfs:label rdf:datatype="&xsd;string">MusicVenue</rdfs:label>
+        <rdfs:label xml:lang="ru">Концертный зал</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Natural_Phenomenon -->
+
+    <owl:Class rdf:about="&ria;Natural_Phenomenon">
+        <rdfs:label rdf:datatype="&xsd;string">Natural Phenomenon</rdfs:label>
+        <rdfs:label xml:lang="ru">Природное явление</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CommonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#NewsProduct -->
+
+    <owl:Class rdf:about="&ria;NewsProduct">
+        <rdfs:label rdf:datatype="&xsd;string">NewsProduct</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#News_Item -->
+
+    <owl:Class rdf:about="&ria;News_Item">
+        <rdfs:label rdf:datatype="&xsd;string">News Item</rdfs:label>
+        <rdfs:label xml:lang="ru">Новостная единица</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;rootConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Organization -->
+
+    <owl:Class rdf:about="&ria;Organization">
+        <rdfs:label rdf:datatype="&xsd;string">Organization</rdfs:label>
+        <rdfs:label xml:lang="ru">Организация</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;MainEntity"/>
+        <rdfs:comment rdf:datatype="&xsd;string">абстрактный надконцепт организаций</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Painting -->
+
+    <owl:Class rdf:about="&ria;Painting">
+        <rdfs:label rdf:datatype="&xsd;string">Painting</rdfs:label>
+        <rdfs:label xml:lang="ru">Живопись</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CreativeWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Park -->
+
+    <owl:Class rdf:about="&ria;Park">
+        <rdfs:label rdf:datatype="&xsd;string">Park</rdfs:label>
+        <rdfs:label xml:lang="ru">Парк</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Performance -->
+
+    <owl:Class rdf:about="&ria;Performance">
+        <rdfs:label rdf:datatype="&xsd;string">Performance</rdfs:label>
+        <rdfs:label xml:lang="ru">Представление</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CreativeWork"/>
+        <rdfs:comment rdf:datatype="&xsd;string">спектакль, балет, концерт</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#PerformingArtsTheater -->
+
+    <owl:Class rdf:about="&ria;PerformingArtsTheater">
+        <rdfs:label rdf:datatype="&xsd;string">PerformingArtsTheater</rdfs:label>
+        <rdfs:label xml:lang="ru">Театр</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#PerformingGroup -->
+
+    <owl:Class rdf:about="&ria;PerformingGroup">
+        <rdfs:label rdf:datatype="&xsd;string">Performing Group</rdfs:label>
+        <rdfs:label xml:lang="ru">Творческий коллектив</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Person -->
+
+    <owl:Class rdf:about="&ria;Person">
+        <rdfs:label rdf:datatype="&xsd;string">Person</rdfs:label>
+        <rdfs:label xml:lang="ru">Персона</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;MainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Place -->
+
+    <owl:Class rdf:about="&ria;Place">
+        <rdfs:label rdf:datatype="&xsd;string">Place</rdfs:label>
+        <rdfs:label xml:lang="ru">Место</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;MainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#PlaceOfWorship -->
+
+    <owl:Class rdf:about="&ria;PlaceOfWorship">
+        <rdfs:label rdf:datatype="&xsd;string">PlaceOfWorship</rdfs:label>
+        <rdfs:label xml:lang="ru">Храм</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Political_Party -->
+
+    <owl:Class rdf:about="&ria;Political_Party">
+        <rdfs:label rdf:datatype="&xsd;string">Political Party</rdfs:label>
+        <rdfs:label xml:lang="ru">Политическая партия</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Product -->
+
+    <owl:Class rdf:about="&ria;Product">
+        <rdfs:label rdf:datatype="&xsd;string">Product</rdfs:label>
+        <rdfs:label xml:lang="ru">Продукт</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;MainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Public_Association -->
+
+    <owl:Class rdf:about="&ria;Public_Association">
+        <rdfs:label rdf:datatype="&xsd;string">Public Association</rdfs:label>
+        <rdfs:label xml:lang="ru">Общественное объединение</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;Organization"/>
+        <rdfs:comment rdf:datatype="&xsd;string">некоммерческое формирование, кроме политических партий: общественная организация, общественное движение, общественный фонд, общественное учреждение, орган общественной самодеятельности</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Research_Educational_Institution -->
+
+    <owl:Class rdf:about="&ria;Research_Educational_Institution">
+        <rdfs:label rdf:datatype="&xsd;string">Research Educational Institution</rdfs:label>
+        <rdfs:label xml:lang="ru">Научно-образовательное учреждение</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Sculpture -->
+
+    <owl:Class rdf:about="&ria;Sculpture">
+        <rdfs:label rdf:datatype="&xsd;string">Sculpture</rdfs:label>
+        <rdfs:label xml:lang="ru">Скульптура</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CreativeWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Season -->
+
+    <owl:Class rdf:about="&ria;Season">
+        <rdfs:label rdf:datatype="&xsd;string">Season</rdfs:label>
+        <rdfs:label xml:lang="ru">Время года</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CommonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Spaceport -->
+
+    <owl:Class rdf:about="&ria;Spaceport">
+        <rdfs:label rdf:datatype="&xsd;string">Spaceport</rdfs:label>
+        <rdfs:label xml:lang="ru">Космодром</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Sport -->
+
+    <owl:Class rdf:about="&ria;Sport">
+        <rdfs:label rdf:datatype="&xsd;string">Sport</rdfs:label>
+        <rdfs:label xml:lang="ru">Вид спорта</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CommonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#SportsTeam -->
+
+    <owl:Class rdf:about="&ria;SportsTeam">
+        <rdfs:label rdf:datatype="&xsd;string">Sports Team</rdfs:label>
+        <rdfs:label xml:lang="ru">Спортивная команда</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#StadiumOrArena -->
+
+    <owl:Class rdf:about="&ria;StadiumOrArena">
+        <rdfs:label rdf:datatype="&xsd;string">StadiumOrArena</rdfs:label>
+        <rdfs:label xml:lang="ru">Стадион</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    
+
+
+    <!-- http://data.ria.ru#Story -->
+
+    <owl:Class rdf:about="&ria;Story">
+        <rdfs:label rdf:datatype="&xsd;string">Story</rdfs:label>
+        <rdfs:label xml:lang="ru">Сюжет</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;Concept"/>
+        <rdfs:comment rdf:datatype="&xsd;string">метка Новостной единицы, обозначающая событие или тему, в связи с которой выпущен материал</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#SubwayStation -->
+
+    <owl:Class rdf:about="&ria;SubwayStation">
+        <rdfs:label rdf:datatype="&xsd;string">SubwayStation</rdfs:label>
+        <rdfs:label xml:lang="ru">Станция метро</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#TVSeries -->
+
+    <owl:Class rdf:about="&ria;TVSeries">
+        <rdfs:label rdf:datatype="&xsd;string">TV Series</rdfs:label>
+        <rdfs:label xml:lang="ru">Телесериал</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CreativeWork"/>
+    </owl:Class>
+    
+
+    <!-- http://data.ria.ru#TheaterGroup -->
+
+    <owl:Class rdf:about="&ria;TheaterGroup">
+        <rdfs:label rdf:datatype="&xsd;string">Theater Group</rdfs:label>
+        <rdfs:label xml:lang="ru">Театральная труппа</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;PerformingGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#Time_of_the_Day -->
+
+    <owl:Class rdf:about="&ria;Time_of_the_Day">
+        <rdfs:label rdf:datatype="&xsd;string">Time of the Day</rdfs:label>
+        <rdfs:label xml:lang="ru">Время суток</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CommonName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru#TrainStation -->
+
+    <owl:Class rdf:about="&ria;TrainStation">
+        <rdfs:label rdf:datatype="&xsd;string">TrainStation</rdfs:label>
+        <rdfs:label xml:lang="ru">Железнодорожный вокзал</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;CivicStructure"/>
+    </owl:Class>
+    
+
+
+
+    <!-- http://data.ria.ru#rootConcept -->
+
+    <owl:Class rdf:about="&ria;rootConcept">
+        <rdfs:label rdf:datatype="&xsd;string">rootConcept</rdfs:label>
+        <rdfs:label xml:lang="ru">вершина дерева концептов</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#AuxiliaryEntity -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#AuxiliaryEntity">
+        <rdfs:label rdf:datatype="&xsd;string">AuxiliaryEntity</rdfs:label>
+        <rdfs:label xml:lang="ru">Вспомогательная сущность</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ria;rootConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#Brand -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#Brand">
+        <rdfs:label rdf:datatype="&xsd;string">Brand</rdfs:label>
+        <rdfs:label xml:lang="ru">Бренд</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.ria.ru/cv#AuxiliaryEntity"/>
+        <rdfs:comment rdf:datatype="&xsd;string">бренд, под которым выходит данный продукт (используется для проверки лукапов))</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#Domain -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#Domain">
+        <rdfs:label rdf:datatype="&xsd;string">Domain</rdfs:label>
+        <rdfs:label xml:lang="ru">Редактура</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.ria.ru/cv#AuxiliaryEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#EduLevel -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#EduLevel">
+        <rdfs:label rdf:datatype="&xsd;string">EduLevel</rdfs:label>
+        <rdfs:label xml:lang="ru">Уровень образования</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.ria.ru/cv#AuxiliaryEntity"/>
+        <rdfs:comment rdf:datatype="&xsd;string">уровень образования которое дает образовательное учреждение</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#Encoding -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#Encoding">
+        <rdfs:label rdf:datatype="&xsd;string">Encoding</rdfs:label>
+        <rdfs:label xml:lang="ru">Формат медиа-объекта</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.ria.ru/cv#AuxiliaryEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#EventType -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#EventType">
+        <rdfs:label rdf:datatype="&xsd;string">EventType</rdfs:label>
+        <rdfs:label xml:lang="ru">Типы событий</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.ria.ru/cv#AuxiliaryEntity"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#Genre -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#Genre">
+        <rdfs:label rdf:datatype="&xsd;string">Genre</rdfs:label>
+        <rdfs:label xml:lang="ru">Жанры новостных единиц</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.ria.ru/cv#AuxiliaryEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#Industry -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#Industry">
+        <rdfs:label rdf:datatype="&xsd;string">Industry</rdfs:label>
+        <rdfs:label xml:lang="ru">Отрасли экономической деятельности</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.ria.ru/cv#AuxiliaryEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#JobTitle -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#JobTitle">
+        <rdfs:label rdf:datatype="&xsd;string">JobTitle</rdfs:label>
+        <rdfs:label xml:lang="ru">Должность</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.ria.ru/cv#AuxiliaryEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#Language -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#Language">
+        <rdfs:label rdf:datatype="&xsd;string">Language</rdfs:label>
+        <rdfs:label xml:lang="ru">Язык</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.ria.ru/cv#AuxiliaryEntity"/>
+        <rdfs:comment rdf:datatype="&xsd;string">язык (названия языков приводятся согласно стандарту IETF BCP 47)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#LocType -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#LocType">
+        <rdfs:label rdf:datatype="&xsd;string">LocType</rdfs:label>
+        <rdfs:label xml:lang="ru">Тип географического объекта</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.ria.ru/cv#AuxiliaryEntity"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#MediaType -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#MediaType">
+        <rdfs:label rdf:datatype="&xsd;string">MediaType</rdfs:label>
+        <rdfs:label xml:lang="ru">Типы медиа-материала</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.ria.ru/cv#AuxiliaryEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#Occupation -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#Occupation">
+        <rdfs:label rdf:datatype="&xsd;string">Occupation</rdfs:label>
+        <rdfs:label xml:lang="ru">Род деятельности</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.ria.ru/cv#AuxiliaryEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#OrgType -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#OrgType">
+        <rdfs:label rdf:datatype="&xsd;string">OrgType</rdfs:label>
+        <rdfs:label xml:lang="ru">Тип организации</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.ria.ru/cv#AuxiliaryEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#ProductClass -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#ProductClass">
+        <rdfs:label rdf:datatype="&xsd;string">ProductClass</rdfs:label>
+        <rdfs:label xml:lang="ru">Классы продуктов</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.ria.ru/cv#AuxiliaryEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#Sex -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#Sex">
+        <rdfs:label rdf:datatype="&xsd;string">Sex</rdfs:label>
+        <rdfs:label xml:lang="ru">Пол</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.ria.ru/cv#AuxiliaryEntity"/>
+        <rdfs:comment rdf:datatype="&xsd;string">пол Персоны</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ria.ru/cv#Title -->
+
+    <owl:Class rdf:about="http://data.ria.ru/cv#Title">
+        <rdfs:label rdf:datatype="&xsd;string">Title</rdfs:label>
+        <rdfs:label xml:lang="ru">Звание</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://data.ria.ru/cv#AuxiliaryEntity"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <owl:NamedIndividual rdf:about="http://data.ria.ru/cv#male">
+        <rdf:type rdf:resource="http://data.ria.ru/cv#Sex"/>
+        <rdfs:label xml:lang="en">male</rdfs:label>
+        <rdfs:label xml:lang="ru">мужской</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <owl:NamedIndividual rdf:about="http://data.ria.ru/cv#female">
+        <rdf:type rdf:resource="http://data.ria.ru/cv#Sex"/>
+        <rdfs:label xml:lang="en">female</rdfs:label>
+        <rdfs:label xml:lang="ru">женский</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

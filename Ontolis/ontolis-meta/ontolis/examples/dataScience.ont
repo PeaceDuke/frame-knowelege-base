@@ -1,0 +1,6209 @@
+{
+    "last_id": "651",
+    "namespaces": {
+        "default": "http://knova.ru/dataScience.owl#",
+        "http://knova.ru/dataScience.owl": "http://knova.ru/dataScience.owl",
+        "ontolis-avis": "http://knova.ru/ontolis-avis",
+        "owl": "http://www.w3.org/2002/07/owl",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsd": "http://www.w3.org/2001/XMLSchema"
+    },
+    "nodes": [
+        {
+            "attributes": {
+            },
+            "id": "136",
+            "name": "False_Discovery_Rate",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -379.93422551592158,
+            "position_y": 603.99696278409692
+        },
+        {
+            "attributes": {
+            },
+            "id": "258",
+            "name": "Clustering",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -218.24963724809166,
+            "position_y": 57.097233122810572
+        },
+        {
+            "attributes": {
+            },
+            "id": "69",
+            "name": "PostgreSQL",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 476.91405191262743,
+            "position_y": 12.306838421831497
+        },
+        {
+            "attributes": {
+            },
+            "id": "71",
+            "name": "k-Means",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 97.403741138737658,
+            "position_y": -475.97260749892416
+        },
+        {
+            "attributes": {
+            },
+            "id": "308",
+            "name": "Bagging",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 1.3697721760021013,
+            "position_y": 239.30448917362634
+        },
+        {
+            "attributes": {
+            },
+            "id": "217",
+            "name": "Linear",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 134.85321896243337,
+            "position_y": 493.46545739335079
+        },
+        {
+            "attributes": {
+            },
+            "id": "47",
+            "name": "Mutual_Information",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 205.39747813639735,
+            "position_y": -706.84034386872577
+        },
+        {
+            "attributes": {
+            },
+            "id": "266",
+            "name": "OPTICS",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -918.98749621465015,
+            "position_y": -5.1422766964441626
+        },
+        {
+            "attributes": {
+            },
+            "id": "7",
+            "name": "Customized_Tuning",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 575.5216446655038,
+            "position_y": 281.96001996515122
+        },
+        {
+            "attributes": {
+            },
+            "id": "281",
+            "name": "Second_Order_Recurrent_Neural_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -140.95160873140495,
+            "position_y": -549.93305092004073
+        },
+        {
+            "attributes": {
+            },
+            "id": "174",
+            "name": "Cassandra",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -121.46118917705802,
+            "position_y": 482.07025996023896
+        },
+        {
+            "attributes": {
+            },
+            "id": "233",
+            "name": "Sparkline",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 655.09618403186141,
+            "position_y": 755.54549146090028
+        },
+        {
+            "attributes": {
+            },
+            "id": "18",
+            "name": "Lotus",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 693.9098203998152,
+            "position_y": -589.31046499266722
+        },
+        {
+            "attributes": {
+            },
+            "id": "141",
+            "name": "Version_Control",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 407.78464199147214,
+            "position_y": -94.848418712931704
+        },
+        {
+            "attributes": {
+            },
+            "id": "186",
+            "name": "Principal_Component_Analysis_(PCA)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 144.8633062396614,
+            "position_y": 429.31746934581957
+        },
+        {
+            "attributes": {
+            },
+            "id": "199",
+            "name": "Bootstrap_Sampling",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 277.41706434691463,
+            "position_y": -397.224105479201
+        },
+        {
+            "attributes": {
+            },
+            "id": "303",
+            "name": "Repeated_Incremental_Pruning_to_Produce_Error_Reduction_(RIPPER)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 657.31661613242522,
+            "position_y": -227.22264511000131
+        },
+        {
+            "attributes": {
+            },
+            "id": "276",
+            "name": "Speech_Recognition",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -163.51809515998306,
+            "position_y": 660.55437580449325
+        },
+        {
+            "attributes": {
+            },
+            "id": "110",
+            "name": "Control_Chart",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 719.3442383263648,
+            "position_y": 631.44637311016049
+        },
+        {
+            "attributes": {
+            },
+            "id": "209",
+            "name": "Automated_Parameter_Tuning",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 284.41765042185585,
+            "position_y": 373.69378919644834
+        },
+        {
+            "attributes": {
+            },
+            "id": "182",
+            "name": "Hierarchical_Recurrent_Neural_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -517.63362249131853,
+            "position_y": -499.78950937368603
+        },
+        {
+            "attributes": {
+            },
+            "id": "2",
+            "name": "Deep_Learning",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 49.009185469155597,
+            "position_y": -354.03733366524324
+        },
+        {
+            "attributes": {
+            },
+            "id": "121",
+            "name": "Phalcon",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 148.44481212593553,
+            "position_y": 544.13254953758678
+        },
+        {
+            "attributes": {
+            },
+            "id": "84",
+            "name": "Expectation-Maximization_(EM)_Algorithm",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -860.67171336379863,
+            "position_y": 139.92893081374913
+        },
+        {
+            "attributes": {
+            },
+            "id": "26",
+            "name": "MemcacheDB",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -24.233518100274523,
+            "position_y": -999.7063251777912
+        },
+        {
+            "attributes": {
+            },
+            "id": "107",
+            "name": "Voldemort",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -68.351077632070002,
+            "position_y": -997.66133040553132
+        },
+        {
+            "attributes": {
+            },
+            "id": "263",
+            "name": "Astrophysics",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -467.11941832329683,
+            "position_y": 716.47441098677348
+        },
+        {
+            "attributes": {
+            },
+            "id": "79",
+            "name": "SLIPPER",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 738.71208278660345,
+            "position_y": -434.30382030846573
+        },
+        {
+            "attributes": {
+            },
+            "id": "50",
+            "name": "MapReduce",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 297.74826408718184,
+            "position_y": 146.77926895020002
+        },
+        {
+            "attributes": {
+            },
+            "id": "248",
+            "name": "Projection_Pursuit",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -247.56310680874435,
+            "position_y": 271.25561301630739
+        },
+        {
+            "attributes": {
+            },
+            "id": "194",
+            "name": "ANOVA_Radial_Basis",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 69.913150377921298,
+            "position_y": 443.45104045840714
+        },
+        {
+            "attributes": {
+            },
+            "id": "120",
+            "name": "Jaccard_index",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 303.51075497715891,
+            "position_y": -357.65757732595938
+        },
+        {
+            "attributes": {
+            },
+            "id": "57",
+            "name": "Deep_Neural_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -671.0862033032696,
+            "position_y": -445.82269292004491
+        },
+        {
+            "attributes": {
+            },
+            "id": "249",
+            "name": "Distribution_Models",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -434.93744879333224,
+            "position_y": 22.963662407966087
+        },
+        {
+            "attributes": {
+            },
+            "id": "27",
+            "name": "AWS/EC2",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -348.13754903469197,
+            "position_y": -772.91332000748002
+        },
+        {
+            "attributes": {
+            },
+            "id": "257",
+            "name": "RavenDB",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -723.45346084928747,
+            "position_y": -376.4911674646084
+        },
+        {
+            "attributes": {
+            },
+            "id": "105",
+            "name": "Multidimensional_Scaling_(MDS)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -136.20215748879448,
+            "position_y": 206.50490963508278
+        },
+        {
+            "attributes": {
+            },
+            "id": "19",
+            "name": "CLIQUE",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -651.03598170741031,
+            "position_y": 454.3990096149239
+        },
+        {
+            "attributes": {
+            },
+            "id": "1",
+            "name": "Bioinformatics",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -490.86630840277394,
+            "position_y": 644.44018226718356
+        },
+        {
+            "attributes": {
+            },
+            "id": "103",
+            "name": "Dimensionality_Reduction",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -87.254016402547734,
+            "position_y": 252.64403942745244
+        },
+        {
+            "attributes": {
+            },
+            "id": "28",
+            "name": "Sammon_Mapping",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -56.253230501333171,
+            "position_y": 350.38433511456884
+        },
+        {
+            "attributes": {
+            },
+            "id": "49",
+            "name": "Vaadin",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 399.98955752421483,
+            "position_y": -512.19217792513211
+        },
+        {
+            "attributes": {
+            },
+            "id": "256",
+            "name": "Netezza",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 425.77974296318263,
+            "position_y": 74.814583966670867
+        },
+        {
+            "attributes": {
+            },
+            "id": "146",
+            "name": "Computer_Vision",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -334.49833902598181,
+            "position_y": 427.37607271282729
+        },
+        {
+            "attributes": {
+            },
+            "id": "208",
+            "name": "Inconsistencies",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 21.369730306282978,
+            "position_y": -577.81176742287278
+        },
+        {
+            "attributes": {
+            },
+            "id": "286",
+            "name": "Heteroskedasticity",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -148.09491209580051,
+            "position_y": 509.39232488830288
+        },
+        {
+            "attributes": {
+            },
+            "id": "45",
+            "name": "Recurrent_Multilayer_Perceptron",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -502.22710549018802,
+            "position_y": -447.40592419465747
+        },
+        {
+            "attributes": {
+            },
+            "id": "269",
+            "name": "Mahout",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -811.90877090908441,
+            "position_y": 357.01441511603525
+        },
+        {
+            "attributes": {
+            },
+            "id": "271",
+            "name": "Subspace_Models",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -375.78365202775132,
+            "position_y": 229.07978228539551
+        },
+        {
+            "attributes": {
+            },
+            "id": "232",
+            "name": "GraphLab",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -811.50375885854157,
+            "position_y": 336.02251787605769
+        },
+        {
+            "attributes": {
+            },
+            "id": "21",
+            "name": "Incremental_Reduced_Error_Pruning_(IREP)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 618.21743717397692,
+            "position_y": -475.96321063261155
+        },
+        {
+            "attributes": {
+            },
+            "id": "70",
+            "name": "Riak",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 370.18607388877797,
+            "position_y": -928.31850221230729
+        },
+        {
+            "attributes": {
+            },
+            "id": "73",
+            "name": "Model_Validation",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 369.8646133550958,
+            "position_y": -188.64814900115545
+        },
+        {
+            "attributes": {
+            },
+            "id": "292",
+            "name": "BIRCH",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 204.79360429471845,
+            "position_y": 796.07591130445371
+        },
+        {
+            "attributes": {
+            },
+            "id": "210",
+            "name": "Average_Linkage",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -313.99034624568912,
+            "position_y": 655.86208320044705
+        },
+        {
+            "attributes": {
+            },
+            "id": "62",
+            "name": "Bar_Chart",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 545.07760651098272,
+            "position_y": 838.38559319698379
+        },
+        {
+            "attributes": {
+            },
+            "id": "152",
+            "name": "Regularization",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 437.40825613718715,
+            "position_y": 311.16287499997242
+        },
+        {
+            "attributes": {
+            },
+            "id": "288",
+            "name": "Rand_Measure",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -114.19164550134879,
+            "position_y": -686.9468097641402
+        },
+        {
+            "attributes": {
+            },
+            "id": "142",
+            "name": "Search_Engines",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -504.31268719780917,
+            "position_y": 786.96590643322418
+        },
+        {
+            "attributes": {
+            },
+            "id": "261",
+            "name": "Microsoft_SQL_Server",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 474.8241778189003,
+            "position_y": 85.150652300527099
+        },
+        {
+            "attributes": {
+            },
+            "id": "189",
+            "name": "Laravel",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 468.13582419871915,
+            "position_y": 429.2937118738638
+        },
+        {
+            "attributes": {
+            },
+            "id": "102",
+            "name": "Accumulo",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -10.997624006008591,
+            "position_y": 683.74670974177502
+        },
+        {
+            "attributes": {
+            },
+            "id": "116",
+            "name": "BSAS",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 271.57231674026093,
+            "position_y": 678.86935712129718
+        },
+        {
+            "attributes": {
+            },
+            "id": "304",
+            "name": "Infinite_Graph",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 255.40056934632287,
+            "position_y": 113.80069468938164
+        },
+        {
+            "attributes": {
+            },
+            "id": "207",
+            "name": "Deep_Boltzmann_Machines",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -429.18234322472767,
+            "position_y": -378.91274302315838
+        },
+        {
+            "attributes": {
+            },
+            "id": "255",
+            "name": "Feature_Engineering",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 617.92207732528243,
+            "position_y": 265.91029777568497
+        },
+        {
+            "attributes": {
+            },
+            "id": "59",
+            "name": "Natural_Language_Generation",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 2.81558327418804,
+            "position_y": 978.17718802175739
+        },
+        {
+            "attributes": {
+            },
+            "id": "135",
+            "name": "DB2",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 564.73656063979433,
+            "position_y": -4.3686719007030073
+        },
+        {
+            "attributes": {
+            },
+            "id": "74",
+            "name": "Agnostic_Specifications",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 170.09099368966523,
+            "position_y": 5.6639619335708726
+        },
+        {
+            "attributes": {
+            },
+            "id": "48",
+            "name": "C4.5/5.0",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -441.64651291468124,
+            "position_y": 195.56104218869859
+        },
+        {
+            "attributes": {
+            },
+            "id": "238",
+            "name": "Data_Cleaning",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -48.603809119985719,
+            "position_y": -433.21849251329593
+        },
+        {
+            "attributes": {
+            },
+            "id": "235",
+            "name": "Web_Frameworks",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 151.97333002634988,
+            "position_y": -181.952465640654
+        },
+        {
+            "attributes": {
+            },
+            "id": "115",
+            "name": "Distributed_ML_Libraries",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -512.20670398286506,
+            "position_y": 213.60850384459368
+        },
+        {
+            "attributes": {
+            },
+            "id": "134",
+            "name": "Multivariate_Adaptive_Regression_Splines_(MARS)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -351.21405063016073,
+            "position_y": -12.908074473330911
+        },
+        {
+            "attributes": {
+            },
+            "id": "155",
+            "name": "Storm",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -551.4001973559657,
+            "position_y": 255.19433267633096
+        },
+        {
+            "attributes": {
+            },
+            "id": "192",
+            "name": "Stacked_Generalization",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 682.36923398372926,
+            "position_y": 368.70041773314063
+        },
+        {
+            "attributes": {
+            },
+            "id": "89",
+            "name": "Chi-squared_Automatic_Interaction_Detection_(CHAID)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -184.05151318131266,
+            "position_y": 177.66493341942746
+        },
+        {
+            "attributes": {
+            },
+            "id": "294",
+            "name": "Java",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 166.50535730744406,
+            "position_y": -311.76134630292876
+        },
+        {
+            "attributes": {
+            },
+            "id": "157",
+            "name": "GitHub",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 679.73464610650262,
+            "position_y": -318.57924196417008
+        },
+        {
+            "attributes": {
+            },
+            "id": "206",
+            "name": "Hierarchical_Clustering",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -241.60463558232979,
+            "position_y": 424.36585238112804
+        },
+        {
+            "attributes": {
+            },
+            "id": "300",
+            "name": "Kernels",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 241.98766691107491,
+            "position_y": 221.81743293149475
+        },
+        {
+            "attributes": {
+            },
+            "id": "31",
+            "name": "Hypothesis_Testing",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 50.144997126911392,
+            "position_y": 688.35860625772898
+        },
+        {
+            "attributes": {
+            },
+            "id": "230",
+            "name": "Stock_Market_Analysis",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -557.73542896680533,
+            "position_y": 736.6804181788043
+        },
+        {
+            "attributes": {
+            },
+            "id": "100",
+            "name": "P-Value",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -303.8455204238868,
+            "position_y": 479.826266481321
+        },
+        {
+            "attributes": {
+            },
+            "id": "53",
+            "name": "Frequentist_Approaches",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 159.38243136761605,
+            "position_y": 769.33577853850022
+        },
+        {
+            "attributes": {
+            },
+            "id": "302",
+            "name": "Boxplot",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 443.61083231787751,
+            "position_y": 748.626058250955
+        },
+        {
+            "attributes": {
+            },
+            "id": "17",
+            "name": "Effect_Size",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -271.72370205077499,
+            "position_y": 509.19624864250591
+        },
+        {
+            "attributes": {
+            },
+            "id": "9",
+            "name": "ArangoDB",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 69.792580777591752,
+            "position_y": -997.56152475343765
+        },
+        {
+            "attributes": {
+            },
+            "id": "318",
+            "name": "Logistic_Regression",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -324.39493867204334,
+            "position_y": -115.6598661113631
+        },
+        {
+            "attributes": {
+            },
+            "id": "314",
+            "name": "Stepwise_Regression",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -600.48495139374108,
+            "position_y": -240.75287202314288
+        },
+        {
+            "attributes": {
+            },
+            "id": "259",
+            "name": "Document_Store",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -463.88839245923566,
+            "position_y": -408.57849214828008
+        },
+        {
+            "attributes": {
+            },
+            "id": "166",
+            "name": "Bi-Directional_Recurrent_Neural_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -393.24367404168129,
+            "position_y": -236.52518325374589
+        },
+        {
+            "attributes": {
+            },
+            "id": "14",
+            "name": "Learning_Vector_Quantization_(LVQ)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 799.01763158631138,
+            "position_y": -413.18025876573512
+        },
+        {
+            "attributes": {
+            },
+            "id": "33",
+            "name": "Computational_Chemistry",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -262.90687778930624,
+            "position_y": 792.54398352647945
+        },
+        {
+            "attributes": {
+            },
+            "id": "44",
+            "name": "Automatic_Summarization",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 93.021788860143118,
+            "position_y": 962.80315561777479
+        },
+        {
+            "attributes": {
+            },
+            "id": "222",
+            "name": "Centroid_Models",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -60.22023300964527,
+            "position_y": -279.40979055777581
+        },
+        {
+            "attributes": {
+            },
+            "id": "282",
+            "name": "Precision_and_Recall",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -69.118666717966263,
+            "position_y": -238.75708654670618
+        },
+        {
+            "attributes": {
+            },
+            "id": "93",
+            "name": "Sentiment_Analysis",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -156.5996432004051,
+            "position_y": 987.66216478586728
+        },
+        {
+            "attributes": {
+            },
+            "id": "34",
+            "name": "Statistics",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -142.08481245101837,
+            "position_y": 585.83276724554423
+        },
+        {
+            "attributes": {
+            },
+            "id": "153",
+            "name": "Missing_Values",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -109.12980510114993,
+            "position_y": -399.46571477686308
+        },
+        {
+            "attributes": {
+            },
+            "id": "268",
+            "name": "HBase",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -405.89937621088882,
+            "position_y": 452.64524896666518
+        },
+        {
+            "attributes": {
+            },
+            "id": "191",
+            "name": "Correlation",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -211.92155813419384,
+            "position_y": 731.437940767177
+        },
+        {
+            "attributes": {
+            },
+            "id": "315",
+            "name": "F-measure",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 10.10180019620501,
+            "position_y": -763.57893500797934
+        },
+        {
+            "attributes": {
+            },
+            "id": "260",
+            "name": "Pareto_Chart",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 644.36804670427989,
+            "position_y": 483.15577868228252
+        },
+        {
+            "attributes": {
+            },
+            "id": "6",
+            "name": "k-Nearest_Neighbor_(kNN)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 794.331355608997,
+            "position_y": -325.10863976663109
+        },
+        {
+            "attributes": {
+            },
+            "id": "3",
+            "name": "Foundation_Framework",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 281.84935001406899,
+            "position_y": -737.55007046036474
+        },
+        {
+            "attributes": {
+            },
+            "id": "25",
+            "name": "Elastic_Net_Regularization",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -386.44739590240238,
+            "position_y": -82.251862071286183
+        },
+        {
+            "attributes": {
+            },
+            "id": "38",
+            "name": "Play",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 223.419706414047,
+            "position_y": -441.44456966128797
+        },
+        {
+            "attributes": {
+            },
+            "id": "106",
+            "name": "Meta_Analysis",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 75.178805595616296,
+            "position_y": 776.48565160407759
+        },
+        {
+            "attributes": {
+            },
+            "id": "51",
+            "name": "Imputation",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -58.385099472833261,
+            "position_y": -631.33372416343366
+        },
+        {
+            "attributes": {
+            },
+            "id": "72",
+            "name": "Neo4J",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -496.83580377899079,
+            "position_y": 54.422928765546899
+        },
+        {
+            "attributes": {
+            },
+            "id": "253",
+            "name": "Oracle",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 446.00934020765186,
+            "position_y": 20.697999892284194
+        },
+        {
+            "attributes": {
+            },
+            "id": "229",
+            "name": "Ranking",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 277.30834451669256,
+            "position_y": -960.78097507257678
+        },
+        {
+            "attributes": {
+            },
+            "id": "317",
+            "name": "Minimal_Value_Adjustment",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 65.988354916557029,
+            "position_y": -482.12091770758792
+        },
+        {
+            "attributes": {
+            },
+            "id": "156",
+            "name": "k-Medoids",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -98.101581154292759,
+            "position_y": -203.79778325776405
+        },
+        {
+            "attributes": {
+            },
+            "id": "58",
+            "name": "TRIPPER",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 689.06817201517288,
+            "position_y": -604.30340459513241
+        },
+        {
+            "attributes": {
+            },
+            "id": "64",
+            "name": "Optical_Character_Recognition",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -74.106128458652307,
+            "position_y": 997.2503606040309
+        },
+        {
+            "attributes": {
+            },
+            "id": "247",
+            "name": "Machine_Translation",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -224.76762464811478,
+            "position_y": 974.41239468206902
+        },
+        {
+            "attributes": {
+            },
+            "id": "225",
+            "name": "Apache_Samza",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 361.03696191265334,
+            "position_y": -102.24515706385543
+        },
+        {
+            "attributes": {
+            },
+            "id": "160",
+            "name": "Ruby",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 374.33945792646551,
+            "position_y": -596.61380614243262
+        },
+        {
+            "attributes": {
+            },
+            "id": "32",
+            "name": "Stacked_(Denoising)_Auto-Encoders",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -105.69267131452776,
+            "position_y": -370.19179281968678
+        },
+        {
+            "attributes": {
+            },
+            "id": "97",
+            "name": "Polynomial",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 6.2591775859723375,
+            "position_y": 495.86255495412775
+        },
+        {
+            "attributes": {
+            },
+            "id": "35",
+            "name": "MongoDB",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -670.50599684451856,
+            "position_y": -530.2037120571332
+        },
+        {
+            "attributes": {
+            },
+            "id": "5",
+            "name": "Batch",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 72.970847440735255,
+            "position_y": -132.77689353555027
+        },
+        {
+            "attributes": {
+            },
+            "id": "272",
+            "name": "FP-Growth",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -612.95359680392335,
+            "position_y": -722.19479416557931
+        },
+        {
+            "attributes": {
+            },
+            "id": "145",
+            "name": "CodeIgniter",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 304.53877792032188,
+            "position_y": 439.2289411647057
+        },
+        {
+            "attributes": {
+            },
+            "id": "197",
+            "name": "CLARANS",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 163.39791341404057,
+            "position_y": 777.7197545807295
+        },
+        {
+            "attributes": {
+            },
+            "id": "87",
+            "name": "Tensor_Deep_Stacking_Network_(T-DSN)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -475.56638193202485,
+            "position_y": -138.091527453483
+        },
+        {
+            "attributes": {
+            },
+            "id": "16",
+            "name": "Apache_Kafka",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 190.64494976767796,
+            "position_y": 36.900203785216121
+        },
+        {
+            "attributes": {
+            },
+            "id": "13",
+            "name": "Fowlkes–Mallows_index",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 227.9578481613807,
+            "position_y": -806.5881729876935
+        },
+        {
+            "attributes": {
+            },
+            "id": "254",
+            "name": "Spectral_Clustering",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 131.52812435024248,
+            "position_y": -895.96105080145423
+        },
+        {
+            "attributes": {
+            },
+            "id": "144",
+            "name": "Transformation",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 301.42187772863849,
+            "position_y": -551.98121555058651
+        },
+        {
+            "attributes": {
+            },
+            "id": "111",
+            "name": "CSS",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 107.42854602448202,
+            "position_y": -604.16017485507689
+        },
+        {
+            "attributes": {
+            },
+            "id": "172",
+            "name": "Rule_Learners",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 521.46846861530537,
+            "position_y": -400.53237654074258
+        },
+        {
+            "attributes": {
+            },
+            "id": "39",
+            "name": "Platforms",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -337.66047166518712,
+            "position_y": -255.41050743497183
+        },
+        {
+            "attributes": {
+            },
+            "id": "119",
+            "name": "Clojure",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -237.05584227072598,
+            "position_y": 55.842860574131706
+        },
+        {
+            "attributes": {
+            },
+            "id": "236",
+            "name": "Scatterplot",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 563.72511167711014,
+            "position_y": 825.96246795155878
+        },
+        {
+            "attributes": {
+            },
+            "id": "169",
+            "name": "Stochastic_Neural_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -57.951088329533874,
+            "position_y": -573.31500459302561
+        },
+        {
+            "attributes": {
+            },
+            "id": "101",
+            "name": "Kappa_Statistic",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 424.04959947430183,
+            "position_y": 85.429351765448374
+        },
+        {
+            "attributes": {
+            },
+            "id": "321",
+            "name": "Davies–Bouldin_index",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 717.21204892628566,
+            "position_y": 313.57553773256501
+        },
+        {
+            "attributes": {
+            },
+            "id": "94",
+            "name": "Julia",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -56.51370910258094,
+            "position_y": 249.96401954445807
+        },
+        {
+            "attributes": {
+            },
+            "id": "216",
+            "name": "Decision_Stump",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -13.879793219241302,
+            "position_y": 66.426506660255001
+        },
+        {
+            "attributes": {
+            },
+            "id": "75",
+            "name": "Javascript",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 548.40269673687919,
+            "position_y": 19.874775753920542
+        },
+        {
+            "attributes": {
+            },
+            "id": "227",
+            "name": "H2O",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -807.81739766979001,
+            "position_y": 252.67641417776116
+        },
+        {
+            "attributes": {
+            },
+            "id": "148",
+            "name": "Run_Chart",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 517.61209553984213,
+            "position_y": 855.61540340906288
+        },
+        {
+            "attributes": {
+            },
+            "id": "196",
+            "name": "Convolutional_Deep_Belief_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -36.025979815729741,
+            "position_y": -496.73056536743849
+        },
+        {
+            "attributes": {
+            },
+            "id": "190",
+            "name": "Production",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -114.07363421659784,
+            "position_y": -78.915530713812402
+        },
+        {
+            "attributes": {
+            },
+            "id": "85",
+            "name": "Kohonen_Self_Organizing_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -328.84992151205358,
+            "position_y": -705.42283271561053
+        },
+        {
+            "attributes": {
+            },
+            "id": "185",
+            "name": "Recurrent_Neural_Networks",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -262.29725865382414,
+            "position_y": -427.54480143873718
+        },
+        {
+            "attributes": {
+            },
+            "id": "195",
+            "name": "DNA_Sequencing",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -360.61585680058215,
+            "position_y": 932.71442779876736
+        },
+        {
+            "attributes": {
+            },
+            "id": "43",
+            "name": "GCE",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -607.75272970054687,
+            "position_y": -686.99416775918667
+        },
+        {
+            "attributes": {
+            },
+            "id": "180",
+            "name": "Paradigms",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 138.86855965760589,
+            "position_y": 163.90996295956523
+        },
+        {
+            "attributes": {
+            },
+            "id": "309",
+            "name": "Long_Short_Term_Memory_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -77.874328789130914,
+            "position_y": -61.557293628922906
+        },
+        {
+            "attributes": {
+            },
+            "id": "306",
+            "name": "DBSCAN",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -921.56145934789856,
+            "position_y": -140.78628695555798
+        },
+        {
+            "attributes": {
+            },
+            "id": "63",
+            "name": "Cartogram",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 550.54765866182208,
+            "position_y": 685.41123337334204
+        },
+        {
+            "attributes": {
+            },
+            "id": "29",
+            "name": "Naive_Bayes_(NB)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 731.50376592035877,
+            "position_y": 117.66574992339834
+        },
+        {
+            "attributes": {
+            },
+            "id": "46",
+            "name": "Software_Engineering",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -640.30740682155545,
+            "position_y": 636.74225826783368
+        },
+        {
+            "attributes": {
+            },
+            "id": "76",
+            "name": "Guassian_Radial_Basis",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 248.66223114625618,
+            "position_y": 491.21475936305694
+        },
+        {
+            "attributes": {
+            },
+            "id": "211",
+            "name": "MySQL",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 314.5623489216224,
+            "position_y": -270.24614882369025
+        },
+        {
+            "attributes": {
+            },
+            "id": "91",
+            "name": "NoSQL",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -84.525438604039181,
+            "position_y": -232.57423581340115
+        },
+        {
+            "attributes": {
+            },
+            "id": "242",
+            "name": "Dataflow",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 403.9376854319205,
+            "position_y": 297.31071211764782
+        },
+        {
+            "attributes": {
+            },
+            "id": "20",
+            "name": "Relational",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 368.99355293891256,
+            "position_y": -46.060235395618207
+        },
+        {
+            "attributes": {
+            },
+            "id": "167",
+            "name": "Medical_Diagnosis",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -301.18741374155746,
+            "position_y": 750.70669945573718
+        },
+        {
+            "attributes": {
+            },
+            "id": "275",
+            "name": "Dunn_index",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 555.30119464119389,
+            "position_y": 291.40386473966697
+        },
+        {
+            "attributes": {
+            },
+            "id": "273",
+            "name": "Character_Encoding",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 210.46145281593422,
+            "position_y": -530.83109252269253
+        },
+        {
+            "attributes": {
+            },
+            "id": "250",
+            "name": "Table",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 655.00728539970896,
+            "position_y": 694.76647089388905
+        },
+        {
+            "attributes": {
+            },
+            "id": "23",
+            "name": "Natural_Language_Processing",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -176.0699499222811,
+            "position_y": 780.6624406761681
+        },
+        {
+            "attributes": {
+            },
+            "id": "293",
+            "name": "Berkeley_DB",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -18.846965195356191,
+            "position_y": -999.82238017706175
+        },
+        {
+            "attributes": {
+            },
+            "id": "151",
+            "name": "Sinatra",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 466.83123653846121,
+            "position_y": -753.56586440810861
+        },
+        {
+            "attributes": {
+            },
+            "id": "77",
+            "name": "Partial_Least_Squares_Regression_(PLS)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -444.3465999774956,
+            "position_y": 388.91107368047648
+        },
+        {
+            "attributes": {
+            },
+            "id": "220",
+            "name": "Complete_Linkage",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -404.00034619538445,
+            "position_y": 430.89447854009205
+        },
+        {
+            "attributes": {
+            },
+            "id": "277",
+            "name": "Silhouette_coefficient",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 473.78555831144485,
+            "position_y": 521.20827709216337
+        },
+        {
+            "attributes": {
+            },
+            "id": "55",
+            "name": "D3",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -69.667851672346771,
+            "position_y": -137.08226957200441
+        },
+        {
+            "attributes": {
+            },
+            "id": "200",
+            "name": "M5'_Algorithm",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -255.20424194547402,
+            "position_y": 80.267415584735858
+        },
+        {
+            "attributes": {
+            },
+            "id": "203",
+            "name": "Model_Performance",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 326.99104036163584,
+            "position_y": 254.5322416370978
+        },
+        {
+            "attributes": {
+            },
+            "id": "245",
+            "name": "Convolutional_Neural_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 8.2123034024092352,
+            "position_y": -443.60064460529378
+        },
+        {
+            "attributes": {
+            },
+            "id": "168",
+            "name": "Databases",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 179.39643352550186,
+            "position_y": 21.916582367932076
+        },
+        {
+            "attributes": {
+            },
+            "id": "108",
+            "name": "k-Medians",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 7.2082567186494195,
+            "position_y": -103.86223338441603
+        },
+        {
+            "attributes": {
+            },
+            "id": "86",
+            "name": "Angular",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 870.17042945291178,
+            "position_y": 41.394820839310867
+        },
+        {
+            "attributes": {
+            },
+            "id": "171",
+            "name": "Spike-and-Slab_RBMs_(ssRBMs)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -333.56584398926918,
+            "position_y": -409.89392710062316
+        },
+        {
+            "attributes": {
+            },
+            "id": "239",
+            "name": "CouchDB",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -755.07589876010138,
+            "position_y": -430.13785156072709
+        },
+        {
+            "attributes": {
+            },
+            "id": "241",
+            "name": "Hive",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -513.84481398276171,
+            "position_y": -253.9585384125142
+        },
+        {
+            "attributes": {
+            },
+            "id": "22",
+            "name": "Data_Visualization",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 411.81044724057466,
+            "position_y": 617.32796310111144
+        },
+        {
+            "attributes": {
+            },
+            "id": "114",
+            "name": "Named_Entity_Recognition",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -76.577396126569766,
+            "position_y": 921.65786772306956
+        },
+        {
+            "attributes": {
+            },
+            "id": "179",
+            "name": "Resource_Managers",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 320.65268783449881,
+            "position_y": -244.11575795991445
+        },
+        {
+            "attributes": {
+            },
+            "id": "193",
+            "name": "Applications",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -337.28776948281535,
+            "position_y": 625.44575150085871
+        },
+        {
+            "attributes": {
+            },
+            "id": "83",
+            "name": "Scala",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -37.977005012973883,
+            "position_y": 147.03026213181479
+        },
+        {
+            "attributes": {
+            },
+            "id": "98",
+            "name": "DynamoDB",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -185.76742537164984,
+            "position_y": -982.59374294302756
+        },
+        {
+            "attributes": {
+            },
+            "id": "234",
+            "name": "Column_Family_Stores",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -139.54052426765762,
+            "position_y": 372.41999949311975
+        },
+        {
+            "attributes": {
+            },
+            "id": "267",
+            "name": "Hopfield_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -444.39330173850141,
+            "position_y": -194.42332514079436
+        },
+        {
+            "attributes": {
+            },
+            "id": "66",
+            "name": "Graph",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -191.3604731563795,
+            "position_y": 9.1401831592021399
+        },
+        {
+            "attributes": {
+            },
+            "id": "41",
+            "name": "EnterpriseDB",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 554.85820953171481,
+            "position_y": -40.49083515181573
+        },
+        {
+            "attributes": {
+            },
+            "id": "104",
+            "name": "Histogram",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 651.02171100454211,
+            "position_y": 540.75185223840413
+        },
+        {
+            "attributes": {
+            },
+            "id": "129",
+            "name": "Meta_Learning",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -227.32219654133877,
+            "position_y": 235.61143984541826
+        },
+        {
+            "attributes": {
+            },
+            "id": "215",
+            "name": "Spark",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -376.44794983538253,
+            "position_y": 381.75349076259471
+        },
+        {
+            "attributes": {
+            },
+            "id": "312",
+            "name": "Area_Chart",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 198.18802237121122,
+            "position_y": 668.55422511018787
+        },
+        {
+            "attributes": {
+            },
+            "id": "90",
+            "name": "PHP",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 272.75216839498739,
+            "position_y": 187.23406777983047
+        },
+        {
+            "attributes": {
+            },
+            "id": "159",
+            "name": "Grails",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 465.00034242722523,
+            "position_y": -394.69475254800545
+        },
+        {
+            "attributes": {
+            },
+            "id": "80",
+            "name": "K-Means++",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -89.143916068147973,
+            "position_y": -119.69270216817938
+        },
+        {
+            "attributes": {
+            },
+            "id": "240",
+            "name": "Benford's_Law",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -130.40629185761188,
+            "position_y": 938.85054130044932
+        },
+        {
+            "attributes": {
+            },
+            "id": "274",
+            "name": "Flask",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 263.95698514863744,
+            "position_y": -104.53428353064534
+        },
+        {
+            "attributes": {
+            },
+            "id": "244",
+            "name": "PMML",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 578.36687865939689,
+            "position_y": -1.5690995821852749
+        },
+        {
+            "attributes": {
+            },
+            "id": "158",
+            "name": "IREP++",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 638.08901169106969,
+            "position_y": -682.76079795507087
+        },
+        {
+            "attributes": {
+            },
+            "id": "42",
+            "name": "Topic_Modeling",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 146.46065521626099,
+            "position_y": 740.7284066602258
+        },
+        {
+            "attributes": {
+            },
+            "id": "15",
+            "name": "Random_Forests",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -432.50737178262017,
+            "position_y": 305.25689524123277
+        },
+        {
+            "attributes": {
+            },
+            "id": "11",
+            "name": "Multiple_Hypothesis_Testing",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -64.748273883875527,
+            "position_y": 684.77341067965153
+        },
+        {
+            "attributes": {
+            },
+            "id": "297",
+            "name": "Association_Rules",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -357.76160706907177,
+            "position_y": -513.72715376601423
+        },
+        {
+            "attributes": {
+            },
+            "id": "218",
+            "name": "Shiny",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -651.12095919465128,
+            "position_y": 75.068116139965269
+        },
+        {
+            "attributes": {
+            },
+            "id": "262",
+            "name": "Single_Linkage",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 45.7729013743389,
+            "position_y": 394.90797680979927
+        },
+        {
+            "attributes": {
+            },
+            "id": "125",
+            "name": "Probabilistic_Classifiers",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 513.40281377915824,
+            "position_y": -11.696870556357297
+        },
+        {
+            "attributes": {
+            },
+            "id": "126",
+            "name": "Redis",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -3.367162361901201,
+            "position_y": -825.52692189015522
+        },
+        {
+            "attributes": {
+            },
+            "id": "285",
+            "name": "Sensitivity_and_Specificity",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 507.47548048863047,
+            "position_y": -474.6886635202589
+        },
+        {
+            "attributes": {
+            },
+            "id": "305",
+            "name": "Internal_Evaluation",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 357.59534066963874,
+            "position_y": 260.65913437348837
+        },
+        {
+            "attributes": {
+            },
+            "id": "187",
+            "name": "SQL_Azure",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 716.33444636317267,
+            "position_y": -122.20458736939159
+        },
+        {
+            "attributes": {
+            },
+            "id": "40",
+            "name": "Compound_Hierarchical-Deep_Models",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -264.54764193400922,
+            "position_y": -185.10941367757906
+        },
+        {
+            "attributes": {
+            },
+            "id": "4",
+            "name": "Error_Localization",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -123.08050691253544,
+            "position_y": -60.624295370769175
+        },
+        {
+            "attributes": {
+            },
+            "id": "307",
+            "name": "ROC_Curves",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 453.13881477993459,
+            "position_y": -126.60227361770463
+        },
+        {
+            "attributes": {
+            },
+            "id": "310",
+            "name": "Stem-and-Leaf_Display",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 423.98246242287348,
+            "position_y": 887.44648417824021
+        },
+        {
+            "attributes": {
+            },
+            "id": "36",
+            "name": "Multiple_Time_Scales_Recurrent_Neural_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -489.44918664615921,
+            "position_y": -307.88706478951934
+        },
+        {
+            "attributes": {
+            },
+            "id": "175",
+            "name": "Classification_and_Regression_Tree_(CART)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -281.81790902401656,
+            "position_y": 114.85688349426545
+        },
+        {
+            "attributes": {
+            },
+            "id": "223",
+            "name": "Symfony2",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 331.36957203850284,
+            "position_y": 387.19239010624676
+        },
+        {
+            "attributes": {
+            },
+            "id": "226",
+            "name": "Padrino",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 430.50646903885388,
+            "position_y": -693.32561322031859
+        },
+        {
+            "attributes": {
+            },
+            "id": "290",
+            "name": "Feature_Learning",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 677.03071072611067,
+            "position_y": 169.57309218010548
+        },
+        {
+            "attributes": {
+            },
+            "id": "178",
+            "name": "Continuous_Time_Recurrent_Neural_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -378.79073290472593,
+            "position_y": -303.02940336026234
+        },
+        {
+            "attributes": {
+            },
+            "id": "164",
+            "name": "Deep_Coding_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -518.21625102994199,
+            "position_y": -361.90276208194223
+        },
+        {
+            "attributes": {
+            },
+            "id": "299",
+            "name": "Pie_Chart",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 475.64013505779889,
+            "position_y": 815.31954791954672
+        },
+        {
+            "attributes": {
+            },
+            "id": "280",
+            "name": "Pyramid",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 433.11656197943665,
+            "position_y": -573.32790046746402
+        },
+        {
+            "attributes": {
+            },
+            "id": "65",
+            "name": "Fuzzy_C-Means",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -115.62595947467071,
+            "position_y": -299.91958141367678
+        },
+        {
+            "attributes": {
+            },
+            "id": "181",
+            "name": "Key-Value_Store",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 18.514495871417289,
+            "position_y": -774.29050279311355
+        },
+        {
+            "attributes": {
+            },
+            "id": "265",
+            "name": "Deductive_Correction",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -154.70696562057262,
+            "position_y": -345.91482782549878
+        },
+        {
+            "attributes": {
+            },
+            "id": "298",
+            "name": "Online_Learning_with_Kernels",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 312.03642719096138,
+            "position_y": -950.07013851920419
+        },
+        {
+            "attributes": {
+            },
+            "id": "313",
+            "name": "Python",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 146.02912159565517,
+            "position_y": -362.43862974895433
+        },
+        {
+            "attributes": {
+            },
+            "id": "177",
+            "name": "Line_Chart",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 583.14756691262994,
+            "position_y": 777.38243190404239
+        },
+        {
+            "attributes": {
+            },
+            "id": "113",
+            "name": "Data_Preparation",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 357.24191172176148,
+            "position_y": 188.44913222790683
+        },
+        {
+            "attributes": {
+            },
+            "id": "202",
+            "name": "Support_Vector_Machine",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -93.71184993766694,
+            "position_y": -979.99785577776879
+        },
+        {
+            "attributes": {
+            },
+            "id": "237",
+            "name": "Interior_Point_Code_Quadratic_Optimizer",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -29.816572812098808,
+            "position_y": -960.40687935715869
+        },
+        {
+            "attributes": {
+            },
+            "id": "221",
+            "name": "Least_Absolute_Shrinkage_and_Selection_Operator_(LASSO)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -581.84541249137976,
+            "position_y": -39.281338366202043
+        },
+        {
+            "attributes": {
+            },
+            "id": "123",
+            "name": "Type_Conversion",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -113.39330284331433,
+            "position_y": -588.16996168487128
+        },
+        {
+            "attributes": {
+            },
+            "id": "117",
+            "name": "Kernel_Methods",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 97.43852265102953,
+            "position_y": -212.18635652709341
+        },
+        {
+            "attributes": {
+            },
+            "id": "112",
+            "name": "HyperGraphDB",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -294.99849721169471,
+            "position_y": 165.54119459612266
+        },
+        {
+            "attributes": {
+            },
+            "id": "287",
+            "name": "Languages",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -55.747468787119097,
+            "position_y": -40.363779693227869
+        },
+        {
+            "attributes": {
+            },
+            "id": "54",
+            "name": "Cloud",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -231.60330682809885,
+            "position_y": -517.44727790736829
+        },
+        {
+            "attributes": {
+            },
+            "id": "278",
+            "name": "Character_Manipulation",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -193.36785540900442,
+            "position_y": -715.75193766818381
+        },
+        {
+            "attributes": {
+            },
+            "id": "279",
+            "name": "Google_Web_Toolkit",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 214.22569467382837,
+            "position_y": -582.77616485779322
+        },
+        {
+            "attributes": {
+            },
+            "id": "81",
+            "name": "Kernel_Canonical_Correlation_Analysis_(KCCA)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 186.22049651003687,
+            "position_y": -914.60663864245726
+        },
+        {
+            "attributes": {
+            },
+            "id": "311",
+            "name": "Architectures",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -295.16293516271497,
+            "position_y": -341.25639206939485
+        },
+        {
+            "attributes": {
+            },
+            "id": "24",
+            "name": "Yahoo_Pure",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -33.809219547467897,
+            "position_y": -784.21346422732506
+        },
+        {
+            "attributes": {
+            },
+            "id": "264",
+            "name": "Outliers",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -129.41315604806232,
+            "position_y": -639.44543634386503
+        },
+        {
+            "attributes": {
+            },
+            "id": "170",
+            "name": "Mean-shift",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -834.40825774614541,
+            "position_y": 14.036792159572579
+        },
+        {
+            "attributes": {
+            },
+            "id": "198",
+            "name": "Familywise_Error_Rate",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -293.11143121671131,
+            "position_y": 588.72769705436167
+        },
+        {
+            "attributes": {
+            },
+            "id": "295",
+            "name": "Laplace_Radial_Basis",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 298.77956455682113,
+            "position_y": 458.08333872430632
+        },
+        {
+            "attributes": {
+            },
+            "id": "301",
+            "name": "Modular_Neural_Networks",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 414.79299290247661,
+            "position_y": -351.84020253733149
+        },
+        {
+            "attributes": {
+            },
+            "id": "188",
+            "name": "Regression",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -443.3667651199263,
+            "position_y": -165.82556828484113
+        },
+        {
+            "attributes": {
+            },
+            "id": "319",
+            "name": "OrientDB",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -542.10572963641505,
+            "position_y": 129.76239169319854
+        },
+        {
+            "attributes": {
+            },
+            "id": "68",
+            "name": "Multiple_Linear_Regression",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -703.3925130411269,
+            "position_y": -95.882203942623832
+        },
+        {
+            "attributes": {
+            },
+            "id": "8",
+            "name": "Eclat_Algorithm",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -544.13010165714002,
+            "position_y": -791.45323527470225
+        },
+        {
+            "attributes": {
+            },
+            "id": "316",
+            "name": "Kernel_Principle_Components_Analysis_(KPCA)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 41.065625895665889,
+            "position_y": -918.66145166744707
+        },
+        {
+            "attributes": {
+            },
+            "id": "173",
+            "name": "YARN",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 469.45230029915035,
+            "position_y": -421.76700125359457
+        },
+        {
+            "attributes": {
+            },
+            "id": "284",
+            "name": "Deep_Kernel_Machines",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -527.22897355851808,
+            "position_y": -233.45330278886973
+        },
+        {
+            "attributes": {
+            },
+            "id": "133",
+            "name": "Artificial_Neural_Networks",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -132.01088872786812,
+            "position_y": -477.8442215582678
+        },
+        {
+            "attributes": {
+            },
+            "id": "322",
+            "name": "Bessel",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 370.50590297928153,
+            "position_y": 433.22022140209913
+        },
+        {
+            "attributes": {
+            },
+            "id": "165",
+            "name": "Deep_Q-Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -207.07306296612089,
+            "position_y": 39.849410715105414
+        },
+        {
+            "attributes": {
+            },
+            "id": "224",
+            "name": "Lambda",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 645.47022540399257,
+            "position_y": -291.17985976101886
+        },
+        {
+            "attributes": {
+            },
+            "id": "149",
+            "name": "Development",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 265.30757797845718,
+            "position_y": -61.844536377474554
+        },
+        {
+            "attributes": {
+            },
+            "id": "184",
+            "name": "Ridge_Regression",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -771.06855338883599,
+            "position_y": -201.95527086411576
+        },
+        {
+            "attributes": {
+            },
+            "id": "219",
+            "name": "Locally_Estimated_Scatterplot_Smoothing_(LOESS)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -653.14351625344204,
+            "position_y": -287.77839686722791
+        },
+        {
+            "attributes": {
+            },
+            "id": "61",
+            "name": "Feature_Selection",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 555.70868734212888,
+            "position_y": 358.63983208156282
+        },
+        {
+            "attributes": {
+            },
+            "id": "139",
+            "name": "Confusion_Matrix",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 756.58772847107036,
+            "position_y": -206.93107801945703
+        },
+        {
+            "attributes": {
+            },
+            "id": "289",
+            "name": "Apriori_Algorithm",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -732.71581059766288,
+            "position_y": -525.06343708108864
+        },
+        {
+            "attributes": {
+            },
+            "id": "201",
+            "name": "Recommender_Systems",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -321.2826337673585,
+            "position_y": 874.21634642696756
+        },
+        {
+            "attributes": {
+            },
+            "id": "132",
+            "name": "R",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -301.27908822067565,
+            "position_y": -20.036711583242678
+        },
+        {
+            "attributes": {
+            },
+            "id": "10",
+            "name": "SQLite",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 516.19867644084184,
+            "position_y": -133.63548558838107
+        },
+        {
+            "attributes": {
+            },
+            "id": "60",
+            "name": "Echo_State_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -508.05577644388433,
+            "position_y": -436.1702536782052
+        },
+        {
+            "attributes": {
+            },
+            "id": "12",
+            "name": "Learning_Algorithms",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 22.912935900465531,
+            "position_y": -304.91292201757193
+        },
+        {
+            "attributes": {
+            },
+            "id": "147",
+            "name": "EnDBSCAN",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -863.06525854979316,
+            "position_y": -138.92873052871576
+        },
+        {
+            "attributes": {
+            },
+            "id": "37",
+            "name": "Robotics",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -510.67455737829903,
+            "position_y": 730.10097756604921
+        },
+        {
+            "attributes": {
+            },
+            "id": "213",
+            "name": "Cluster_Validity",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 259.44700313396584,
+            "position_y": -44.919670729969212
+        },
+        {
+            "attributes": {
+            },
+            "id": "143",
+            "name": "Bayesian_Approaches",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -265.44329678093362,
+            "position_y": 841.70907073260571
+        },
+        {
+            "attributes": {
+            },
+            "id": "251",
+            "name": "Instance-Based_Methods",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 434.40096627987896,
+            "position_y": -322.08838663587721
+        },
+        {
+            "attributes": {
+            },
+            "id": "320",
+            "name": "Bayesian_Belief_Network_(BBN)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 617.47137410798609,
+            "position_y": 115.21989885537035
+        },
+        {
+            "attributes": {
+            },
+            "id": "96",
+            "name": "Real-Time/Streaming",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -186.43426936830409,
+            "position_y": 155.70792240007651
+        },
+        {
+            "attributes": {
+            },
+            "id": "150",
+            "name": "Relevance_Vector_Machine",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 307.26809527462541,
+            "position_y": -858.3493134162901
+        },
+        {
+            "attributes": {
+            },
+            "id": "270",
+            "name": "Covariance",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -51.717192841954329,
+            "position_y": 632.00259526830916
+        },
+        {
+            "attributes": {
+            },
+            "id": "88",
+            "name": "Mixed",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 475.93281710025428,
+            "position_y": -147.14010892056749
+        },
+        {
+            "attributes": {
+            },
+            "id": "231",
+            "name": "Kernel_Feature_Analysis",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 438.82961597863834,
+            "position_y": -898.57029115147179
+        },
+        {
+            "attributes": {
+            },
+            "id": "118",
+            "name": "Confidence_Interval",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -362.99072412123706,
+            "position_y": 655.44450323193689
+        },
+        {
+            "attributes": {
+            },
+            "id": "183",
+            "name": "Special_Values",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -182.23028153139026,
+            "position_y": -498.06326142158582
+        },
+        {
+            "attributes": {
+            },
+            "id": "214",
+            "name": "Pig",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -532.92681263866052,
+            "position_y": -517.89555899327843
+        },
+        {
+            "attributes": {
+            },
+            "id": "228",
+            "name": "Incomplete_Cholesky_Decomposition",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 375.61428678236547,
+            "position_y": -926.77608275406783
+        },
+        {
+            "attributes": {
+            },
+            "id": "130",
+            "name": "Deep_Stacking_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -394.23235276364568,
+            "position_y": -190.66546152157099
+        },
+        {
+            "attributes": {
+            },
+            "id": "56",
+            "name": "Associative_Neural_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 699.1285350945052,
+            "position_y": -183.01704120142006
+        },
+        {
+            "attributes": {
+            },
+            "id": "296",
+            "name": "Hypertable",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -196.20486502413445,
+            "position_y": 415.93286542790077
+        },
+        {
+            "attributes": {
+            },
+            "id": "78",
+            "name": "Information_Retrieval",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -245.92075791298421,
+            "position_y": 763.98760304826533
+        },
+        {
+            "attributes": {
+            },
+            "id": "243",
+            "name": "Hadoop",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -237.4571333094234,
+            "position_y": -553.62838432777289
+        },
+        {
+            "attributes": {
+            },
+            "id": "137",
+            "name": "Elman/Jordan_Networks",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -473.98091184450601,
+            "position_y": -446.79729213811373
+        },
+        {
+            "attributes": {
+            },
+            "id": "67",
+            "name": "Django",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 172.24570154929529,
+            "position_y": -73.265201792994574
+        },
+        {
+            "attributes": {
+            },
+            "id": "30",
+            "name": "Gradient_Boosting_Machines_(GBM)",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 195.42698195371901,
+            "position_y": 223.78773079211425
+        },
+        {
+            "attributes": {
+            },
+            "id": "128",
+            "name": "Ruby_on_Rails",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 545.59886899711705,
+            "position_y": -796.34506778539776
+        },
+        {
+            "attributes": {
+            },
+            "id": "161",
+            "name": "Connectivity_Models",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -212.34141859098935,
+            "position_y": 236.40921026009687
+        },
+        {
+            "attributes": {
+            },
+            "id": "154",
+            "name": "Naiad",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 731.09200703793476,
+            "position_y": -138.83575872687882
+        },
+        {
+            "attributes": {
+            },
+            "id": "176",
+            "name": "Performant",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 162.88633817035421,
+            "position_y": 596.93312218387439
+        },
+        {
+            "attributes": {
+            },
+            "id": "163",
+            "name": "Decision_Trees",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -200.75793144346417,
+            "position_y": 28.601250299119812
+        },
+        {
+            "attributes": {
+            },
+            "id": "252",
+            "name": "Data_Science",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 104.29228602745302,
+            "position_y": 123.94951227593361
+        },
+        {
+            "attributes": {
+            },
+            "id": "212",
+            "name": "External_Evaluation",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 112.44417839803829,
+            "position_y": -591.180270189628
+        },
+        {
+            "attributes": {
+            },
+            "id": "140",
+            "name": "Gaussian_Processes",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 118.55200805933787,
+            "position_y": -992.94784424213276
+        },
+        {
+            "attributes": {
+            },
+            "id": "52",
+            "name": "Architectures/Frameworks",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -25.276878319372251,
+            "position_y": -86.868829628982652
+        },
+        {
+            "attributes": {
+            },
+            "id": "205",
+            "name": "Cross_Validation",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 167.17060019886833,
+            "position_y": -376.54921185741887
+        },
+        {
+            "attributes": {
+            },
+            "id": "92",
+            "name": "Visualization",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 129.10605432537812,
+            "position_y": 42.444745432207689
+        },
+        {
+            "attributes": {
+            },
+            "id": "162",
+            "name": "Boosting",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -496.97650264391416,
+            "position_y": 233.03330900071859
+        },
+        {
+            "attributes": {
+            },
+            "id": "131",
+            "name": "Spring_MVC",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 467.72116483972718,
+            "position_y": -600.54898850890561
+        },
+        {
+            "attributes": {
+            },
+            "id": "291",
+            "name": "Density_Models",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -604.84789079832547,
+            "position_y": -58.240932852039371
+        },
+        {
+            "attributes": {
+            },
+            "id": "122",
+            "name": "jQuery",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 854.15126781068034,
+            "position_y": 120.38969880965901
+        },
+        {
+            "attributes": {
+            },
+            "id": "99",
+            "name": "Deep_Belief_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -411.98403212522794,
+            "position_y": -488.46833843306632
+        },
+        {
+            "attributes": {
+            },
+            "id": "124",
+            "name": "Radial_Basis_Function_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -31.719937092205914,
+            "position_y": -663.15448430058655
+        },
+        {
+            "attributes": {
+            },
+            "id": "204",
+            "name": "Feedforward_Network",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -304.07977839042184,
+            "position_y": -471.89019801595396
+        },
+        {
+            "attributes": {
+            },
+            "id": "246",
+            "name": "MLlib",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -873.81367791333901,
+            "position_y": 307.66824029077418
+        },
+        {
+            "attributes": {
+            },
+            "id": "109",
+            "name": "Learning_Vector_Quantization",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -148.76437170121679,
+            "position_y": -767.6495899168948
+        },
+        {
+            "attributes": {
+            },
+            "id": "283",
+            "name": "Twitter_Bootstrap",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 422.99866702751723,
+            "position_y": -415.58986635331672
+        },
+        {
+            "attributes": {
+            },
+            "id": "127",
+            "name": "RaptorDB",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -674.98176815753334,
+            "position_y": -604.33990490935764
+        },
+        {
+            "attributes": {
+            },
+            "id": "95",
+            "name": "Hyperbolic_Tangent",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 207.44040827582137,
+            "position_y": 453.56595510462063
+        },
+        {
+            "attributes": {
+            },
+            "id": "138",
+            "name": "Cheminformatics",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": -426.94136049431563,
+            "position_y": 849.22316577056472
+        },
+        {
+            "attributes": {
+            },
+            "id": "82",
+            "name": "Methods",
+            "namespace": "http://knova.ru/dataScience.owl",
+            "position_x": 197.87001079224555,
+            "position_y": -796.18065663762866
+        }
+    ],
+    "relationNames": [
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+    ],
+    "relations": [
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "234",
+            "id": "323",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "296"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "22",
+            "id": "324",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "299"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "180",
+            "id": "325",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "50"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "294",
+            "id": "326",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "279"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "34",
+            "id": "327",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "143"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "328",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "307"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "329",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "213"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "160",
+            "id": "330",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "18"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "75",
+            "id": "331",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "86"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "188",
+            "id": "332",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "134"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "82",
+            "id": "333",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "231"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "193",
+            "id": "334",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "263"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "133",
+            "id": "335",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "85"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "188",
+            "id": "336",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "25"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "238",
+            "id": "337",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "144"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "188",
+            "id": "338",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "184"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "252",
+            "id": "339",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "193"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "238",
+            "id": "340",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "317"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "115",
+            "id": "341",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "246"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "111",
+            "id": "342",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "283"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "212",
+            "id": "343",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "13"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "313",
+            "id": "344",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "274"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "39",
+            "id": "345",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "241"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "193",
+            "id": "346",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "1"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "193",
+            "id": "347",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "23"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "258",
+            "id": "348",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "161"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "349",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "178"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "66",
+            "id": "350",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "319"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "259",
+            "id": "351",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "127"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "12",
+            "id": "352",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "133"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "163",
+            "id": "353",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "134"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "206",
+            "id": "354",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "210"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "96",
+            "id": "355",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "215"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "117",
+            "id": "356",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "300"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "149",
+            "id": "357",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "92"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "163",
+            "id": "358",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "216"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "129",
+            "id": "359",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "15"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "88",
+            "id": "360",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "224"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "361",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "245"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "172",
+            "id": "362",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "79"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "111",
+            "id": "363",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "24"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "252",
+            "id": "364",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "73"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "113",
+            "id": "365",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "103"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "366",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "59"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "300",
+            "id": "367",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "95"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "22",
+            "id": "368",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "236"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "300",
+            "id": "369",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "322"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "370",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "276"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "252",
+            "id": "371",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "22"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "75",
+            "id": "372",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "122"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "373",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "45"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "238",
+            "id": "374",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "273"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "190",
+            "id": "375",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "180"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "188",
+            "id": "376",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "221"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "34",
+            "id": "377",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "31"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "313",
+            "id": "378",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "280"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "259",
+            "id": "379",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "257"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "291",
+            "id": "380",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "170"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "149",
+            "id": "381",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "235"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "20",
+            "id": "382",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "41"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "90",
+            "id": "383",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "145"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "238",
+            "id": "384",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "208"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "193",
+            "id": "385",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "146"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "22",
+            "id": "386",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "63"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "258",
+            "id": "387",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "291"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "235",
+            "id": "388",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "294"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "222",
+            "id": "389",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "80"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "188",
+            "id": "390",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "68"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "168",
+            "id": "391",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "20"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "392",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "137"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "393",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "88"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "258",
+            "id": "394",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "249"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "238",
+            "id": "395",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "278"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "54",
+            "id": "396",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "43"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "258",
+            "id": "397",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "222"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "398",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "93"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "103",
+            "id": "399",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "186"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "12",
+            "id": "400",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "125"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "74",
+            "id": "401",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "244"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "294",
+            "id": "402",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "49"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "91",
+            "id": "403",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "234"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "301",
+            "id": "404",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "56"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "234",
+            "id": "405",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "102"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "238",
+            "id": "406",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "51"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "251",
+            "id": "407",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "6"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "297",
+            "id": "408",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "8"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "34",
+            "id": "409",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "17"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "252",
+            "id": "410",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "287"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "82",
+            "id": "411",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "81"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "193",
+            "id": "412",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "167"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "212",
+            "id": "413",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "120"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "297",
+            "id": "414",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "272"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "115",
+            "id": "415",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "227"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "416",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "281"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "163",
+            "id": "417",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "175"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "66",
+            "id": "418",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "304"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "419",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "99"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "160",
+            "id": "420",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "151"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "421",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "60"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "422",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "87"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "294",
+            "id": "423",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "131"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "181",
+            "id": "424",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "70"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "181",
+            "id": "425",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "126"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "190",
+            "id": "426",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "179"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "252",
+            "id": "427",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "168"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "188",
+            "id": "428",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "318"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "222",
+            "id": "429",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "156"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "141",
+            "id": "430",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "157"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "163",
+            "id": "431",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "89"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "82",
+            "id": "432",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "298"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "235",
+            "id": "433",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "75"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "117",
+            "id": "434",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "82"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "291",
+            "id": "435",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "266"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "300",
+            "id": "436",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "76"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "212",
+            "id": "437",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "288"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "113",
+            "id": "438",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "290"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "439",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "166"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "172",
+            "id": "440",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "303"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "252",
+            "id": "441",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "238"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "88",
+            "id": "442",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "225"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "443",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "267"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "294",
+            "id": "444",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "159"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "445",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "207"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "446",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "5"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "447",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "101"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "39",
+            "id": "448",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "214"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "133",
+            "id": "449",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "185"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "160",
+            "id": "450",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "226"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "305",
+            "id": "451",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "277"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "213",
+            "id": "452",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "212"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "34",
+            "id": "453",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "11"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "5",
+            "id": "454",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "243"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "297",
+            "id": "455",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "289"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "456",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "64"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "22",
+            "id": "457",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "233"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "203",
+            "id": "458",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "152"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "82",
+            "id": "459",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "229"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "181",
+            "id": "460",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "98"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "461",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "285"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "96",
+            "id": "462",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "155"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "252",
+            "id": "463",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "203"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "238",
+            "id": "464",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "123"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "103",
+            "id": "465",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "77"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "466",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "78"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "181",
+            "id": "467",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "9"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "22",
+            "id": "468",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "104"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "22",
+            "id": "469",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "310"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "252",
+            "id": "470",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "34"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "249",
+            "id": "471",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "84"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "188",
+            "id": "472",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "219"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "149",
+            "id": "473",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "141"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "180",
+            "id": "474",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "242"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "475",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "165"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "476",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "42"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "477",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "205"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "34",
+            "id": "478",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "100"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "479",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "44"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "258",
+            "id": "480",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "176"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "190",
+            "id": "481",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "54"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "300",
+            "id": "482",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "97"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "193",
+            "id": "483",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "78"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "484",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "182"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "22",
+            "id": "485",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "260"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "252",
+            "id": "486",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "113"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "291",
+            "id": "487",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "306"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "22",
+            "id": "488",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "110"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "12",
+            "id": "489",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "188"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "34",
+            "id": "490",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "136"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "291",
+            "id": "491",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "147"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "212",
+            "id": "492",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "315"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "82",
+            "id": "493",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "140"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "103",
+            "id": "494",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "28"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "181",
+            "id": "495",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "107"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "160",
+            "id": "496",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "128"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "203",
+            "id": "497",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "209"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "91",
+            "id": "498",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "181"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "203",
+            "id": "499",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "7"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "305",
+            "id": "500",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "321"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "113",
+            "id": "501",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "255"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "212",
+            "id": "502",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "47"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "66",
+            "id": "503",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "112"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "504",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "196"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "12",
+            "id": "505",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "297"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "259",
+            "id": "506",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "35"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "82",
+            "id": "507",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "150"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "508",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "130"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "235",
+            "id": "509",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "313"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "222",
+            "id": "510",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "71"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "193",
+            "id": "511",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "276"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "34",
+            "id": "512",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "198"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "258",
+            "id": "513",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "271"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "514",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "139"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "92",
+            "id": "515",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "55"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "252",
+            "id": "516",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "149"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "34",
+            "id": "517",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "240"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "82",
+            "id": "518",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "316"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "20",
+            "id": "519",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "135"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "176",
+            "id": "520",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "292"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "82",
+            "id": "521",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "202"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "12",
+            "id": "522",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "2"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "234",
+            "id": "523",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "268"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "294",
+            "id": "524",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "38"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "287",
+            "id": "525",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "313"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "190",
+            "id": "526",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "74"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "271",
+            "id": "527",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "19"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "12",
+            "id": "528",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "251"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "34",
+            "id": "529",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "191"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "34",
+            "id": "530",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "286"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "22",
+            "id": "531",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "62"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "88",
+            "id": "532",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "154"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "533",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "199"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "206",
+            "id": "534",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "220"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "213",
+            "id": "535",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "305"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "287",
+            "id": "536",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "83"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "287",
+            "id": "537",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "132"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "90",
+            "id": "538",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "223"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "234",
+            "id": "539",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "174"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "161",
+            "id": "540",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "206"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "541",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "57"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "259",
+            "id": "542",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "239"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "287",
+            "id": "543",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "119"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "544",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "171"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "193",
+            "id": "545",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "46"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "125",
+            "id": "546",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "320"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "168",
+            "id": "547",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "91"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "300",
+            "id": "548",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "295"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "20",
+            "id": "549",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "256"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "12",
+            "id": "550",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "172"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "287",
+            "id": "551",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "94"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "22",
+            "id": "552",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "312"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "235",
+            "id": "553",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "90"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "133",
+            "id": "554",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "109"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "82",
+            "id": "555",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "228"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "20",
+            "id": "556",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "261"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "176",
+            "id": "557",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "197"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "172",
+            "id": "558",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "21"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "82",
+            "id": "559",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "237"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "125",
+            "id": "560",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "29"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "179",
+            "id": "561",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "173"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "193",
+            "id": "562",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "142"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "188",
+            "id": "563",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "314"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "172",
+            "id": "564",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "158"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "252",
+            "id": "565",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "12"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "193",
+            "id": "566",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "33"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "567",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "284"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "20",
+            "id": "568",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "69"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "235",
+            "id": "569",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "132"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "235",
+            "id": "570",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "160"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "300",
+            "id": "571",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "194"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "20",
+            "id": "572",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "253"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "573",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "36"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "115",
+            "id": "574",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "232"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "163",
+            "id": "575",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "200"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "181",
+            "id": "576",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "293"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "238",
+            "id": "577",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "183"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "52",
+            "id": "578",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "96"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "300",
+            "id": "579",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "217"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "113",
+            "id": "580",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "61"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "287",
+            "id": "581",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "294"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "66",
+            "id": "582",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "72"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "20",
+            "id": "583",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "211"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "193",
+            "id": "584",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "37"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "193",
+            "id": "585",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "138"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "586",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "32"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "133",
+            "id": "587",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "124"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "185",
+            "id": "588",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "311"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "238",
+            "id": "589",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "265"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "163",
+            "id": "590",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "30"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "181",
+            "id": "591",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "26"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "22",
+            "id": "592",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "302"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "22",
+            "id": "593",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "177"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "206",
+            "id": "594",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "262"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "190",
+            "id": "595",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "39"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "12",
+            "id": "596",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "258"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "54",
+            "id": "597",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "27"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "132",
+            "id": "598",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "218"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "111",
+            "id": "599",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "3"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "91",
+            "id": "600",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "66"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "129",
+            "id": "601",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "308"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "193",
+            "id": "602",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "230"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "90",
+            "id": "603",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "121"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "34",
+            "id": "604",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "106"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "203",
+            "id": "605",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "192"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "238",
+            "id": "606",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "264"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "305",
+            "id": "607",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "275"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "222",
+            "id": "608",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "108"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "193",
+            "id": "609",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "195"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "34",
+            "id": "610",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "53"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "129",
+            "id": "611",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "162"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "203",
+            "id": "612",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "129"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "133",
+            "id": "613",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "204"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "163",
+            "id": "614",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "48"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "251",
+            "id": "615",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "14"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "82",
+            "id": "616",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "254"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "617",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "309"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "618",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "164"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "619",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "169"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "2",
+            "id": "620",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "311"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "235",
+            "id": "621",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "111"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "313",
+            "id": "622",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "67"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "22",
+            "id": "623",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "148"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "20",
+            "id": "624",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "187"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "311",
+            "id": "625",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "40"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "626",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "114"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "193",
+            "id": "627",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "201"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "103",
+            "id": "628",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "248"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "90",
+            "id": "629",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "189"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "133",
+            "id": "630",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "301"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "91",
+            "id": "631",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "259"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "34",
+            "id": "632",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "118"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "172",
+            "id": "633",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "58"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "222",
+            "id": "634",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "65"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "238",
+            "id": "635",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "4"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "96",
+            "id": "636",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "16"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "203",
+            "id": "637",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "30"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "20",
+            "id": "638",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "10"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "23",
+            "id": "639",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "247"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "190",
+            "id": "640",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "52"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "190",
+            "id": "641",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "115"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "22",
+            "id": "642",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "250"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "12",
+            "id": "643",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "117"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "12",
+            "id": "644",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "163"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "176",
+            "id": "645",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "116"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "238",
+            "id": "646",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "153"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "252",
+            "id": "647",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "190"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "115",
+            "id": "648",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "269"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "34",
+            "id": "649",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "270"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "650",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "282"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "103",
+            "id": "651",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "105"
+        }
+    ],
+    "visualize_ont_path": ""
+}

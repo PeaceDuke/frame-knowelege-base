@@ -1,0 +1,354 @@
+{
+    "last_id": "308",
+    "namespaces": {
+        "default": "http://www.ontosearch.com/2007/12/ontosofa-ns#",
+        "http://data.ria.ru": "http://data.ria.ru",
+        "ontolis-avis": "http://knova.ru/ontolis-avis",
+        "owl": "http://www.w3.org/2002/07/owl",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+        "ria": "http://data.ria.ru#",
+        "riacv": "http://data.ria.ru/cv#",
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsd": "http://www.w3.org/2001/XMLSchema"
+    },
+    "nodes": [
+        {
+            "attributes": {
+            },
+            "id": "120",
+            "name": "ссылка на формат",
+            "namespace": "http://data.ria.ru",
+            "position_x": 1044.295258862222,
+            "position_y": 864.55495162726811
+        },
+        {
+            "attributes": {
+            },
+            "id": "30",
+            "name": "Уровень образования",
+            "namespace": "http://data.ria.ru/cv",
+            "position_x": 973.14525275577705,
+            "position_y": 584.07832222714728
+        },
+        {
+            "attributes": {
+            },
+            "id": "76",
+            "name": "Орган власти",
+            "namespace": "http://data.ria.ru",
+            "position_x": 726.21555558603347,
+            "position_y": 1045.1329799056091
+        },
+        {
+            "attributes": {
+            },
+            "id": "46",
+            "name": "Должность",
+            "namespace": "http://data.ria.ru/cv",
+            "position_x": 994.01361614169184,
+            "position_y": 1000.6757439121255
+        },
+        {
+            "attributes": {
+            },
+            "id": "148",
+            "name": "фото",
+            "namespace": "http://data.ria.ru",
+            "position_x": 355.22994358515018,
+            "position_y": 846.36142058344797
+        },
+        {
+            "attributes": {
+            },
+            "id": "75",
+            "name": "Сюжет",
+            "namespace": "http://data.ria.ru",
+            "position_x": 427.60756928524756,
+            "position_y": 799.79435971803514
+        },
+        {
+            "attributes": {
+            },
+            "id": "65",
+            "name": "Творческий коллектив",
+            "namespace": "http://data.ria.ru",
+            "position_x": 569.18686894652956,
+            "position_y": 589.25049120820381
+        },
+        {
+            "attributes": {
+            },
+            "id": "9",
+            "name": "Время суток",
+            "namespace": "http://data.ria.ru",
+            "position_x": 321.77224846405829,
+            "position_y": 575.64449035908626
+        },
+        {
+            "attributes": {
+            },
+            "id": "28",
+            "name": "Общественное объединение",
+            "namespace": "http://data.ria.ru",
+            "position_x": 448.41358645676519,
+            "position_y": 958.34542691088768
+        },
+        {
+            "attributes": {
+            },
+            "id": "86",
+            "name": "аббревиатура",
+            "namespace": "http://data.ria.ru",
+            "position_x": 375.11208950442244,
+            "position_y": 1054.7514785588735
+        },
+        {
+            "attributes": {
+            },
+            "id": "121",
+            "name": "наименование",
+            "namespace": "http://data.ria.ru",
+            "position_x": 478.43207168617948,
+            "position_y": 767.29201549532331
+        },
+        {
+            "attributes": {
+            },
+            "id": "44",
+            "name": "Вид спорта",
+            "namespace": "http://data.ria.ru",
+            "position_x": 571.76482589376792,
+            "position_y": 683.60310980696136
+        },
+        {
+            "attributes": {
+            },
+            "id": "13",
+            "name": "Редактура",
+            "namespace": "http://data.ria.ru/cv",
+            "position_x": 820.35509863109155,
+            "position_y": 605.20974071053547
+        },
+        {
+            "attributes": {
+            },
+            "id": "12",
+            "name": "Общее понятие",
+            "namespace": "http://data.ria.ru",
+            "position_x": 597.03608583801895,
+            "position_y": 826.42639252199069
+        },
+        {
+            "attributes": {
+            },
+            "id": "82",
+            "name": "синоним",
+            "namespace": "http://data.ria.ru",
+            "position_x": 936.66326275836786,
+            "position_y": 935.05568145937696
+        },
+        {
+            "attributes": {
+            },
+            "id": "73",
+            "name": "Организация",
+            "namespace": "http://data.ria.ru",
+            "position_x": 630.25504978905383,
+            "position_y": 1104.8943386331546
+        },
+        {
+            "attributes": {
+            },
+            "id": "103",
+            "name": "высота",
+            "namespace": "http://data.ria.ru",
+            "position_x": 843.24799061314627,
+            "position_y": 846.98720290091933
+        },
+        {
+            "attributes": {
+            },
+            "id": "56",
+            "name": "Концепт",
+            "namespace": "http://data.ria.ru",
+            "position_x": 704.85839271757482,
+            "position_y": 921.55904051743528
+        },
+        {
+            "attributes": {
+            },
+            "id": "93",
+            "name": "ссылка редактуры",
+            "namespace": "http://data.ria.ru",
+            "position_x": 530.6803123688494,
+            "position_y": 955.29964586871893
+        },
+        {
+            "attributes": {
+            },
+            "id": "96",
+            "name": "listSid",
+            "namespace": "http://data.ria.ru",
+            "position_x": 874.18215705556884,
+            "position_y": 705.89061702205117
+        },
+        {
+            "attributes": {
+            },
+            "id": "112",
+            "name": "продукт-источник",
+            "namespace": "http://data.ria.ru",
+            "position_x": 338.671238203749,
+            "position_y": 919.61605532089561
+        }
+    ],
+    "relationNames": [
+        "http://knova.ru/reply/converter#a_part_of",
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+        "http://knova.ru/reply/converter#is_instance_of"
+    ],
+    "relations": [
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "56",
+            "id": "192",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "148"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "12",
+            "id": "263",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "96"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "215",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "86"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "56",
+            "id": "237",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "112"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "166",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "76"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "290",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "65"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "12",
+            "id": "244",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "44"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "12",
+            "id": "288",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "9"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "56",
+            "id": "284",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "75"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "56",
+            "id": "176",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "93"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "56",
+            "id": "287",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "82"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "56",
+            "id": "182",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "12"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "56",
+            "id": "169",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "121"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "73",
+            "id": "257",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "28"
+        }
+    ],
+    "visualize_ont_path": ""
+}

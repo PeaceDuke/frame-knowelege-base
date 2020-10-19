@@ -1,0 +1,313 @@
+{
+    "last_id": "4135",
+    "namespaces": {
+        "default": "http://knova.ru/dataScience.owl#",
+        "http://knova.ru/dataScience.owl": "http://knova.ru/dataScience.owl",
+        "ontolis-avis": "http://knova.ru/ontolis-avis",
+        "owl": "http://www.w3.org/2002/07/owl",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+        "xsd": "http://www.w3.org/2001/XMLSchema"
+    },
+    "nodes": [
+        {
+            "attributes": {
+            },
+            "id": "32",
+            "name": "Displays and imagers",
+            "namespace": "owl",
+            "position_x": 580,
+            "position_y": 530
+        },
+        {
+            "attributes": {
+            },
+            "id": "27",
+            "name": "Digital signal processing",
+            "namespace": "owl",
+            "position_x": 620,
+            "position_y": 380
+        },
+        {
+            "attributes": {
+            },
+            "id": "28",
+            "name": "Beamforming",
+            "namespace": "owl",
+            "position_x": 620,
+            "position_y": 410
+        },
+        {
+            "attributes": {
+            },
+            "id": "35",
+            "name": "Printers",
+            "namespace": "owl",
+            "position_x": 580,
+            "position_y": 620
+        },
+        {
+            "attributes": {
+            },
+            "id": "26",
+            "name": "Signal processing systems",
+            "namespace": "owl",
+            "position_x": 580,
+            "position_y": 350
+        },
+        {
+            "attributes": {
+            },
+            "id": "25",
+            "name": "Communication hardware, interfaces and storage",
+            "namespace": "owl",
+            "position_x": 540,
+            "position_y": 320
+        },
+        {
+            "attributes": {
+            },
+            "id": "24",
+            "name": "PCB design and layout",
+            "namespace": "owl",
+            "position_x": 580,
+            "position_y": 290
+        },
+        {
+            "attributes": {
+            },
+            "id": "34",
+            "name": "Networking hardware",
+            "namespace": "owl",
+            "position_x": 580,
+            "position_y": 590
+        },
+        {
+            "attributes": {
+            },
+            "id": "33",
+            "name": "External storage",
+            "namespace": "owl",
+            "position_x": 580,
+            "position_y": 560
+        },
+        {
+            "attributes": {
+            },
+            "id": "5",
+            "name": "General conference proceedings",
+            "namespace": "owl",
+            "position_x": 280,
+            "position_y": 320
+        },
+        {
+            "attributes": {
+            },
+            "id": "23",
+            "name": "Electromagnetic interference and compatibility",
+            "namespace": "owl",
+            "position_x": 580,
+            "position_y": 260
+        },
+        {
+            "attributes": {
+            },
+            "id": "22",
+            "name": "Printed circuit boards",
+            "namespace": "owl",
+            "position_x": 540,
+            "position_y": 230
+        },
+        {
+            "attributes": {
+            },
+            "id": "8",
+            "name": "Computing standards, RFCs and guidelines",
+            "namespace": "owl",
+            "position_x": 280,
+            "position_y": 410
+        },
+        {
+            "attributes": {
+            },
+            "id": "31",
+            "name": "Buses and high-speed links",
+            "namespace": "owl",
+            "position_x": 580,
+            "position_y": 500
+        },
+        {
+            "attributes": {
+            },
+            "id": "30",
+            "name": "Sensors and actuators",
+            "namespace": "owl",
+            "position_x": 580,
+            "position_y": 470
+        },
+        {
+            "attributes": {
+            },
+            "id": "21",
+            "name": "Hardware",
+            "namespace": "owl",
+            "position_x": 500,
+            "position_y": 200
+        },
+        {
+            "attributes": {
+            },
+            "id": "29",
+            "name": "Noise reduction",
+            "namespace": "owl",
+            "position_x": 620,
+            "position_y": 440
+        }
+    ],
+    "relationNames": [
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+    ],
+    "relations": [
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "25",
+            "id": "2106",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "34"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "25",
+            "id": "2098",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "26"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "26",
+            "id": "2100",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "28"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "22",
+            "id": "2095",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "23"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "25",
+            "id": "2104",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "32"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "25",
+            "id": "2105",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "33"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "26",
+            "id": "2099",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "27"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "2097",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "25"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "25",
+            "id": "2103",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "31"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "25",
+            "id": "2107",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "35"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "21",
+            "id": "2094",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "22"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "26",
+            "id": "2101",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "29"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "22",
+            "id": "2096",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "24"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "25",
+            "id": "2102",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "30"
+        }
+    ],
+    "visualize_ont_path": ""
+}

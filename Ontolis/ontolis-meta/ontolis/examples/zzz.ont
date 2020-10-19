@@ -1,0 +1,301 @@
+{
+    "last_id": "9999",
+    "namespaces": {
+        "default": "http://www.ontosearch.com/2007/12/ontosofa-ns#",
+        "http://data.ria.ru": "http://data.ria.ru",
+        "ontolis-avis": "http://knova.ru/ontolis-avis",
+        "owl": "http://www.w3.org/2002/07/owl",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+        "ria": "http://data.ria.ru#",
+        "riacv": "http://data.ria.ru/cv#",
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsd": "http://www.w3.org/2001/XMLSchema"
+    },
+    "nodes": [
+        {
+            "attributes": {
+            },
+            "id": "215",
+            "name": "C01EB: Other cardiac preparations",
+            "namespace": "http://data.ria.ru",
+            "position_x": 762,
+            "position_y": 540
+        },
+        {
+            "attributes": {
+            },
+            "id": "14",
+            "name": "Clopidogrel",
+            "namespace": "http://data.ria.ru",
+            "position_x": 458,
+            "position_y": 913
+        },
+        {
+            "attributes": {
+            },
+            "id": "13",
+            "name": "Metoprolol",
+            "namespace": "http://data.ria.ru",
+            "position_x": 737,
+            "position_y": 548
+        },
+        {
+            "attributes": {
+            },
+            "id": "117",
+            "name": "Ticagrelor",
+            "namespace": "http://data.ria.ru",
+            "position_x": 477,
+            "position_y": 664
+        },
+        {
+            "attributes": {
+            },
+            "id": "113",
+            "name": "Edoxaban",
+            "namespace": "http://data.ria.ru",
+            "position_x": 745,
+            "position_y": 952
+        },
+        {
+            "attributes": {
+            },
+            "id": "210",
+            "name": "B01AC: Platelet aggregation inhibitors excl. heparin",
+            "namespace": "http://data.ria.ru",
+            "position_x": 641,
+            "position_y": 595
+        },
+        {
+            "attributes": {
+            },
+            "id": "111",
+            "name": "Apixaban",
+            "namespace": "http://data.ria.ru",
+            "position_x": 1075,
+            "position_y": 768
+        },
+        {
+            "attributes": {
+            },
+            "id": "115",
+            "name": "rivaroxaban",
+            "namespace": "http://data.ria.ru",
+            "position_x": 721,
+            "position_y": 707
+        },
+        {
+            "attributes": {
+            },
+            "id": "17",
+            "name": "Trimetazidine",
+            "namespace": "http://data.ria.ru",
+            "position_x": 1106,
+            "position_y": 720
+        },
+        {
+            "attributes": {
+            },
+            "id": "16",
+            "name": "Bisoprolol",
+            "namespace": "http://data.ria.ru",
+            "position_x": 1220,
+            "position_y": 550
+        }
+    ],
+    "relationNames": [
+        "http://niki290595icloud.com/converter#InstanceOf",
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+        "http://niki290595icloud.com/converter#interact"
+    ],
+    "relations": [
+        {
+            "attributes": {
+                "DrugGroup": "Approved",
+                "Interact": "The serum concentration of Edoxaban can be increased when it is combined with Ticagrelor.",
+                "Weight": "0.0"
+            },
+            "destination_node_id": "117",
+            "id": "3152",
+            "name": "interact",
+            "namespace": "http://niki290595icloud.com/converter",
+            "source_node_id": "113"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "210",
+            "id": "343",
+            "name": "InstanceOf",
+            "namespace": "http://niki290595icloud.com/converter",
+            "source_node_id": "14"
+        },
+        {
+            "attributes": {
+                "DrugGroup": "Approved, Nutraceutical",
+                "Interact": "The risk or severity of adverse effects can be increased when Clopidogrel is combined with Apixaban.",
+                "Weight": "0.0"
+            },
+            "destination_node_id": "14",
+            "id": "396",
+            "name": "interact",
+            "namespace": "http://niki290595icloud.com/converter",
+            "source_node_id": "111"
+        },
+        {
+            "attributes": {
+                "DrugGroup": "Approved",
+                "Interact": "The risk or severity of adverse effects can be increased when Ticagrelor is combined with Apixaban.",
+                "Weight": "0.0"
+            },
+            "destination_node_id": "117",
+            "id": "3150",
+            "name": "interact",
+            "namespace": "http://niki290595icloud.com/converter",
+            "source_node_id": "111"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "215",
+            "id": "352",
+            "name": "InstanceOf",
+            "namespace": "http://niki290595icloud.com/converter",
+            "source_node_id": "17"
+        },
+        {
+            "attributes": {
+                "DrugGroup": "Approved",
+                "Interact": "The serum concentration of Metoprolol can be increased when it is combined with Ticagrelor.",
+                "Weight": "0.0"
+            },
+            "destination_node_id": "117",
+            "id": "3154",
+            "name": "interact",
+            "namespace": "http://niki290595icloud.com/converter",
+            "source_node_id": "13"
+        },
+        {
+            "attributes": {
+                "DrugGroup": "Approved",
+                "Interact": "Apixaban may increase the anticoagulant activities of Rivaroxaban.",
+                "Weight": "0.0"
+            },
+            "destination_node_id": "115",
+            "id": "3140",
+            "name": "interact",
+            "namespace": "http://niki290595icloud.com/converter",
+            "source_node_id": "111"
+        },
+        {
+            "attributes": {
+                "DrugGroup": "Approved",
+                "Interact": "Clopidogrel may increase the anticoagulant activities of Rivaroxaban.",
+                "Weight": "0.0"
+            },
+            "destination_node_id": "115",
+            "id": "3141",
+            "name": "interact",
+            "namespace": "http://niki290595icloud.com/converter",
+            "source_node_id": "14"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "210",
+            "id": "347",
+            "name": "InstanceOf",
+            "namespace": "http://niki290595icloud.com/converter",
+            "source_node_id": "117"
+        },
+        {
+            "attributes": {
+                "DrugGroup": "Approved",
+                "Interact": "Edoxaban may increase the anticoagulant activities of Rivaroxaban.",
+                "Weight": "0.0"
+            },
+            "destination_node_id": "115",
+            "id": "3142",
+            "name": "interact",
+            "namespace": "http://niki290595icloud.com/converter",
+            "source_node_id": "113"
+        },
+        {
+            "attributes": {
+                "DrugGroup": "Approved",
+                "Interact": "Clopidogrel may increase the anticoagulant activities of Edoxaban.",
+                "Weight": "0.0"
+            },
+            "destination_node_id": "113",
+            "id": "3128",
+            "name": "interact",
+            "namespace": "http://niki290595icloud.com/converter",
+            "source_node_id": "14"
+        },
+        {
+            "attributes": {
+                "DrugGroup": "Approved, Investigational",
+                "Interact": "The risk or severity of adverse effects can be increased when Metoprolol is combined with Bisoprolol.",
+                "Weight": "0.0"
+            },
+            "destination_node_id": "13",
+            "id": "391",
+            "name": "interact",
+            "namespace": "http://niki290595icloud.com/converter",
+            "source_node_id": "16"
+        },
+        {
+            "attributes": {
+                "DrugGroup": "Approved",
+                "Interact": "Ticagrelor may increase the anticoagulant activities of Rivaroxaban.",
+                "Weight": "0.0"
+            },
+            "destination_node_id": "115",
+            "id": "3144",
+            "name": "interact",
+            "namespace": "http://niki290595icloud.com/converter",
+            "source_node_id": "117"
+        },
+        {
+            "attributes": {
+                "DrugGroup": "Approved",
+                "Interact": "The metabolism of Clopidogrel can be decreased when combined with Ticagrelor.",
+                "Weight": "0.0"
+            },
+            "destination_node_id": "117",
+            "id": "3151",
+            "name": "interact",
+            "namespace": "http://niki290595icloud.com/converter",
+            "source_node_id": "14"
+        },
+        {
+            "attributes": {
+                "DrugGroup": "Approved",
+                "Interact": "Apixaban may increase the anticoagulant activities of Edoxaban.",
+                "Weight": "0.0"
+            },
+            "destination_node_id": "113",
+            "id": "3126",
+            "name": "interact",
+            "namespace": "http://niki290595icloud.com/converter",
+            "source_node_id": "111"
+        },
+        {
+            "attributes": {
+                "DrugGroup": "Approved, Investigational",
+                "Interact": "The serum concentration of Edoxaban can be increased when it is combined with Metoprolol.",
+                "Weight": "0.0"
+            },
+            "destination_node_id": "13",
+            "id": "393",
+            "name": "interact",
+            "namespace": "http://niki290595icloud.com/converter",
+            "source_node_id": "113"
+        }
+    ],
+    "visualize_ont_path": ""
+}

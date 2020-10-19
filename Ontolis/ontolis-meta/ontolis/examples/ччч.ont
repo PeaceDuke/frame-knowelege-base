@@ -1,0 +1,252 @@
+{
+    "last_id": "308",
+    "namespaces": {
+        "default": "http://www.ontosearch.com/2007/12/ontosofa-ns#",
+        "http://data.ria.ru": "http://data.ria.ru",
+        "ontolis-avis": "http://knova.ru/ontolis-avis",
+        "owl": "http://www.w3.org/2002/07/owl",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+        "ria": "http://data.ria.ru#",
+        "riacv": "http://data.ria.ru/cv#",
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsd": "http://www.w3.org/2001/XMLSchema"
+    },
+    "nodes": [
+        {
+            "attributes": {
+            },
+            "id": "116",
+            "name": "вымышленный персонаж",
+            "namespace": "http://data.ria.ru",
+            "position_x": 809,
+            "position_y": 549
+        },
+        {
+            "attributes": {
+            },
+            "id": "108",
+            "name": "дата рождения",
+            "namespace": "http://data.ria.ru",
+            "position_x": 739,
+            "position_y": 639
+        },
+        {
+            "attributes": {
+            },
+            "id": "154",
+            "name": "дата смерти",
+            "namespace": "http://data.ria.ru",
+            "position_x": 669,
+            "position_y": 549
+        },
+        {
+            "attributes": {
+            },
+            "id": "119",
+            "name": "фамилия",
+            "namespace": "http://data.ria.ru",
+            "position_x": 719,
+            "position_y": 609
+        },
+        {
+            "attributes": {
+            },
+            "id": "146",
+            "name": "отчество",
+            "namespace": "http://data.ria.ru",
+            "position_x": 839,
+            "position_y": 489
+        },
+        {
+            "attributes": {
+            },
+            "id": "118",
+            "name": "имя",
+            "namespace": "http://data.ria.ru",
+            "position_x": 869,
+            "position_y": 639
+        },
+        {
+            "attributes": {
+            },
+            "id": "133",
+            "name": "название для редактора",
+            "namespace": "http://data.ria.ru",
+            "position_x": 869,
+            "position_y": 659
+        },
+        {
+            "attributes": {
+            },
+            "id": "98",
+            "name": "псевдоним",
+            "namespace": "http://data.ria.ru",
+            "position_x": 749,
+            "position_y": 549
+        },
+        {
+            "attributes": {
+            },
+            "id": "83",
+            "name": "рост",
+            "namespace": "http://data.ria.ru",
+            "position_x": 739,
+            "position_y": 489
+        },
+        {
+            "attributes": {
+            },
+            "id": "1",
+            "name": "Именованная сущность",
+            "namespace": "http://data.ria.ru",
+            "position_x": 949,
+            "position_y": 619
+        },
+        {
+            "attributes": {
+            },
+            "id": "59",
+            "name": "Персона",
+            "namespace": "http://data.ria.ru",
+            "position_x": 819,
+            "position_y": 569
+        },
+        {
+            "attributes": {
+            },
+            "id": "95",
+            "name": "соцсети",
+            "namespace": "http://data.ria.ru",
+            "position_x": 779,
+            "position_y": 479
+        },
+        {
+            "attributes": {
+            },
+            "id": "63",
+            "name": "Ключевое слово",
+            "namespace": "http://data.ria.ru",
+            "position_x": 599,
+            "position_y": 699
+        }
+    ],
+    "relationNames": [
+        "http://knova.ru/reply/converter#a_part_of",
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+        "http://knova.ru/reply/converter#is_instance_of"
+    ],
+    "relations": [
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "59",
+            "id": "299",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "116"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "59",
+            "id": "180",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "146"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "1",
+            "id": "233",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "133"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "59",
+            "id": "269",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "154"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "59",
+            "id": "307",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "118"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "59",
+            "id": "225",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "119"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "59",
+            "id": "280",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "83"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "59",
+            "id": "271",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "95"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "59",
+            "id": "161",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "98"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "59",
+            "id": "229",
+            "name": "a_part_of",
+            "namespace": "http://knova.ru/reply/converter",
+            "source_node_id": "108"
+        },
+        {
+            "attributes": {
+                "Weight": "0.0"
+            },
+            "destination_node_id": "1",
+            "id": "230",
+            "name": "subClassOf",
+            "namespace": "http://www.w3.org/2000/01/rdf-schema",
+            "source_node_id": "59"
+        }
+    ],
+    "visualize_ont_path": ""
+}
