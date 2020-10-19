@@ -19,6 +19,7 @@
       <value name = "Ниже"/>
       <value name = "Слева"/>
       <value name = "Справа"/>
+      <value name = "Вместо"/>
     </Domain>
   </Domains>
   <Frames>
@@ -37,7 +38,7 @@
       <TextSlot name = "Изображение" value = "picture" />
     </Frame>
     <Frame name = "Поле">
-      <TextSlot name = "Высота" value = "10"/>
+      <TextSlot name = "Высота" value = "15"/>
       <TextSlot name = "Ширина" value = "10"/>
     </Frame>
     <Frame name = "Клетка"/>
