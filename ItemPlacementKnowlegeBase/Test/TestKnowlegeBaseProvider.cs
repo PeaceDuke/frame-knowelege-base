@@ -30,9 +30,6 @@ namespace ItemPlacementKnowlegeBase.Services
             var response = new List<string>() { reason };
             response.Add("Сработавшие фреймы:");
             response.AddRange(binding);
-            response.Add("Порядок обхода:");
-            foreach(Frame frame in reasoning)
-                response.Add(frame.Name);
             return response;
         }
 
@@ -93,7 +90,7 @@ namespace ItemPlacementKnowlegeBase.Services
                 reason = "Нет ни одного правила разрешающего такое размещение";
                 return false;
             }
-            else if (result == "")
+            else if (result == "allow")
             {
                 Test.Test.PutItem(cell.X, cell.Y, item.Name);
                 return true;
@@ -124,7 +121,7 @@ namespace ItemPlacementKnowlegeBase.Services
             frame.Slots.Add(new DomainSlot("Субъект", itemDomain, itemDomain[subject.Name], false, true));
             if(!string.IsNullOrEmpty(place))
                 frame.Slots.Add(new DomainSlot("Расположение", placeDomain, placeDomain[place], false, true));
-            frame.Slots.Add(new DomainSlot("Тип правила", typeDomain, typeDomain[type]));
+            frame.Slots.Add(new DomainSlot("Тип правила", typeDomain, typeDomain[type], false, true));
             frame.Slots.Add(new TextSlot("Объяснение", reason));
             frame.Parent = knowlegeBase["Правило"];
             knowlegeBase.Frames.Add(frame);

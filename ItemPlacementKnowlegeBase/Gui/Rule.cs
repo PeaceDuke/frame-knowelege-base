@@ -40,7 +40,7 @@ namespace ItemPlacementKnowlegeBase.Gui
 
         public string GetDescription()
         {
-            return (Object == null ? "Любой" : Object.Name) + " -> " + (Subject == null ? "Любой" : Subject.Name) + ": " + (string.IsNullOrEmpty(Where) ? "Рядом" : Where) + ", " + Type;
+            return (Object == null ? "Любой" : Object.Name) + " -> " + (Subject == null ? "Любой" : Subject.Name) + ": " + (string.IsNullOrEmpty(Where) ? "Как угодно" : Where) + ", " + Type;
         }
     }
 }

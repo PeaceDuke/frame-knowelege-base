@@ -91,7 +91,7 @@ namespace ItemPlacementKnowlegeBase.Test
                 frames[9].Slots.Add(new DomainSlot("Объект", domains[2], domains[2][1], false, true));
                 frames[9].Slots.Add(new DomainSlot("Субъект", domains[2], domains[2][0], false, true));
                 frames[9].Slots.Add(new DomainSlot("Расположение", domains[3], domains[3][2], false, true));
-                frames[9].Slots.Add(new DomainSlot("Тип правила", domains[1], domains[1][0]));
+                frames[9].Slots.Add(new DomainSlot("Тип правила", domains[1], domains[1][0], false, true));
                 frames[9].Slots.Add(new TextSlot("Объяснение", "Нельзя ставить стул справа стола"));
                 frames[9].Parent = frames[7];
 
@@ -100,7 +100,7 @@ namespace ItemPlacementKnowlegeBase.Test
                 frames[10].Slots.Add(new DomainSlot("Объект", domains[2], domains[2][0], false, true));
                 frames[10].Slots.Add(new DomainSlot("Субъект", domains[2], domains[2][2], false, true));
                 //frames[10].Slots.Add(new DomainSlot("Расположение", domains[3], domains[3][3], false, true));
-                frames[10].Slots.Add(new DomainSlot("Тип правила", domains[1], domains[1][1]));
+                frames[10].Slots.Add(new DomainSlot("Тип правила", domains[1], domains[1][1],false, true));
                 frames[10].Slots.Add(new TextSlot("Объяснение", "Нельзя ставить картину рядом со столом"));
                 frames[10].Parent = frames[7];
 
@@ -109,7 +109,7 @@ namespace ItemPlacementKnowlegeBase.Test
                 frames[11].Slots.Add(new DomainSlot("Объект", domains[2], domains[2][1], false, true));
                 frames[11].Slots.Add(new DomainSlot("Субъект", domains[2], domains[2][0], false, true));
                 frames[11].Slots.Add(new DomainSlot("Расположение", domains[3], domains[3][3], false, true));
-                frames[11].Slots.Add(new DomainSlot("Тип правила", domains[1], domains[1][0]));
+                frames[11].Slots.Add(new DomainSlot("Тип правила", domains[1], domains[1][0], false, true));
                 frames[11].Slots.Add(new TextSlot("Объяснение", "Нельзя ставить стул слева стола"));
                 frames[11].Parent = frames[7];
 
@@ -268,8 +268,9 @@ namespace ItemPlacementKnowlegeBase.Test
                         continue;
                     reasoner.Clear();
                     Frame nearCellFrame = ((FrameSlot)slot).Frame;
-                    if (nearCellFrame["Предмет"].ValueAsString != "Пустота")
-                        anyItemNear = true;
+                    if (nearCellFrame["Предмет"].ValueAsString == "Пустота")
+                        continue;
+                    anyItemNear = true;
                     while (true)
                     {
                         var answerSlot = reasoner.test(eventFrame);
@@ -298,18 +299,47 @@ namespace ItemPlacementKnowlegeBase.Test
                     }
                     if (reasoner.AnswerFound)
                         break;
+                    reasoner.Clear();
+                    while (true)
+                    {
+                        var answerSlot = reasoner.test(eventFrame);
+                        if (answerSlot == null)
+                            break;
+                        switch (answerSlot.Name)
+                        {
+                            case "Объект":
+                                answer = answerSlot.Domain[itemName];
+                                break;
+                            case "Субъект":
+                                if (nearCellFrame["Предмет"].ValueAsString == "Пустота")
+                                    answer = null;
+                                else
+                                    answer = answerSlot.Domain[nearCellFrame["Предмет"].ValueAsString];
+                                break;
+                            case "Расположение":
+                                answer = answerSlot.Domain[slot.Name];
+                                break;
+                            case "Тип правила":
+                                answer = answerSlot.Domain["Разрешающее"];
+                                break;
+
+                        }
+                        reasoner.SetAnswer(answer);
+                    }
+                    if (reasoner.AnswerFound)
+                        break;
                 }
             if (reasoner.AnswerFound)
             {
                 Frame answerFrame = reasoner.GetAnswer();
                 if(answerFrame["Тип правила"].ValueAsString == "Разрешающее")
-                    return "";
+                    return "allow";
                 else
                     return answerFrame["Объяснение"].ValueAsString;
             }
             else if(!anyItemNear) 
                     if (cellFrame["Предмет"].ValueAsString == "Пустота")
-                        return "";
+                        return "allow";
             return null;
         }
 
