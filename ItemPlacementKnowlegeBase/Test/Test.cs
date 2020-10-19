@@ -38,6 +38,7 @@ namespace ItemPlacementKnowlegeBase.Test
                 new DomainValue("Ниже"),
                 new DomainValue("Слева"),
                 new DomainValue("Справа"),
+                new DomainValue("Вместо"),
             }),
         };
         private static KnowlegeBase testFrameModel = null;
@@ -81,7 +82,7 @@ namespace ItemPlacementKnowlegeBase.Test
                 frames[4].Parent = frames[0];
 
                 frames[5].Slots.Add(new TextSlot("Высота", "10"));
-                frames[5].Slots.Add(new TextSlot("Ширина", "10"));
+                frames[5].Slots.Add(new TextSlot("Ширина", "15"));
 
                 frames[8].Slots.Add(new FrameSlot("Правило", frames[7], false, true));
 
@@ -115,6 +116,13 @@ namespace ItemPlacementKnowlegeBase.Test
                 frames[12].Parent = frames[0];
 
                 frames[13].Slots.Add(new FrameSlot("Клетка", frames[6], false, true));
+
+                //frames[14].Slots.Add(new DomainSlot("Объект", domains[2], null, false, true));
+                //frames[14].Slots.Add(new DomainSlot("Субъект", domains[2], null, false, true));
+                //frames[14].Slots.Add(new DomainSlot("Расположение", domains[3], domains[3][4], false, true));
+                //frames[14].Slots.Add(new DomainSlot("Тип правила", domains[1], domains[1][1]));
+                //frames[14].Slots.Add(new TextSlot("Объяснение", "Нельзя ставить стул слева стола"));
+                //frames[14].Parent = frames[7];
 
                 foreach (var domain in domains)
                 {
@@ -156,15 +164,15 @@ namespace ItemPlacementKnowlegeBase.Test
                 for (int i = 0; i < max; i++)
                     domain.Values.Add(new DomainValue(i.ToString()));
                 reasoner.AddDomain(domain);
-                for (int i = 0; i < h; i++)
-                    for (int j = 0; j < w; j++)
+                for (int x = 0; x < w; x++)
+                    for (int y = 0; y < h; y++)
                     {
-                        string name = "Клетка" + i + ":" + j;
+                        string name = "Клетка" + x + ":" + y;
                         Frame newCellFrame = new Frame(name);
-                        newCellFrame.Slots.Add(new DomainSlot("X", domain, domain[i], false, true));
-                        newCellFrame.Slots.Add(new DomainSlot("Y", domain, domain[j], false, true));
-                        Frame leftFrame = i > 0 ? cellFrames[(i - 1) * h + j] : null;
-                        Frame upFrame = j > 0 ? cellFrames[i * h + j - 1] : null;
+                        newCellFrame.Slots.Add(new DomainSlot("X", domain, domain[x], false, true));
+                        newCellFrame.Slots.Add(new DomainSlot("Y", domain, domain[y], false, true));
+                        Frame leftFrame = x > 0 ? cellFrames[(x - 1) * h + y] : null;
+                        Frame upFrame = y > 0 ? cellFrames[x * h + y - 1] : null;
                         if (leftFrame != null)
                         {
                             newCellFrame.Slots.Add(new FrameSlot("Слева", leftFrame));
@@ -203,9 +211,11 @@ namespace ItemPlacementKnowlegeBase.Test
             reasoner.Clear();
             DomainValue answer = null;
 
+            Frame fieldFrame = reasoner.GetFrame("Костыль");
+
             while (true)
             {
-                var answerSlot = reasoner.GetNextValueToAsk();
+                var answerSlot = reasoner.test(fieldFrame);
                 if (answerSlot == null)
                     break;
                 switch (answerSlot.Name)
@@ -230,38 +240,83 @@ namespace ItemPlacementKnowlegeBase.Test
 
             Frame eventFrame = reasoner.GetFrame("Событие");
 
-            foreach (Slot slot in cellFrame.Slots)
+            reasoner.Clear();
+            while (true)
             {
-                if (slot.IsSystemSlot || slot.Name == "Предмет" || !(slot is FrameSlot))
-                    continue;
-                reasoner.Clear();
-                Frame nearCellFrame = ((FrameSlot)slot).Frame;
-                while (true)
+                var answerSlot = reasoner.test(eventFrame);
+                if (answerSlot == null)
+                    break;
+                switch (answerSlot.Name)
                 {
-                    var answerSlot = reasoner.test(eventFrame);
-                    if (answerSlot == null)
+                    case "Объект":
+                        answer = answerSlot.Domain[itemName];
                         break;
-                    switch (answerSlot.Name)
-                    {
-                        case "Объект":
-                            answer = answerSlot.Domain[itemName];
-                            break;
-                        case "Субъект":
-                            if (nearCellFrame["Предмет"].ValueAsString == "Пустота")
-                                answer = null;
-                            else
-                                answer = answerSlot.Domain[nearCellFrame["Предмет"].ValueAsString];
-                            break;
-                        case "Расположение":
-                            answer = answerSlot.Domain[slot.Name];
-                            break;
+                    case "Субъект":
+                        if (cellFrame["Предмет"].ValueAsString == "Пустота")
+                            answer = null;
+                        else
+                            answer = answerSlot.Domain[cellFrame["Предмет"].ValueAsString];
+                        break;
+                    case "Расположение":
+                        answer = answerSlot.Domain["Вместо"];
+                        break;
+                    case "Тип правила":
+                        answer = answerSlot.Domain["Запрещающее"];
+                        break;
 
-                    }
-                    reasoner.SetAnswer(answer);
                 }
-                if (reasoner.AnswerFound)
-                    return reasoner.GetAnswer()["Объяснение"].ValueAsString;
+                reasoner.SetAnswer(answer);
             }
+            bool anyItemNear = false;
+            if (!reasoner.AnswerFound)
+                foreach (Slot slot in cellFrame.Slots)
+                {
+                    if (slot.IsSystemSlot || slot.Name == "Предмет" || !(slot is FrameSlot))
+                        continue;
+                    reasoner.Clear();
+                    Frame nearCellFrame = ((FrameSlot)slot).Frame;
+                    if (nearCellFrame["Предмет"].ValueAsString != "Пустота")
+                        anyItemNear = true;
+                    while (true)
+                    {
+                        var answerSlot = reasoner.test(eventFrame);
+                        if (answerSlot == null)
+                            break;
+                        switch (answerSlot.Name)
+                        {
+                            case "Объект":
+                                answer = answerSlot.Domain[itemName];
+                                break;
+                            case "Субъект":
+                                if (nearCellFrame["Предмет"].ValueAsString == "Пустота")
+                                    answer = null;
+                                else
+                                    answer = answerSlot.Domain[nearCellFrame["Предмет"].ValueAsString];
+                                break;
+                            case "Расположение":
+                                answer = answerSlot.Domain[slot.Name];
+                                break;
+                            case "Тип правила":
+                                answer = answerSlot.Domain["Запрещающее"];
+                                break;
+
+                        }
+                        reasoner.SetAnswer(answer);
+                    }
+                    if (reasoner.AnswerFound)
+                        break;
+                }
+            if (reasoner.AnswerFound)
+            {
+                Frame answerFrame = reasoner.GetAnswer();
+                if(answerFrame["Тип правила"].ValueAsString == "Разрешающее")
+                    return "";
+                else
+                    return answerFrame["Объяснение"].ValueAsString;
+            }
+            else if(!anyItemNear) 
+                    if (cellFrame["Предмет"].ValueAsString == "Пустота")
+                        return "";
             return null;
         }
 

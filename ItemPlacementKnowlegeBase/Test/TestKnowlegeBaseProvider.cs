@@ -27,7 +27,13 @@ namespace ItemPlacementKnowlegeBase.Services
         {
             var reasoning = Test.Test.getReasoning();
             var binding = Test.Test.GetBindedFrames();
-            return new List<string>() { reason };
+            var response = new List<string>() { reason };
+            response.Add("Сработавшие фреймы:");
+            response.AddRange(binding);
+            response.Add("Порядок обхода:");
+            foreach(Frame frame in reasoning)
+                response.Add(frame.Name);
+            return response;
         }
 
         public Field LoadField()
@@ -84,6 +90,11 @@ namespace ItemPlacementKnowlegeBase.Services
             string result = Test.Test.CheckRule(cell.X, cell.Y, item.Name);
             if (result == null)
             {
+                reason = "Нет ни одного правила разрешающего такое размещение";
+                return false;
+            }
+            else if (result == "")
+            {
                 Test.Test.PutItem(cell.X, cell.Y, item.Name);
                 return true;
             }
@@ -103,8 +114,6 @@ namespace ItemPlacementKnowlegeBase.Services
 
         public Rule AddRuleToList(Item obj, Item subject, string place, string type, string reason)
         {
-            if (string.IsNullOrEmpty(place))
-                place = "Рядом";
             KnowlegeBase knowlegeBase = Test.Test.GetModel();
             string name = "Отношение " + obj.Name + " и " + subject.Name + " "+ DateTime.Now.Ticks;
             Domain itemDomain = knowlegeBase.Domains.Where(x => x.Name == "Предметы").First();
@@ -113,7 +122,8 @@ namespace ItemPlacementKnowlegeBase.Services
             Frame frame = new Frame(name);
             frame.Slots.Add(new DomainSlot("Объект", itemDomain, itemDomain[obj.Name], false, true));
             frame.Slots.Add(new DomainSlot("Субъект", itemDomain, itemDomain[subject.Name], false, true));
-            frame.Slots.Add(new DomainSlot("Расположение", placeDomain, placeDomain[place], false, true));
+            if(!string.IsNullOrEmpty(place))
+                frame.Slots.Add(new DomainSlot("Расположение", placeDomain, placeDomain[place], false, true));
             frame.Slots.Add(new DomainSlot("Тип правила", typeDomain, typeDomain[type]));
             frame.Slots.Add(new TextSlot("Объяснение", reason));
             frame.Parent = knowlegeBase["Правило"];
@@ -177,7 +187,8 @@ namespace ItemPlacementKnowlegeBase.Services
             KnowlegeBase knowlegeBase = Test.Test.GetModel();
             Frame itemFrame = knowlegeBase[item.Name];
             Frame emptyFrame = knowlegeBase["Пустота"];
-            foreach (var cellItemSlot in knowlegeBase.Frames.Where(x => x.Slots.Where(y => y is FrameSlot && ((FrameSlot)y).Frame.Equals(itemFrame)).Any()).Select(x => x["Предмет"] as FrameSlot))
+            var test = knowlegeBase.Frames.Where(x => x.Slots.Where(y => y.Name == "Предмет" && y is FrameSlot && ((FrameSlot)y).Frame.Equals(itemFrame)).Any()).Select(x => x["Предмет"] as FrameSlot);
+            foreach (var cellItemSlot in test)
             {
                 cellItemSlot.Frame = emptyFrame;
             }
@@ -200,7 +211,7 @@ namespace ItemPlacementKnowlegeBase.Services
 
         private Item getItem(string name)
         {
-            if (name == "Пустота")
+            if (name == "Пустота" || name == "")
                 return null;
             if(items.Where(x => x.Name == name).Any())
                 return items.Where(x => x.Name == name).First();

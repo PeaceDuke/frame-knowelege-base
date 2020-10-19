@@ -227,7 +227,10 @@ namespace ItemPlacementKnowlegeBase
             if (lv_items.SelectedItems.Count <= 0)
                 MessageBox.Show("Выберете предмет");
             else
+            {
                 provider.RemoveItemFromList((Item)lv_items.SelectedItems[0].Tag);
+				lv_items.Items.Remove(lv_items.SelectedItems[0]);
+            }
 
         }
 
@@ -251,9 +254,8 @@ namespace ItemPlacementKnowlegeBase
                 MessageBox.Show("Выберете правило");
             else
             {
-                var selectedItem = lv_rules.SelectedItems[0];
-                provider.RemoveRuleFromList((Rule)selectedItem.Tag);
-                lv_rules.Items.Remove(selectedItem);
+                provider.RemoveRuleFromList((Rule)lv_rules.SelectedItems[0].Tag);
+            	lv_rules.Items.Remove(lv_rules.SelectedItems[0]);
             }
         }
     }

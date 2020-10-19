@@ -35,6 +35,7 @@ namespace ItemPlacementKnowlegeBase
                 cb_object.Items.Add(item.Name);
                 cb_subject.Items.Add(item.Name);
             }
+            cb_type.SelectedIndex = 0;
         }
 
         private void Bt_applay_Click(object sender, EventArgs e)
