@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ItemPlacementKnowlegeBase.Loader;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,9 @@ namespace ItemPlacementKnowlegeBase.Services
         public static TestKnowlegeBaseProvider get()
         {
             if (instance == null)
+            {
                 instance = new TestKnowlegeBaseProvider();
+            }
 
             return instance;
         }

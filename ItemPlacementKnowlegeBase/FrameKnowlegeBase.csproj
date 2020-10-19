@@ -82,6 +82,7 @@
     <Compile Include="Gui\TextureResource.cs" />
     <Compile Include="Gui\Item.cs" />
     <Compile Include="Images\ImagePathes.cs" />
+    <Compile Include="Loader\KnowlegeBaseLoader.cs" />
     <Compile Include="Models\Domain.cs" />
     <Compile Include="Models\DomainSlot.cs" />
     <Compile Include="Models\DomainValue.cs" />
@@ -148,6 +149,7 @@
     <Content Include="Images\picture2.jpg" />
     <Content Include="Images\shelf.jpg" />
     <Content Include="Images\table.jpg" />
+    <Content Include="Loader\KB.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

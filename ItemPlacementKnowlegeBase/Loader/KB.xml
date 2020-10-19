@@ -1,0 +1,73 @@
+<KnowledgeBase>
+  <Domains>
+    <Domain name = "Место">
+      <value name = "Пол"/>
+      <value name = "Стена"/>
+      <value name = "Потолок"/>
+    </Domain>
+    <Domain name = "Тип правила">
+      <value name = "Запрещающее"/>
+      <value name = "Разрешающее"/>
+    </Domain>
+    <Domain name = "Предметы">
+      <value name = "Стол"/>
+      <value name = "Стул"/>
+      <value name = "Картина"/>
+    </Domain>
+    <Domain name = "Расположение">
+      <value name = "Выше"/>
+      <value name = "Ниже"/>
+      <value name = "Слева"/>
+      <value name = "Справа"/>
+    </Domain>
+  </Domains>
+  <Frames>
+    <Frame name = "Предмет"/>
+    <Frame name = "Напольный предмет"/>
+    <Frame name = "Стол" parent = "Предмет">
+      <DomainSlot name = "Предмет" domain = "Предметы" value = "Стол" isRequestable = "true"/>
+      <TextSlot name = "Изображение" value = "table"/>
+    </Frame>
+    <Frame name = "Стул" parent = "Предмет">
+      <DomainSlot name = "Предмет" domain = "Предметы" value = "Стул" isRequestable = "true"/>
+      <TextSlot name = "Изображение" value = "chair"/>
+    </Frame>
+    <Frame name = "Картина" parent = "Предмет">
+      <DomainSlot name = "Предмет" domain = "Предметы" value = "Картина" isRequestable = "true"/>
+      <TextSlot name = "Изображение" value = "picture" />
+    </Frame>
+    <Frame name = "Поле">
+      <TextSlot name = "Высота" value = "10"/>
+      <TextSlot name = "Ширина" value = "10"/>
+    </Frame>
+    <Frame name = "Клетка"/>
+    <Frame name = "Правило"/>
+    <Frame name = "Событие">
+      <FrameSlot name = "Правило" value = "Правило"/>
+    </Frame>
+    <Frame name = "Отношение стола и стула" parent = "Правило">
+      <DomainSlot name = "Объект" domain = "Предметы" value = "Стул" isRequestable = "true"/>
+      <DomainSlot name = "Субъект" domain = "Предметы" value = "Стол" isRequestable = "true"/>
+      <DomainSlot name = "Расположение" domain = "Расположение" value = "Слева" isRequestable = "true"/>
+      <DomainSlot name = "Тип правила" domain = "Тип правила" value = "Запрещающее"/>
+      <TextSlot name = "Объяснение" value = "Нельзя ставить стул справа стола"/>
+    </Frame>
+    <Frame name = "Отношение горшка и стола" parent = "Правило">
+      <DomainSlot name = "Объект" domain = "Предметы" value = "Стол" isRequestable = "true"/>
+      <DomainSlot name = "Субъект" domain = "Предметы" value = "Картина" isRequestable = "true"/>
+      <DomainSlot name = "Тип правила" domain = "Тип правила" value = "Разрешающее"/>
+      <TextSlot name = "Объяснение" value = "Нельзя ставить картину рядом со столом"/>
+    </Frame>
+    <Frame name = "Отношение стола и стула 2" parent = "Правило">
+      <DomainSlot name = "Объект" domain = "Предметы" value = "Стул" isRequestable = "true"/>
+      <DomainSlot name = "Субъект" domain = "Предметы" value = "Стол" isRequestable = "true"/>
+      <DomainSlot name = "Расположение" domain = "Расположение" value = "Справа" isRequestable = "true"/>
+      <DomainSlot name = "Тип правила" domain = "Тип правила" value = "Запрещающее"/>
+      <TextSlot name = "Объяснение" value = "Нельзя ставить стул слева стола"/>      
+    </Frame>
+    <Frame name = "Пустота" parent = "Предмет"/>
+    <Frame name = "Костыль">
+      <FrameSlot name = "Клетка" value = "Клетка" isRequestable = "true"/>
+    </Frame>
+  </Frames>
+</KnowledgeBase>
