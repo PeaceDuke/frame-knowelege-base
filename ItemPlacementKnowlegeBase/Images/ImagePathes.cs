@@ -19,6 +19,7 @@ namespace ItemPlacementKnowlegeBase.Images
         public const string PICTURE2 = PREFIX + "picture2";
         public const string SHELF = PREFIX + "shelf";
         public const string TABLE = PREFIX + "table";
-        public static readonly string[] ITEMLIST = { "chest", "closet", "commode", "freezer", "lamp", "lamp2", "picture", "picture2", "shelf", "table" };
+        public const string CHAIR = PREFIX + "chair";
+        public static readonly string[] ITEMLIST = { "chest", "closet", "commode", "freezer", "lamp", "lamp2", "picture", "picture2", "shelf", "table", "chair" };
     }
 }
