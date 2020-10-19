@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ItemPlacementKnowlegeBase.Gui;
+using ItemPlacementKnowlegeBase.Loader;
 using ItemPlacementKnowlegeBase.Models;
 using ItemPlacementKnowlegeBase.Services;
 
@@ -40,27 +41,27 @@ namespace ItemPlacementKnowlegeBase.Test
                 new DomainValue("Вместо"),
             }),
         };
+        private static KnowlegeBase testFrameModel = null;
         private static KnowlegeBase TestFrameModel
         {
             get
             {
                 var frames = new[]
                 {
-                    new Frame("Предмет"),
-                    new Frame("Напольный предмет"),
-                    new Frame("Стол"),
-                    new Frame("Стул"),
-                    new Frame("Картина"),
-                    new Frame("Поле"),
-                    new Frame("Клетка"),
-                    new Frame("Правило"),
-                    new Frame("Событие"),
-                    new Frame("Отношение стула и стола"),
-                    new Frame("Отношение стола и картины"),
-                    new Frame("Отношение стула и стола 2"),
-                    new Frame("Пустота"),
-                    new Frame("Костыль"),
-                    new Frame("Вставка любого предмета"),
+                    new Frame("Предмет"),                       //0
+                    new Frame("Напольный предмет"),             //1
+                    new Frame("Стол"),                          //2
+                    new Frame("Стул"),                          //3
+                    new Frame("Картина"),                       //4
+                    new Frame("Поле"),                          //5
+                    new Frame("Клетка"),                        //6
+                    new Frame("Правило"),                       //7
+                    new Frame("Событие"),                       //8
+                    new Frame("Отношение стола и стула"),       //9
+                    new Frame("Отношение горшка и стола"),      //10
+                    new Frame("Отношение стола и стула 2"),     //11
+                    new Frame("Пустота"),                       //12
+                    new Frame("Костыль"),                       //13
                 };
 
                 var frameModel = new KnowlegeBase();
@@ -133,7 +134,13 @@ namespace ItemPlacementKnowlegeBase.Test
                     frameModel.Frames.Add(frame);
                 }
 
-                return frameModel;
+                if (testFrameModel == null) 
+                {
+                    testFrameModel = KnowlegeBaseLoader.Parce(KnowlegeBaseLoader.TEST_KNOWLEDGE_BASE);
+                }
+
+                return testFrameModel;
+                //return frameModel;
             }
         }
 
