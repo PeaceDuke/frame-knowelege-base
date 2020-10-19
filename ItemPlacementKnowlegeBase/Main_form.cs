@@ -226,7 +226,8 @@ namespace ItemPlacementKnowlegeBase
         {
             if (lv_items.SelectedItems.Count <= 0)
                 MessageBox.Show("Выберете предмет");
-            provider.RemoveItemFromList((Item)lv_items.SelectedItems[0].Tag);
+            else
+                provider.RemoveItemFromList((Item)lv_items.SelectedItems[0].Tag);
 
         }
 
@@ -248,7 +249,12 @@ namespace ItemPlacementKnowlegeBase
         {
             if (lv_rules.SelectedItems.Count <= 0)
                 MessageBox.Show("Выберете правило");
-            provider.RemoveRuleFromList((Rule)lv_rules.SelectedItems[0].Tag);
+            else
+            {
+                var selectedItem = lv_rules.SelectedItems[0];
+                provider.RemoveRuleFromList((Rule)selectedItem.Tag);
+                lv_rules.Items.Remove(selectedItem);
+            }
         }
     }
 }
