@@ -21,15 +21,15 @@
     <Frame name = "Предмет"/>
     <Frame name = "Стол" parent = "Предмет">
       <DomainSlot name = "Предмет" domain = "Предметы" value = "Стол" isRequestable = "true"/>
-      <TextSlot name = "Изображение" value = "table"/>
+      <TextSlot name = "Изображение" value = "..\..\Images\table.jpg"/>
     </Frame>
     <Frame name = "Стул" parent = "Предмет">
       <DomainSlot name = "Предмет" domain = "Предметы" value = "Стул" isRequestable = "true"/>
-      <TextSlot name = "Изображение" value = "chair"/>
+      <TextSlot name = "Изображение" value = "..\..\Images\chair.jpg"/>
     </Frame>
     <Frame name = "Картина" parent = "Предмет">
       <DomainSlot name = "Предмет" domain = "Предметы" value = "Картина" isRequestable = "true"/>
-      <TextSlot name = "Изображение" value = "picture" />
+      <TextSlot name = "Изображение" value = "..\..\Images\picture.jpg" />
     </Frame>
     <Frame name = "Поле">
       <TextSlot name = "Размер" value = "5"/>

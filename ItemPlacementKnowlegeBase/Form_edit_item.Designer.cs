@@ -33,7 +33,9 @@
             this.bt_add = new System.Windows.Forms.Button();
             this.bt_abort = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.cb_images = new System.Windows.Forms.ComboBox();
+            this.ofd = new System.Windows.Forms.OpenFileDialog();
+            this.bt_loadImage = new System.Windows.Forms.Button();
+            this.label_imageName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tb_name
@@ -82,27 +84,43 @@
             this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Изображение";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // cb_images
+            // ofd
             // 
-            this.cb_images.FormattingEnabled = true;
-            this.cb_images.Location = new System.Drawing.Point(103, 47);
-            this.cb_images.Name = "cb_images";
-            this.cb_images.Size = new System.Drawing.Size(156, 21);
-            this.cb_images.TabIndex = 6;
+            this.ofd.FileName = "openFileDialog1";
+            this.ofd.Filter = "jpeg|*.jpg";
+            // 
+            // bt_loadImage
+            // 
+            this.bt_loadImage.Location = new System.Drawing.Point(103, 44);
+            this.bt_loadImage.Name = "bt_loadImage";
+            this.bt_loadImage.Size = new System.Drawing.Size(75, 23);
+            this.bt_loadImage.TabIndex = 6;
+            this.bt_loadImage.Text = "Загрузить";
+            this.bt_loadImage.UseVisualStyleBackColor = true;
+            this.bt_loadImage.Click += new System.EventHandler(this.bt_loadImage_Click);
+            // 
+            // label_imageName
+            // 
+            this.label_imageName.AutoSize = true;
+            this.label_imageName.Location = new System.Drawing.Point(185, 49);
+            this.label_imageName.Name = "label_imageName";
+            this.label_imageName.Size = new System.Drawing.Size(0, 13);
+            this.label_imageName.TabIndex = 7;
             // 
             // Form_edit_item
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(281, 114);
-            this.Controls.Add(this.cb_images);
+            this.ClientSize = new System.Drawing.Size(269, 110);
+            this.Controls.Add(this.label_imageName);
+            this.Controls.Add(this.bt_loadImage);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bt_abort);
             this.Controls.Add(this.bt_add);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tb_name);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form_edit_item";
             this.Text = "Добавить фрейм";
             this.Load += new System.EventHandler(this.Form_edit_frame_Load);
@@ -118,6 +136,8 @@
         private System.Windows.Forms.Button bt_add;
         private System.Windows.Forms.Button bt_abort;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cb_images;
+        private System.Windows.Forms.OpenFileDialog ofd;
+        private System.Windows.Forms.Button bt_loadImage;
+        private System.Windows.Forms.Label label_imageName;
     }
 }

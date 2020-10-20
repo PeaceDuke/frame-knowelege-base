@@ -81,7 +81,8 @@ namespace ItemPlacementKnowlegeBase.Test
                 frames[4].Slots.Add(new TextSlot("Изображение", "picture"));
                 frames[4].Parent = frames[0];
 
-                frames[5].Slots.Add(new TextSlot("Размер", "10"));
+                frames[5].Slots.Add(new TextSlot("Размер", "5"));
+                frames[5].Slots.Add(new TextSlot("Размер клетки", "64"));
 
                 frames[8].Slots.Add(new FrameSlot("Правило", frames[7], false, true));
 

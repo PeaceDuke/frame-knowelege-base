@@ -130,7 +130,7 @@ namespace ItemPlacementKnowlegeBase.Gui
             if(this.Source != null)
                 this.Source.Dispose();
 
-            string fullFilename = ImagePathes.PREFIX + this.Name + ".jpg";
+            string fullFilename = this.Name;
             int checkFile = FileIsOk(fullFilename);
             if (checkFile == 1)
             {

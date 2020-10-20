@@ -18,6 +18,7 @@ namespace ItemPlacementKnowlegeBase
     {
         public Item item;
         public TestKnowlegeBaseProvider provider;
+        private String fullImageName = "";
 
         public Form_edit_item(TestKnowlegeBaseProvider _provider)
         {
@@ -35,13 +36,11 @@ namespace ItemPlacementKnowlegeBase
             item = _item;
             bt_add.Text = @"Обновить";
             tb_name.Text = item.Name;
-            cb_images.Text = ImagePathes.ITEMLIST.Where(x => x == item.ImageName).First();
         }
 
         public void Initialize()
         {
             bt_add.Enabled = false;
-            cb_images.Items.AddRange(ImagePathes.ITEMLIST);
         }
 
         private void Bt_add_Click(object sender, EventArgs e)
@@ -50,11 +49,11 @@ namespace ItemPlacementKnowlegeBase
             {
                 if(item == null)
                 {
-                    item = provider.AddItemToList(tb_name.Text, cb_images.Text);
+                    item = provider.AddItemToList(tb_name.Text, fullImageName);
                 }
                 else
                 {
-                    item = provider.ChangeItemFromList(item, tb_name.Text, cb_images.Text);
+                    item = provider.ChangeItemFromList(item, tb_name.Text, fullImageName);
                 }
                 this.DialogResult = DialogResult.OK;
                 this.Close();
@@ -68,10 +67,10 @@ namespace ItemPlacementKnowlegeBase
 
         private void Tb_name_TextChanged(object sender, EventArgs e)
         {
-            if (tb_name.Text != "")
-                bt_add.Enabled = true;
-            else
+            if (String.IsNullOrWhiteSpace(tb_name.Text))
                 bt_add.Enabled = false;
+            else
+                bt_add.Enabled = true;
         }
 
         private void Form_edit_frame_Load(object sender, EventArgs e)
@@ -83,10 +82,14 @@ namespace ItemPlacementKnowlegeBase
         {
             this.Close();
         }
-
-        private void label2_Click(object sender, EventArgs e)
+        
+        private void bt_loadImage_Click(object sender, EventArgs e)
         {
-
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+                label_imageName.Text = ofd.SafeFileName;
+                fullImageName = ofd.FileName;
+            }
         }
     }
 }
