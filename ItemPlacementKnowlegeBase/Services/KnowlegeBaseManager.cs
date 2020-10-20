@@ -13,6 +13,7 @@ namespace ItemPlacementKnowlegeBase.Services
 
         public static TestKnowlegeBaseProvider get()
         {
+            ONTKnowlegeBaseLoader.Parce("D:\\Projects\\frame-knowelege-base\\Ontolis\\ontolis-meta\\ontolis\\examples\\Онтология курсовой.ont");
             if (instance == null)
             {
                 instance = new TestKnowlegeBaseProvider();

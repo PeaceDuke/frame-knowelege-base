@@ -128,7 +128,7 @@ namespace ItemPlacementKnowlegeBase.Test
 
                 if (testFrameModel == null) 
                 {
-                    testFrameModel = KnowlegeBaseLoader.Parce(KnowlegeBaseLoader.TEST_KNOWLEDGE_BASE);
+                    testFrameModel = XMLKnowlegeBaseLoader.Parce(XMLKnowlegeBaseLoader.TEST_KNOWLEDGE_BASE);
                 }
 
                 if (testFrameModel == null)
