@@ -1,0 +1,441 @@
+{
+    "last_id": "46",
+    "nodes": [
+        {
+            "attributes": {
+            },
+            "id": "1",
+            "name": "Предмет",
+            "position_x": -520,
+            "position_y": -374
+        },
+        {
+            "attributes": {
+            },
+            "id": "2",
+            "name": "Домен",
+            "position_x": -65,
+            "position_y": -421
+        },
+        {
+            "attributes": {
+                "list": ["Стол",
+                "Стул",
+                "Картина"]
+            },
+            "id": "3",
+            "name": "Предметы",
+            "position_x": -99,
+            "position_y": -323
+        },
+        {
+            "attributes": {
+            },
+            "id": "5",
+            "name": "Фрейм",
+            "position_x": -422,
+            "position_y": -476
+        },
+        {
+            "attributes": {
+                "Предмет": {
+                    "type": "d",
+                    "domain": "Предметы",
+                    "value": "Стол",
+                    "isRequestable": true
+                },
+                "Изображение": {
+                    "type": "t",
+                    "value": "table"
+                }
+            },
+            "id": "8",
+            "name": "Стол",
+            "position_x": -647,
+            "position_y": -211
+        },
+        {
+            "attributes": {
+                "Предмет": {
+                    "type": "d",
+                    "domain": "Предметы",
+                    "value": "Стул",
+                    "isRequestable": true
+                },
+                "Изображение": {
+                    "type": "t",
+                    "value": "chair"
+                }
+            },
+            "id": "10",
+            "name": "Стул",
+            "position_x": -590,
+            "position_y": -201
+        },
+        {
+            "attributes": {
+                "Предмет": {
+                    "type": "d",
+                    "domain": "Предметы",
+                    "value": "Картина",
+                    "isRequestable": true
+                },
+                "Изображение": {
+                    "type": "t",
+                    "value": "picture"
+                }
+            },
+            "id": "12",
+            "name": "Картина",
+            "position_x": -526,
+            "position_y": -192
+        },
+        {
+            "attributes": {
+                "Размер": {
+                    "type": "t",
+                    "value": "5"
+                },
+                "Размер клетки": {
+                    "type": "t",
+                    "value": "64"
+                }
+            },
+            "id": "14",
+            "name": "Поле",
+            "position_x": -461,
+            "position_y": -292
+        },
+        {
+            "attributes": {
+            },
+            "id": "16",
+            "name": "Клетка",
+            "position_x": -405,
+            "position_y": -180
+        },
+        {
+            "attributes": {
+            },
+            "id": "19",
+            "name": "Правило",
+            "position_x": -240,
+            "position_y": -355
+        },
+        {
+            "attributes": {
+                "Объект": {
+                    "type": "d",
+                    "domain": "Предметы",
+                    "value": "Стул",
+                    "isRequestable": true
+                },
+                "Субъект": {
+                    "type": "d",
+                    "domain": "Предметы",
+                    "value": "Стол",
+                    "isRequestable": true
+                },
+                "Расположение": {
+                    "type": "d",
+                    "domain": "Расположение",
+                    "value": "Слева",
+                    "isRequestable": true
+                },
+                "Тип правила": {
+                    "type": "d",
+                    "domain": "Тип правила",
+                    "value": "Запрещающее",
+                    "isRequestable": true
+                },
+                "Объяснение": {
+                    "type": "t",
+                    "value": "Нельзя ставить стул справа стола"
+                }
+            },
+            "id": "21",
+            "name": "Отношение стола и стула",
+            "position_x": -312,
+            "position_y": -161
+        },
+        {
+            "attributes": {
+                "Объект": {
+                    "type": "d",
+                    "domain": "Предметы",
+                    "value": "Стол",
+                    "isRequestable": true
+                },
+                "Субъект": {
+                    "type": "d",
+                    "domain": "Предметы",
+                    "value": "Картина",
+                    "isRequestable": true
+                },
+                "Тип правила": {
+                    "type": "d",
+                    "domain": "Тип правила",
+                    "value": "Разрешающее",
+                    "isRequestable": true
+                },
+                "Объяснение": {
+                    "type": "t",
+                    "value": "Нельзя ставить картину рядом со столом"
+                }
+            },
+            "id": "23",
+            "name": "Отношение стола и картины",
+            "position_x": -238,
+            "position_y": -108
+        },
+        {
+            "attributes": {
+                "Объект": {
+                    "type": "d",
+                    "domain": "Предметы",
+                    "value": "Стул",
+                    "isRequestable": true
+                },
+                "Субъект": {
+                    "type": "d",
+                    "domain": "Предметы",
+                    "value": "Стол",
+                    "isRequestable": true
+                },
+                "Расположение": {
+                    "type": "d",
+                    "domain": "Расположение",
+                    "value": "Справа",
+                    "isRequestable": true
+                },
+                "Тип правила": {
+                    "type": "d",
+                    "domain": "Тип правила",
+                    "value": "Запрещающее",
+                    "isRequestable": true
+                },
+                "Объяснение": {
+                    "type": "t",
+                    "value": "Нельзя ставить стул слева стола"
+                }
+            },
+            "id": "25",
+            "name": "Отношение стола и стула 2",
+            "position_x": -135,
+            "position_y": -160
+        },
+        {
+            "attributes": {
+            },
+            "id": "27",
+            "name": "Пустота",
+            "position_x": -650,
+            "position_y": -346
+        },
+        {
+            "attributes": {
+                "Клетка": {
+                    "type": "f",
+                    "value": "Клетка",
+                    "isRequestable": true
+                }
+            },
+            "id": "29",
+            "name": "Клетки_корень",
+            "position_x": -385,
+            "position_y": -334
+        },
+        {
+            "attributes": {
+                "Правило": {
+                    "type": "f",
+                    "value": "Правило",
+                    "isRequestable": true
+                }
+            },
+            "id": "32",
+            "name": "Событие",
+            "position_x": -276,
+            "position_y": -451
+        },
+        {
+            "attributes": {
+                "list": [
+                    "Запрещающее",
+                    "Разрешающее"
+                ]
+            },
+            "id": "43",
+            "name": "Тип правила",
+            "position_x": 32,
+            "position_y": -335
+        },
+        {
+            "attributes": {
+                "list": ["Выше",
+                    "Ниже",
+                    "Слева",
+                "Справа",
+                "Вместо"]
+            },
+            "id": "45",
+            "name": "Расположение",
+            "position_x": 125,
+            "position_y": -392
+        }
+    ],
+    "relations": [
+        {
+            "attributes": {
+            },
+            "destination_node_id": "2",
+            "id": "4",
+            "name": "is_a",
+            "source_node_id": "3"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "5",
+            "id": "7",
+            "name": "is_a",
+            "source_node_id": "1"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "1",
+            "id": "9",
+            "name": "is_a",
+            "source_node_id": "8"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "1",
+            "id": "11",
+            "name": "is_a",
+            "source_node_id": "10"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "1",
+            "id": "13",
+            "name": "is_a",
+            "source_node_id": "12"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "5",
+            "id": "15",
+            "name": "is_a",
+            "source_node_id": "14"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "16",
+            "id": "17",
+            "name": "",
+            "source_node_id": "16"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "5",
+            "id": "18",
+            "name": "is_a",
+            "source_node_id": "16"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "5",
+            "id": "20",
+            "name": "is_a",
+            "source_node_id": "19"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "19",
+            "id": "22",
+            "name": "is_a",
+            "source_node_id": "21"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "19",
+            "id": "24",
+            "name": "is_a",
+            "source_node_id": "23"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "19",
+            "id": "26",
+            "name": "is_a",
+            "source_node_id": "25"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "1",
+            "id": "28",
+            "name": "is_a",
+            "source_node_id": "27"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "5",
+            "id": "30",
+            "name": "is_a",
+            "source_node_id": "29"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "16",
+            "id": "31",
+            "name": "sub_frame",
+            "source_node_id": "29"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "5",
+            "id": "33",
+            "name": "is_a",
+            "source_node_id": "32"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "19",
+            "id": "34",
+            "name": "sub_frame",
+            "source_node_id": "32"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "2",
+            "id": "44",
+            "name": "is_a",
+            "source_node_id": "43"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "2",
+            "id": "46",
+            "name": "is_a",
+            "source_node_id": "45"
+        }
+    ]
+}
