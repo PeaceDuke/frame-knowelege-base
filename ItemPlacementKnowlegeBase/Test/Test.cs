@@ -128,7 +128,8 @@ namespace ItemPlacementKnowlegeBase.Test
 
                 if (testFrameModel == null) 
                 {
-                    testFrameModel = XMLKnowlegeBaseLoader.Parce(XMLKnowlegeBaseLoader.TEST_KNOWLEDGE_BASE);
+                    testFrameModel = ONTKnowlegeBaseLoader.Parce("D:\\Projects\\frame-knowelege-base\\Ontolis\\itemPlacement.ont");
+                    //testFrameModel = XMLKnowlegeBaseLoader.Parce(XMLKnowlegeBaseLoader.TEST_KNOWLEDGE_BASE);
                 }
 
                 if (testFrameModel == null)
