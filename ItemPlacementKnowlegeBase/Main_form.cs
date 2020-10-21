@@ -73,9 +73,13 @@ namespace ItemPlacementKnowlegeBase
         {
             if (lv_kb.SelectedItems.Count > 0)
             {
-                SaveFileDialog sfd = new SaveFileDialog();
-                if(sfd.ShowDialog() == DialogResult.OK)
+                KnowlegeBaseData kbd = lv_kb.SelectedItems[0].Tag as KnowlegeBaseData;
+                using (SaveFileDialog sfd = new SaveFileDialog())
                 {
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                    {
+                        ONTKnowlegeBaseWriter.Write(kbd.knowlegeBase, sfd.FileName);
+                    }
                 }
             }
 
