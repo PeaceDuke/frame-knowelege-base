@@ -115,71 +115,73 @@ namespace ItemPlacementKnowlegeBase.Loader
             }
 
 
-            StreamWriter stream = new StreamWriter(filename);
-            JsonWriterOptions options = new JsonWriterOptions();
-            options.Indented = true;
-            options.Encoder = JavaScriptEncoder.Create(UnicodeRanges.All);
-            Dictionary<int,Vector2> positions = new Dictionary<int, Vector2>();
-            positions = GeneratePosition(nodes, relations);
-            using (Utf8JsonWriter jsonWriter = new Utf8JsonWriter(stream.BaseStream, options))
+            using (StreamWriter stream = new StreamWriter(filename)) 
             {
-                jsonWriter.WriteStartObject();
-                jsonWriter.WriteString("last_id", id.ToString());
-
-                jsonWriter.WritePropertyName("namespaces");
-                jsonWriter.WriteStartObject();
-                jsonWriter.WriteString("ontolis-avis", "http://knova.ru/ontolis-avis");
-                jsonWriter.WriteString("owl", "http://www.w3.org/2002/07/owl");
-                jsonWriter.WriteString("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns");
-                jsonWriter.WriteString("rdfs", "http://www.w3.org/2000/01/rdf-schema");
-                jsonWriter.WriteString("xsd", "http://www.w3.org/2001/XMLSchema");
-                jsonWriter.WriteEndObject();
-
-                jsonWriter.WritePropertyName("nodes");
-                jsonWriter.WriteStartArray();
-                foreach(Node node in nodes)
+                JsonWriterOptions options = new JsonWriterOptions();
+                options.Indented = true;
+                options.Encoder = JavaScriptEncoder.Create(UnicodeRanges.All);
+                Dictionary<int, Vector2> positions = new Dictionary<int, Vector2>();
+                positions = GeneratePosition(nodes, relations);
+                using (Utf8JsonWriter jsonWriter = new Utf8JsonWriter(stream.BaseStream, options))
                 {
                     jsonWriter.WriteStartObject();
+                    jsonWriter.WriteString("last_id", id.ToString());
 
-                    jsonWriter.WritePropertyName("attributes");
+                    jsonWriter.WritePropertyName("namespaces");
                     jsonWriter.WriteStartObject();
-                    foreach (var attrib in node.attributes)
+                    jsonWriter.WriteString("ontolis-avis", "http://knova.ru/ontolis-avis");
+                    jsonWriter.WriteString("owl", "http://www.w3.org/2002/07/owl");
+                    jsonWriter.WriteString("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns");
+                    jsonWriter.WriteString("rdfs", "http://www.w3.org/2000/01/rdf-schema");
+                    jsonWriter.WriteString("xsd", "http://www.w3.org/2001/XMLSchema");
+                    jsonWriter.WriteEndObject();
+
+                    jsonWriter.WritePropertyName("nodes");
+                    jsonWriter.WriteStartArray();
+                    foreach (Node node in nodes)
                     {
-                        WriteAttribute(jsonWriter, attrib);
+                        jsonWriter.WriteStartObject();
+
+                        jsonWriter.WritePropertyName("attributes");
+                        jsonWriter.WriteStartObject();
+                        foreach (var attrib in node.attributes)
+                        {
+                            WriteAttribute(jsonWriter, attrib);
+                        }
+                        jsonWriter.WriteEndObject();
+                        jsonWriter.WriteString("id", node.id.ToString());
+                        jsonWriter.WriteString("name", node.name);
+                        jsonWriter.WriteString("namespace", "ontolis-avis");
+
+                        Vector2 pos = positions[node.id];
+                        jsonWriter.WriteNumber("position_x", pos.X);
+                        jsonWriter.WriteNumber("position_y", pos.Y);
+                        positions[node.id] = pos;
+                        jsonWriter.WriteEndObject();
                     }
-                    jsonWriter.WriteEndObject();
-                    jsonWriter.WriteString("id", node.id.ToString());
-                    jsonWriter.WriteString("name", node.name);
-                    jsonWriter.WriteString("namespace", "ontolis-avis");
-                    
-                    Vector2 pos = positions[node.id];
-                    jsonWriter.WriteNumber("position_x", pos.X);
-                    jsonWriter.WriteNumber("position_y", pos.Y);
-                    positions[node.id] = pos;
+                    jsonWriter.WriteEndArray();
+
+                    jsonWriter.WritePropertyName("relations");
+                    jsonWriter.WriteStartArray();
+                    foreach (Relation relation in relations)
+                    {
+                        jsonWriter.WriteStartObject();
+                        jsonWriter.WritePropertyName("attributes");
+                        jsonWriter.WriteStartObject();
+                        jsonWriter.WriteEndObject();
+                        jsonWriter.WriteString("destination_node_id", relation.destination.id.ToString());
+                        jsonWriter.WriteString("id", relation.id.ToString());
+                        jsonWriter.WriteString("name", relation.name);
+                        jsonWriter.WriteString("namespace", "ontolis-avis");
+                        jsonWriter.WriteString("source_node_id", relation.source.id.ToString());
+                        jsonWriter.WriteEndObject();
+                    }
+                    jsonWriter.WriteEndArray();
+
+                    jsonWriter.WriteString("visualize_ont_path", "");
                     jsonWriter.WriteEndObject();
                 }
-                jsonWriter.WriteEndArray();
-
-                jsonWriter.WritePropertyName("relations");
-                jsonWriter.WriteStartArray();
-                foreach(Relation relation in relations)
-                {
-                    jsonWriter.WriteStartObject();
-                    jsonWriter.WritePropertyName("attributes");
-                    jsonWriter.WriteStartObject();
-                    jsonWriter.WriteEndObject();
-                    jsonWriter.WriteString("destination_node_id", relation.destination.id.ToString());
-                    jsonWriter.WriteString("id", relation.id.ToString());
-                    jsonWriter.WriteString("name", relation.name);
-                    jsonWriter.WriteString("namespace", "ontolis-avis");
-                    jsonWriter.WriteString("source_node_id", relation.source.id.ToString());
-                    jsonWriter.WriteEndObject();
-                }
-                jsonWriter.WriteEndArray();
-
-                jsonWriter.WriteString("visualize_ont_path", "");
-                jsonWriter.WriteEndObject();
-            }
+            };
         }
 
         private static Dictionary<int, Vector2> GeneratePosition(List<Node> nodes, List<Relation> relations)
