@@ -32,6 +32,7 @@
             this.bt_load = new System.Windows.Forms.Button();
             this.lv_kb = new System.Windows.Forms.ListView();
             this.bt_delete = new System.Windows.Forms.Button();
+            this.bt_save = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bt_runApp
@@ -83,11 +84,23 @@
             this.bt_delete.UseVisualStyleBackColor = true;
             this.bt_delete.Click += new System.EventHandler(this.bt_delete_Click);
             // 
+            // bt_save
+            // 
+            this.bt_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bt_save.Location = new System.Drawing.Point(93, 212);
+            this.bt_save.Name = "bt_save";
+            this.bt_save.Size = new System.Drawing.Size(75, 23);
+            this.bt_save.TabIndex = 5;
+            this.bt_save.Text = "Сохранить";
+            this.bt_save.UseVisualStyleBackColor = true;
+            this.bt_save.Click += new System.EventHandler(this.bt_save_Click);
+            // 
             // Main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(352, 247);
+            this.Controls.Add(this.bt_save);
             this.Controls.Add(this.bt_delete);
             this.Controls.Add(this.lv_kb);
             this.Controls.Add(this.bt_load);
@@ -104,5 +117,6 @@
         private System.Windows.Forms.Button bt_load;
         private System.Windows.Forms.ListView lv_kb;
         private System.Windows.Forms.Button bt_delete;
+        private System.Windows.Forms.Button bt_save;
     }
 }

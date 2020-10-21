@@ -16,17 +16,19 @@ namespace ItemPlacementKnowlegeBase.Services
         private List<Rule> rules;
         private Field field;
         private string reason;
+        private Test.Test test;
 
-        public TestKnowlegeBaseProvider()
+        public TestKnowlegeBaseProvider(KnowlegeBase knowlegeBase)
         {
-            Frame fieldFrame = Test.Test.GetFieldFrame();
+            test = new Test.Test(knowlegeBase);
+            Frame fieldFrame = test.GetFieldFrame();
             field = new Field(int.Parse(fieldFrame["Размер"].ValueAsString), int.Parse(fieldFrame["Размер"].ValueAsString), int.Parse(fieldFrame["Размер клетки"].ValueAsString));
         }
 
         public List<string> GetLastReasoning()
         {
-            var reasoning = Test.Test.getReasoning();
-            var binding = Test.Test.GetBindedFrames();
+            var reasoning = test.getReasoning();
+            var binding = test.GetBindedFrames();
             var response = new List<string>() { reason };
             response.Add("Сработавшие фреймы:");
             response.AddRange(binding);
@@ -35,7 +37,7 @@ namespace ItemPlacementKnowlegeBase.Services
 
         public Field LoadField()
         {
-            Frame fieldFrame = Test.Test.GetFieldFrame();
+            Frame fieldFrame = test.GetFieldFrame();
             List<Frame> cellFrames = new List<Frame>(fieldFrame.Slots.Where(x => !x.IsSystemSlot && x is FrameSlot).Select(x => ((FrameSlot)x).Frame));
             field.Cells.Clear();
             foreach (Frame cellFrame in cellFrames)
@@ -53,7 +55,7 @@ namespace ItemPlacementKnowlegeBase.Services
         public List<Item> LoadItems()
         {
             items = new List<Item>();
-            List<Frame> itemFrames = Test.Test.GetItemFrameList();
+            List<Frame> itemFrames = test.GetItemFrameList();
 
             foreach (Frame frame in itemFrames)
             {
@@ -69,7 +71,7 @@ namespace ItemPlacementKnowlegeBase.Services
         public List<Rule> LoadRules()
         {
             rules = new List<Rule>();
-            List<Frame> ruleFrames = Test.Test.GetRuleFrameList();
+            List<Frame> ruleFrames = test.GetRuleFrameList();
 
             foreach (Frame frame in ruleFrames)
             {
@@ -84,7 +86,7 @@ namespace ItemPlacementKnowlegeBase.Services
 
         public bool PlaceItem(Cell cell, Item item)
         {
-            string result = Test.Test.CheckRule(cell.X, cell.Y, item.Name);
+            string result = test.CheckRule(cell.X, cell.Y, item.Name);
             if (result == null)
             {
                 reason = "Нет ни одного правила разрешающего такое размещение";
@@ -92,7 +94,7 @@ namespace ItemPlacementKnowlegeBase.Services
             }
             else if (result == "allow")
             {
-                Test.Test.PutItem(cell.X, cell.Y, item.Name);
+                test.PutItem(cell.X, cell.Y, item.Name);
                 return true;
             }
             else
@@ -104,14 +106,14 @@ namespace ItemPlacementKnowlegeBase.Services
 
         public bool RemoveItem(Cell cell)
         {
-            Test.Test.RemoveItem(cell.X, cell.Y);
+            test.RemoveItem(cell.X, cell.Y);
             return true;
              
         }
 
         public Rule AddRuleToList(Item obj, Item subject, string place, string type, string reason)
         {
-            KnowlegeBase knowlegeBase = Test.Test.GetModel();
+            KnowlegeBase knowlegeBase = test.GetModel();
             string name = "Отношение " + obj.Name + " и " + subject.Name + " "+ DateTime.Now.Ticks;
             Domain itemDomain = knowlegeBase.Domains.Where(x => x.Name == "Предметы").First();
             Domain typeDomain = knowlegeBase.Domains.Where(x => x.Name == "Тип правила").First();
@@ -133,14 +135,14 @@ namespace ItemPlacementKnowlegeBase.Services
         public void RemoveRuleFromList(Rule rule)
         {
             rules.Remove(rule);
-            KnowlegeBase knowlegeBase = Test.Test.GetModel();
+            KnowlegeBase knowlegeBase = test.GetModel();
             Frame itemFrame = knowlegeBase[rule.Name];
             knowlegeBase.Frames.Remove(itemFrame);
         }
 
         public Item AddItemToList(string name, string image)
         {
-            KnowlegeBase knowlegeBase = Test.Test.GetModel();
+            KnowlegeBase knowlegeBase = test.GetModel();
             Domain domain = knowlegeBase.Domains.Where(x => x.Name == "Предметы").First();
             if (domain.Values.Where(x => x.Text == name).Any())
                 throw new Exception("Предмет с таким названием уже есть в базе");
@@ -158,7 +160,7 @@ namespace ItemPlacementKnowlegeBase.Services
 
         public Item ChangeItemFromList(Item item, string name, string image)
         {
-            KnowlegeBase knowlegeBase = Test.Test.GetModel();
+            KnowlegeBase knowlegeBase = test.GetModel();
             Frame itemFrame = knowlegeBase[item.Name];
             if (!string.IsNullOrEmpty(name))
             {
@@ -181,11 +183,11 @@ namespace ItemPlacementKnowlegeBase.Services
         public void RemoveItemFromList(Item item)
         {
             items.Remove(item);
-            KnowlegeBase knowlegeBase = Test.Test.GetModel();
+            KnowlegeBase knowlegeBase = test.GetModel();
             Frame itemFrame = knowlegeBase[item.Name];
             Frame emptyFrame = knowlegeBase["Пустота"];
-            var test = knowlegeBase.Frames.Where(x => x.Slots.Where(y => y.Name == "Предмет" && y is FrameSlot && ((FrameSlot)y).Frame.Equals(itemFrame)).Any()).Select(x => x["Предмет"] as FrameSlot);
-            foreach (var cellItemSlot in test)
+            var cellItemSlots = knowlegeBase.Frames.Where(x => x.Slots.Where(y => y.Name == "Предмет" && y is FrameSlot && ((FrameSlot)y).Frame.Equals(itemFrame)).Any()).Select(x => x["Предмет"] as FrameSlot);
+            foreach (var cellItemSlot in cellItemSlots)
             {
                 cellItemSlot.Frame = emptyFrame;
             }

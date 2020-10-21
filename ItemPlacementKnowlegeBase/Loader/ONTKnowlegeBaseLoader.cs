@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ItemPlacementKnowlegeBase.Models;
 using System.Text.Json;
 using System.IO;
+using ItemPlacementKnowlegeBase.Loader.Model;
 
 namespace ItemPlacementKnowlegeBase.Loader
 {
@@ -117,15 +118,16 @@ namespace ItemPlacementKnowlegeBase.Loader
             foreach (var jRelation in jRelations.EnumerateArray())
             {
                 string name = jRelation.GetProperty(NAME).GetString();
-                string destId = jRelation.GetProperty(DEST_NODE_ID).GetString();
-                string sourceId = jRelation.GetProperty(SOURCE_NODE_ID).GetString();
+                int destId = Convert.ToInt32(jRelation.GetProperty(DEST_NODE_ID).GetString());
+                int sourceId = Convert.ToInt32(jRelation.GetProperty(SOURCE_NODE_ID).GetString());
+                int id = Convert.ToInt32(jRelation.GetProperty(ID).GetString());
                 Node dest = nodes.Find(_n => _n.id == destId);
                 Node source = nodes.Find(_n => _n.id == sourceId);
                 if (dest == null || source == null)
                 {
                     throw new ArgumentOutOfRangeException();
                 }
-                relations.Add(new Relation(dest, source, name));
+                relations.Add(new Relation(dest, source, name, id));
             }
         }
 
@@ -135,7 +137,7 @@ namespace ItemPlacementKnowlegeBase.Loader
             foreach (var jNode in jNodes.EnumerateArray())
             {
                 var name = jNode.GetProperty(NAME).GetString();
-                var id = jNode.GetProperty(ID).GetString();
+                var id = Convert.ToInt32(jNode.GetProperty(ID).GetString());
                 Node node = new Node(name, id);
                 nodes.Add(node);
                 JsonElement attributes = jNode.GetProperty(ATTRIBUTES);
@@ -200,79 +202,6 @@ namespace ItemPlacementKnowlegeBase.Loader
             return result;
         }
 
-        private class Node
-        {
-            public string name;
-            public string id;
-            public Dictionary<string, IAttribute> attributes;
-
-            public Node(string name, string id)
-            {
-                this.name = name;
-                this.id = id;
-                this.attributes = new Dictionary<string, IAttribute>();
-            }
-        }
-
-        private class Relation
-        {
-            public Node destination;
-            public Node source;
-            public string name;
-
-            public Relation(Node destination, Node source, string name)
-            {
-                this.destination = destination;
-                this.source = source;
-                this.name = name;
-            }
-        }
-        //маркерный интерфейс
-        private interface IAttribute { }
-        private class ArrayAttribute : IAttribute
-        {
-            public string[] items;
-
-            public ArrayAttribute(string[] items)
-            {
-                this.items = items;
-            }
-        }
-
-        private class DomainAttribute : IAttribute
-        {
-            public string domain;
-            public string value;
-            public bool isRequestable;
-
-            public DomainAttribute(string domain, string value, bool isRequestable)
-            {
-                this.domain = domain;
-                this.value = value;
-                this.isRequestable = isRequestable;
-            }
-        }
-
-        private class TextAttribute : IAttribute
-        {
-            public string value;
-
-            public TextAttribute(string value)
-            {
-                this.value = value;
-            }
-        }
-
-        private class FrameAttribute : IAttribute
-        {
-            public string value;
-            public bool isRequestable;
-
-            public FrameAttribute(string value, bool isRequestable)
-            {
-                this.value = value;
-                this.isRequestable = isRequestable;
-            }
-        }
+        
     }
 }

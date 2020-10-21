@@ -111,6 +111,8 @@
     <Compile Include="Gui\Item.cs" />
     <Compile Include="Images\ImagePathes.cs" />
     <Compile Include="Loader\ONTKnowlegeBaseLoader.cs" />
+    <Compile Include="Loader\Model.cs" />
+    <Compile Include="Loader\ONTKnowlegeBaseWriter.cs" />
     <Compile Include="Loader\XMLKnowlegeBaseLoader.cs" />
     <Compile Include="Main_form.cs">
       <SubType>Form</SubType>

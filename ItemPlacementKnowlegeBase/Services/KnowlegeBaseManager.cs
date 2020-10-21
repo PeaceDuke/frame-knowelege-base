@@ -1,4 +1,5 @@
 ﻿using ItemPlacementKnowlegeBase.Loader;
+using ItemPlacementKnowlegeBase.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,18 +12,12 @@ namespace ItemPlacementKnowlegeBase.Services
     {
         private static TestKnowlegeBaseProvider instance;
 
-        public static void Initialise(string filename)
+        public static void Initialise(KnowlegeBase knowlegeBase)
         {
-            Test.Test.Filename = filename;
-            instance = null;
+            instance = new TestKnowlegeBaseProvider(knowlegeBase);
         }
         public static TestKnowlegeBaseProvider get()
         {
-            if (instance == null)
-            {
-                instance = new TestKnowlegeBaseProvider();
-            }
-
             return instance;
         }
     }

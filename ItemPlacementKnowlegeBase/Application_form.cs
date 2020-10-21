@@ -18,10 +18,11 @@ namespace ItemPlacementKnowlegeBase
         public TestKnowlegeBaseProvider provider;
         public Application_form()
         {
+            provider = KnowlegeBaseManager.get();
+            var items = provider.LoadItems();
             InitializeComponent();
             //InicializeParts();
-            provider = KnowlegeBaseManager.get();
-            foreach(var item in provider.LoadItems())
+            foreach(var item in items)
             {
                 ListViewItem lvi = new ListViewItem(item.Name);
                 lvi.Tag = item;
