@@ -1,4 +1,6 @@
-﻿using ItemPlacementKnowlegeBase.Services;
+﻿using ItemPlacementKnowlegeBase.Loader;
+using ItemPlacementKnowlegeBase.Models;
+using ItemPlacementKnowlegeBase.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,13 +20,15 @@ namespace ItemPlacementKnowlegeBase
             InitializeComponent();
             bt_runApp.Enabled = false;
             bt_delete.Enabled = false;
+            bt_save.Enabled = false;
         }
 
         private void bt_runApp_Click(object sender, EventArgs e)
         {
             if (lv_kb.SelectedItems.Count > 0)
             {
-                KnowlegeBaseManager.Initialise(lv_kb.SelectedItems[0].Tag as string);
+                KnowlegeBaseData kbd = lv_kb.SelectedItems[0].Tag as KnowlegeBaseData;
+                KnowlegeBaseManager.Initialise(kbd.knowlegeBase);
                 Application_form appForm = new Application_form();
                 this.Visible = false;
                 appForm.ShowDialog();
@@ -41,7 +45,10 @@ namespace ItemPlacementKnowlegeBase
                 {
                     ListViewItem lvi = new ListViewItem(ofd.SafeFileName);
                     lvi.Name = ofd.FileName;
-                    lvi.Tag = ofd.FileName;
+                    lvi.Tag = new KnowlegeBaseData(
+                        ONTKnowlegeBaseLoader.Parce(ofd.FileName),
+                        ofd.FileName
+                        );
                     lv_kb.Items.Add(lvi);
                 }
             }
@@ -51,6 +58,7 @@ namespace ItemPlacementKnowlegeBase
         {
             bt_runApp.Enabled = lv_kb.SelectedItems.Count > 0;
             bt_delete.Enabled = lv_kb.SelectedItems.Count > 0;
+            bt_save.Enabled = lv_kb.SelectedItems.Count > 0;
         }
 
         private void bt_delete_Click(object sender, EventArgs e)
@@ -58,6 +66,30 @@ namespace ItemPlacementKnowlegeBase
             if(lv_kb.SelectedItems.Count > 0)
             {
                 lv_kb.Items.Remove(lv_kb.SelectedItems[0]);
+            }
+        }
+
+        private void bt_save_Click(object sender, EventArgs e)
+        {
+            if (lv_kb.SelectedItems.Count > 0)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                if(sfd.ShowDialog() == DialogResult.OK)
+                {
+                }
+            }
+
+        }
+
+        private class KnowlegeBaseData
+        {
+            public KnowlegeBase knowlegeBase;
+            public string filename;
+
+            public KnowlegeBaseData(KnowlegeBase knowlegeBase, string filename)
+            {
+                this.knowlegeBase = knowlegeBase;
+                this.filename = filename;
             }
         }
     }
