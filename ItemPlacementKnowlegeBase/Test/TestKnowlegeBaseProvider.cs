@@ -191,6 +191,10 @@ namespace ItemPlacementKnowlegeBase.Services
             {
                 cellItemSlot.Frame = emptyFrame;
             }
+            Domain domain = knowlegeBase.Domains.Where(x => x.Name == "Предметы").First();
+            domain.Values.Remove(domain[item.Name]);
+            Frame parent = itemFrame.Parent;
+            parent.Children.Remove(itemFrame);
             knowlegeBase.Frames.Remove(itemFrame);
         }
 
