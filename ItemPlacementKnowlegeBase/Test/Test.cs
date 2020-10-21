@@ -138,6 +138,11 @@ namespace ItemPlacementKnowlegeBase.Test
             Frame fieldFrame = reasoner.GetFrame("Поле");
             if(!inited)
             {
+                if (fieldFrame.Slots.Where(x => x is FrameSlot && !x.IsSystemSlot).Any())
+                {
+                    inited = true;
+                    return fieldFrame;
+                }
                 Frame cellFrame = reasoner.GetFrame("Клетка");
                 Frame emptyItem = reasoner.GetFrame("Пустота");
                 List<Frame> cellFrames = new List<Frame>();

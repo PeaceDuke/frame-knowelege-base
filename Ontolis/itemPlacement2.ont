@@ -1,519 +1,3034 @@
 {
-    "last_id": "48",
-    "namespaces": {
-        "ontolis-avis": "http://knova.ru/ontolis-avis",
-        "owl": "http://www.w3.org/2002/07/owl",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema",
-        "xsd": "http://www.w3.org/2001/XMLSchema"
+  "last_id": "230",
+  "namespaces": {
+    "ontolis-avis": "http://knova.ru/ontolis-avis",
+    "owl": "http://www.w3.org/2002/07/owl",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+    "xsd": "http://www.w3.org/2001/XMLSchema"
+  },
+  "nodes": [
+    {
+      "attributes": {},
+      "id": "1",
+      "name": "Домен",
+      "namespace": "ontolis-avis",
+      "position_x": 10,
+      "position_y": 333
     },
-    "nodes": [
-        {
-            "attributes": {
-            },
-            "id": "1",
-            "name": "Предмет",
-            "namespace": "",
-            "position_x": 330,
-            "position_y": 302
+    {
+      "attributes": {},
+      "id": "2",
+      "name": "Фрейм",
+      "namespace": "ontolis-avis",
+      "position_x": 10,
+      "position_y": 799
+    },
+    {
+      "attributes": {
+        "list": []
+      },
+      "id": "3",
+      "name": "Текст",
+      "namespace": "ontolis-avis",
+      "position_x": 295,
+      "position_y": 520
+    },
+    {
+      "attributes": {
+        "list": []
+      },
+      "id": "5",
+      "name": "Текст",
+      "namespace": "ontolis-avis",
+      "position_x": 202,
+      "position_y": 173
+    },
+    {
+      "attributes": {
+        "list": []
+      },
+      "id": "7",
+      "name": "Текст",
+      "namespace": "ontolis-avis",
+      "position_x": 157,
+      "position_y": 478
+    },
+    {
+      "attributes": {
+        "list": [
+          "Стол",
+          "Стул",
+          "Картина",
+          "Что-то",
+          "1",
+          "2"
+        ]
+      },
+      "id": "9",
+      "name": "Предметы",
+      "namespace": "ontolis-avis",
+      "position_x": 150,
+      "position_y": 276
+    },
+    {
+      "attributes": {
+        "list": [
+          "Запрещающее",
+          "Разрешающее"
+        ]
+      },
+      "id": "11",
+      "name": "Тип правила",
+      "namespace": "ontolis-avis",
+      "position_x": 115,
+      "position_y": 238
+    },
+    {
+      "attributes": {
+        "list": [
+          "Выше",
+          "Ниже",
+          "Слева",
+          "Справа",
+          "Вместо"
+        ]
+      },
+      "id": "13",
+      "name": "Расположение",
+      "namespace": "ontolis-avis",
+      "position_x": 203,
+      "position_y": 429
+    },
+    {
+      "attributes": {
+        "list": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "id": "15",
+      "name": "Числа",
+      "namespace": "ontolis-avis",
+      "position_x": 205,
+      "position_y": 289
+    },
+    {
+      "attributes": {
+        "Изображение": {
+          "type": "t",
+          "value": "../../Images/table.jpg"
         },
-        {
-            "attributes": {
-            },
-            "id": "2",
-            "name": "Домен",
-            "namespace": "",
-            "position_x": 785,
-            "position_y": 255
-        },
-        {
-          "attributes": {
-            "list": [
-              "Стол",
-              "Стул",
-              "Картина",
-              "Что-то"
-            ]
-          },
-            "id": "3",
-            "name": "Предметы",
-            "namespace": "",
-            "position_x": 751,
-            "position_y": 353
-        },
-        {
-            "attributes": {
-            },
-            "id": "5",
-            "name": "Фрейм",
-            "namespace": "",
-            "position_x": 428,
-            "position_y": 200
-        },
-        {
-          "attributes": {
-              "Изображение": {
-                "type": "t",
-                "value": "../../Images/table.jpg"
-              },
-              "Предмет": {
-                "domain": "Предметы",
-                "isRequestable": true,
-                "type": "d",
-                "value": "Стол"
-              }
-          },
-            "id": "8",
-            "name": "Стол",
-            "namespace": "",
-            "position_x": 203,
-            "position_y": 465
-        },
-        {
-            "attributes": {
-                "Изображение": {
-                    "type": "t",
-                    "value": "../../Images/chair.jpg"
-                },
-                "Предмет": {
-                    "domain": "Предметы",
-                    "isRequestable": true,
-                    "type": "d",
-                    "value": "Стул"
-                }
-            },
-            "id": "10",
-            "name": "Стул",
-            "namespace": "",
-            "position_x": 260,
-            "position_y": 475
-        },
-        {
-            "attributes": {
-                "Изображение": {
-                    "type": "t",
-                    "value": "../../Images/picture.jpg"
-                },
-                "Предмет": {
-                    "domain": "Предметы",
-                    "isRequestable": true,
-                    "type": "d",
-                    "value": "Картина"
-                }
-            },
-            "id": "12",
-            "name": "Картина",
-            "namespace": "",
-            "position_x": 324,
-            "position_y": 484
-        },
-        {
-            "attributes": {
-                "Размер": {
-                    "type": "t",
-                    "value": "5"
-                },
-                "Размер клетки": {
-                    "type": "t",
-                    "value": "64"
-                }
-            },
-            "id": "14",
-            "name": "Поле",
-            "namespace": "",
-            "position_x": 389,
-            "position_y": 384
-        },
-        {
-            "attributes": {
-            },
-            "id": "16",
-            "name": "Клетка",
-            "namespace": "",
-            "position_x": 445,
-            "position_y": 496
-        },
-        {
-            "attributes": {
-            },
-            "id": "19",
-            "name": "Правило",
-            "namespace": "",
-            "position_x": 610,
-            "position_y": 321
-        },
-        {
-            "attributes": {
-                "Объект": {
-                    "domain": "Предметы",
-                    "isRequestable": true,
-                    "type": "d",
-                    "value": "Стул"
-                },
-                "Объяснение": {
-                    "type": "t",
-                    "value": "Нельзя ставить стул справа стола"
-                },
-                "Расположение": {
-                    "domain": "Расположение",
-                    "isRequestable": true,
-                    "type": "d",
-                    "value": "Слева"
-                },
-                "Субъект": {
-                    "domain": "Предметы",
-                    "isRequestable": true,
-                    "type": "d",
-                    "value": "Стол"
-                },
-                "Тип правила": {
-                    "domain": "Тип правила",
-                    "isRequestable": true,
-                    "type": "d",
-                    "value": "Запрещающее"
-                }
-            },
-            "id": "21",
-            "name": "Отношение стола и стула",
-            "namespace": "",
-            "position_x": 538,
-            "position_y": 515
-        },
-        {
-            "attributes": {
-                "Объект": {
-                    "domain": "Предметы",
-                    "isRequestable": true,
-                    "type": "d",
-                    "value": "Стол"
-                },
-                "Объяснение": {
-                    "type": "t",
-                    "value": "Нельзя ставить картину рядом со столом"
-                },
-                "Субъект": {
-                    "domain": "Предметы",
-                    "isRequestable": true,
-                    "type": "d",
-                    "value": "Картина"
-                },
-                "Тип правила": {
-                    "domain": "Тип правила",
-                    "isRequestable": true,
-                    "type": "d",
-                    "value": "Разрешающее"
-                }
-            },
-            "id": "23",
-            "name": "Отношение стола и картины",
-            "namespace": "",
-            "position_x": 612,
-            "position_y": 568
-        },
-        {
-            "attributes": {
-                "Объект": {
-                    "domain": "Предметы",
-                    "isRequestable": true,
-                    "type": "d",
-                    "value": "Стул"
-                },
-                "Объяснение": {
-                    "type": "t",
-                    "value": "Нельзя ставить стул слева стола"
-                },
-                "Расположение": {
-                    "domain": "Расположение",
-                    "isRequestable": true,
-                    "type": "d",
-                    "value": "Справа"
-                },
-                "Субъект": {
-                    "domain": "Предметы",
-                    "isRequestable": true,
-                    "type": "d",
-                    "value": "Стол"
-                },
-                "Тип правила": {
-                    "domain": "Тип правила",
-                    "isRequestable": true,
-                    "type": "d",
-                    "value": "Запрещающее"
-                }
-            },
-            "id": "25",
-            "name": "Отношение стола и стула 2",
-            "namespace": "",
-            "position_x": 715,
-            "position_y": 516
-        },
-        {
-            "attributes": {
-            },
-            "id": "27",
-            "name": "Пустота",
-            "namespace": "",
-            "position_x": 200,
-            "position_y": 330
-        },
-        {
-            "attributes": {
-                "Клетка": {
-                    "isRequestable": true,
-                    "type": "f",
-                    "value": "Клетка"
-                }
-            },
-            "id": "29",
-            "name": "Клетки_корень",
-            "namespace": "",
-            "position_x": 465,
-            "position_y": 342
-        },
-        {
-            "attributes": {
-                "Правило": {
-                    "isRequestable": true,
-                    "type": "f",
-                    "value": "Правило"
-                }
-            },
-            "id": "32",
-            "name": "Событие",
-            "namespace": "",
-            "position_x": 574,
-            "position_y": 225
-        },
-        {
-            "attributes": {
-                "list": [
-                    "Запрещающее",
-                    "Разрешающее"
-                ]
-            },
-            "id": "43",
-            "name": "Тип правила",
-            "namespace": "",
-            "position_x": 882,
-            "position_y": 341
-        },
-        {
-            "attributes": {
-                "list": [
-                    "Выше",
-                    "Ниже",
-                    "Слева",
-                    "Справа",
-                    "Вместо"
-                ]
-            },
-            "id": "45",
-            "name": "Расположение",
-            "namespace": "",
-            "position_x": 975,
-            "position_y": 284
-        },
-        {
-          "attributes": {
-              "Изображение": {
-                "type": "t",
-                "value": "../../Images/table1.jpg"
-              },
-              "Предмет": {
-                "domain": "Предметы",
-                "isRequestable": true,
-                "type": "d",
-                "value": "Что-то"
-              }
-          },
-            "id": "47",
-            "name": "Что-то",
-            "namespace": "http://knova.ru/ontolis-avis",
-            "position_x": 0,
-            "position_y": 0
+        "Предмет": {
+          "type": "d",
+          "domain": "Предметы",
+          "isRequestable": true,
+          "value": "Стол"
         }
-    ],
-    "relations": [
-        {
-            "attributes": {
-            },
-            "destination_node_id": "2",
-            "id": "4",
-            "name": "is_a",
-            "namespace": "",
-            "source_node_id": "3"
+      },
+      "id": "17",
+      "name": "Стол",
+      "namespace": "ontolis-avis",
+      "position_x": 442,
+      "position_y": 778
+    },
+    {
+      "attributes": {
+        "Изображение": {
+          "type": "t",
+          "value": "../../Images/chair.jpg"
         },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "5",
-            "id": "7",
-            "name": "is_a",
-            "namespace": "",
-            "source_node_id": "1"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "1",
-            "id": "9",
-            "name": "is_a",
-            "namespace": "",
-            "source_node_id": "8"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "1",
-            "id": "11",
-            "name": "is_a",
-            "namespace": "",
-            "source_node_id": "10"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "1",
-            "id": "13",
-            "name": "is_a",
-            "namespace": "",
-            "source_node_id": "12"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "5",
-            "id": "15",
-            "name": "is_a",
-            "namespace": "",
-            "source_node_id": "14"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "16",
-            "id": "17",
-            "name": "",
-            "namespace": "",
-            "source_node_id": "16"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "5",
-            "id": "18",
-            "name": "is_a",
-            "namespace": "",
-            "source_node_id": "16"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "5",
-            "id": "20",
-            "name": "is_a",
-            "namespace": "",
-            "source_node_id": "19"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "19",
-            "id": "22",
-            "name": "is_a",
-            "namespace": "",
-            "source_node_id": "21"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "19",
-            "id": "24",
-            "name": "is_a",
-            "namespace": "",
-            "source_node_id": "23"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "19",
-            "id": "26",
-            "name": "is_a",
-            "namespace": "",
-            "source_node_id": "25"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "1",
-            "id": "28",
-            "name": "is_a",
-            "namespace": "",
-            "source_node_id": "27"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "5",
-            "id": "30",
-            "name": "is_a",
-            "namespace": "",
-            "source_node_id": "29"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "16",
-            "id": "31",
-            "name": "sub_frame",
-            "namespace": "",
-            "source_node_id": "29"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "5",
-            "id": "33",
-            "name": "is_a",
-            "namespace": "",
-            "source_node_id": "32"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "19",
-            "id": "34",
-            "name": "sub_frame",
-            "namespace": "",
-            "source_node_id": "32"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "2",
-            "id": "44",
-            "name": "is_a",
-            "namespace": "",
-            "source_node_id": "43"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "2",
-            "id": "46",
-            "name": "is_a",
-            "namespace": "",
-            "source_node_id": "45"
-        },
-        {
-            "attributes": {
-            },
-            "destination_node_id": "1",
-            "id": "48",
-            "name": "is_a",
-            "namespace": "http://knova.ru/ontolis-avis",
-            "source_node_id": "47"
+        "Предмет": {
+          "type": "d",
+          "domain": "Предметы",
+          "isRequestable": true,
+          "value": "Стул"
         }
-    ],
-    "visualize_ont_path": ""
+      },
+      "id": "18",
+      "name": "Стул",
+      "namespace": "ontolis-avis",
+      "position_x": 385,
+      "position_y": 1021
+    },
+    {
+      "attributes": {
+        "Изображение": {
+          "type": "t",
+          "value": "../../Images/picture.jpg"
+        },
+        "Предмет": {
+          "type": "d",
+          "domain": "Предметы",
+          "isRequestable": true,
+          "value": "Картина"
+        }
+      },
+      "id": "19",
+      "name": "Картина",
+      "namespace": "ontolis-avis",
+      "position_x": 314,
+      "position_y": 996
+    },
+    {
+      "attributes": {},
+      "id": "20",
+      "name": "Пустота",
+      "namespace": "ontolis-avis",
+      "position_x": 287,
+      "position_y": 1018
+    },
+    {
+      "attributes": {
+        "Изображение": {
+          "type": "t",
+          "value": "../../Images/table1.jpg"
+        },
+        "Предмет": {
+          "type": "d",
+          "domain": "Предметы",
+          "isRequestable": true,
+          "value": "Что-то"
+        }
+      },
+      "id": "21",
+      "name": "Что-то",
+      "namespace": "ontolis-avis",
+      "position_x": 266,
+      "position_y": 929
+    },
+    {
+      "attributes": {
+        "Предмет": {
+          "type": "d",
+          "domain": "Предметы",
+          "isRequestable": true,
+          "value": "1"
+        },
+        "Изображение": {
+          "type": "t",
+          "value": ""
+        }
+      },
+      "id": "22",
+      "name": "1",
+      "namespace": "ontolis-avis",
+      "position_x": 284,
+      "position_y": 1039
+    },
+    {
+      "attributes": {
+        "Предмет": {
+          "type": "d",
+          "domain": "Предметы",
+          "isRequestable": true,
+          "value": "2"
+        },
+        "Изображение": {
+          "type": "t",
+          "value": ""
+        }
+      },
+      "id": "23",
+      "name": "2",
+      "namespace": "ontolis-avis",
+      "position_x": 278,
+      "position_y": 896
+    },
+    {
+      "attributes": {},
+      "id": "24",
+      "name": "Предмет",
+      "namespace": "ontolis-avis",
+      "position_x": 160,
+      "position_y": 959
+    },
+    {
+      "attributes": {
+        "Размер": {
+          "type": "t",
+          "value": "5"
+        },
+        "Размер клетки": {
+          "type": "t",
+          "value": "64"
+        },
+        "Клетка0:0": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:0"
+        },
+        "Клетка0:1": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:1"
+        },
+        "Клетка0:2": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:2"
+        },
+        "Клетка0:3": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:3"
+        },
+        "Клетка0:4": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:4"
+        },
+        "Клетка1:0": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:0"
+        },
+        "Клетка1:1": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:1"
+        },
+        "Клетка1:2": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:2"
+        },
+        "Клетка1:3": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:3"
+        },
+        "Клетка1:4": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:4"
+        },
+        "Клетка2:0": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:0"
+        },
+        "Клетка2:1": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:1"
+        },
+        "Клетка2:2": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:2"
+        },
+        "Клетка2:3": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:3"
+        },
+        "Клетка2:4": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:4"
+        },
+        "Клетка3:0": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:0"
+        },
+        "Клетка3:1": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:1"
+        },
+        "Клетка3:2": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:2"
+        },
+        "Клетка3:3": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:3"
+        },
+        "Клетка3:4": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:4"
+        },
+        "Клетка4:0": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:0"
+        },
+        "Клетка4:1": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:1"
+        },
+        "Клетка4:2": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:2"
+        },
+        "Клетка4:3": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:3"
+        },
+        "Клетка4:4": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:4"
+        }
+      },
+      "id": "25",
+      "name": "Поле",
+      "namespace": "ontolis-avis",
+      "position_x": 128,
+      "position_y": 712
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "0"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "0"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:1"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:0"
+        }
+      },
+      "id": "26",
+      "name": "Клетка0:0",
+      "namespace": "ontolis-avis",
+      "position_x": 319,
+      "position_y": 799
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "0"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "1"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:0"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:2"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:1"
+        }
+      },
+      "id": "27",
+      "name": "Клетка0:1",
+      "namespace": "ontolis-avis",
+      "position_x": 337,
+      "position_y": 897
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "0"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "2"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:1"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:3"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:2"
+        }
+      },
+      "id": "28",
+      "name": "Клетка0:2",
+      "namespace": "ontolis-avis",
+      "position_x": 317,
+      "position_y": 941
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "0"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "3"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:2"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:4"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:3"
+        }
+      },
+      "id": "29",
+      "name": "Клетка0:3",
+      "namespace": "ontolis-avis",
+      "position_x": 346,
+      "position_y": 741
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "0"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "4"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:3"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:4"
+        }
+      },
+      "id": "30",
+      "name": "Клетка0:4",
+      "namespace": "ontolis-avis",
+      "position_x": 320,
+      "position_y": 685
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "1"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "0"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:0"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:1"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:0"
+        }
+      },
+      "id": "31",
+      "name": "Клетка1:0",
+      "namespace": "ontolis-avis",
+      "position_x": 365,
+      "position_y": 805
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "1"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "1"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:1"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:0"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:2"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:1"
+        }
+      },
+      "id": "32",
+      "name": "Клетка1:1",
+      "namespace": "ontolis-avis",
+      "position_x": 380,
+      "position_y": 734
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "1"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "2"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:2"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:1"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "2"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:3"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:2"
+        }
+      },
+      "id": "33",
+      "name": "Клетка1:2",
+      "namespace": "ontolis-avis",
+      "position_x": 376,
+      "position_y": 735
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "1"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "3"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:3"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:2"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:4"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:3"
+        }
+      },
+      "id": "34",
+      "name": "Клетка1:3",
+      "namespace": "ontolis-avis",
+      "position_x": 377,
+      "position_y": 967
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "1"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "4"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка0:4"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:3"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:4"
+        }
+      },
+      "id": "35",
+      "name": "Клетка1:4",
+      "namespace": "ontolis-avis",
+      "position_x": 316,
+      "position_y": 757
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "2"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "0"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:0"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Картина"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:1"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:0"
+        }
+      },
+      "id": "36",
+      "name": "Клетка2:0",
+      "namespace": "ontolis-avis",
+      "position_x": 354,
+      "position_y": 815
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "2"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "1"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:1"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:0"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Стол"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:2"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:1"
+        }
+      },
+      "id": "37",
+      "name": "Клетка2:1",
+      "namespace": "ontolis-avis",
+      "position_x": 386,
+      "position_y": 868
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "2"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "2"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:2"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:1"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:3"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:2"
+        }
+      },
+      "id": "38",
+      "name": "Клетка2:2",
+      "namespace": "ontolis-avis",
+      "position_x": 357,
+      "position_y": 801
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "2"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "3"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:3"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:2"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Стол"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:4"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:3"
+        }
+      },
+      "id": "39",
+      "name": "Клетка2:3",
+      "namespace": "ontolis-avis",
+      "position_x": 383,
+      "position_y": 726
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "2"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "4"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка1:4"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:3"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:4"
+        }
+      },
+      "id": "40",
+      "name": "Клетка2:4",
+      "namespace": "ontolis-avis",
+      "position_x": 369,
+      "position_y": 947
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "3"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "0"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:0"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:1"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:0"
+        }
+      },
+      "id": "41",
+      "name": "Клетка3:0",
+      "namespace": "ontolis-avis",
+      "position_x": 339,
+      "position_y": 701
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "3"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "1"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:1"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:0"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:2"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:1"
+        }
+      },
+      "id": "42",
+      "name": "Клетка3:1",
+      "namespace": "ontolis-avis",
+      "position_x": 366,
+      "position_y": 823
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "3"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "2"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:2"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:1"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:3"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:2"
+        }
+      },
+      "id": "43",
+      "name": "Клетка3:2",
+      "namespace": "ontolis-avis",
+      "position_x": 314,
+      "position_y": 883
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "3"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "3"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:3"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:2"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Картина"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:4"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:3"
+        }
+      },
+      "id": "44",
+      "name": "Клетка3:3",
+      "namespace": "ontolis-avis",
+      "position_x": 324,
+      "position_y": 722
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "3"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "4"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка2:4"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:3"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Справа": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:4"
+        }
+      },
+      "id": "45",
+      "name": "Клетка3:4",
+      "namespace": "ontolis-avis",
+      "position_x": 350,
+      "position_y": 722
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "4"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "0"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:0"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:1"
+        }
+      },
+      "id": "46",
+      "name": "Клетка4:0",
+      "namespace": "ontolis-avis",
+      "position_x": 301,
+      "position_y": 933
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "4"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "1"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:1"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:0"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:2"
+        }
+      },
+      "id": "47",
+      "name": "Клетка4:1",
+      "namespace": "ontolis-avis",
+      "position_x": 382,
+      "position_y": 700
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "4"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "2"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:2"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:1"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:3"
+        }
+      },
+      "id": "48",
+      "name": "Клетка4:2",
+      "namespace": "ontolis-avis",
+      "position_x": 309,
+      "position_y": 856
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "4"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "3"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:3"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:2"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        },
+        "Ниже": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:4"
+        }
+      },
+      "id": "49",
+      "name": "Клетка4:3",
+      "namespace": "ontolis-avis",
+      "position_x": 349,
+      "position_y": 690
+    },
+    {
+      "attributes": {
+        "X": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "4"
+        },
+        "Y": {
+          "type": "d",
+          "domain": "Числа",
+          "isRequestable": true,
+          "value": "4"
+        },
+        "Слева": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка3:4"
+        },
+        "Выше": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Клетка4:3"
+        },
+        "Предмет": {
+          "type": "f",
+          "isRequestable": false,
+          "value": "Пустота"
+        }
+      },
+      "id": "50",
+      "name": "Клетка4:4",
+      "namespace": "ontolis-avis",
+      "position_x": 368,
+      "position_y": 885
+    },
+    {
+      "attributes": {},
+      "id": "51",
+      "name": "Клетка",
+      "namespace": "ontolis-avis",
+      "position_x": 193,
+      "position_y": 834
+    },
+    {
+      "attributes": {
+        "Объект": {
+          "type": "d",
+          "domain": "Предметы",
+          "isRequestable": true,
+          "value": "Стул"
+        },
+        "Объяснение": {
+          "type": "t",
+          "value": "Нельзя ставить стул справа стола"
+        },
+        "Расположение": {
+          "type": "d",
+          "domain": "Расположение",
+          "isRequestable": true,
+          "value": "Слева"
+        },
+        "Субъект": {
+          "type": "d",
+          "domain": "Предметы",
+          "isRequestable": true,
+          "value": "Стол"
+        },
+        "Тип правила": {
+          "type": "d",
+          "domain": "Тип правила",
+          "isRequestable": true,
+          "value": "Запрещающее"
+        }
+      },
+      "id": "52",
+      "name": "Отношение стола и стула",
+      "namespace": "ontolis-avis",
+      "position_x": 357,
+      "position_y": 759
+    },
+    {
+      "attributes": {
+        "Объект": {
+          "type": "d",
+          "domain": "Предметы",
+          "isRequestable": true,
+          "value": "Стол"
+        },
+        "Объяснение": {
+          "type": "t",
+          "value": "Нельзя ставить картину рядом со столом"
+        },
+        "Субъект": {
+          "type": "d",
+          "domain": "Предметы",
+          "isRequestable": true,
+          "value": "Картина"
+        },
+        "Тип правила": {
+          "type": "d",
+          "domain": "Тип правила",
+          "isRequestable": true,
+          "value": "Разрешающее"
+        }
+      },
+      "id": "53",
+      "name": "Отношение стола и картины",
+      "namespace": "ontolis-avis",
+      "position_x": 356,
+      "position_y": 822
+    },
+    {
+      "attributes": {
+        "Объект": {
+          "type": "d",
+          "domain": "Предметы",
+          "isRequestable": true,
+          "value": "Стул"
+        },
+        "Объяснение": {
+          "type": "t",
+          "value": "Нельзя ставить стул слева стола"
+        },
+        "Расположение": {
+          "type": "d",
+          "domain": "Расположение",
+          "isRequestable": true,
+          "value": "Справа"
+        },
+        "Субъект": {
+          "type": "d",
+          "domain": "Предметы",
+          "isRequestable": true,
+          "value": "Стол"
+        },
+        "Тип правила": {
+          "type": "d",
+          "domain": "Тип правила",
+          "isRequestable": true,
+          "value": "Запрещающее"
+        }
+      },
+      "id": "54",
+      "name": "Отношение стола и стула 2",
+      "namespace": "ontolis-avis",
+      "position_x": 276,
+      "position_y": 691
+    },
+    {
+      "attributes": {},
+      "id": "55",
+      "name": "Правило",
+      "namespace": "ontolis-avis",
+      "position_x": 168,
+      "position_y": 696
+    },
+    {
+      "attributes": {
+        "Клетка": {
+          "type": "f",
+          "isRequestable": true,
+          "value": "Клетка"
+        }
+      },
+      "id": "56",
+      "name": "Клетки_корень",
+      "namespace": "ontolis-avis",
+      "position_x": 190,
+      "position_y": 675
+    },
+    {
+      "attributes": {
+        "Правило": {
+          "type": "f",
+          "isRequestable": true,
+          "value": "Правило"
+        }
+      },
+      "id": "57",
+      "name": "Событие",
+      "namespace": "ontolis-avis",
+      "position_x": 142,
+      "position_y": 801
+    }
+  ],
+  "relations": [
+    {
+      "attributes": {},
+      "destination_node_id": "1",
+      "id": "4",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "3"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "1",
+      "id": "6",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "5"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "1",
+      "id": "8",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "7"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "1",
+      "id": "10",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "9"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "1",
+      "id": "12",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "11"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "1",
+      "id": "14",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "13"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "1",
+      "id": "16",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "15"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "24",
+      "id": "58",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "17"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "24",
+      "id": "59",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "18"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "24",
+      "id": "60",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "19"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "24",
+      "id": "61",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "20"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "24",
+      "id": "62",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "21"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "24",
+      "id": "63",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "22"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "24",
+      "id": "64",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "23"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "2",
+      "id": "65",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "24"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "2",
+      "id": "66",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "26",
+      "id": "67",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "27",
+      "id": "68",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "28",
+      "id": "69",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "29",
+      "id": "70",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "30",
+      "id": "71",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "31",
+      "id": "72",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "32",
+      "id": "73",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "33",
+      "id": "74",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "34",
+      "id": "75",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "35",
+      "id": "76",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "36",
+      "id": "77",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "37",
+      "id": "78",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "38",
+      "id": "79",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "39",
+      "id": "80",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "40",
+      "id": "81",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "41",
+      "id": "82",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "42",
+      "id": "83",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "43",
+      "id": "84",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "44",
+      "id": "85",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "45",
+      "id": "86",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "46",
+      "id": "87",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "47",
+      "id": "88",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "48",
+      "id": "89",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "49",
+      "id": "90",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "50",
+      "id": "91",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "25"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "92",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "26"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "93",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "26"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "27",
+      "id": "94",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "26"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "31",
+      "id": "95",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "26"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "96",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "27"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "26",
+      "id": "97",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "27"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "98",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "27"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "28",
+      "id": "99",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "27"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "32",
+      "id": "100",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "27"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "101",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "28"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "27",
+      "id": "102",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "28"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "103",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "28"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "29",
+      "id": "104",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "28"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "33",
+      "id": "105",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "28"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "106",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "29"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "28",
+      "id": "107",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "29"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "108",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "29"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "30",
+      "id": "109",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "29"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "34",
+      "id": "110",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "29"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "111",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "30"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "29",
+      "id": "112",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "30"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "113",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "30"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "35",
+      "id": "114",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "30"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "115",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "31"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "26",
+      "id": "116",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "31"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "117",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "31"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "32",
+      "id": "118",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "31"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "36",
+      "id": "119",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "31"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "120",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "32"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "27",
+      "id": "121",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "32"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "31",
+      "id": "122",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "32"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "123",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "32"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "33",
+      "id": "124",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "32"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "37",
+      "id": "125",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "32"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "126",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "33"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "28",
+      "id": "127",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "33"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "32",
+      "id": "128",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "33"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "23",
+      "id": "129",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "33"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "34",
+      "id": "130",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "33"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "38",
+      "id": "131",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "33"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "132",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "34"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "29",
+      "id": "133",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "34"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "33",
+      "id": "134",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "34"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "135",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "34"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "35",
+      "id": "136",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "34"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "39",
+      "id": "137",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "34"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "138",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "35"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "30",
+      "id": "139",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "35"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "34",
+      "id": "140",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "35"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "141",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "35"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "40",
+      "id": "142",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "35"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "143",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "36"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "31",
+      "id": "144",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "36"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "19",
+      "id": "145",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "36"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "37",
+      "id": "146",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "36"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "41",
+      "id": "147",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "36"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "148",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "37"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "32",
+      "id": "149",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "37"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "36",
+      "id": "150",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "37"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "17",
+      "id": "151",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "37"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "38",
+      "id": "152",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "37"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "42",
+      "id": "153",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "37"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "154",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "38"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "33",
+      "id": "155",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "38"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "37",
+      "id": "156",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "38"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "157",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "38"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "39",
+      "id": "158",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "38"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "43",
+      "id": "159",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "38"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "160",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "39"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "34",
+      "id": "161",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "39"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "38",
+      "id": "162",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "39"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "17",
+      "id": "163",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "39"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "40",
+      "id": "164",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "39"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "44",
+      "id": "165",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "39"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "166",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "40"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "35",
+      "id": "167",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "40"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "39",
+      "id": "168",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "40"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "169",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "40"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "45",
+      "id": "170",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "40"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "171",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "41"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "36",
+      "id": "172",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "41"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "173",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "41"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "42",
+      "id": "174",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "41"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "46",
+      "id": "175",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "41"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "176",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "42"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "37",
+      "id": "177",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "42"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "41",
+      "id": "178",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "42"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "179",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "42"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "43",
+      "id": "180",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "42"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "47",
+      "id": "181",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "42"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "182",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "43"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "38",
+      "id": "183",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "43"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "42",
+      "id": "184",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "43"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "185",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "43"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "44",
+      "id": "186",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "43"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "48",
+      "id": "187",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "43"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "188",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "44"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "39",
+      "id": "189",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "44"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "43",
+      "id": "190",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "44"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "19",
+      "id": "191",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "44"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "45",
+      "id": "192",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "44"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "49",
+      "id": "193",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "44"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "194",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "45"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "40",
+      "id": "195",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "45"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "44",
+      "id": "196",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "45"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "197",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "45"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "50",
+      "id": "198",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "45"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "199",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "46"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "41",
+      "id": "200",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "46"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "201",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "46"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "47",
+      "id": "202",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "46"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "203",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "47"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "42",
+      "id": "204",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "47"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "46",
+      "id": "205",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "47"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "206",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "47"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "48",
+      "id": "207",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "47"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "208",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "48"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "43",
+      "id": "209",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "48"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "47",
+      "id": "210",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "48"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "211",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "48"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "49",
+      "id": "212",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "48"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "213",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "49"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "44",
+      "id": "214",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "49"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "48",
+      "id": "215",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "49"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "216",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "49"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "50",
+      "id": "217",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "49"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "218",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "50"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "45",
+      "id": "219",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "50"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "49",
+      "id": "220",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "50"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "20",
+      "id": "221",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "50"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "2",
+      "id": "222",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "51"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "55",
+      "id": "223",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "52"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "55",
+      "id": "224",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "53"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "55",
+      "id": "225",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "54"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "2",
+      "id": "226",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "55"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "2",
+      "id": "227",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "56"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "51",
+      "id": "228",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "56"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "2",
+      "id": "229",
+      "name": "is_a",
+      "namespace": "ontolis-avis",
+      "source_node_id": "57"
+    },
+    {
+      "attributes": {},
+      "destination_node_id": "55",
+      "id": "230",
+      "name": "sub_frame",
+      "namespace": "ontolis-avis",
+      "source_node_id": "57"
+    }
+  ],
+  "visualize_ont_path": ""
 }

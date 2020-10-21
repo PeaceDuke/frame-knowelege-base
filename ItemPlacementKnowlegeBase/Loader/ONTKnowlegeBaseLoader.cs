@@ -53,6 +53,7 @@ namespace ItemPlacementKnowlegeBase.Loader
                 AddAttributes(frame, child.source, knowlegeBase);
                 knowlegeBase.Frames.Add(frame);
             }
+            BoundSubframes(relations, knowlegeBase);
         }
 
         private static void AddChildFrames(Node parentNode, List<Node> nodes, List<Relation> relations, KnowlegeBase knowlegeBase, Frame parent)
@@ -87,13 +88,32 @@ namespace ItemPlacementKnowlegeBase.Loader
                     Slot slot = new TextSlot(attrib.Key, textAttribute.value, false, false, false);
                     frame.Slots.Add(slot);
                 }
-                if (attrib.Value is FrameAttribute)
+                //if (attrib.Value is FrameAttribute)
+                //{
+                //    FrameAttribute frameAttribute = attrib.Value as FrameAttribute;
+                //    Slot slot = new FrameSlot(attrib.Key, null, false, frameAttribute.isRequestable, false);
+                //    frame.Slots.Add(slot);
+                //}
+            }
+        }
+
+        private static void BoundSubframes(List<Relation> relations, KnowlegeBase knowlegeBase)
+        {
+            var subFrames = relations.FindAll(_r => _r.name == "sub_frame");
+           foreach(var relation in subFrames)
+            {
+                var atributes = relation.source.attributes;
+                var a = atributes.Where(x => x.Value is FrameAttribute && ((FrameAttribute)x.Value).value == relation.destination.name);
+                if(a.Any())
                 {
-                    FrameAttribute frameAttribute = attrib.Value as FrameAttribute;
-                    Slot slot = new FrameSlot(attrib.Key, knowlegeBase[frameAttribute.value], false, frameAttribute.isRequestable, false);
-                    frame.Slots.Add(slot);
+                    var atribute = a.First();
+                    var destination = knowlegeBase[relation.destination.name];
+                    var source = knowlegeBase[relation.source.name];
+                    Slot slot = new FrameSlot(atribute.Key, destination, false, ((FrameAttribute)atribute.Value).isRequestable, false);
+                    source.Slots.Add(slot);
                 }
             }
+
         }
 
         private static void AddDomains(KnowlegeBase knowlegeBase, List<Node> nodes, List<Relation> relations)

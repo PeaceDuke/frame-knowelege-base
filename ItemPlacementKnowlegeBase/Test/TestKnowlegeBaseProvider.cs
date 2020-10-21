@@ -37,18 +37,24 @@ namespace ItemPlacementKnowlegeBase.Services
 
         public Field LoadField()
         {
+            return LoadField(false);
+        }
+
+        public Field LoadField(bool skipCells)
+        {
             Frame fieldFrame = test.GetFieldFrame();
             List<Frame> cellFrames = new List<Frame>(fieldFrame.Slots.Where(x => !x.IsSystemSlot && x is FrameSlot).Select(x => ((FrameSlot)x).Frame));
             field.Cells.Clear();
-            foreach (Frame cellFrame in cellFrames)
-            {
-                Cell cell = new Cell(int.Parse(cellFrame["X"].ValueAsString), int.Parse(cellFrame["Y"].ValueAsString));
-                Item item = getItem(cellFrame["Предмет"].ValueAsString);
-                if (item != null)
-                    cell.Item = item;
-                field.Cells.Add(cell);
+            if(!skipCells)
+                foreach (Frame cellFrame in cellFrames)
+                {
+                    Cell cell = new Cell(int.Parse(cellFrame["X"].ValueAsString), int.Parse(cellFrame["Y"].ValueAsString));
+                    Item item = getItem(cellFrame["Предмет"].ValueAsString);
+                    if (item != null)
+                        cell.Item = item;
+                    field.Cells.Add(cell);
 
-            }
+                }
             return field;
         }
 

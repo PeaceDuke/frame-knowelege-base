@@ -24,7 +24,7 @@ namespace ItemPlacementKnowlegeBase.Gui
         Font font = new Font(FontFamily.Families[39], 13);
         public GridDrawer(PictureBox canvas, Label label)
         {
-            var field = KnowlegeBaseManager.get().LoadField();
+            var field = KnowlegeBaseManager.get().LoadField(true);
             Width = field.Width;
             Height = field.Heigth;
             CellSize = field.CellSize;

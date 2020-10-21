@@ -180,6 +180,7 @@ namespace ItemPlacementKnowlegeBase.Loader
                 jsonWriter.WriteString("visualize_ont_path", "");
                 jsonWriter.WriteEndObject();
             }
+            stream.Close();
         }
 
         private static Dictionary<int, Vector2> GeneratePosition(List<Node> nodes, List<Relation> relations)
