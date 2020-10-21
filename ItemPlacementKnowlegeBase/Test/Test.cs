@@ -41,13 +41,33 @@ namespace ItemPlacementKnowlegeBase.Test
                 new DomainValue("Вместо"),
             }),
         };
+        private static string filename = "";
+        public static string Filename
+        {
+            get
+            {
+                return filename;
+            }
+            set
+            {
+                filename = value;
+                reasoner = new Reasoner(TestFrameModel);
+            }
+        }
         private static KnowlegeBase testFrameModel = null;
         private static KnowlegeBase TestFrameModel
         {
             get
             {
-                var frames = new[]
+                if (!String.IsNullOrWhiteSpace(filename))
                 {
+                    return ONTKnowlegeBaseLoader.Parce(filename);
+                }
+                else
+                {
+
+                    var frames = new[]
+                    {
                     new Frame("Предмет"),                       //0
                     new Frame("Напольный предмет"),             //1
                     new Frame("Стол"),                          //2
@@ -64,81 +84,76 @@ namespace ItemPlacementKnowlegeBase.Test
                     new Frame("Клетки_корень"),                       //13
                 };
 
-                var frameModel = new KnowlegeBase();
+                    var frameModel = new KnowlegeBase();
 
-                //frames[2].Slots.Add(new DomainSlot("Предмет", domains[2], domains[2][0]));
-                frames[2].Slots.Add(new DomainSlot("Предмет", domains[2], domains[2][0], false, true));
-                frames[2].Slots.Add(new TextSlot("Изображение", "table"));
-                frames[2].Parent = frames[0];
+                    //frames[2].Slots.Add(new DomainSlot("Предмет", domains[2], domains[2][0]));
+                    frames[2].Slots.Add(new DomainSlot("Предмет", domains[2], domains[2][0], false, true));
+                    frames[2].Slots.Add(new TextSlot("Изображение", "table"));
+                    frames[2].Parent = frames[0];
 
-                //frames[3].Slots.Add(new DomainSlot("Предмет", domains[2], domains[2][1]));
-                frames[3].Slots.Add(new DomainSlot("Предмет", domains[2], domains[2][1], false, true));
-                frames[3].Slots.Add(new TextSlot("Изображение", "chair"));
-                frames[3].Parent = frames[0];
+                    //frames[3].Slots.Add(new DomainSlot("Предмет", domains[2], domains[2][1]));
+                    frames[3].Slots.Add(new DomainSlot("Предмет", domains[2], domains[2][1], false, true));
+                    frames[3].Slots.Add(new TextSlot("Изображение", "chair"));
+                    frames[3].Parent = frames[0];
 
-                //frames[4].Slots.Add(new DomainSlot("Предмет", domains[2], domains[2][2]));
-                frames[4].Slots.Add(new DomainSlot("Предмет", domains[2], domains[2][2], false, true));
-                frames[4].Slots.Add(new TextSlot("Изображение", "picture"));
-                frames[4].Parent = frames[0];
+                    //frames[4].Slots.Add(new DomainSlot("Предмет", domains[2], domains[2][2]));
+                    frames[4].Slots.Add(new DomainSlot("Предмет", domains[2], domains[2][2], false, true));
+                    frames[4].Slots.Add(new TextSlot("Изображение", "picture"));
+                    frames[4].Parent = frames[0];
 
-                frames[5].Slots.Add(new TextSlot("Размер", "5"));
-                frames[5].Slots.Add(new TextSlot("Размер клетки", "64"));
+                    frames[5].Slots.Add(new TextSlot("Размер", "5"));
+                    frames[5].Slots.Add(new TextSlot("Размер клетки", "64"));
 
-                frames[8].Slots.Add(new FrameSlot("Правило", frames[7], false, true));
+                    frames[8].Slots.Add(new FrameSlot("Правило", frames[7], false, true));
 
-                //frames[9].Slots.Add(new FrameSlot("Объект", frames[3], false, true));
-                //frames[9].Slots.Add(new FrameSlot("Субъект", frames[2], false, true));
-                frames[9].Slots.Add(new DomainSlot("Объект", domains[2], domains[2][1], false, true));
-                frames[9].Slots.Add(new DomainSlot("Субъект", domains[2], domains[2][0], false, true));
-                frames[9].Slots.Add(new DomainSlot("Расположение", domains[3], domains[3][2], false, true));
-                frames[9].Slots.Add(new DomainSlot("Тип правила", domains[1], domains[1][0], false, true));
-                frames[9].Slots.Add(new TextSlot("Объяснение", "Нельзя ставить стул справа стола"));
-                frames[9].Parent = frames[7];
+                    //frames[9].Slots.Add(new FrameSlot("Объект", frames[3], false, true));
+                    //frames[9].Slots.Add(new FrameSlot("Субъект", frames[2], false, true));
+                    frames[9].Slots.Add(new DomainSlot("Объект", domains[2], domains[2][1], false, true));
+                    frames[9].Slots.Add(new DomainSlot("Субъект", domains[2], domains[2][0], false, true));
+                    frames[9].Slots.Add(new DomainSlot("Расположение", domains[3], domains[3][2], false, true));
+                    frames[9].Slots.Add(new DomainSlot("Тип правила", domains[1], domains[1][0], false, true));
+                    frames[9].Slots.Add(new TextSlot("Объяснение", "Нельзя ставить стул справа стола"));
+                    frames[9].Parent = frames[7];
 
-                //frames[10].Slots.Add(new FrameSlot("Объект", frames[2], false, true));
-                //frames[10].Slots.Add(new FrameSlot("Субъект", frames[4], false, true));
-                frames[10].Slots.Add(new DomainSlot("Объект", domains[2], domains[2][0], false, true));
-                frames[10].Slots.Add(new DomainSlot("Субъект", domains[2], domains[2][2], false, true));
-                //frames[10].Slots.Add(new DomainSlot("Расположение", domains[3], domains[3][3], false, true));
-                frames[10].Slots.Add(new DomainSlot("Тип правила", domains[1], domains[1][1],false, true));
-                frames[10].Slots.Add(new TextSlot("Объяснение", "Нельзя ставить картину рядом со столом"));
-                frames[10].Parent = frames[7];
+                    //frames[10].Slots.Add(new FrameSlot("Объект", frames[2], false, true));
+                    //frames[10].Slots.Add(new FrameSlot("Субъект", frames[4], false, true));
+                    frames[10].Slots.Add(new DomainSlot("Объект", domains[2], domains[2][0], false, true));
+                    frames[10].Slots.Add(new DomainSlot("Субъект", domains[2], domains[2][2], false, true));
+                    //frames[10].Slots.Add(new DomainSlot("Расположение", domains[3], domains[3][3], false, true));
+                    frames[10].Slots.Add(new DomainSlot("Тип правила", domains[1], domains[1][1], false, true));
+                    frames[10].Slots.Add(new TextSlot("Объяснение", "Нельзя ставить картину рядом со столом"));
+                    frames[10].Parent = frames[7];
 
-                //frames[11].Slots.Add(new FrameSlot("Объект", frames[3], false, true));
-                //frames[11].Slots.Add(new FrameSlot("Субъект", frames[2], false, true));
-                frames[11].Slots.Add(new DomainSlot("Объект", domains[2], domains[2][1], false, true));
-                frames[11].Slots.Add(new DomainSlot("Субъект", domains[2], domains[2][0], false, true));
-                frames[11].Slots.Add(new DomainSlot("Расположение", domains[3], domains[3][3], false, true));
-                frames[11].Slots.Add(new DomainSlot("Тип правила", domains[1], domains[1][0], false, true));
-                frames[11].Slots.Add(new TextSlot("Объяснение", "Нельзя ставить стул слева стола"));
-                frames[11].Parent = frames[7];
+                    //frames[11].Slots.Add(new FrameSlot("Объект", frames[3], false, true));
+                    //frames[11].Slots.Add(new FrameSlot("Субъект", frames[2], false, true));
+                    frames[11].Slots.Add(new DomainSlot("Объект", domains[2], domains[2][1], false, true));
+                    frames[11].Slots.Add(new DomainSlot("Субъект", domains[2], domains[2][0], false, true));
+                    frames[11].Slots.Add(new DomainSlot("Расположение", domains[3], domains[3][3], false, true));
+                    frames[11].Slots.Add(new DomainSlot("Тип правила", domains[1], domains[1][0], false, true));
+                    frames[11].Slots.Add(new TextSlot("Объяснение", "Нельзя ставить стул слева стола"));
+                    frames[11].Parent = frames[7];
 
-                frames[12].Parent = frames[0];
+                    frames[12].Parent = frames[0];
 
-                frames[13].Slots.Add(new FrameSlot("Клетка", frames[6], false, true));
+                    frames[13].Slots.Add(new FrameSlot("Клетка", frames[6], false, true));
 
-                foreach (var domain in domains)
-                {
-                    frameModel.Domains.Add(domain);
-                }
+                    foreach (var domain in domains)
+                    {
+                        frameModel.Domains.Add(domain);
+                    }
 
-                foreach (var frame in frames)
-                {
-                    frameModel.Frames.Add(frame);
-                }
+                    foreach (var frame in frames)
+                    {
+                        frameModel.Frames.Add(frame);
+                    }
 
-                if (testFrameModel == null) 
-                {
-                    testFrameModel = ONTKnowlegeBaseLoader.Parce("D:\\Projects\\frame-knowelege-base\\Ontolis\\itemPlacement.ont");
-                    //testFrameModel = XMLKnowlegeBaseLoader.Parce(XMLKnowlegeBaseLoader.TEST_KNOWLEDGE_BASE);
-                }
+                    if (testFrameModel == null)
+                    {
+                        testFrameModel = ONTKnowlegeBaseLoader.Parce("D:\\Projects\\frame-knowelege-base\\Ontolis\\itemPlacement.ont");
+                        //testFrameModel = XMLKnowlegeBaseLoader.Parce(XMLKnowlegeBaseLoader.TEST_KNOWLEDGE_BASE);
+                    }
 
-                if (testFrameModel == null)
-                { 
-                    return frameModel; 
-                }
-                {
-                    return testFrameModel;
+                    return frameModel;
                 }
             }
         }

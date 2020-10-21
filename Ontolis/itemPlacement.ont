@@ -44,10 +44,10 @@
                     "value": "Стол",
                     "isRequestable": true
                 },
-                "Изображение": {
-                    "type": "t",
-                    "value": "table"
-                }
+              "Изображение": {
+                "type": "t",
+                "value": "../../Images/table.jpg"
+              }
             },
             "id": "8",
             "name": "Стол",
@@ -62,10 +62,10 @@
                     "value": "Стул",
                     "isRequestable": true
                 },
-                "Изображение": {
-                    "type": "t",
-                    "value": "chair"
-                }
+              "Изображение": {
+                "type": "t",
+                "value": "../../Images/chair.jpg"
+              }
             },
             "id": "10",
             "name": "Стул",
@@ -80,10 +80,10 @@
                     "value": "Картина",
                     "isRequestable": true
                 },
-                "Изображение": {
-                    "type": "t",
-                    "value": "picture"
-                }
+              "Изображение": {
+                "type": "t",
+                "value": "../../Images/picture.jpg"
+              }
             },
             "id": "12",
             "name": "Картина",
