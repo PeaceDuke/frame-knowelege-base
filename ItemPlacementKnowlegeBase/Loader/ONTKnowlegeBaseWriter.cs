@@ -28,6 +28,7 @@ namespace ItemPlacementKnowlegeBase.Loader
         private const string SOURCE_NODE_ID = "source_node_id";
 
         private static int id;
+        private static Random random = new Random();
         public static void Write(KnowlegeBase knowlegeBase, string filename)
         {
             id = 0;
@@ -118,8 +119,8 @@ namespace ItemPlacementKnowlegeBase.Loader
             JsonWriterOptions options = new JsonWriterOptions();
             options.Indented = true;
             options.Encoder = JavaScriptEncoder.Create(UnicodeRanges.All);
-            Random random = new Random();
-            Dictionary<int,Vector2> position = new Dictionary<int, Vector2>();
+            Dictionary<int,Vector2> positions = new Dictionary<int, Vector2>();
+            positions = GeneratePosition(nodes, relations);
             using (Utf8JsonWriter jsonWriter = new Utf8JsonWriter(stream.BaseStream, options))
             {
                 jsonWriter.WriteStartObject();
@@ -150,10 +151,11 @@ namespace ItemPlacementKnowlegeBase.Loader
                     jsonWriter.WriteString("id", node.id.ToString());
                     jsonWriter.WriteString("name", node.name);
                     jsonWriter.WriteString("namespace", "ontolis-avis");
-                    Vector2 pos = new Vector2(random.Next(100, 500), random.Next(100, 500));
+                    
+                    Vector2 pos = positions[node.id];
                     jsonWriter.WriteNumber("position_x", pos.X);
                     jsonWriter.WriteNumber("position_y", pos.Y);
-                    position[node.id] = pos;
+                    positions[node.id] = pos;
                     jsonWriter.WriteEndObject();
                 }
                 jsonWriter.WriteEndArray();
@@ -177,6 +179,63 @@ namespace ItemPlacementKnowlegeBase.Loader
 
                 jsonWriter.WriteString("visualize_ont_path", "");
                 jsonWriter.WriteEndObject();
+            }
+        }
+
+        private static Dictionary<int, Vector2> GeneratePosition(List<Node> nodes, List<Relation> relations)
+        {
+            Dictionary<int, Vector2> positions = new Dictionary<int, Vector2>();
+            foreach(var node in nodes)
+            {
+                if(!positions.ContainsKey(node.id))
+                {
+                    positions[node.id] = GeneratePosition(node, positions, nodes, relations);
+                }
+            }
+            return positions;
+        }
+
+        private static Vector2 GeneratePosition(Node node, Dictionary<int, Vector2> positions, List<Node> nodes, List<Relation> relations)
+        {
+            Relation parentRel = relations.Find(_r => _r.source.id == node.id && _r.name == "is_a");
+            if(parentRel == null)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    Vector2 newPos = new Vector2(10, random.Next(50, 800));
+                    bool close = false;
+                    foreach (var pos in positions)
+                    {
+                        if (Vector2.Distance(newPos, pos.Value) < 300)
+                            close = true;
+                    }
+                    if (!close)
+                        return newPos;
+                }
+                return new Vector2(10, random.Next(50, 800));
+            }
+            else
+            {
+                Node parentNode = parentRel.destination;
+                if (!positions.ContainsKey(parentNode.id))
+                {
+                    positions[parentNode.id] = GeneratePosition(parentNode, positions, nodes, relations);
+                }
+
+                Vector2 parentPos = positions[parentNode.id];
+                for (int i = 0; i < 50; i++)
+                {
+                    Vector2 newPos = new Vector2(parentPos.X + random.Next(100, 300), parentPos.Y + random.Next(-200, 200));
+                    bool close = false;
+                    foreach(var pos in positions)
+                    {
+                        if (Vector2.Distance(newPos, pos.Value) < 200)
+                            close = true;
+                    }
+                    if (!close)
+                        return newPos;
+                }
+                return new Vector2(parentPos.X + random.Next(100, 200), parentPos.Y + random.Next(-150, 150));
             }
         }
 

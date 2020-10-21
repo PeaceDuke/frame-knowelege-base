@@ -13,16 +13,16 @@
       "id": "1",
       "name": "Домен",
       "namespace": "ontolis-avis",
-      "position_x": 214,
-      "position_y": 195
+      "position_x": 10,
+      "position_y": 770
     },
     {
       "attributes": {},
       "id": "2",
       "name": "Фрейм",
       "namespace": "ontolis-avis",
-      "position_x": 324,
-      "position_y": 239
+      "position_x": 10,
+      "position_y": 269
     },
     {
       "attributes": {
@@ -31,8 +31,8 @@
       "id": "3",
       "name": "Текст",
       "namespace": "ontolis-avis",
-      "position_x": 375,
-      "position_y": 453
+      "position_x": 161,
+      "position_y": 654
     },
     {
       "attributes": {
@@ -46,8 +46,8 @@
       "id": "5",
       "name": "Предметы",
       "namespace": "ontolis-avis",
-      "position_x": 306,
-      "position_y": 348
+      "position_x": 265,
+      "position_y": 896
     },
     {
       "attributes": {
@@ -59,8 +59,8 @@
       "id": "7",
       "name": "Тип правила",
       "namespace": "ontolis-avis",
-      "position_x": 157,
-      "position_y": 461
+      "position_x": 190,
+      "position_y": 687
     },
     {
       "attributes": {
@@ -75,8 +75,8 @@
       "id": "9",
       "name": "Расположение",
       "namespace": "ontolis-avis",
-      "position_x": 342,
-      "position_y": 421
+      "position_x": 114,
+      "position_y": 933
     },
     {
       "attributes": {
@@ -94,8 +94,8 @@
       "id": "11",
       "name": "Стол",
       "namespace": "ontolis-avis",
-      "position_x": 388,
-      "position_y": 498
+      "position_x": 370,
+      "position_y": 43
     },
     {
       "attributes": {
@@ -113,8 +113,8 @@
       "id": "12",
       "name": "Стул",
       "namespace": "ontolis-avis",
-      "position_x": 481,
-      "position_y": 312
+      "position_x": 467,
+      "position_y": 310
     },
     {
       "attributes": {
@@ -132,16 +132,16 @@
       "id": "13",
       "name": "Картина",
       "namespace": "ontolis-avis",
-      "position_x": 360,
-      "position_y": 237
+      "position_x": 518,
+      "position_y": 5
     },
     {
       "attributes": {},
       "id": "14",
       "name": "Пустота",
       "namespace": "ontolis-avis",
-      "position_x": 379,
-      "position_y": 174
+      "position_x": 354,
+      "position_y": 308
     },
     {
       "attributes": {
@@ -159,16 +159,16 @@
       "id": "15",
       "name": "Что-то",
       "namespace": "ontolis-avis",
-      "position_x": 341,
-      "position_y": 388
+      "position_x": 417,
+      "position_y": 78
     },
     {
       "attributes": {},
       "id": "16",
       "name": "Предмет",
       "namespace": "ontolis-avis",
-      "position_x": 397,
-      "position_y": 333
+      "position_x": 219,
+      "position_y": 191
     },
     {
       "attributes": {
@@ -184,16 +184,16 @@
       "id": "17",
       "name": "Поле",
       "namespace": "ontolis-avis",
-      "position_x": 281,
-      "position_y": 315
+      "position_x": 207,
+      "position_y": 406
     },
     {
       "attributes": {},
       "id": "18",
       "name": "Клетка",
       "namespace": "ontolis-avis",
-      "position_x": 303,
-      "position_y": 483
+      "position_x": 145,
+      "position_y": 392
     },
     {
       "attributes": {
@@ -229,8 +229,8 @@
       "id": "19",
       "name": "Отношение стола и стула",
       "namespace": "ontolis-avis",
-      "position_x": 456,
-      "position_y": 460
+      "position_x": 299,
+      "position_y": 119
     },
     {
       "attributes": {
@@ -260,8 +260,8 @@
       "id": "20",
       "name": "Отношение стола и картины",
       "namespace": "ontolis-avis",
-      "position_x": 217,
-      "position_y": 237
+      "position_x": 235,
+      "position_y": -31
     },
     {
       "attributes": {
@@ -297,16 +297,16 @@
       "id": "21",
       "name": "Отношение стола и стула 2",
       "namespace": "ontolis-avis",
-      "position_x": 447,
-      "position_y": 244
+      "position_x": 263,
+      "position_y": 44
     },
     {
       "attributes": {},
       "id": "22",
       "name": "Правило",
       "namespace": "ontolis-avis",
-      "position_x": 199,
-      "position_y": 417
+      "position_x": 121,
+      "position_y": 169
     },
     {
       "attributes": {
@@ -319,8 +319,8 @@
       "id": "23",
       "name": "Клетки_корень",
       "namespace": "ontolis-avis",
-      "position_x": 414,
-      "position_y": 364
+      "position_x": 170,
+      "position_y": 120
     },
     {
       "attributes": {
@@ -333,8 +333,8 @@
       "id": "24",
       "name": "Событие",
       "namespace": "ontolis-avis",
-      "position_x": 440,
-      "position_y": 367
+      "position_x": 202,
+      "position_y": 205
     }
   ],
   "relations": [
