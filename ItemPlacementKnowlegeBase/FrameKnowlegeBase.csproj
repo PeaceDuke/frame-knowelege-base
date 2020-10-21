@@ -112,17 +112,23 @@
     <Compile Include="Images\ImagePathes.cs" />
     <Compile Include="Loader\ONTKnowlegeBaseLoader.cs" />
     <Compile Include="Loader\XMLKnowlegeBaseLoader.cs" />
+    <Compile Include="Main_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_form.Designer.cs">
+      <DependentUpon>Main_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Domain.cs" />
     <Compile Include="Models\DomainSlot.cs" />
     <Compile Include="Models\DomainValue.cs" />
     <Compile Include="Models\FrameSlot.cs" />
     <Compile Include="Test\TestKnowlegeBaseProvider.cs" />
     <Compile Include="Services\DummyKnowlegeBaseProvider.cs" />
-    <Compile Include="Main_form.cs">
+    <Compile Include="Application_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main_form.Designer.cs">
-      <DependentUpon>Main_form.cs</DependentUpon>
+    <Compile Include="Application_form.Designer.cs">
+      <DependentUpon>Application_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Frame.cs" />
     <Compile Include="Models\KnowlegeBase.cs" />
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_edit_rule.resx">
       <DependentUpon>Form_edit_rule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application_form.resx">
+      <DependentUpon>Application_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_form.resx">
       <DependentUpon>Main_form.cs</DependentUpon>

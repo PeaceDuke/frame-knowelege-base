@@ -69,16 +69,16 @@ namespace ItemPlacementKnowlegeBase.Gui
             {
                 case MouseButtons.Left:
                     {
-                        if (Main_form.draggedData != null)
+                        if (Application_form.draggedData != null)
                         {
-                            Item item = Main_form.draggedData;
+                            Item item = Application_form.draggedData;
                             Cell cell = new Cell(cellX, cellY, item);
                             if(!cellInField(cell, provider.LoadField()))
                             {
                                 break;
                             }
                             var sucsess = provider.PlaceItem(cell, item);
-                            Main_form.draggedData = null;
+                            Application_form.draggedData = null;
                             if (!sucsess)
                             {
                                 string reasoning = "не смог поставить предмет:\n";
