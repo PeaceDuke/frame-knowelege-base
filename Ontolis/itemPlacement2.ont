@@ -1,0 +1,519 @@
+{
+    "last_id": "48",
+    "namespaces": {
+        "ontolis-avis": "http://knova.ru/ontolis-avis",
+        "owl": "http://www.w3.org/2002/07/owl",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+        "xsd": "http://www.w3.org/2001/XMLSchema"
+    },
+    "nodes": [
+        {
+            "attributes": {
+            },
+            "id": "1",
+            "name": "Предмет",
+            "namespace": "",
+            "position_x": 330,
+            "position_y": 302
+        },
+        {
+            "attributes": {
+            },
+            "id": "2",
+            "name": "Домен",
+            "namespace": "",
+            "position_x": 785,
+            "position_y": 255
+        },
+        {
+          "attributes": {
+            "list": [
+              "Стол",
+              "Стул",
+              "Картина",
+              "Что-то"
+            ]
+          },
+            "id": "3",
+            "name": "Предметы",
+            "namespace": "",
+            "position_x": 751,
+            "position_y": 353
+        },
+        {
+            "attributes": {
+            },
+            "id": "5",
+            "name": "Фрейм",
+            "namespace": "",
+            "position_x": 428,
+            "position_y": 200
+        },
+        {
+          "attributes": {
+              "Изображение": {
+                "type": "t",
+                "value": "../../Images/table.jpg"
+              },
+              "Предмет": {
+                "domain": "Предметы",
+                "isRequestable": true,
+                "type": "d",
+                "value": "Стол"
+              }
+          },
+            "id": "8",
+            "name": "Стол",
+            "namespace": "",
+            "position_x": 203,
+            "position_y": 465
+        },
+        {
+            "attributes": {
+                "Изображение": {
+                    "type": "t",
+                    "value": "../../Images/chair.jpg"
+                },
+                "Предмет": {
+                    "domain": "Предметы",
+                    "isRequestable": true,
+                    "type": "d",
+                    "value": "Стул"
+                }
+            },
+            "id": "10",
+            "name": "Стул",
+            "namespace": "",
+            "position_x": 260,
+            "position_y": 475
+        },
+        {
+            "attributes": {
+                "Изображение": {
+                    "type": "t",
+                    "value": "../../Images/picture.jpg"
+                },
+                "Предмет": {
+                    "domain": "Предметы",
+                    "isRequestable": true,
+                    "type": "d",
+                    "value": "Картина"
+                }
+            },
+            "id": "12",
+            "name": "Картина",
+            "namespace": "",
+            "position_x": 324,
+            "position_y": 484
+        },
+        {
+            "attributes": {
+                "Размер": {
+                    "type": "t",
+                    "value": "5"
+                },
+                "Размер клетки": {
+                    "type": "t",
+                    "value": "64"
+                }
+            },
+            "id": "14",
+            "name": "Поле",
+            "namespace": "",
+            "position_x": 389,
+            "position_y": 384
+        },
+        {
+            "attributes": {
+            },
+            "id": "16",
+            "name": "Клетка",
+            "namespace": "",
+            "position_x": 445,
+            "position_y": 496
+        },
+        {
+            "attributes": {
+            },
+            "id": "19",
+            "name": "Правило",
+            "namespace": "",
+            "position_x": 610,
+            "position_y": 321
+        },
+        {
+            "attributes": {
+                "Объект": {
+                    "domain": "Предметы",
+                    "isRequestable": true,
+                    "type": "d",
+                    "value": "Стул"
+                },
+                "Объяснение": {
+                    "type": "t",
+                    "value": "Нельзя ставить стул справа стола"
+                },
+                "Расположение": {
+                    "domain": "Расположение",
+                    "isRequestable": true,
+                    "type": "d",
+                    "value": "Слева"
+                },
+                "Субъект": {
+                    "domain": "Предметы",
+                    "isRequestable": true,
+                    "type": "d",
+                    "value": "Стол"
+                },
+                "Тип правила": {
+                    "domain": "Тип правила",
+                    "isRequestable": true,
+                    "type": "d",
+                    "value": "Запрещающее"
+                }
+            },
+            "id": "21",
+            "name": "Отношение стола и стула",
+            "namespace": "",
+            "position_x": 538,
+            "position_y": 515
+        },
+        {
+            "attributes": {
+                "Объект": {
+                    "domain": "Предметы",
+                    "isRequestable": true,
+                    "type": "d",
+                    "value": "Стол"
+                },
+                "Объяснение": {
+                    "type": "t",
+                    "value": "Нельзя ставить картину рядом со столом"
+                },
+                "Субъект": {
+                    "domain": "Предметы",
+                    "isRequestable": true,
+                    "type": "d",
+                    "value": "Картина"
+                },
+                "Тип правила": {
+                    "domain": "Тип правила",
+                    "isRequestable": true,
+                    "type": "d",
+                    "value": "Разрешающее"
+                }
+            },
+            "id": "23",
+            "name": "Отношение стола и картины",
+            "namespace": "",
+            "position_x": 612,
+            "position_y": 568
+        },
+        {
+            "attributes": {
+                "Объект": {
+                    "domain": "Предметы",
+                    "isRequestable": true,
+                    "type": "d",
+                    "value": "Стул"
+                },
+                "Объяснение": {
+                    "type": "t",
+                    "value": "Нельзя ставить стул слева стола"
+                },
+                "Расположение": {
+                    "domain": "Расположение",
+                    "isRequestable": true,
+                    "type": "d",
+                    "value": "Справа"
+                },
+                "Субъект": {
+                    "domain": "Предметы",
+                    "isRequestable": true,
+                    "type": "d",
+                    "value": "Стол"
+                },
+                "Тип правила": {
+                    "domain": "Тип правила",
+                    "isRequestable": true,
+                    "type": "d",
+                    "value": "Запрещающее"
+                }
+            },
+            "id": "25",
+            "name": "Отношение стола и стула 2",
+            "namespace": "",
+            "position_x": 715,
+            "position_y": 516
+        },
+        {
+            "attributes": {
+            },
+            "id": "27",
+            "name": "Пустота",
+            "namespace": "",
+            "position_x": 200,
+            "position_y": 330
+        },
+        {
+            "attributes": {
+                "Клетка": {
+                    "isRequestable": true,
+                    "type": "f",
+                    "value": "Клетка"
+                }
+            },
+            "id": "29",
+            "name": "Клетки_корень",
+            "namespace": "",
+            "position_x": 465,
+            "position_y": 342
+        },
+        {
+            "attributes": {
+                "Правило": {
+                    "isRequestable": true,
+                    "type": "f",
+                    "value": "Правило"
+                }
+            },
+            "id": "32",
+            "name": "Событие",
+            "namespace": "",
+            "position_x": 574,
+            "position_y": 225
+        },
+        {
+            "attributes": {
+                "list": [
+                    "Запрещающее",
+                    "Разрешающее"
+                ]
+            },
+            "id": "43",
+            "name": "Тип правила",
+            "namespace": "",
+            "position_x": 882,
+            "position_y": 341
+        },
+        {
+            "attributes": {
+                "list": [
+                    "Выше",
+                    "Ниже",
+                    "Слева",
+                    "Справа",
+                    "Вместо"
+                ]
+            },
+            "id": "45",
+            "name": "Расположение",
+            "namespace": "",
+            "position_x": 975,
+            "position_y": 284
+        },
+        {
+          "attributes": {
+              "Изображение": {
+                "type": "t",
+                "value": "../../Images/table1.jpg"
+              },
+              "Предмет": {
+                "domain": "Предметы",
+                "isRequestable": true,
+                "type": "d",
+                "value": "Что-то"
+              }
+          },
+            "id": "47",
+            "name": "Что-то",
+            "namespace": "http://knova.ru/ontolis-avis",
+            "position_x": 0,
+            "position_y": 0
+        }
+    ],
+    "relations": [
+        {
+            "attributes": {
+            },
+            "destination_node_id": "2",
+            "id": "4",
+            "name": "is_a",
+            "namespace": "",
+            "source_node_id": "3"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "5",
+            "id": "7",
+            "name": "is_a",
+            "namespace": "",
+            "source_node_id": "1"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "1",
+            "id": "9",
+            "name": "is_a",
+            "namespace": "",
+            "source_node_id": "8"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "1",
+            "id": "11",
+            "name": "is_a",
+            "namespace": "",
+            "source_node_id": "10"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "1",
+            "id": "13",
+            "name": "is_a",
+            "namespace": "",
+            "source_node_id": "12"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "5",
+            "id": "15",
+            "name": "is_a",
+            "namespace": "",
+            "source_node_id": "14"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "16",
+            "id": "17",
+            "name": "",
+            "namespace": "",
+            "source_node_id": "16"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "5",
+            "id": "18",
+            "name": "is_a",
+            "namespace": "",
+            "source_node_id": "16"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "5",
+            "id": "20",
+            "name": "is_a",
+            "namespace": "",
+            "source_node_id": "19"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "19",
+            "id": "22",
+            "name": "is_a",
+            "namespace": "",
+            "source_node_id": "21"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "19",
+            "id": "24",
+            "name": "is_a",
+            "namespace": "",
+            "source_node_id": "23"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "19",
+            "id": "26",
+            "name": "is_a",
+            "namespace": "",
+            "source_node_id": "25"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "1",
+            "id": "28",
+            "name": "is_a",
+            "namespace": "",
+            "source_node_id": "27"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "5",
+            "id": "30",
+            "name": "is_a",
+            "namespace": "",
+            "source_node_id": "29"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "16",
+            "id": "31",
+            "name": "sub_frame",
+            "namespace": "",
+            "source_node_id": "29"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "5",
+            "id": "33",
+            "name": "is_a",
+            "namespace": "",
+            "source_node_id": "32"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "19",
+            "id": "34",
+            "name": "sub_frame",
+            "namespace": "",
+            "source_node_id": "32"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "2",
+            "id": "44",
+            "name": "is_a",
+            "namespace": "",
+            "source_node_id": "43"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "2",
+            "id": "46",
+            "name": "is_a",
+            "namespace": "",
+            "source_node_id": "45"
+        },
+        {
+            "attributes": {
+            },
+            "destination_node_id": "1",
+            "id": "48",
+            "name": "is_a",
+            "namespace": "http://knova.ru/ontolis-avis",
+            "source_node_id": "47"
+        }
+    ],
+    "visualize_ont_path": ""
+}
