@@ -231,10 +231,19 @@ namespace ItemPlacementKnowlegeBase
                 MessageBox.Show("Выберете предмет");
             else
             {
-                provider.RemoveItemFromList((Item)lv_items.SelectedItems[0].Tag);
-				lv_items.Items.Remove(lv_items.SelectedItems[0]);
+                Item item = (Item)lv_items.SelectedItems[0].Tag;
+                provider.RemoveItemFromList(item);
+                lv_items.Items.Remove(lv_items.SelectedItems[0]);
+                foreach (ListViewItem i in lv_rules.Items)
+                {
+                    Rule rule = (Rule)i.Tag;
+                    if (rule.Object.Equals(item) || rule.Subject.Equals(item))
+                    {
+                        provider.RemoveRuleFromList(rule);
+                        lv_rules.Items.Remove(i);
+                    }
+                }
             }
-
         }
 
         private void btn_addRule_Click(object sender, EventArgs e)
