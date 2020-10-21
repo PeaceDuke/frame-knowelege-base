@@ -15,6 +15,7 @@ namespace ItemPlacementKnowlegeBase.Services
         {
             if (instance == null)
             {
+                
                 instance = new TestKnowlegeBaseProvider();
             }
 

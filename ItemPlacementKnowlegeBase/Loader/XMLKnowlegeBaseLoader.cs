@@ -8,7 +8,7 @@ using System.Xml;
 
 namespace ItemPlacementKnowlegeBase.Loader
 {
-    class KnowlegeBaseLoader
+    class XMLKnowlegeBaseLoader
     {
         public const string TEST_KNOWLEDGE_BASE = "../../Loader/KB.xml";
         public static KnowlegeBase Parce(string path)
