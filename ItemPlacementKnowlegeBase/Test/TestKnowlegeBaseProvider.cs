@@ -170,7 +170,11 @@ namespace ItemPlacementKnowlegeBase.Services
             Frame itemFrame = knowlegeBase[item.Name];
             if (!string.IsNullOrEmpty(name))
             {
-                DomainValue domainValue = knowlegeBase.Domains.Where(x => x.Name == "Предметы").First().Values.Where(y => y.Text == item.Name).First();
+                Domain domain = knowlegeBase.Domains.Where(x => x.Name == "Предметы").First();
+                if (item.Name != name)
+                    if (domain.Values.Where(x => x.Text == name).Any())
+                        throw new Exception("Предмет с таким названием уже есть в базе");
+                DomainValue domainValue = domain.Values.Where(y => y.Text == item.Name).First();
                 domainValue.Text = name;
                 itemFrame.Name = name;
                 item.Name = name;

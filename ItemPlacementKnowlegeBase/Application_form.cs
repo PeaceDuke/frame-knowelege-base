@@ -213,14 +213,14 @@ namespace ItemPlacementKnowlegeBase
                 MessageBox.Show("Выберете предмет");
                 return;
             }
-            var formFrameChange = new Form_edit_item(provider, (Item)lv_items.SelectedItems[0].Tag);
+            ListViewItem lvi = lv_items.SelectedItems[0];
+            var formFrameChange = new Form_edit_item(provider, (Item)lvi.Tag);
 
             if (formFrameChange.ShowDialog() == DialogResult.OK)
             {
                 var item = formFrameChange.item;
-                ListViewItem lvi = new ListViewItem(item.Name);
+                lvi.Text = item.Name;
                 lvi.Tag = item;
-                lv_items.Items.Add(lvi);
             }
             formFrameChange.Close();
 
