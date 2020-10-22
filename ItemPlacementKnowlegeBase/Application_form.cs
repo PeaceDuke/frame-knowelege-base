@@ -223,6 +223,7 @@ namespace ItemPlacementKnowlegeBase
                 lvi.Tag = item;
             }
             formFrameChange.Close();
+            RuleRefresh();
 
         }
 
@@ -269,6 +270,15 @@ namespace ItemPlacementKnowlegeBase
             {
                 provider.RemoveRuleFromList((Rule)lv_rules.SelectedItems[0].Tag);
             	lv_rules.Items.Remove(lv_rules.SelectedItems[0]);
+            }
+        }
+        
+        private void RuleRefresh()
+        {
+            foreach (ListViewItem lvi in lv_rules.Items)
+            {
+                Rule rule = (Rule)lvi.Tag;
+                lvi.Text = rule.GetDescription();
             }
         }
     }

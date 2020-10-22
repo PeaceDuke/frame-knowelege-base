@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ItemPlacementKnowlegeBase.Models.Domain">
+    <Position X="6.25" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAAAIAEAAAAAAACAKAAAAAQAgCAACAAAAAAgCAAAAAA=</HashCode>
+      <FileName>Models\Domain.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ItemPlacementKnowlegeBase.Models.DomainSlot">
+    <Position X="9.75" Y="6.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABAAQIAAAAAAAAAAAAAAAgAAAgAAAAAAAIAgAAAAAEA=</HashCode>
+      <FileName>Models\DomainSlot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemPlacementKnowlegeBase.Models.DomainValue">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AgAAAAEAAAAAAACEqAAAAAAAgAAAAIAIAAAACAAAAAA=</HashCode>
+      <FileName>Models\DomainValue.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ItemPlacementKnowlegeBase.Models.Frame">
+    <Position X="9.75" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQAgUAEAAwxIBESEKAEEUgQAgABAACAoAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Frame.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ItemPlacementKnowlegeBase.Models.FrameSlot">
+    <Position X="6.25" Y="6.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABCAAAAAAgAAAAAAAAAAAIAAgAAAAAE=</HashCode>
+      <FileName>Models\FrameSlot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemPlacementKnowlegeBase.Models.KnowlegeBase">
+    <Position X="11.5" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABAAAEAAAAABAAEAiAACQABAEAAACBAAAAAAQAAACAE=</HashCode>
+      <FileName>Models\KnowlegeBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemPlacementKnowlegeBase.Models.Slot">
+    <Position X="8" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAEAAAAAAAiEKAAAAgQAgABAAEAAQIAAAAAEAIA=</HashCode>
+      <FileName>Models\Slot.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ItemPlacementKnowlegeBase.Models.TextSlot">
+    <Position X="8" Y="6.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAgAAAAAAAAAIAIAACAAAAAA=</HashCode>
+      <FileName>Models\TextSlot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
