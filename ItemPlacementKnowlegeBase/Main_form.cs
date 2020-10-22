@@ -43,13 +43,21 @@ namespace ItemPlacementKnowlegeBase
             {
                 if (!lv_kb.Items.ContainsKey(ofd.FileName))
                 {
-                    ListViewItem lvi = new ListViewItem(ofd.SafeFileName);
-                    lvi.Name = ofd.FileName;
-                    lvi.Tag = new KnowlegeBaseData(
-                        ONTKnowlegeBaseLoader.Parce(ofd.FileName),
-                        ofd.FileName
-                        );
-                    lv_kb.Items.Add(lvi);
+                    try
+                    {
+                        ListViewItem lvi = new ListViewItem(ofd.SafeFileName);
+                        lvi.Name = ofd.FileName;
+                        lvi.Tag = new KnowlegeBaseData(
+                            ONTKnowlegeBaseLoader.Parce(ofd.FileName),
+                            ofd.FileName
+                            );
+
+                        lv_kb.Items.Add(lvi);
+                    }
+                    catch
+                    {
+                        System.Windows.MessageBox.Show("Выбранный файл неверного формата");                        
+                    }
                 }
             }
         }
